@@ -1619,9 +1619,11 @@ Kenmerken: live binnen 2 weken, geen verborgen kosten, Nederlandstalig support, 
 
 Beantwoord vragen kort, vriendelijk en in het Nederlands. Stimuleer bezoekers om een gratis gesprek in te plannen via het contactformulier. Maximaal 2-3 zinnen per antwoord. Gebruik soms een emoji. Wees direct en concreet.`;
 
-  // ── Gemini API key: vervang JOUW_GEMINI_API_KEY met jouw key
-  // Of stel in via Vercel: Settings → Environment Variables → GEMINI_API_KEY
-  const GEMINI_API_KEY = window.GEMINI_API_KEY || 'JOUW_GEMINI_API_KEY';
+  // ── STAP 1: Vervang ALLEEN de tekst hieronder met jouw Gemini API key
+  // Haal je key op via: aistudio.google.com → Get API Key → Create API Key
+  const GEMINI_API_KEY = 'AIzaSyBfNiVF2S6nwbcREfmEc8ZciVOeU_6FJrk';
+  // ── Voorbeeld: const GEMINI_API_KEY = 'AIzaSyAbCdEfGhIjKlMnOpQrStUvWxYz123456';
+
   const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
 
   async function sendMessage(text) {
@@ -1646,25 +1648,22 @@ Beantwoord vragen kort, vriendelijk en in het Nederlands. Stimuleer bezoekers om
         })
       });
 
-      typingEl.remove();
       const data = await response.json();
-
-      // Debug: toon de ruwe API response in console
-      console.log('Gemini response:', JSON.stringify(data));
+      typingEl.remove();
 
       if (!response.ok) {
-        const errMsg = data.error?.message || `HTTP ${response.status}`;
-        addMessage(`⚠️ API fout: ${errMsg}`, 'bot');
-        return;
+        const errMsg = data.error?.message || `HTTP fout ${response.status}`;
+        console.error('Gemini fout:', errMsg, data);
+        addMessage(`⚠️ ${errMsg}`, 'bot');
+      } else {
+        const reply = data.candidates?.[0]?.content?.parts?.[0]?.text
+          || 'Geen antwoord ontvangen. Probeer opnieuw.';
+        addMessage(reply, 'bot');
       }
-
-      const reply = data.candidates?.[0]?.content?.parts?.[0]?.text
-        || 'Even geen verbinding. Probeer het opnieuw!';
-      addMessage(reply, 'bot');
     } catch (e) {
       typingEl.remove();
       console.error('Chat error:', e);
-      addMessage(`⚠️ Fout: ${e.message}`, 'bot');
+      addMessage(`⚠️ Verbindingsfout: ${e.message}`, 'bot');
     }
 
     isLoading = false;
