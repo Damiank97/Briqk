@@ -1621,7 +1621,7 @@ Beantwoord vragen kort, vriendelijk en in het Nederlands. Stimuleer bezoekers om
 
   // ── STAP 1: Haal je GRATIS Groq API key op via console.groq.com
   // Maak account → klik "API Keys" → "Create API Key" → kopieer en plak hieronder
-  const GROQ_API_KEY = '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';
+  const GROQ_API_KEY = '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';
   // Voorbeeld: 'gsk_AbCdEfGhIjKlMnOpQrStUvWxYz...'
 
   async function sendMessage(text) {
@@ -1718,15 +1718,42 @@ Beantwoord vragen kort, vriendelijk en in het Nederlands. Stimuleer bezoekers om
   });
 
   // Form submit
-  function submitForm() {
+  async function submitForm() {
     const name = document.getElementById('formName').value;
     const email = document.getElementById('formEmail').value;
+    const type = document.getElementById('formType').value;
+    const interest = document.getElementById('formInterest').value;
+    const msg = document.getElementById('formMsg').value;
     if (!name || !email) {
       alert('Vul je naam en e-mailadres in.');
       return;
     }
-    document.getElementById('formSuccess').style.display = 'block';
-    document.querySelector('.form-submit').style.display = 'none';
+    const btn = document.querySelector('.form-submit');
+    btn.textContent = 'Verzenden...';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://formspree.io/f/mdawzenb', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          naam: name,
+          email: email,
+          bedrijfstype: type,
+          interesse: interest,
+          message: msg
+        })
+      });
+      if (res.ok) {
+        document.getElementById('formSuccess').style.display = 'block';
+        btn.style.display = 'none';
+      } else {
+        btn.textContent = 'Fout — probeer opnieuw';
+        btn.disabled = false;
+      }
+    } catch(e) {
+      btn.textContent = 'Fout — probeer opnieuw';
+      btn.disabled = false;
+    }
   }
 </script>
 
