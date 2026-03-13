@@ -3,7 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Launchly — AI Websites voor Nederlands MKB</title>
+<title>AI Website Laten Maken voor MKB | Briqk — Arnhem</title>
+<meta name="description" content="Briqk bouwt AI-powered websites voor Nederlands MKB en ZZP. Live binnen 2 weken. Inclusief AI chatbot, WhatsApp bot en lead qualifier. Vanaf €850. Gratis kennismaking.">
+<meta name="keywords" content="AI website laten maken, website laten maken MKB, website laten maken Arnhem, AI chatbot laten maken, WhatsApp bot laten maken, website met chatbot">
+<link rel="canonical" href="https://briqk.nl">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Website Laten Maken voor MKB | Briqk">
+<meta property="og:description" content="AI-powered websites voor Nederlands MKB. Live binnen 2 weken. Chatbot, WhatsApp bot & lead qualifier inbegrepen. Vanaf €850.">
+<meta property="og:url" content="https://briqk.nl">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Website Laten Maken voor MKB | Briqk">
+<meta name="twitter:description" content="AI-powered websites voor Nederlands MKB. Vanaf €850. Live binnen 2 weken.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Briqk",
+  "url": "https://briqk.nl",
+  "email": "info@briqk.nl",
+  "description": "Briqk bouwt AI-powered websites voor Nederlands MKB en ZZP. Inclusief AI chatbot, WhatsApp bot en lead qualifier.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Arnhem",
+    "addressRegion": "Gelderland",
+    "addressCountry": "NL"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Nederland"
+  },
+  "serviceType": ["AI website laten maken", "website laten maken MKB", "AI chatbot laten maken", "WhatsApp bot laten maken"],
+  "priceRange": "€€",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -39,7 +78,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 48px;
+    padding: 20px 80px;
     backdrop-filter: blur(16px);
     background: rgba(8,8,8,0.7);
     border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -91,7 +130,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 140px 48px 80px;
+    padding: 160px 80px 100px;
     position: relative;
     overflow: hidden;
   }
@@ -252,7 +291,7 @@
   }
 
   /* SECTIONS */
-  section { padding: 100px 48px; }
+  section { padding: 120px 80px; }
 
   .section-tag {
     font-size: 12px;
@@ -1246,15 +1285,196 @@
     text-align: center;
   }
 
-  @media (max-width: 900px) {
-    nav { padding: 16px 24px; }
+
+  /* ─── CONTAINER ─────────────────────────────────── */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+
+  /* ─── HAMBURGER ──────────────────────────────────── */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Mobile nav drawer */
+  .nav-mobile {
+    display: none;
+    position: fixed;
+    top: 65px; left: 0; right: 0;
+    background: rgba(8,8,8,0.97);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 24px 24px 32px;
+    z-index: 99;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .nav-mobile.open { display: flex; }
+  .nav-mobile a {
+    color: var(--grey-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: color 0.2s;
+  }
+  .nav-mobile a:hover { color: var(--white); }
+  .nav-mobile .nav-cta-mobile {
+    margin-top: 12px;
+    background: var(--lime);
+    color: var(--black) !important;
+    text-align: center;
+    padding: 14px;
+    border-radius: 100px;
+    font-weight: 500;
+    border: none;
+  }
+
+  /* ─── TABLET: 901px – 1200px ─────────────────────── */
+  @media (max-width: 1200px) {
+    .container { padding: 0 40px; }
+    section { padding: 100px 40px; }
+    .hero { padding: 140px 40px 80px; }
+    nav { padding: 20px 40px; }
+  }
+
+  /* ─── MOBILE: ≤768px ─────────────────────────────── */
+  @media (max-width: 768px) {
+    /* Nav */
+    nav { padding: 16px 20px; }
     nav .nav-links { display: none; }
-    .hero { padding: 120px 24px 60px; }
-    section { padding: 60px 24px; }
-    .hero-stats { gap: 24px; }
-    .steps, .services-grid, .portfolio-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
-    .chatbot-layout, .contact-layout { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 12px; text-align: center; }
+    .nav-hamburger { display: flex; }
+
+    /* General spacing */
+    section { padding: 64px 20px; }
+    .container { padding: 0 20px; }
+
+    /* Hero */
+    .hero { padding: 110px 20px 60px; }
+    .hero h1 { font-size: clamp(38px, 10vw, 60px); letter-spacing: -2px; }
+    .hero-sub { font-size: 16px; }
+    .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .hero-actions .btn-primary { width: 100%; text-align: center; justify-content: center; }
+    .hero-stats { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 20px 16px; 
+      margin-top: 48px;
+      padding-top: 32px;
+    }
+    .stat-num { font-size: 28px; }
+
+    /* Sections */
+    .section-title { font-size: clamp(28px, 7vw, 40px); letter-spacing: -1px; }
+
+    /* Steps */
+    .steps { 
+      grid-template-columns: 1fr; 
+      gap: 2px;
+      margin-top: 40px;
+    }
+    .step { padding: 32px 24px; }
+
+    /* Services */
+    .services-grid { 
+      grid-template-columns: 1fr; 
+      gap: 2px;
+      margin-top: 40px;
+    }
+    .service-card { padding: 32px 24px; }
+
+    /* Portfolio */
+    .portfolio-grid { 
+      grid-template-columns: 1fr; 
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    /* Pricing */
+    .pricing-grid { 
+      grid-template-columns: 1fr; 
+      gap: 2px;
+      margin-top: 40px;
+    }
+    .pricing-card { padding: 36px 28px; }
+    .pricing-price { font-size: 40px; }
+
+    /* Launch deal cards */
+    .launch-deals-grid {
+      flex-direction: column !important;
+      max-width: 100% !important;
+    }
+    .launch-deal { min-width: unset !important; width: 100% !important; }
+
+    /* Chatbot */
+    .chatbot-layout { 
+      grid-template-columns: 1fr; 
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .chat-widget { max-width: 100%; }
+    .quick-questions { gap: 6px; }
+    .quick-q { font-size: 11px; padding: 5px 10px; }
+
+    /* Contact */
+    .contact-layout { 
+      grid-template-columns: 1fr; 
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .contact-form { padding: 28px 20px; }
+
+    /* Testimonials */
+    .testimonials-grid { 
+      grid-template-columns: 1fr; 
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    /* FAQ */
+    .faq-item { padding: 20px; }
+    .faq-question { font-size: 15px; }
+
+    /* Footer */
+    footer { 
+      flex-direction: column; 
+      gap: 12px; 
+      text-align: center; 
+      padding: 32px 20px;
+    }
+
+    /* Buttons */
+    .btn-primary { padding: 14px 24px; font-size: 14px; }
+    .btn-ghost { padding: 14px 16px; font-size: 14px; }
+  }
+
+  /* ─── SMALL PHONES: ≤400px ───────────────────────── */
+  @media (max-width: 400px) {
+    .hero h1 { font-size: 34px; }
+    .hero-stats { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .stat-num { font-size: 24px; }
+    .pricing-price { font-size: 36px; }
   }
 </style>
 </head>
@@ -1262,26 +1482,38 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Launch<span>ly</span></a>
+  <a href="#" class="nav-logo">Bri<span>qk</span></a>
   <ul class="nav-links">
     <li><a href="#diensten">Diensten</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#prijzen">Prijzen</a></li>
     <li><a href="#demo">AI Demo</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact" class="nav-cta">Gratis gesprek →</a></li>
   </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu openen">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-mobile" id="mobileNav">
+  <a href="#diensten" onclick="closeMobileNav()">Diensten</a>
+  <a href="#portfolio" onclick="closeMobileNav()">Portfolio</a>
+  <a href="#prijzen" onclick="closeMobileNav()">Prijzen</a>
+  <a href="#demo" onclick="closeMobileNav()">AI Demo</a>
+  <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+  <a href="#contact" class="nav-cta-mobile" onclick="closeMobileNav()">Gratis gesprek inplannen →</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-tag">🇳🇱 AI Websites voor Nederlands MKB</div>
-  <h1>Jouw bedrijf.<br><em>Slimmer</em> online.</h1>
-  <p class="hero-sub">Wij bouwen <strong>AI-powered websites</strong> die automatisch leads binnenhalen, afspraken inplannen en vragen beantwoorden. Geen gewone website — een digitale medewerker.</p>
+  <div class="hero-tag">🇳🇱 Websites voor Nederlands MKB · Arnhem · heel Nederland</div>
+  <h1>Je website werkt.<br><em>24/7. Zonder jou.</em></h1>
+  <p class="hero-sub">Briqk bouwt <strong>slimme websites voor MKB en ZZP</strong> die automatisch leads binnenhalen, vragen beantwoorden en afspraken inplannen — ook als jij slaapt. Geen gewone website. Een digitale medewerker.</p>
   <div class="hero-actions">
-    <a href="#contact" class="btn-primary">Gratis gesprek inplannen →</a>
-    <a href="#demo" class="btn-ghost">↓ Bekijk de AI demo</a>
+    <a href="#contact" class="btn-primary">Plan gratis gesprek →</a>
+    <a href="#diensten" class="btn-ghost">↓ Bekijk wat we bouwen</a>
   </div>
   <div class="hero-stats">
     <div class="stat-item">
@@ -1290,7 +1522,7 @@
     </div>
     <div class="stat-item">
       <div class="stat-num">24<span>/7</span></div>
-      <div class="stat-label">AI beantwoordt vragen</div>
+      <div class="stat-label">Werkt voor je terwijl jij slaapt</div>
     </div>
     <div class="stat-item">
       <div class="stat-num">€0</div>
@@ -1306,59 +1538,71 @@
 <!-- HOE HET WERKT -->
 <section class="how" id="diensten">
   <div class="section-tag">Hoe het werkt</div>
-  <h2 class="section-title">Van gesprek tot klanten — in 2 weken</h2>
-  <p class="section-sub">Geen gedoe met techniek. Wij regelen alles, jij focust op je bedrijf.</p>
+  <h2 class="section-title">Van gesprek tot werkende website — in 2 weken</h2>
+  <p class="section-sub">Geen gedoe met techniek. Jij focust op je bedrijf, wij regelen de rest. Live binnen 2 weken.</p>
   <div class="steps">
     <div class="step reveal">
       <div class="step-num">01</div>
       <div class="step-icon">☕</div>
       <h3>Gratis kennismaking</h3>
-      <p>We bespreken jouw bedrijf, doelen en wat je klanten nodig hebben. 30 minuten, geen verplichtingen.</p>
+      <p>We bespreken jouw bedrijf, doelen en welke taken geautomatiseerd kunnen worden. 30 minuten, geen verplichtingen.</p>
     </div>
     <div class="step reveal">
       <div class="step-num">02</div>
       <div class="step-icon">⚡</div>
-      <h3>Wij bouwen jouw AI site</h3>
-      <p>Binnen 10 werkdagen staat jouw site live — inclusief AI chatbot, contactformulier en agenda-integratie.</p>
+      <h3>Wij bouwen jouw digitale medewerker</h3>
+      <p>Binnen 10 werkdagen staat jouw site live — inclusief slimme chatbot, contactformulier en agenda-integratie.</p>
     </div>
     <div class="step reveal">
       <div class="step-num">03</div>
       <div class="step-icon">🚀</div>
-      <h3>Meer klanten, minder werk</h3>
-      <p>Jouw AI-assistent werkt 24/7. Wij houden alles draaiende met maandelijks onderhoud en updates.</p>
+      <h3>Meer klanten, minder handwerk</h3>
+      <p>Jouw site werkt 24/7 — ook in het weekend. Wij houden alles draaiende met maandelijks onderhoud en updates.</p>
     </div>
   </div>
 </section>
 
 <!-- DIENSTEN -->
 <section id="diensten-detail">
-  <div class="section-tag">Wat we bouwen</div>
-  <h2 class="section-title">Niet zomaar een website</h2>
-  <p class="section-sub">Elke site die wij bouwen heeft AI ingebakken. Standaard.</p>
+  <div class="section-tag">Wat we bouwen — 6 pakketten</div>
+  <h2 class="section-title">Kies wat jouw bedrijf nodig heeft</h2>
+  <p class="section-sub">Van professionele website voor ZZP tot volledig geautomatiseerde leadmachine voor groeiende bedrijven. Altijd vaste prijs, nooit verrassingen.</p>
   <div class="services-grid">
     <div class="service-card reveal">
-      <div class="service-tag">Meest gevraagd</div>
-      <h3>AI Website + Chatbot</h3>
-      <p>Een professionele website met een slimme AI-assistent die vragen beantwoordt, leads kwalificeert en afspraken inplant — ook 's nachts en in het weekend.</p>
-      <div class="service-price">€1.750 <span>eenmalig + onderhoud</span></div>
+      <div class="service-tag">Populair bij ZZP</div>
+      <h3><a href="/website-laten-maken-mkb" style="color:inherit;text-decoration:none;">Starter Website</a></h3>
+      <p>Snel online met een strakke, professionele website. Inclusief slim contactformulier dat leads automatisch opslaat. Ideaal voor ZZP en kleine bedrijven. Live in 5-7 werkdagen.</p>
+      <div class="service-price">€850 <span>eenmalig + €99/mnd</span></div>
     </div>
     <div class="service-card reveal">
-      <div class="service-tag">Populair bij ZZP</div>
-      <h3>Starter AI Site</h3>
-      <p>Snel online met een strakke, professionele site. AI contactformulier inbegrepen. Perfect als je een betrouwbare online aanwezigheid wil zonder poespas.</p>
-      <div class="service-price">€850 <span>eenmalig</span></div>
+      <div class="service-tag">Meest gevraagd</div>
+      <h3><a href="/ai-website-laten-maken" style="color:inherit;text-decoration:none;">Pro Website + Slimme Chatbot</a></h3>
+      <p>Website met ingebouwde assistent die 24/7 vragen beantwoordt, leads kwalificeert en afspraken inplant — ook 's nachts en in het weekend.</p>
+      <div class="service-price">€1.750 <span>eenmalig + €249/mnd</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-tag">Al een website?</div>
+      <h3><a href="/ai-chatbot-laten-maken" style="color:inherit;text-decoration:none;">Chatbot op bestaande website</a></h3>
+      <p>Eén regel code op je huidige website — en jouw bezoekers worden 24/7 geholpen door een slimme assistent die jouw bedrijf en diensten door en door kent.</p>
+      <div class="service-price">€600 <span>setup + €149/mnd</span></div>
     </div>
     <div class="service-card reveal">
       <div class="service-tag">Automation</div>
-      <h3>WhatsApp Bot</h3>
-      <p>Automatisch reageren op WhatsApp-berichten van klanten. Vragen beantwoorden, afspraken inplannen, offertes sturen — volledig automatisch.</p>
-      <div class="service-price">€600 <span>setup + maandelijks</span></div>
+      <h3><a href="/whatsapp-bot-bedrijf" style="color:inherit;text-decoration:none;">WhatsApp Automatisering</a></h3>
+      <p>Automatisch reageren op WhatsApp-berichten van klanten. Vragen beantwoorden, afspraken inplannen — ook buiten kantooruren, zonder dat jij iets hoeft te doen.</p>
+      <div class="service-price">€750 <span>setup + €149/mnd</span></div>
     </div>
     <div class="service-card reveal">
       <div class="service-tag">AI Agent</div>
       <h3>Lead Qualifier Agent</h3>
-      <p>Een AI die binnenkomende leads automatisch kwalificeert, sorteert en doorstuurt naar jou. Nooit meer tijd verliezen aan slechte leads.</p>
-      <div class="service-price">€950 <span>setup + maandelijks</span></div>
+      <p>Automatische leadsortering: elke binnenkomende aanvraag wordt direct gescoord en doorgestuurd. Jij belt alleen nog terug met mensen die écht willen kopen.</p>
+      <div class="service-price">€950 <span>setup + €199/mnd</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-tag">Op maat</div>
+      <h3>Maatwerk</h3>
+      <p>Meerdere agents, CRM-koppelingen, meertalig, salesautomatisering — alles mogelijk. Vaste offerte vooraf, geen verrassingen.</p>
+      <div class="service-price">Op aanvraag <span>na intakegesprek</span></div>
     </div>
   </div>
 </section>
@@ -1368,7 +1612,7 @@
   <div class="launch-inner reveal">
     <div class="launch-badge">🚀 Beperkt aanbod</div>
     <h2 class="section-title" style="max-width:700px">We zoeken onze eerste 3 klanten</h2>
-    <p class="section-sub" style="max-width:600px">Launchly is net gestart. We zijn goed — maar hebben nog geen portfolio. Eerlijk is eerlijk. Daarom bieden we onze eerste 3 klanten een speciaal lanceringstarief: <strong style="color:var(--white)">40% korting</strong> in ruil voor een eerlijke review.</p>
+    <p class="section-sub" style="max-width:600px">Briqk is net gestart. We zijn goed — maar hebben nog geen portfolio. Eerlijk is eerlijk. Daarom bieden we onze eerste 3 klanten een speciaal lanceringstarief: <strong style="color:var(--white)">40% korting</strong> in ruil voor een eerlijke review.</p>
     <div class="launch-spots">
       <div class="launch-spot taken">
         <div class="spot-num">1</div>
@@ -1383,49 +1627,64 @@
         <div class="spot-status">Beschikbaar</div>
       </div>
     </div>
-    <div class="launch-deal">
-      <div class="launch-deal-item">
-        <div class="launch-deal-label">Normale prijs</div>
-        <div class="launch-deal-price strike">€1.750</div>
+    <p style="font-size:14px;color:var(--grey-text);margin-top:8px;">Geldt voor elk pakket — kies wat bij jou past:</p>
+    <div class="launch-deals-grid" style="display:flex;gap:16px;width:100%;max-width:960px;margin-top:8px;justify-content:center;flex-wrap:wrap;">
+      <div class="launch-deal" style="flex:1;min-width:240px;flex-direction:column;gap:12px;padding:32px 24px;text-align:center;">
+        <div class="launch-deal-label">Starter Website</div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:10px;">
+          <div class="launch-deal-price strike" style="font-size:18px;">€850</div>
+          <div style="color:var(--grey-text)">→</div>
+          <div class="launch-deal-price" style="font-size:28px;color:var(--lime);">€510</div>
+        </div>
+        <div style="font-size:12px;color:var(--grey-text);">+ €99/maand onderhoud</div>
       </div>
-      <div class="launch-deal-arrow">→</div>
-      <div class="launch-deal-item highlight">
-        <div class="launch-deal-label">Lanceringsprijs</div>
-        <div class="launch-deal-price">€1.050</div>
+      <div class="launch-deal" style="flex:1;min-width:240px;flex-direction:column;gap:12px;padding:32px 24px;text-align:center;border:2px solid rgba(200,255,0,0.5);">
+        <div class="launch-deal-label" style="color:var(--lime);">⭐ Pro + Chatbot</div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:10px;">
+          <div class="launch-deal-price strike" style="font-size:18px;">€1.750</div>
+          <div style="color:var(--grey-text)">→</div>
+          <div class="launch-deal-price" style="font-size:28px;color:var(--lime);">€1.050</div>
+        </div>
+        <div style="font-size:12px;color:var(--grey-text);">+ €249/maand onderhoud</div>
       </div>
-      <div class="launch-deal-includes">
-        <span>✓ Pro AI Website</span>
-        <span>✓ AI Chatbot</span>
-        <span>✓ 3 maanden gratis onderhoud</span>
+      <div class="launch-deal" style="flex:1;min-width:240px;flex-direction:column;gap:12px;padding:32px 24px;text-align:center;">
+        <div class="launch-deal-label">Chatbot Add-on</div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:10px;">
+          <div class="launch-deal-price strike" style="font-size:18px;">€600</div>
+          <div style="color:var(--grey-text)">→</div>
+          <div class="launch-deal-price" style="font-size:28px;color:var(--lime);">€360</div>
+        </div>
+        <div style="font-size:12px;color:var(--grey-text);">+ €149/maand onderhoud</div>
       </div>
     </div>
-    <a href="#contact" class="btn-primary" style="margin-top:8px">Claim jouw plek →</a>
+    <p style="font-size:13px;color:var(--grey-text);margin-top:4px;">WhatsApp Bot & Lead Qualifier ook 40% korting — vraag naar de prijs.</p>
+    <a href="#contact" class="btn-primary" style="margin-top:16px">Claim jouw plek →</a>
   </div>
 </section>
 
 <!-- PRICING -->
 <section id="prijzen">
-  <div class="section-tag">Transparante prijzen</div>
-  <h2 class="section-title">Geen verrassingen</h2>
-  <p class="section-sub">Alles inbegrepen, vaste prijs. Geen verborgen kosten.</p>
-  <div class="pricing-grid">
+  <div class="section-tag">Transparante prijzen — geen verrassingen</div>
+  <h2 class="section-title">Vaste prijs, geen verrassingen</h2>
+  <p class="section-sub">Wat kost een AI website laten maken? Alles inbegrepen, vaste prijs. Geen verborgen kosten, geen uurtjes-facturering.</p>
+  <div class="pricing-grid" style="grid-template-columns: repeat(3, 1fr);">
     <div class="pricing-card reveal">
-      <div class="pricing-name">Starter</div>
+      <div class="pricing-name">Starter Website</div>
       <div class="pricing-price"><sup>€</sup>850</div>
       <div class="pricing-period">eenmalig + €99/maand</div>
-      <div class="pricing-desc">Voor ZZP'ers en kleine bedrijven die professioneel online willen staan.</div>
+      <div class="pricing-desc">Voor ZZP'ers en kleine bedrijven die snel professioneel online willen.</div>
       <ul class="pricing-features">
         <li>Professionele website (5 pagina's)</li>
         <li>AI contactformulier</li>
         <li>Mobielvriendelijk design</li>
-        <li>Hosting via Vercel (gratis)</li>
-        <li>Maandelijks onderhoud</li>
+        <li>Gratis hosting via Vercel</li>
+        <li>1 revisieronde</li>
       </ul>
       <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek</button>
     </div>
     <div class="pricing-card featured reveal">
       <div class="pricing-badge">Meest gekozen</div>
-      <div class="pricing-name">Pro AI Website</div>
+      <div class="pricing-name">Pro + Chatbot</div>
       <div class="pricing-price"><sup>€</sup>1.750</div>
       <div class="pricing-period">eenmalig + €249/maand</div>
       <div class="pricing-desc">De complete AI-powered aanwezigheid voor groeiende bedrijven.</div>
@@ -1434,26 +1693,71 @@
         <li>AI chatbot (24/7 actief)</li>
         <li>Agenda-integratie</li>
         <li>Lead capture & kwalificatie</li>
-        <li>WhatsApp koppeling</li>
         <li>Maandelijkse rapportage</li>
       </ul>
       <button class="btn-pricing btn-pricing-black" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek →</button>
     </div>
     <div class="pricing-card reveal">
-      <div class="pricing-name">Maatwerk</div>
-      <div class="pricing-price"><sup>€</sup>Op<br>maat</div>
-      <div class="pricing-period">prijs op aanvraag</div>
-      <div class="pricing-desc">Voor complexe automations, meerdere AI-agents of volledige digitale transformatie.</div>
+      <div class="pricing-name">Chatbot Add-on</div>
+      <div class="pricing-price"><sup>€</sup>600</div>
+      <div class="pricing-period">eenmalig + €149/maand</div>
+      <div class="pricing-desc">Al een website? Voeg een AI-assistent toe met 1 regel code.</div>
       <ul class="pricing-features">
-        <li>Alles uit Pro</li>
+        <li>Chatbot op bestaande website</li>
+        <li>Getraind op jouw bedrijfsinfo</li>
+        <li>Klikbare voorbeeldvragen</li>
+        <li>Huisstijl kleuren aanpasbaar</li>
+        <li>Live binnen 3-5 werkdagen</li>
+      </ul>
+      <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek</button>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-name">WhatsApp Bot</div>
+      <div class="pricing-price"><sup>€</sup>750</div>
+      <div class="pricing-period">eenmalig + €149/maand</div>
+      <div class="pricing-desc">Automatisch reageren op WhatsApp — ook buiten kantooruren.</div>
+      <ul class="pricing-features">
+        <li>WhatsApp Business API koppeling</li>
+        <li>Afspraken inplannen via bot</li>
+        <li>Escalatie naar medewerker</li>
+        <li>GDPR-conforme opzet</li>
+        <li>Wekelijkse rapportage</li>
+      </ul>
+      <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek</button>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-name">Lead Qualifier</div>
+      <div class="pricing-price"><sup>€</sup>950</div>
+      <div class="pricing-period">eenmalig + €199/maand</div>
+      <div class="pricing-desc">Nooit meer tijd verliezen aan slechte leads.</div>
+      <ul class="pricing-features">
+        <li>AI scoort: Warm / Koud / Niet relevant</li>
+        <li>Real-time notificaties WhatsApp + mail</li>
+        <li>Dashboard met leadoverzicht</li>
+        <li>Optionele CRM-koppeling</li>
+        <li>Maandrapportage</li>
+      </ul>
+      <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek</button>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-name">Maatwerk</div>
+      <div class="pricing-price" style="font-size:36px;"><sup style="font-size:18px">€</sup>Op<br>maat</div>
+      <div class="pricing-period">prijs op aanvraag</div>
+      <div class="pricing-desc">Complexe automations, meerdere agents of volledige digitale transformatie.</div>
+      <ul class="pricing-features">
         <li>Meerdere AI agents</li>
-        <li>API-koppelingen op maat</li>
-        <li>WhatsApp automation</li>
-        <li>Dedicated support</li>
-        <li>SLA garantie</li>
+        <li>CRM-koppelingen (HubSpot etc.)</li>
+        <li>Meertalige website (NL/EN/DE)</li>
+        <li>Dedicated support + SLA</li>
+        <li>Vaste offerte vooraf</li>
       </ul>
       <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Neem contact op</button>
     </div>
+  </div>
+  <div style="display:flex;justify-content:center;margin-top:48px;">
+    <a href="brochure.pdf" download="Briqk_Brochure_2026.pdf" class="btn-primary" style="background:transparent;border:1px solid rgba(200,255,0,0.4);color:var(--lime);">
+      ↓ Download volledige brochure (PDF)
+    </a>
   </div>
 </section>
 
@@ -1462,25 +1766,25 @@
   <div class="chatbot-layout">
     <div class="chatbot-info reveal">
       <div class="section-tag">Live AI Demo</div>
-      <h2>Zo werkt jouw<br>AI-assistent</h2>
-      <p>Dit is een echte AI die draait op jouw toekomstige website. Stel een vraag en zie hoe het werkt.</p>
-      <p>Jouw klanten krijgen ook zo'n assistent — maar dan ingesteld op jouw bedrijf, diensten en toon.</p>
+      <h2>Zo werkt jouw<br>digitale medewerker</h2>
+      <p>Dit is een echte assistent die draait op jouw toekomstige website. Stel een vraag en zie hoe het werkt.</p>
+      <p>Jouw klanten krijgen ook zo'n assistent — volledig ingesteld op jouw bedrijf, diensten en manier van communiceren.</p>
       <div class="chatbot-features">
         <div class="chatbot-feature">
           <div class="chatbot-feature-dot"></div>
-          Beantwoordt vragen over jouw diensten
+          Beantwoordt vragen over jouw diensten en prijzen
         </div>
         <div class="chatbot-feature">
           <div class="chatbot-feature-dot"></div>
-          Plant afspraken automatisch in
+          Plant afspraken in — zonder dat jij iets doet
         </div>
         <div class="chatbot-feature">
           <div class="chatbot-feature-dot"></div>
-          Werkt in het Nederlands en Engels
+          Spreekt Nederlands, geen technisch gedoe
         </div>
         <div class="chatbot-feature">
           <div class="chatbot-feature-dot"></div>
-          24/7 beschikbaar, ook 's nachts
+          24/7 actief — ook 's nachts en in het weekend
         </div>
       </div>
     </div>
@@ -1489,14 +1793,14 @@
       <div class="chat-header">
         <div class="chat-avatar">🤖</div>
         <div class="chat-header-info">
-          <div class="chat-header-name">Launchly AI Assistent</div>
+          <div class="chat-header-name">Briqk Assistent</div>
           <div class="chat-header-status">Online</div>
         </div>
       </div>
       <div class="chat-messages" id="chatMessages">
         <div class="msg bot">
           <div class="msg-dot">🤖</div>
-          <div class="msg-bubble">Hoi! Ik ben de AI-assistent van Launchly. Stel me een vraag over onze diensten, of test gewoon hoe ik werk! 👋</div>
+          <div class="msg-bubble">Hoi! Ik ben de AI-assistent van Briqk. Stel me een vraag over onze diensten, of test gewoon hoe ik werk! 👋</div>
         </div>
       </div>
       <div class="quick-questions">
@@ -1514,17 +1818,101 @@
 
 
 
+<!-- FAQ -->
+<section id="faq" style="background:var(--grey);">
+  <div class="section-tag">Veelgestelde vragen</div>
+  <h2 class="section-title">Alles over AI website laten maken</h2>
+  <p class="section-sub">De meest gestelde vragen van MKB ondernemers over onze diensten.</p>
+  <div style="max-width:800px;margin-top:48px;display:flex;flex-direction:column;gap:2px;" id="faqList">
+    <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--black);padding:28px 32px;cursor:pointer;border-left:3px solid transparent;transition:border-color 0.2s;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;">
+        <h3 style="font-size:16px;font-weight:600;font-family:var(--font-display);letter-spacing:-0.3px;">Wat kost een AI website laten maken?</h3>
+        <span class="faq-icon" style="color:var(--lime);font-size:20px;flex-shrink:0;">+</span>
+      </div>
+      <div class="faq-answer" style="display:none;margin-top:16px;font-size:14px;color:var(--grey-text);line-height:1.8;">
+        Een <strong>AI website laten maken</strong> bij Briqk start vanaf <strong>€850 eenmalig</strong> voor de Starter Website. De Pro Website met AI chatbot kost €1.750 eenmalig. Daarboven betaal je een maandelijkse fee voor onderhoud en AI-updates: €99/mnd (Starter) of €249/mnd (Pro). Geen verborgen kosten — alles staat vooraf vast in de offerte.
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--black);padding:28px 32px;cursor:pointer;border-left:3px solid transparent;transition:border-color 0.2s;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;">
+        <h3 style="font-size:16px;font-weight:600;font-family:var(--font-display);letter-spacing:-0.3px;">Hoe snel is mijn AI website live?</h3>
+        <span class="faq-icon" style="color:var(--lime);font-size:20px;flex-shrink:0;">+</span>
+      </div>
+      <div class="faq-answer" style="display:none;margin-top:16px;font-size:14px;color:var(--grey-text);line-height:1.8;">
+        De <strong>Starter Website is live binnen 5-7 werkdagen</strong>. De Pro Website met AI chatbot gaat live binnen 10-14 werkdagen. Dit is inclusief design, bouw, AI-training en oplevering. Sneller dan elk traditioneel webbureau.
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--black);padding:28px 32px;cursor:pointer;border-left:3px solid transparent;transition:border-color 0.2s;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;">
+        <h3 style="font-size:16px;font-weight:600;font-family:var(--font-display);letter-spacing:-0.3px;">Wat doet een AI chatbot op mijn website?</h3>
+        <span class="faq-icon" style="color:var(--lime);font-size:20px;flex-shrink:0;">+</span>
+      </div>
+      <div class="faq-answer" style="display:none;margin-top:16px;font-size:14px;color:var(--grey-text);line-height:1.8;">
+        Een <strong>AI chatbot laten maken</strong> betekent dat jouw website 24/7 bezoekers te woord staat. De chatbot beantwoordt vragen over jouw diensten, plant afspraken in via Calendly of Google Calendar, kwalificeert leads en stuurt warme leads direct door naar jou via WhatsApp of e-mail. Getraind op jouw bedrijfsinformatie — altijd de juiste antwoorden.
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--black);padding:28px 32px;cursor:pointer;border-left:3px solid transparent;transition:border-color 0.2s;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;">
+        <h3 style="font-size:16px;font-weight:600;font-family:var(--font-display);letter-spacing:-0.3px;">Bouwen jullie ook websites voor ZZP'ers?</h3>
+        <span class="faq-icon" style="color:var(--lime);font-size:20px;flex-shrink:0;">+</span>
+      </div>
+      <div class="faq-answer" style="display:none;margin-top:16px;font-size:14px;color:var(--grey-text);line-height:1.8;">
+        Ja. De Starter Website is speciaal ontworpen voor <strong>ZZP'ers en kleine MKB bedrijven</strong> die professioneel online willen staan zonder groot budget. Voor €850 eenmalig heb je een complete website met AI contactformulier, mobielvriendelijk design en gratis hosting. Live binnen een week.
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--black);padding:28px 32px;cursor:pointer;border-left:3px solid transparent;transition:border-color 0.2s;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;">
+        <h3 style="font-size:16px;font-weight:600;font-family:var(--font-display);letter-spacing:-0.3px;">Kan een WhatsApp bot mijn klantenservice automatiseren?</h3>
+        <span class="faq-icon" style="color:var(--lime);font-size:20px;flex-shrink:0;">+</span>
+      </div>
+      <div class="faq-answer" style="display:none;margin-top:16px;font-size:14px;color:var(--grey-text);line-height:1.8;">
+        Zeker. Een <strong>WhatsApp bot voor bedrijven</strong> reageert automatisch op berichten van klanten — ook buiten kantooruren. De bot beantwoordt vragen, plant afspraken in en stuurt offertes. Volledig GDPR-proof en gekoppeld aan de officiële WhatsApp Business API.
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--black);padding:28px 32px;cursor:pointer;border-left:3px solid transparent;transition:border-color 0.2s;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;">
+        <h3 style="font-size:16px;font-weight:600;font-family:var(--font-display);letter-spacing:-0.3px;">Werken jullie alleen in Arnhem of heel Nederland?</h3>
+        <span class="faq-icon" style="color:var(--lime);font-size:20px;flex-shrink:0;">+</span>
+      </div>
+      <div class="faq-answer" style="display:none;margin-top:16px;font-size:14px;color:var(--grey-text);line-height:1.8;">
+        Briqk is gevestigd in <strong>Arnhem, Gelderland</strong> maar werkt voor MKB bedrijven door heel Nederland. Alles verloopt online: intake via formulier, gesprekken via Zoom, oplevering via Vercel. Geen verschil in service of doorlooptijd, waar je ook zit.
+      </div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--black);padding:28px 32px;cursor:pointer;border-left:3px solid transparent;transition:border-color 0.2s;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;">
+        <h3 style="font-size:16px;font-weight:600;font-family:var(--font-display);letter-spacing:-0.3px;">Wat als ik al een website heb maar toch een AI chatbot wil?</h3>
+        <span class="faq-icon" style="color:var(--lime);font-size:20px;flex-shrink:0;">+</span>
+      </div>
+      <div class="faq-answer" style="display:none;margin-top:16px;font-size:14px;color:var(--grey-text);line-height:1.8;">
+        Geen probleem. De <strong>AI Chatbot Add-on</strong> werkt op elke bestaande website — via één klein stukje code. Setup kost €600 eenmalig, daarna €149/mnd voor beheer en updates. Live binnen 3-5 werkdagen.
+      </div>
+    </div>
+  </div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Wat kost een AI website laten maken?","acceptedAnswer":{"@type":"Answer","text":"Een AI website laten maken bij Briqk start vanaf €850 eenmalig voor de Starter Website. De Pro Website met AI chatbot kost €1.750 eenmalig plus €249/mnd onderhoud."}},
+      {"@type":"Question","name":"Hoe snel is mijn AI website live?","acceptedAnswer":{"@type":"Answer","text":"De Starter Website is live binnen 5-7 werkdagen. De Pro Website met AI chatbot binnen 10-14 werkdagen."}},
+      {"@type":"Question","name":"Wat doet een AI chatbot op mijn website?","acceptedAnswer":{"@type":"Answer","text":"Een AI chatbot beantwoordt 24/7 vragen van bezoekers, plant afspraken in en kwalificeert leads — getraind op jouw bedrijfsinformatie."}},
+      {"@type":"Question","name":"Werken jullie alleen in Arnhem of heel Nederland?","acceptedAnswer":{"@type":"Answer","text":"Briqk is gevestigd in Arnhem maar werkt voor MKB bedrijven door heel Nederland via online samenwerking."}}
+    ]
+  }
+  </script>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-layout">
     <div class="contact-info reveal">
-      <div class="section-tag">Contact</div>
+      <div class="section-tag">Website laten maken voor MKB — Arnhem en heel Nederland</div>
       <h2>Klaar om te starten?</h2>
-      <p>Plan een gratis kennismakingsgesprek van 30 minuten. Geen verplichtingen, gewoon kijken of we bij elkaar passen.</p>
+      <p>Plan een gratis kennismakingsgesprek van 30 minuten over jouw AI website of automatisering. Geen verplichtingen — gewoon kijken of we bij elkaar passen.</p>
       <div class="contact-items">
         <div class="contact-item">
           <div class="contact-item-icon">📍</div>
-          Arnhem, Gelderland — ook remote
+          Arnhem, Gelderland — heel Nederland (ook remote)
         </div>
         <div class="contact-item">
           <div class="contact-item-icon">⏱️</div>
@@ -1581,9 +1969,9 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Launch<span>ly</span></div>
-  <p>© 2026 Launchly · Arnhem, Nederland · AI Websites voor MKB</p>
-  <p style="font-size:12px;color:#555">Gebouwd met Claude AI</p>
+  <div class="footer-logo">Bri<span>qk</span></div>
+  <p>© 2026 Briqk · Arnhem, Gelderland · AI website laten maken voor MKB en ZZP</p>
+  <p style="font-size:12px;color:#555"><a href="/website-laten-maken-arnhem" style="color:#555;">Website laten maken Arnhem</a> · <a href="/ai-website-laten-maken" style="color:#555;">AI website</a> · <a href="/ai-chatbot-laten-maken" style="color:#555;">AI chatbot</a></p>
 </footer>
 
 <script>
@@ -1606,16 +1994,17 @@
 
   let isLoading = false;
 
-  const SYSTEM_PROMPT = `Je bent de vriendelijke AI-assistent van Launchly, een Nederlands bedrijf dat AI-powered websites bouwt voor het MKB. 
+  const SYSTEM_PROMPT = `Je bent de vriendelijke AI-assistent van Briqk, een Nederlands bedrijf dat AI-powered websites en automatisering bouwt voor het MKB.
 
-Launchly biedt:
-- Starter AI Website: €850 eenmalig + €99/maand onderhoud (5 pagina's, AI contactformulier, hosting)
-- Pro AI Website + Chatbot: €1.750 eenmalig + €249/maand (alles uit starter + AI chatbot 24/7, agenda-integratie, WhatsApp)
-- WhatsApp Bot: €600 setup + maandelijks
-- Lead Qualifier Agent: €950 setup
-- Maatwerk: op aanvraag
+Briqk heeft 6 pakketten:
+1. Starter Website: €850 eenmalig + €99/maand — professionele website (5 pagina's), AI contactformulier, hosting. Live in 5-7 werkdagen.
+2. Pro Website + Chatbot: €1.750 eenmalig + €249/maand — alles uit Starter + AI chatbot 24/7, agenda-integratie, lead vastlegging, WhatsApp-knop. Live in 10-14 werkdagen.
+3. AI Chatbot Add-on: €600 eenmalig + €149/maand — chatbot op bestaande website via 1 script-tag. Live in 3-5 werkdagen. Geen nieuwe website nodig.
+4. WhatsApp Bot: €750 eenmalig + €149/maand — automatisch reageren op WhatsApp, afspraken inplannen, GDPR-proof. Live in 5-7 werkdagen.
+5. Lead Qualifier Agent: €950 eenmalig + €199/maand — autonome AI die leads scoort (warm/koud/niet relevant) en warme leads direct doorstuurt. Live in 7-10 werkdagen.
+6. Maatwerk: op aanvraag — meerdere agents, CRM-koppelingen, meertalig, salesautomatisering.
 
-Kenmerken: live binnen 2 weken, geen verborgen kosten, Nederlandstalig support, gevestigd in Arnhem.
+Kenmerken: geen verborgen kosten, Nederlandstalig support, gevestigd in Arnhem, ook remote.
 
 Beantwoord vragen kort, vriendelijk en in het Nederlands. Stimuleer bezoekers om een gratis gesprek in te plannen via het contactformulier. Maximaal 2-3 zinnen per antwoord. Gebruik soms een emoji. Wees direct en concreet.`;
 
@@ -1636,33 +2025,21 @@ Beantwoord vragen kort, vriendelijk en in het Nederlands. Stimuleer bezoekers om
     const typingEl = addTyping();
 
     try {
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      const response = await fetch('/api/chat', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${GROQ_API_KEY}`
-        },
-        body: JSON.stringify({
-          model: 'llama-3.1-8b-instant',
-          max_tokens: 300,
-          temperature: 0.7,
-          messages: [
-            { role: 'system', content: SYSTEM_PROMPT },
-            { role: 'user', content: message }
-          ]
-        })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message, systemPrompt: SYSTEM_PROMPT })
       });
 
       const data = await response.json();
       typingEl.remove();
 
       if (!response.ok) {
-        const errMsg = data.error?.message || `HTTP fout ${response.status}`;
-        console.error('Groq fout:', errMsg);
+        const errMsg = data.error || `HTTP fout ${response.status}`;
+        console.error('Chat fout:', errMsg);
         addMessage(`⚠️ ${errMsg}`, 'bot');
       } else {
-        const reply = data.choices?.[0]?.message?.content
-          || 'Geen antwoord ontvangen. Probeer opnieuw.';
+        const reply = data.reply || 'Geen antwoord ontvangen. Probeer opnieuw.';
         addMessage(reply, 'bot');
       }
     } catch (e) {
@@ -1717,6 +2094,27 @@ Beantwoord vragen kort, vriendelijk en in het Nederlands. Stimuleer bezoekers om
     }
   });
 
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+
+  function closeMobileNav() {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+  }
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+      closeMobileNav();
+    }
+  });
+
   // Form submit
   async function submitForm() {
     const name = document.getElementById('formName').value;
@@ -1753,6 +2151,23 @@ Beantwoord vragen kort, vriendelijk en in het Nederlands. Stimuleer bezoekers om
     } catch(e) {
       btn.textContent = 'Fout — probeer opnieuw';
       btn.disabled = false;
+    }
+  }
+
+  function toggleFaq(el) {
+    const answer = el.querySelector('.faq-answer');
+    const icon = el.querySelector('.faq-icon');
+    const isOpen = answer.style.display === 'block';
+    // close all
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-answer').style.display = 'none';
+      item.querySelector('.faq-icon').textContent = '+';
+      item.style.borderLeftColor = 'transparent';
+    });
+    if (!isOpen) {
+      answer.style.display = 'block';
+      icon.textContent = '−';
+      el.style.borderLeftColor = 'var(--lime)';
     }
   }
 </script>
