@@ -447,7 +447,7 @@
         <div class="chat-messages" id="chatMessages2">
           <div class="msg bot">
             <div class="msg-dot" style="background:#fff;color:#080808">🎯</div>
-            <div class="msg-bubble">Goedemiddag! Ik help je snel bepalen of Briqk bij jou past. Ik stel je 4 korte vragen. Klaar?</div>
+            <div class="msg-bubble">Goedemiddag! Ik help je snel bepalen of Briqk bij jou past. Ik stel je 5 korte vragen. Klaar?</div>
           </div>
         </div>
         <div class="quick-questions" id="qualQuickAnswers">
@@ -806,10 +806,11 @@ document.getElementById('chatInput1').addEventListener('keydown', e => { if (e.k
 
 // ---- BOT 2: LEAD QUALIFIER ----
 const QUAL_QUICK = [
-  ['Nieuwe website', 'AI chatbot toevoegen', 'Automatisering'],  // na q1
-  ['Onder €1.000', '€1.000 - €2.500', 'Meer dan €2.500'],       // na q2
-  ['Zo snel mogelijk', 'Binnen 1 maand', 'Oriënterend'],         // na q3
-  ['Ja, ik beslis zelf', 'Ik moet overleggen'],                  // na q4
+  ['ZZP / Freelancer', 'MKB (2-10 pers)', 'MKB (10-50 pers)'],  // na opening -> q1 antwoorden
+  ['Nieuwe website', 'AI chatbot toevoegen', 'Automatisering'],  // na q1 -> q2 antwoorden
+  ['Onder €1.000', '€1.000 - €2.500', 'Meer dan €2.500'],       // na q2 -> q3 antwoorden
+  ['Zo snel mogelijk', 'Binnen 1 maand', 'Oriënterend'],         // na q3 -> q4 antwoorden
+  ['Ja, ik beslis zelf', 'Ik moet overleggen'],                  // na q4 -> q5 antwoorden
 ];
 
 function updateQualQuick(step) {
@@ -853,6 +854,22 @@ async function sendMsg2(text) {
   if (qqa) qqa.style.display = 'none';
   addMsg('chatMessages2', msg, 'user', '🎯');
   document.getElementById('chatInput2').value = '';
+
+  // Handle "Vertel me meer eerst" - give info and reset
+  if (msg === 'Vertel me meer eerst' && qualStep === 0) {
+    isLoading2 = true;
+    document.getElementById('chatSend2').disabled = true;
+    const t = addTyping('chatMessages2', '🎯');
+    setTimeout(() => {
+      t.remove();
+      addMsg('chatMessages2', 'Briqk bouwt AI-powered websites, chatbots en automatiseringen voor Nederlands MKB. Live binnen 2 weken, vanaf €850. Klaar om te starten?', 'bot', '🎯');
+      updateQualQuick(0);
+      isLoading2 = false;
+      document.getElementById('chatSend2').disabled = false;
+    }, 800);
+    return;
+  }
+
   isLoading2 = true;
   document.getElementById('chatSend2').disabled = true;
   qualAnswers.push(msg);
