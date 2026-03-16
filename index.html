@@ -741,7 +741,7 @@ async function callAPI(systemPrompt, userMsg) {
   const res = await fetch('/api/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ system: systemPrompt, message: userMsg })
+    body: JSON.stringify({ systemPrompt: systemPrompt, message: userMsg })
   });
   if (!res.ok) throw new Error('API fout: ' + res.status);
   const data = await res.json();
