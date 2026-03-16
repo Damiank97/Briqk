@@ -738,26 +738,14 @@ Beantwoord vragen kort en vriendelijk in het Nederlands. Max 2-3 zinnen. Stimule
 let isLoading1 = false;
 
 async function callAPI(systemPrompt, userMsg) {
-  try {
-    const res = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ system: systemPrompt, message: userMsg })
-    });
-    if (!res.ok) throw new Error('api error');
-    const data = await res.json();
-    const reply = data.reply || data.choices?.[0]?.message?.content;
-    if (!reply) throw new Error('no reply');
-    return reply;
-  } catch(e) {
-    const res2 = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer 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' },
-      body: JSON.stringify({ model: 'llama-3.1-8b-instant', max_tokens: 300, temperature: 0.7, messages: [{ role: 'system', content: systemPrompt }, { role: 'user', content: userMsg }] })
-    });
-    const data2 = await res2.json();
-    return data2.choices?.[0]?.message?.content || 'Geen antwoord ontvangen.';
-  }
+  const res = await fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ system: systemPrompt, message: userMsg })
+  });
+  if (!res.ok) throw new Error('API fout: ' + res.status);
+  const data = await res.json();
+  return data.reply || data.choices?.[0]?.message?.content || 'Geen antwoord ontvangen.';
 }
 
 function addMsg(containerId, text, type, avatarEmoji) {
