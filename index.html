@@ -827,9 +827,14 @@ function showQualBtns(btns) {
   if (!c) return;
   if (!btns || btns.length === 0) { c.style.display = 'none'; return; }
   c.style.display = 'flex';
-  c.innerHTML = btns.map(function(a) {
-    return '<button class="quick-q" onclick="sendMsg2(\'' + a + '\')">' + a + '</button>';
-  }).join('');
+  c.innerHTML = '';
+  btns.forEach(function(a) {
+    var btn = document.createElement('button');
+    btn.className = 'quick-q';
+    btn.textContent = a;
+    btn.onclick = function() { sendMsg2(a); };
+    c.appendChild(btn);
+  });
 }
 
 async function sendMsg2(text) {
@@ -843,7 +848,7 @@ async function sendMsg2(text) {
   document.getElementById('chatSend2').disabled = true;
 
   // "Vertel me meer eerst" at opening - give info, keep step 0
-  if (qualStep === 0 && msg === 'Vertel me meer eerst') {
+  if (qualStep === 0 && msg.indexOf('Vertel me meer') !== -1) {
     var t1 = addTyping('chatMessages2', '\ud83c\udfaf');
     setTimeout(function() {
       t1.remove();
@@ -856,7 +861,7 @@ async function sendMsg2(text) {
   }
 
   // "Ja ga maar" at opening (step 0) - move to step 1, show q1
-  if (qualStep === 0) {
+  if (qualStep === 0 && msg.indexOf('Vertel me meer') === -1) {
     qualStep = 1;
     var t2 = addTyping('chatMessages2', '\ud83c\udfaf');
     setTimeout(function() {
