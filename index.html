@@ -651,18 +651,22 @@
         <div class="contact-item"><div class="contact-item-icon">🆓</div>Eerste gesprek altijd gratis</div>
       </div>
     </div>
-    <div class="contact-form reveal">
+    <form class="contact-form reveal" action="https://formspree.io/f/xlgpodnl" method="POST">
       <div class="form-group">
         <label>Naam</label>
-        <input type="text" placeholder="Jan de Vries" id="formName" />
+        <input type="text" name="naam" placeholder="Jan de Vries" required />
       </div>
       <div class="form-group">
         <label>E-mailadres</label>
-        <input type="email" placeholder="jan@bedrijf.nl" id="formEmail" />
+        <input type="email" name="email" placeholder="jan@bedrijf.nl" required />
+      </div>
+      <div class="form-group">
+        <label>Telefoonnummer</label>
+        <input type="tel" name="telefoon" placeholder="06 12345678" />
       </div>
       <div class="form-group">
         <label>Type bedrijf</label>
-        <select id="formType">
+        <select name="bedrijfstype">
           <option value="">Selecteer...</option>
           <option>ZZP / Freelancer</option>
           <option>MKB (2-10 medewerkers)</option>
@@ -672,7 +676,7 @@
       </div>
       <div class="form-group">
         <label>Interesse in</label>
-        <select id="formInterest">
+        <select name="interesse">
           <option value="">Selecteer...</option>
           <option>Starter Website (€850)</option>
           <option>Pro Website + Chatbot (€1.750)</option>
@@ -685,11 +689,10 @@
       </div>
       <div class="form-group">
         <label>Vraag of opmerking (optioneel)</label>
-        <textarea placeholder="Vertel iets over jouw bedrijf..." id="formMsg"></textarea>
+        <textarea name="bericht" placeholder="Vertel iets over jouw bedrijf..."></textarea>
       </div>
-      <div id="formSuccess" class="success-msg">Bedankt! We nemen binnen 24 uur contact op.</div>
-      <button class="form-submit" onclick="submitForm()">Gratis gesprek inplannen</button>
-    </div>
+      <button type="submit" class="form-submit">Gratis gesprek inplannen</button>
+    </form>
   </div>
 </section>
 
@@ -697,10 +700,10 @@
 <footer>
   <div class="footer-logo">Bri<span>qk</span></div>
   <p>© 2026 Briqk · Arnhem, Nederland · AI Websites voor MKB</p>
-  <p style="font-size:12px;color:#444"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e28b8c848da280908b9389cc8c8e">[email&#160;protected]</a> · briqk.nl</p>
+  <p style="font-size:12px;color:#444">info@briqk.nl · briqk.nl</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Mobile menu
 function toggleMenu() {
   const ham = document.getElementById('hamburger');
@@ -994,4 +997,16 @@ async function submitForm() {
     });
     if (res.ok) {
       document.getElementById('formSuccess').style.display = 'block';
-      btn.styl
+      btn.style.display = 'none';
+    } else {
+      btn.textContent = 'Probeer opnieuw';
+      btn.disabled = false;
+    }
+  } catch(e) {
+    btn.textContent = 'Probeer opnieuw';
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
