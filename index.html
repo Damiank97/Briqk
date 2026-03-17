@@ -3,13 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Briqk, Arnhem: AI Websites & Automatisering voor MKB</title>
+<title>Briqk, Arnhem: AI Websites &amp; Automatisering voor MKB</title>
 <meta name="description" content="Briqk bouwt AI-powered websites, chatbots en workflow automatiseringen voor Nederlands MKB. Live binnen 2 weken. Inclusief AI chatbot, WhatsApp bot en lead qualifier. Vanaf €850.">
-<meta name="keywords" content="AI website laten maken, AI automatisering MKB, chatbot laten maken, WhatsApp bot bedrijf, lead qualifier, website laten maken Arnhem, workflow automatisering">
-<meta property="og:title" content="AI Website & Automatisering voor MKB | Briqk">
-<meta property="og:description" content="AI websites, chatbots en automatiseringen voor MKB. Live binnen 2 weken. Vanaf €850.">
 <meta name="keywords" content="AI website laten maken, AI automatisering MKB, chatbot laten maken, WhatsApp bot bedrijf, lead qualifier, website laten maken Arnhem, AI workflow automatisering, Micro-SaaS">
+<meta property="og:title" content="AI Website &amp; Automatisering voor MKB | Briqk">
+<meta property="og:description" content="AI websites, chatbots en automatiseringen voor MKB. Live binnen 2 weken. Vanaf €850.">
+<meta property="og:image" content="https://briqk.nl/og-image.png">
 <meta property="og:url" content="https://briqk.nl">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://briqk.nl/og-image.png">
 <link rel="canonical" href="https://briqk.nl">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
@@ -28,8 +31,8 @@
     --font-body: 'DM Sans', sans-serif;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--black); color: var(--white); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { background: var(--black); color: var(--white); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; max-width: 100vw; }
 
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; backdrop-filter: blur(16px); background: rgba(8,8,8,0.7); border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -166,8 +169,6 @@
   .btn-cv { width: 100%; padding: 14px; background: var(--lime); color: var(--black); border: none; border-radius: 100px; font-family: var(--font-body); font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
   .btn-cv:hover { background: var(--lime-dark); transform: translateY(-1px); }
   .btn-cv:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-
-  /* MICRO SAAS TEASER */
   .saas-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(200,255,0,0.1); border: 1px solid rgba(200,255,0,0.2); color: var(--lime); padding: 4px 12px; border-radius: 100px; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 12px; }
 
   /* PRICING */
@@ -245,6 +246,8 @@
     .steps { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 900px) {
+    * { max-width: 100%; }
+    section { overflow-x: hidden; }
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
@@ -370,7 +373,7 @@
     <div class="pillar reveal">
       <div class="pillar-icon">🌐</div>
       <div class="pillar-tag">Meest gevraagd</div>
-      <h3>Websites & AI Bots</h3>
+      <h3>Websites &amp; AI Bots</h3>
       <p>Een professionele website met een slimme AI-assistent die 24/7 voor je werkt. Leads binnenhalen, afspraken inplannen, vragen beantwoorden.</p>
       <div class="pillar-items">
         <div class="pillar-item">Starter Website — vanaf €850</div>
@@ -415,7 +418,6 @@
   <h2 class="section-title">Zie het verschil</h2>
   <p class="section-sub">Twee bots, twee doelen. Test ze allebei en ontdek wat bij jouw bedrijf past.</p>
   <div class="demo-grid">
-    <!-- CHATBOT -->
     <div class="reveal" style="display:flex;flex-direction:column;">
       <div class="demo-label"><span>Standaard Chatbot</span> — Informeert en helpt bezoekers</div>
       <div class="chat-widget">
@@ -444,7 +446,6 @@
       </div>
     </div>
 
-    <!-- LEAD QUALIFIER -->
     <div class="reveal" style="display:flex;flex-direction:column;">
       <div class="demo-label"><span>Lead Qualifier Bot</span> — Filtert warme leads automatisch</div>
       <div class="chat-widget">
@@ -631,7 +632,7 @@
       <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
-      <div class="pricing-name">AI Automation & Maatwerk</div>
+      <div class="pricing-name">AI Automation &amp; Maatwerk</div>
       <div class="pricing-price" style="font-size:32px;letter-spacing:-1px;margin:16px 0">Op maat</div>
       <div class="pricing-period">prijs op aanvraag</div>
       <div class="pricing-desc">AI automatisering, Micro-SaaS tools of complexe koppelingen.</div>
@@ -706,7 +707,6 @@
     </form>
   </div>
 </section>
-
 </main>
 
 <!-- FOOTER -->
@@ -718,7 +718,6 @@
 </footer>
 
 <script>
-// Mobile menu
 function toggleMenu() {
   const ham = document.getElementById('hamburger');
   const nav = document.getElementById('mobileNav');
@@ -726,7 +725,6 @@ function toggleMenu() {
   nav.classList.toggle('open');
 }
 
-// Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
   entries.forEach((entry, i) => {
@@ -738,7 +736,6 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 reveals.forEach(el => observer.observe(el));
 
-// ---- BOT 1: STANDAARD CHATBOT ----
 const SYSTEM_1 = `Je bent de vriendelijke AI-assistent van Briqk, een Nederlands bedrijf dat AI-powered websites, automatiseringen en Micro-SaaS tools bouwt voor MKB.
 
 Briqk biedt:
@@ -811,27 +808,22 @@ async function sendMsg1(text) {
 function sendQuick1(btn) { sendMsg1(btn.textContent); }
 document.getElementById('chatInput1').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); sendMsg1(); } });
 
-// ---- BOT 2: LEAD QUALIFIER ----
-// ---- LEAD QUALIFIER ----
-// Flow: opening (step 0) -> q1 (step 1) -> q2 -> q3 -> q4 -> q5 -> scoring
 const QUAL_STEPS = [
-  null, // step 0: opening, buttons in HTML
-  { q: 'Super! Wat voor bedrijf heb je?',                         btns: ['ZZP / Freelancer', 'MKB (2-10 pers)', 'MKB (10-50 pers)'] },
-  { q: 'Goed! En wat wil je verbeteren of automatiseren?',        btns: ['Nieuwe website', 'AI chatbot toevoegen', 'Automatisering'] },
-  { q: 'Interessant! Heb je al een idee van je budget?',          btns: ['Onder \u20ac1.000', '\u20ac1.000 - \u20ac2.500', 'Meer dan \u20ac2.500'] },
-  { q: 'Wanneer wil je dit gerealiseerd hebben?',                 btns: ['Zo snel mogelijk', 'Binnen 1 maand', 'Ori\u00ebnterend'] },
-  { q: 'Laatste vraag: ben jij degene die de beslissing neemt?',  btns: ['Ja, ik beslis zelf', 'Ik moet overleggen'] },
+  null,
+  { q: 'Super! Wat voor bedrijf heb je?', btns: ['ZZP / Freelancer', 'MKB (2-10 pers)', 'MKB (10-50 pers)'] },
+  { q: 'Goed! En wat wil je verbeteren of automatiseren?', btns: ['Nieuwe website', 'AI chatbot toevoegen', 'Automatisering'] },
+  { q: 'Interessant! Heb je al een idee van je budget?', btns: ['\u20acOnder 1.000', '\u20ac1.000 - \u20ac2.500', 'Meer dan \u20ac2.500'] },
+  { q: 'Wanneer wil je dit gerealiseerd hebben?', btns: ['Zo snel mogelijk', 'Binnen 1 maand', 'Ori\u00ebnterend'] },
+  { q: 'Laatste vraag: ben jij degene die de beslissing neemt?', btns: ['Ja, ik beslis zelf', 'Ik moet overleggen'] },
 ];
 
-const SYSTEM_QUAL = `Je bent een vriendelijke assistent van Briqk. Beoordeel de antwoorden en geef een KORTE afsluiting van maximaal 2 zinnen. Geen analyse, geen uitleg — gewoon een menselijke reactie.
+const SYSTEM_QUAL = `Je bent een vriendelijke assistent van Briqk. Beoordeel de antwoorden en geef een KORTE afsluiting van maximaal 2 zinnen. Geen analyse, geen uitleg.
 
-Warm (budget aanwezig + urgentie binnen 3 maanden + beslisser): "Top, dit klinkt als een goede match! Damian neemt zo snel mogelijk contact met je op."
+Warm: "Top, dit klinkt als een goede match! Damian neemt zo snel mogelijk contact met je op."
+Koud: "Goed om te weten! Mocht je er klaar voor zijn, dan staan we voor je klaar."
+Niet relevant: "Bedankt voor je interesse! Dit valt helaas buiten ons werkgebied."
 
-Koud (oriënterend, geen budget of lange termijn): "Goed om te weten! Mocht je er klaar voor zijn, dan staan we voor je klaar."
-
-Niet relevant (buitenland, geen zakelijk doel): "Bedankt voor je interesse! Dit valt helaas buiten ons werkgebied."
-
-Schrijf ALTIJD in maximaal 2 korte zinnen. Geen opsommingen, geen analyse.`;
+Schrijf ALTIJD in maximaal 2 korte zinnen.`;
 
 let qualStep = 0;
 let isLoading2 = false;
@@ -855,14 +847,12 @@ function showQualBtns(btns) {
 async function sendMsg2(text) {
   var msg = text || document.getElementById('chatInput2').value.trim();
   if (!msg || isLoading2) return;
-
   showQualBtns([]);
   addMsg('chatMessages2', msg, 'user', '\ud83c\udfaf');
   document.getElementById('chatInput2').value = '';
   isLoading2 = true;
   document.getElementById('chatSend2').disabled = true;
 
-  // "Vertel me meer eerst" at opening - give info, keep step 0
   if (qualStep === 0 && msg.indexOf('Vertel me meer') !== -1) {
     var t1 = addTyping('chatMessages2', '\ud83c\udfaf');
     setTimeout(function() {
@@ -875,7 +865,6 @@ async function sendMsg2(text) {
     return;
   }
 
-  // "Ja ga maar" at opening (step 0) - move to step 1, show q1
   if (qualStep === 0 && msg.indexOf('Vertel me meer') === -1) {
     qualStep = 1;
     var t2 = addTyping('chatMessages2', '\ud83c\udfaf');
@@ -890,15 +879,12 @@ async function sendMsg2(text) {
     return;
   }
 
-  // Steps 1-5: save answer, show next question or score
   qualAnswers.push(msg);
   var progress = Math.min((qualAnswers.length / 5) * 100, 100);
   document.getElementById('qualProgress').style.width = progress + '%';
-
   var t3 = addTyping('chatMessages2', '\ud83c\udfaf');
 
   if (qualAnswers.length < 5) {
-    // More questions
     qualStep = qualAnswers.length + 1;
     setTimeout(function() {
       t3.remove();
@@ -908,7 +894,6 @@ async function sendMsg2(text) {
       document.getElementById('chatSend2').disabled = false;
     }, 800);
   } else {
-    // All 5 answered - AI scoring
     document.getElementById('qualProgress').style.width = '100%';
     var summary = 'Antwoorden:\n1. Bedrijfstype: ' + qualAnswers[0] + '\n2. Wens: ' + qualAnswers[1] + '\n3. Budget: ' + qualAnswers[2] + '\n4. Timing: ' + qualAnswers[3] + '\n5. Beslisser: ' + qualAnswers[4];
     try {
@@ -928,7 +913,6 @@ async function sendMsg2(text) {
 
 document.getElementById('chatInput2').addEventListener('keydown', function(e) { if (e.key === 'Enter') { e.preventDefault(); sendMsg2(); } });
 
-// ---- CV OPTIMIZER ----
 const SYSTEM_CV = `Je bent een expert CV-schrijver. Een gebruiker geeft je hun huidige CV en een vacature. Herschrijf hun professionele samenvatting en top 3 werkpunten zodat ze perfect aansluiten op de vacature.
 
 BELANGRIJK: Als het CV te kort of leeg is (minder dan 50 woorden), geef dan GEEN fictieve inhoud. Zeg dan vriendelijk: "Jouw CV bevat te weinig informatie. Voeg meer details toe over je werkervaring, vaardigheden en resultaten."
@@ -983,43 +967,6 @@ async function optimizeCV() {
   }
   btn.disabled = false;
   btn.textContent = 'Opnieuw optimaliseren';
-}
-
-// Contact form
-async function submitForm() {
-  const name = document.getElementById('formName').value;
-  const email = document.getElementById('formEmail').value;
-  if (!name || !email) {
-    document.getElementById('formEmail').style.borderColor='rgba(255,80,80,0.5)';
-    document.getElementById('formName').style.borderColor='rgba(255,80,80,0.5)';
-    return;
-  }
-  const btn = document.querySelector('.form-submit');
-  btn.textContent = 'Versturen...';
-  btn.disabled = true;
-  try {
-    const res = await fetch('https://formspree.io/f/xlgpodnl', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        naam: name,
-        email: email,
-        bedrijfstype: document.getElementById('formType').value,
-        interesse: document.getElementById('formInterest').value,
-        bericht: document.getElementById('formMsg').value
-      })
-    });
-    if (res.ok) {
-      document.getElementById('formSuccess').style.display = 'block';
-      btn.style.display = 'none';
-    } else {
-      btn.textContent = 'Probeer opnieuw';
-      btn.disabled = false;
-    }
-  } catch(e) {
-    btn.textContent = 'Probeer opnieuw';
-    btn.disabled = false;
-  }
 }
 </script>
 </body>
