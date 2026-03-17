@@ -1,6 +1,8 @@
 {
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/algemene-voorwaarden", "destination": "/algemene-voorwaarden.html" },
     { "source": "/blog-ai-voor-mkb", "destination": "/blog-ai-voor-mkb.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
