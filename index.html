@@ -572,7 +572,7 @@
         <li>Google Search Console + Bedrijfsprofiel</li>
         <li>Maandelijks onderhoud</li>
       </ul>
-      <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Starter')">Start gesprek</button>
     </div>
     <div class="pricing-card featured reveal">
       <div class="pricing-badge">Meest gekozen</div>
@@ -588,7 +588,7 @@
         <li>WhatsApp koppeling</li>
         <li>Maandelijkse rapportage</li>
       </ul>
-      <button class="btn-pricing btn-pricing-black" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-black" onclick="startGesprek('Pro Website')">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">Chatbot Add-on</div>
@@ -601,7 +601,7 @@
         <li>Agenda-integratie</li>
         <li>Maandelijks onderhoud</li>
       </ul>
-      <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Chatbot Add-on')">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">WhatsApp Bot</div>
@@ -615,7 +615,7 @@
         <li>Afspraken inplannen</li>
         <li>Escalatie naar eigenaar</li>
       </ul>
-      <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('WhatsApp Bot')">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">Lead Qualifier Agent</div>
@@ -629,7 +629,7 @@
         <li>WhatsApp of e-mail notificatie</li>
         <li>Maandelijkse leadrapportage</li>
       </ul>
-      <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Lead Qualifier')">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">AI Automation &amp; Maatwerk</div>
@@ -643,7 +643,7 @@
         <li>Meerdere AI agents</li>
         <li>Dedicated support</li>
       </ul>
-      <button class="btn-pricing btn-pricing-dark" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Neem contact op</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('AI Automatisering')">Neem contact op</button>
     </div>
   </div>
 </section>
@@ -718,6 +718,23 @@
 </footer>
 
 <script>
+function startGesprek(interesse) {
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+  if (interesse) {
+    setTimeout(function() {
+      var sel = document.getElementById('formInteresse');
+      if (sel) {
+        for (var i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].text.indexOf(interesse) !== -1) {
+            sel.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }, 600);
+  }
+}
+
 function toggleMenu() {
   const ham = document.getElementById('hamburger');
   const nav = document.getElementById('mobileNav');
