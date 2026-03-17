@@ -23,7 +23,7 @@
     --lime-dark: #9FCC00;
     --grey: #1A1A1A;
     --grey-mid: #2E2E2E;
-    --grey-text: #888;
+    --grey-text: #999;
     --font-display: 'Syne', sans-serif;
     --font-body: 'DM Sans', sans-serif;
   }
@@ -272,6 +272,7 @@
 </script>
 </head>
 <body>
+<a href="#main-content" style="position:absolute;top:-40px;left:0;background:var(--lime);color:var(--black);padding:8px 16px;z-index:9999;border-radius:0 0 8px 0;font-size:14px;text-decoration:none;transition:top 0.2s" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Naar hoofdinhoud</a>
 
 <!-- NAV -->
 <nav>
@@ -295,6 +296,7 @@
   <a href="#contact" onclick="toggleMenu()" style="color:var(--lime)">Gratis gesprek</a>
 </div>
 
+<main id="main-content">
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -662,20 +664,20 @@
     <form class="contact-form reveal" action="https://formspree.io/f/xlgpodnl" method="POST">
       <input type="hidden" name="_next" value="https://briqk.nl/#contact" />
       <div class="form-group">
-        <label>Naam</label>
-        <input type="text" name="naam" placeholder="Jan de Vries" required />
+        <label for="formNaam">Naam</label>
+        <input type="text" id="formNaam" name="naam" placeholder="Jan de Vries" required />
       </div>
       <div class="form-group">
-        <label>E-mailadres</label>
-        <input type="email" name="email" placeholder="jan@bedrijf.nl" required />
+        <label for="formEmail">E-mailadres</label>
+        <input type="email" id="formEmail" name="email" placeholder="jan@bedrijf.nl" required />
       </div>
       <div class="form-group">
-        <label>Telefoonnummer</label>
-        <input type="tel" name="telefoon" placeholder="06 12345678" />
+        <label for="formTel">Telefoonnummer</label>
+        <input type="tel" id="formTel" name="telefoon" placeholder="06 12345678" />
       </div>
       <div class="form-group">
-        <label>Type bedrijf</label>
-        <select name="bedrijfstype">
+        <label for="formType">Type bedrijf</label>
+        <select id="formType" name="bedrijfstype">
           <option value="">Selecteer...</option>
           <option>ZZP / Freelancer</option>
           <option>MKB (2-10 medewerkers)</option>
@@ -684,8 +686,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label>Interesse in</label>
-        <select name="interesse">
+        <label for="formInteresse">Interesse in</label>
+        <select id="formInteresse" name="interesse">
           <option value="">Selecteer...</option>
           <option>Starter Website (€850)</option>
           <option>Pro Website + Chatbot (€1.750)</option>
@@ -697,13 +699,15 @@
         </select>
       </div>
       <div class="form-group">
-        <label>Vraag of opmerking (optioneel)</label>
-        <textarea name="bericht" placeholder="Vertel iets over jouw bedrijf..."></textarea>
+        <label for="formBericht">Vraag of opmerking (optioneel)</label>
+        <textarea id="formBericht" name="bericht" placeholder="Vertel iets over jouw bedrijf..."></textarea>
       </div>
       <button type="submit" class="form-submit">Gratis gesprek inplannen</button>
     </form>
   </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
