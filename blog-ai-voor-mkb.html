@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI voor MKB: Waarom je nu moet beginnen | Briqk Blog</title>
+<meta name="description" content="Ontdek hoe AI jouw MKB bedrijf kan transformeren. Van chatbots tot workflow automatisering — praktische tips voor ondernemers in 2026.">
+<link rel="canonical" href="https://briqk.nl/blog/ai-voor-mkb">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #080808;
+    --white: #F5F2ED;
+    --lime: #C8FF00;
+    --grey: #1A1A1A;
+    --grey-mid: #2E2E2E;
+    --grey-text: #888;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; backdrop-filter: blur(16px); background: rgba(8,8,8,0.7); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 22px; color: var(--white); text-decoration: none; }
+  .nav-logo span { color: var(--lime); }
+  .nav-back { color: var(--grey-text); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+  .nav-back:hover { color: var(--white); }
+
+  .hero { padding: 140px 80px 60px; max-width: 900px; margin: 0 auto; }
+  .blog-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(200,255,0,0.1); border: 1px solid rgba(200,255,0,0.25); color: var(--lime); padding: 6px 16px; border-radius: 100px; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 28px; }
+  .blog-title { font-family: var(--font-display); font-size: clamp(36px, 5vw, 64px); font-weight: 800; letter-spacing: -2px; line-height: 1; margin-bottom: 24px; }
+  .blog-title em { font-style: normal; color: var(--lime); }
+  .blog-meta { display: flex; align-items: center; gap: 20px; font-size: 14px; color: var(--grey-text); margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .blog-meta span { display: flex; align-items: center; gap: 6px; }
+
+  .blog-content { max-width: 720px; margin: 0 auto; padding: 0 80px 80px; }
+  .blog-content p { font-size: 17px; line-height: 1.8; color: rgba(245,242,237,0.85); margin-bottom: 24px; }
+  .blog-content h2 { font-family: var(--font-display); font-size: 28px; font-weight: 700; letter-spacing: -1px; margin: 48px 0 16px; color: var(--white); }
+  .blog-content h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; margin: 32px 0 12px; color: var(--white); }
+  .blog-content strong { color: var(--white); font-weight: 500; }
+
+  .highlight-box { background: rgba(200,255,0,0.06); border: 1px solid rgba(200,255,0,0.2); border-radius: 16px; padding: 28px 32px; margin: 32px 0; }
+  .highlight-box p { color: var(--white); margin: 0; font-size: 16px; }
+  .highlight-box .label { font-size: 11px; color: var(--lime); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+
+  .examples-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+  .example-card { background: var(--grey); border-radius: 12px; padding: 24px; }
+  .example-card .icon { font-size: 28px; margin-bottom: 12px; }
+  .example-card h4 { font-family: var(--font-display); font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+  .example-card p { font-size: 14px; color: var(--grey-text); line-height: 1.6; margin: 0; }
+
+  .steps { display: flex; flex-direction: column; gap: 0; margin: 32px 0; }
+  .step-item { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .step-num { font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--lime); flex-shrink: 0; width: 40px; line-height: 1; }
+  .step-content h4 { font-weight: 500; margin-bottom: 6px; }
+  .step-content p { font-size: 15px; color: var(--grey-text); margin: 0; line-height: 1.6; }
+
+  .cta-block { background: var(--grey); border-radius: 20px; padding: 48px; text-align: center; margin: 48px 0; }
+  .cta-block h2 { font-family: var(--font-display); font-size: 28px; font-weight: 800; letter-spacing: -1px; margin-bottom: 12px; }
+  .cta-block p { color: var(--grey-text); margin-bottom: 28px; }
+  .btn-primary { background: var(--lime); color: var(--black); padding: 16px 32px; border-radius: 100px; font-family: var(--font-body); font-size: 15px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+  .btn-primary:hover { background: #9FCC00; transform: translateY(-2px); }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .hero { padding: 120px 24px 40px; }
+    .blog-content { padding: 0 24px 60px; }
+    .examples-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://briqk.nl" class="nav-logo">Bri<span>qk</span></a>
+  <a href="https://briqk.nl" class="nav-back">← Terug naar briqk.nl</a>
+</nav>
+
+<article>
+  <div class="hero">
+    <div class="blog-tag">Blog · AI voor MKB</div>
+    <h1 class="blog-title">Waarom jouw MKB bedrijf<br><em>nu</em> moet beginnen met AI</h1>
+    <div class="blog-meta">
+      <span>📅 Maart 2026</span>
+      <span>⏱️ 5 minuten lezen</span>
+      <span>✍️ Briqk</span>
+    </div>
+  </div>
+
+  <div class="blog-content">
+
+    <p>Er is een verschuiving gaande in het Nederlandse bedrijfsleven. Grote bedrijven gebruiken al jaren AI om efficiënter te werken. Maar nu is het ook voor het MKB bereikbaar — en goedkoper dan je denkt.</p>
+
+    <p>In dit artikel lees je wat AI concreet kan doen voor jouw bedrijf, welke toepassingen het meest opleveren en hoe je er morgen mee kunt beginnen.</p>
+
+    <div class="highlight-box">
+      <div class="label">Wist je dat?</div>
+      <p>Bedrijven die AI inzetten voor klantenservice besparen gemiddeld <strong>30% op tijd</strong> die medewerkers kwijt zijn aan terugkerende vragen. Dat zijn uren die je terug kunt steken in werk dat écht groei oplevert.</p>
+    </div>
+
+    <h2>Wat is AI eigenlijk voor een MKB bedrijf?</h2>
+
+    <p>AI is voor jou als ondernemer geen rocket science. Het gaat simpelweg om software die repetitief werk overneemt. Denk aan het beantwoorden van standaardvragen van klanten, het kwalificeren van leads, of het automatisch versturen van follow-up mails na een offerte.</p>
+
+    <p>Je hoeft er geen programmeur voor te zijn. De tools van nu zijn zo gebouwd dat je er als ondernemer mee uit de voeten kunt — of je een installatiebedrijf hebt, een makelaardij runt, of een webshop hebt.</p>
+
+    <h2>De drie meest waardevolle AI toepassingen voor MKB</h2>
+
+    <div class="examples-grid">
+      <div class="example-card">
+        <div class="icon">🤖</div>
+        <h4>AI Chatbot op je website</h4>
+        <p>Beantwoordt vragen 24/7, ook 's nachts en in het weekend. Plant afspraken in en vangt leads op terwijl jij slaapt.</p>
+      </div>
+      <div class="example-card">
+        <div class="icon">🎯</div>
+        <h4>Lead Qualifier</h4>
+        <p>Filtert automatisch welke leads de moeite waard zijn. Alleen warme leads komen bij jou terecht — geen tijdverspilling meer.</p>
+      </div>
+      <div class="example-card">
+        <div class="icon">⚙️</div>
+        <h4>Workflow Automatisering</h4>
+        <p>Van lead binnenkomt naar CRM, follow-up mail verstuurd en WhatsApp notificatie — volledig automatisch.</p>
+      </div>
+      <div class="example-card">
+        <div class="icon">📱</div>
+        <h4>WhatsApp Bot</h4>
+        <p>Reageert automatisch op WhatsApp berichten van klanten. Beantwoordt vragen, plant afspraken in en stuurt brochures.</p>
+      </div>
+    </div>
+
+    <h2>Waarom nú en niet over een jaar?</h2>
+
+    <p>De concurrenten in jouw branche die nu beginnen met AI, hebben over een jaar een flinke voorsprong. Ze draaien op lagere kosten, hebben meer capaciteit en reageren sneller op leads.</p>
+
+    <p>Bovendien worden de tools elk kwartaal beter. Wie nu leert hoe het werkt, kan over een jaar veel geavanceerdere toepassingen inzetten. Wachten is dus twee keer verliezen.</p>
+
+    <div class="highlight-box">
+      <div class="label">Echt gebeurd</div>
+      <p>Een makelaar in Arnhem ontving gemiddeld 40 vragen per week via de website. Na het implementeren van een AI chatbot werd 70% daarvan automatisch beantwoord. <strong>Resultaat: 6 uur per week bespaard.</strong></p>
+    </div>
+
+    <h2>Hoe begin je als MKB ondernemer met AI?</h2>
+
+    <div class="steps">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Begin met één probleem</h4>
+          <p>Niet alles tegelijk. Kies het grootste pijnpunt: te veel terugkerende vragen? Begin met een chatbot. Te veel slechte leads? Begin met een lead qualifier.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Kies voor een kant-en-klare oplossing</h4>
+          <p>Zelf bouwen is niet nodig. Er zijn bureaus die AI-oplossingen op maat bouwen voor MKB, vaak al vanaf €600 eenmalig. Dat verdien je terug in de eerste maand.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Meet het resultaat</h4>
+          <p>Hoeveel vragen beantwoordt de chatbot per week? Hoeveel leads worden automatisch gekwalificeerd? Cijfers laten zien of de investering loont.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Breid uit wat werkt</h4>
+          <p>Als de chatbot werkt, voeg je een WhatsApp bot toe. Als de lead qualifier werkt, automatiseer je de follow-up. Stap voor stap bouw je een digitale medewerker.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Wat kost het?</h2>
+
+    <p>Een AI chatbot op je website begint al vanaf <strong>€600 eenmalig</strong>, met een maandelijks onderhoudsbedrag van zo'n €150. Vergelijk dat met één extra medewerker die €2.500 per maand kost — en de chatbot werkt ook nog eens 24/7.</p>
+
+    <p>Voor een complete AI-powered website met chatbot, lead qualifier en automatiseringen betaal je eenmalig gemiddeld €1.750. Dat is een investering die de meeste MKB bedrijven in 2-3 maanden terugverdienen.</p>
+
+    <h2>De conclusie</h2>
+
+    <p>AI is niet meer iets van grote corporates met IT-afdelingen. Het is beschikbaar, betaalbaar en direct inzetbaar voor elk MKB bedrijf. De vraag is niet langer óf je ermee begint, maar wanneer.</p>
+
+    <p>Die bedrijven die nu de stap zetten, werken over een jaar efficiënter, reageren sneller op klanten en verliezen minder leads. De rest haalt in — of valt weg.</p>
+
+    <div class="cta-block">
+      <h2>Klaar om te beginnen?</h2>
+      <p>Plan een gratis kennismakingsgesprek van 30 minuten. We kijken samen wat AI voor jouw bedrijf kan doen.</p>
+      <a href="https://briqk.nl/#contact" class="btn-primary">Gratis gesprek inplannen →</a>
+    </div>
+
+  </div>
+</article>
+
+</body>
+</html>
