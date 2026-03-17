@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Website & Automatisering voor MKB | Briqk — Arnhem</title>
-<meta name="description" content="Briqk bouwt AI-powered websites, chatbots en workflow automatiseringen voor Nederlands MKB. Live binnen 2 weken. Chatbot, WhatsApp bot, lead qualifier. Vanaf €850.">
+<title>Briqk, Arnhem: AI Websites & Automatisering voor MKB</title>
+<meta name="description" content="Briqk bouwt AI-powered websites, chatbots en workflow automatiseringen voor Nederlands MKB. Live binnen 2 weken. Inclusief AI chatbot, WhatsApp bot en lead qualifier. Vanaf €850.">
 <meta name="keywords" content="AI website laten maken, AI automatisering MKB, chatbot laten maken, WhatsApp bot bedrijf, lead qualifier, website laten maken Arnhem, workflow automatisering">
 <meta property="og:title" content="AI Website & Automatisering voor MKB | Briqk">
 <meta property="og:description" content="AI websites, chatbots en automatiseringen voor MKB. Live binnen 2 weken. Vanaf €850.">
@@ -804,7 +804,15 @@ const QUAL_STEPS = [
   { q: 'Laatste vraag: ben jij degene die de beslissing neemt?',  btns: ['Ja, ik beslis zelf', 'Ik moet overleggen'] },
 ];
 
-const SYSTEM_QUAL = `Je bent een vriendelijke lead qualifier voor Briqk. Beoordeel de antwoorden en geef een korte afsluiting. Max 3 zinnen. Warm = budget aanwezig, urgentie binnen 3 maanden, beslisser. Koud = orienterend. Niet relevant = buitenland of geen zakelijke toepassing. Bij warm: vertel enthousiast dat iemand snel contact opneemt. Bij koud: vriendelijk afronden. Bij niet relevant: vriendelijk uitleggen.`;
+const SYSTEM_QUAL = `Je bent een vriendelijke assistent van Briqk. Beoordeel de antwoorden en geef een KORTE afsluiting van maximaal 2 zinnen. Geen analyse, geen uitleg — gewoon een menselijke reactie.
+
+Warm (budget aanwezig + urgentie binnen 3 maanden + beslisser): "Top, dit klinkt als een goede match! Damian neemt zo snel mogelijk contact met je op."
+
+Koud (oriënterend, geen budget of lange termijn): "Goed om te weten! Mocht je er klaar voor zijn, dan staan we voor je klaar."
+
+Niet relevant (buitenland, geen zakelijk doel): "Bedankt voor je interesse! Dit valt helaas buiten ons werkgebied."
+
+Schrijf ALTIJD in maximaal 2 korte zinnen. Geen opsommingen, geen analyse.`;
 
 let qualStep = 0;
 let isLoading2 = false;
