@@ -969,12 +969,40 @@ async function optimizeCV() {
 }
 
 // Contact form
-function submitForm() {
+async function submitForm() {
   const name = document.getElementById('formName').value;
   const email = document.getElementById('formEmail').value;
-  if (!name || !email) { document.getElementById('formEmail').style.borderColor='rgba(255,80,80,0.5)'; document.getElementById('formName').style.borderColor='rgba(255,80,80,0.5)'; return; }
-  document.getElementById('formSuccess').style.display = 'block';
-  document.querySelector('.form-submit').style.display = 'none';
+  if (!name || !email) {
+    document.getElementById('formEmail').style.borderColor='rgba(255,80,80,0.5)';
+    document.getElementById('formName').style.borderColor='rgba(255,80,80,0.5)';
+    return;
+  }
+  const btn = document.querySelector('.form-submit');
+  btn.textContent = 'Versturen...';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://formspree.io/f/xlgpodnl', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        naam: name,
+        email: email,
+        bedrijfstype: document.getElementById('formType').value,
+        interesse: document.getElementById('formInterest').value,
+        bericht: document.getElementById('formMsg').value
+      })
+    });
+    if (res.ok) {
+      document.getElementById('formSuccess').style.display = 'block';
+      btn.style.display = 'none';
+    } else {
+      btn.textContent = 'Probeer opnieuw';
+      btn.disabled = false;
+    }
+  } catch(e) {
+    btn.textContent = 'Probeer opnieuw';
+    btn.disabled = false;
+  }
 }
 </script>
 </body>
