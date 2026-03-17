@@ -990,7 +990,7 @@ function prefillContact(product, interest) {
   const select = document.getElementById('formInteresse');
   if (select) {
     for (let i = 0; i < select.options.length; i++) {
-      if (select.options[i].text.includes(product.split(' ')[0])) {
+      if (select.options[i].text === interest) {
         select.selectedIndex = i;
         break;
       }
@@ -998,7 +998,7 @@ function prefillContact(product, interest) {
   }
   const msg = document.getElementById('formBericht');
   if (msg) {
-    msg.value = 'Hallo, ik ben geïnteresseerd in ' + interest + '. Kunnen jullie mij meer informatie geven?';
+    msg.value = 'Hallo, ik ben geintresseerd in ' + interest + '. Kunnen jullie mij meer informatie geven?';
   }
   document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
 }
