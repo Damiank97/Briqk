@@ -73,6 +73,7 @@
   .stat-num span { color: var(--lime); }
   .stat-label { font-size: 13px; color: var(--grey-text); margin-top: 4px; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes arrowBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
 
   /* SECTIONS */
   section { padding: 120px 80px; }
@@ -85,7 +86,7 @@
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 60px; }
   .step { background: var(--black); padding: 40px; position: relative; transition: background 0.3s; }
   .step:hover { background: #111; }
-  .step-num { font-family: var(--font-display); font-size: 72px; font-weight: 800; color: rgba(255,255,255,0.04); line-height: 1; position: absolute; top: 24px; right: 32px; }
+  .step-num { font-family: var(--font-display); font-size: 72px; font-weight: 800; color: rgba(255,255,255,0.12); line-height: 1; position: absolute; top: 24px; right: 32px; }
   .step-icon { width: 48px; height: 48px; background: rgba(200,255,0,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
   .step h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
   .step p { font-size: 14px; color: var(--grey-text); line-height: 1.7; }
@@ -307,9 +308,24 @@
   <div class="hero-tag">AI voor Nederlands MKB</div>
   <h1>Meer klanten.<br><em>Minder werk.</em><br>Automatisch.</h1>
   <p class="hero-sub">Van <strong>AI website</strong> tot volledige <strong>workflow automatisering</strong>. Wij bouwen digitale medewerkers die 24/7 voor jouw bedrijf werken.</p>
+  <div class="hero-scroll-hint" style="position:absolute;bottom:40px;left:80px;display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.6;">
+    <span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--lime)">Scroll</span>
+    <svg width="24" height="32" viewBox="0 0 24 32" fill="none" style="animation:bounceDown 1.5s infinite;">
+      <path d="M12 2 L12 22 M5 15 L12 22 L19 15" stroke="#C8FF00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <style>@keyframes bounceDown { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }</style>
   <div class="hero-actions">
     <a href="#contact" class="btn-primary">Gratis gesprek inplannen</a>
     <a href="#demo" class="btn-ghost">Bekijk de demo</a>
+  </div>
+  <div style="margin-top:32px;animation:fadeUp 0.8s 0.5s ease both;">
+    <a href="#diensten" style="display:inline-flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;opacity:0.5;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.5">
+      <span style="font-size:11px;color:var(--lime);letter-spacing:0.12em;text-transform:uppercase;font-weight:500;">Scroll</span>
+      <svg width="20" height="32" viewBox="0 0 20 32" fill="none" style="animation:arrowBounce 1.6s ease-in-out infinite;">
+        <path d="M10 0 L10 24 M3 17 L10 24 L17 17" stroke="#C8FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </div>
   <div class="hero-stats">
     <div class="stat-item">
@@ -575,7 +591,7 @@
       <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Starter')">Start gesprek</button>
     </div>
     <div class="pricing-card featured reveal">
-      <div class="pricing-badge">Meest gekozen</div>
+      <div class="pricing-badge">Aanbevolen</div>
       <div class="pricing-name">Pro Website + Chatbot</div>
       <div class="pricing-price"><sup>€</sup>1.750</div>
       <div class="pricing-period">eenmalig + €249/maand</div>
@@ -657,7 +673,7 @@
       <p>Plan een gratis kennismakingsgesprek van 30 minuten. Geen verplichtingen.</p>
       <div class="contact-items">
         <div class="contact-item"><div class="contact-item-icon">📍</div>Arnhem, Gelderland — ook remote</div>
-        <div class="contact-item"><div class="contact-item-icon">📞</div>06 42839335</div>
+        <div class="contact-item"><div class="contact-item-icon">📞</div><a href="tel:0642839335" style="color:var(--lime);text-decoration:underline;text-underline-offset:3px;">06 42839335</a></div>
         <div class="contact-item"><div class="contact-item-icon">⏱️</div>Reactie binnen 24 uur</div>
         <div class="contact-item"><div class="contact-item-icon">🆓</div>Eerste gesprek altijd gratis</div>
       </div>
@@ -674,7 +690,7 @@
       </div>
       <div class="form-group">
         <label for="formTel">Telefoonnummer</label>
-        <input type="tel" id="formTel" name="telefoon" placeholder="06 12345678" />
+        <input type="tel" id="formTel" name="telefoon" placeholder="06 12345678" pattern="[0-9\s\-\+]{10,15}" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9\s\-\+]/g,'')" />
       </div>
       <div class="form-group">
         <label for="formType">Type bedrijf</label>
@@ -687,17 +703,16 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="formInteresse">Interesse in</label>
-        <select id="formInteresse" name="interesse">
-          <option value="">Selecteer...</option>
-          <option>Starter Website (€850)</option>
-          <option>Pro Website + Chatbot (€1.750)</option>
-          <option>Chatbot Add-on (€600)</option>
-          <option>WhatsApp Bot (€750)</option>
-          <option>Lead Qualifier Agent (€950)</option>
-          <option>AI Automatisering</option>
-          <option>Micro-SaaS Tool</option>
-        </select>
+        <label>Interesse in (meerdere mogelijk)</label>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;" id="interesseCheckboxes">
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Starter Website (€850)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Starter Website (€850)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Pro Website + Chatbot (€1.750)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Pro Website + Chatbot (€1.750)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Chatbot Add-on (€600)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Chatbot Add-on (€600)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="WhatsApp Bot (€750)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> WhatsApp Bot (€750)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Lead Qualifier Agent (€950)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Lead Qualifier Agent (€950)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="AI Automatisering" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> AI Automatisering</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Micro-SaaS Tool" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Micro-SaaS Tool</label>
+        </div>
       </div>
       <div class="form-group">
         <label for="formBericht">Vraag of opmerking (optioneel)</label>
@@ -714,7 +729,9 @@
   <div class="footer-logo">Bri<span>qk</span></div>
   <p>© 2026 Briqk · Arnhem, Nederland · AI Websites voor MKB</p>
   <p style="font-size:13px;color:var(--grey-text)"><a href="/blog-ai-voor-mkb" style="color:var(--lime);text-decoration:none">Blog: AI voor MKB →</a></p>
-  <p style="font-size:12px;color:#444">info@briqk.nl · briqk.nl</p>
+  <p style="font-size:12px;color:#888">info@briqk.nl · briqk.nl</p>
+  <div style="font-size:12px;color:#666;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px"><a href="/privacy" style="color:#666;text-decoration:none;border-bottom:1px solid #444">Privacybeleid</a><a href="/voorwaarden" style="color:#666;text-decoration:none;border-bottom:1px solid #444">Algemene Voorwaarden</a></div>
+  <p style="font-size:12px;color:#666"><a href="/privacy" style="color:#888;text-decoration:none;">Privacybeleid</a> · <a href="/algemene-voorwaarden" style="color:#888;text-decoration:none;">Algemene Voorwaarden</a></p>
 </footer>
 
 <script>
@@ -722,15 +739,10 @@ function startGesprek(interesse) {
   document.getElementById('contact').scrollIntoView({behavior:'smooth'});
   if (interesse) {
     setTimeout(function() {
-      var sel = document.getElementById('formInteresse');
-      if (sel) {
-        for (var i = 0; i < sel.options.length; i++) {
-          if (sel.options[i].text.indexOf(interesse) !== -1) {
-            sel.selectedIndex = i;
-            break;
-          }
-        }
-      }
+      var boxes = document.querySelectorAll('#interesseCheckboxes input[type=checkbox]');
+      boxes.forEach(function(box) {
+        box.checked = box.value.indexOf(interesse) !== -1;
+      });
       var bericht = document.getElementById('formBericht');
       if (bericht) {
         var labels = {
