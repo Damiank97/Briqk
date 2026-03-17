@@ -731,6 +731,18 @@ function startGesprek(interesse) {
           }
         }
       }
+      var bericht = document.getElementById('formBericht');
+      if (bericht && !bericht.value) {
+        var labels = {
+          'Starter': 'Hallo, ik heb interesse in de Starter Website (€850). Kunnen jullie mij meer informatie geven?',
+          'Pro Website': 'Hallo, ik heb interesse in de Pro Website + Chatbot (€1.750). Kunnen jullie mij meer informatie geven?',
+          'Chatbot Add-on': 'Hallo, ik heb interesse in de Chatbot Add-on (€600). Kunnen jullie mij meer informatie geven?',
+          'WhatsApp Bot': 'Hallo, ik heb interesse in de WhatsApp Bot (€750). Kunnen jullie mij meer informatie geven?',
+          'Lead Qualifier': 'Hallo, ik heb interesse in de Lead Qualifier Agent (€950). Kunnen jullie mij meer informatie geven?',
+          'AI Automatisering': 'Hallo, ik heb interesse in AI Automatisering of Maatwerk. Kunnen jullie mij meer informatie geven?'
+        };
+        bericht.value = labels[interesse] || '';
+      }
     }, 600);
   }
 }
