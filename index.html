@@ -678,10 +678,12 @@
       <div class="form-group">
         <label for="formEmail">E-mailadres</label>
         <input type="email" id="formEmail" name="email" placeholder="jan@bedrijf.nl" required />
+        <span id="emailError" style="display:none;font-size:12px;color:#ff6b6b;margin-top:4px;">Vul een geldig e-mailadres in.</span>
       </div>
       <div class="form-group">
         <label for="formTel">Telefoonnummer</label>
-        <input type="tel" id="formTel" name="telefoon" placeholder="06 12345678" pattern="[0-9\s\-\+]{10,15}" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9\s\-\+]/g,'')" />
+        <input type="tel" id="formTel" name="telefoon" placeholder="06 12345678" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9\s\-\+]/g,'')" />
+        <span id="telError" style="display:none;font-size:12px;color:#ff6b6b;margin-top:4px;">Vul een geldig telefoonnummer in (minimaal 10 cijfers).</span>
       </div>
       <div class="form-group">
         <label for="formType">Type bedrijf</label>
@@ -709,7 +711,7 @@
         <label for="formBericht">Vraag of opmerking (optioneel)</label>
         <textarea id="formBericht" name="bericht" placeholder="Vertel iets over jouw bedrijf..."></textarea>
       </div>
-      <button type="submit" class="form-submit">Gratis gesprek inplannen</button>
+      <button type="submit" class="form-submit" >Gratis gesprek inplannen</button>
     </form>
   </div>
 </section>
@@ -999,6 +1001,44 @@ async function optimizeCV() {
   btn.disabled = false;
   btn.textContent = 'Opnieuw optimaliseren';
 }
+
+(function() {
+  var emailInput = document.getElementById('formEmail');
+  var telInput = document.getElementById('formTel');
+  var emailErr = document.getElementById('emailError');
+  var telErr = document.getElementById('telError');
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function validateEmail() {
+    var val = emailInput.value.trim();
+    if (val.length === 0) { emailErr.style.display = 'none'; emailInput.style.borderColor = ''; return; }
+    if (!emailRegex.test(val)) {
+      emailErr.style.display = 'block';
+      emailInput.style.borderColor = 'rgba(255,107,107,0.6)';
+    } else {
+      emailErr.style.display = 'none';
+      emailInput.style.borderColor = 'rgba(200,255,0,0.4)';
+    }
+  }
+
+  function validateTel() {
+    var val = telInput.value.trim();
+    var digits = val.replace(/[^0-9]/g, '');
+    if (val.length === 0) { telErr.style.display = 'none'; telInput.style.borderColor = ''; return; }
+    if (digits.length < 10) {
+      telErr.style.display = 'block';
+      telInput.style.borderColor = 'rgba(255,107,107,0.6)';
+    } else {
+      telErr.style.display = 'none';
+      telInput.style.borderColor = 'rgba(200,255,0,0.4)';
+    }
+  }
+
+  emailInput.addEventListener('blur', validateEmail);
+  emailInput.addEventListener('input', validateEmail);
+  telInput.addEventListener('blur', validateTel);
+  telInput.addEventListener('input', validateTel);
+})();
 </script>
 </body>
 </html>
