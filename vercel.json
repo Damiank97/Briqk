@@ -2,9 +2,8 @@
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/voorwaarden", "destination": "/algemene-voorwaarden.html" },
+    { "source": "/voorwaarden", "destination": "/voorwaarden.html" },
     { "source": "/blog-ai-voor-mkb", "destination": "/blog-ai-voor-mkb.html" },
-    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
