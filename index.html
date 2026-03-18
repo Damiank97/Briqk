@@ -248,8 +248,6 @@
     .steps { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 900px) {
-    * { max-width: 100%; }
-    section { overflow-x: hidden; }
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
@@ -994,3 +992,4 @@ async function optimizeCV() {
     const reply = await callAPI(SYSTEM_CV, userMsg);
     result.innerHTML = renderCV(reply);
     result.className = 'cv-result visible';
+ 
