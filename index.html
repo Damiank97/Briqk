@@ -17,7 +17,7 @@
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Briqk","url":"https://briqk.nl","telephone":"06-42839335","address":{"@type":"PostalAddress","addressLocality":"Arnhem","addressRegion":"Gelderland","addressCountry":"NL"},"description":"Briqk bouwt AI-powered websites voor Nederlands MKB","priceRange":"€€","openingHours":"Mo-Fr 09:00-18:00"}</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -992,3 +992,4 @@ async function optimizeCV() {
     const reply = await callAPI(SYSTEM_CV, userMsg);
     result.innerHTML = renderCV(reply);
     result.className = 'cv-result visible';
+ 
