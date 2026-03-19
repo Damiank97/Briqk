@@ -267,8 +267,7 @@
     .steps { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 900px) {
-    * { max-width: 100%; }
-    section { overflow-x: hidden; }
+    * { max-width: 100%; overflow-x: hidden; }
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
@@ -683,8 +682,11 @@
       <details class="monthly-accordion">
         <summary>Wat zit er in de maandkosten?<span class="ma-chevron">▼</span></summary>
         <div class="accordion-body"><ul>
-          <li>X uur ondersteuning en onderhoud per maand in overleg bepaald</li>
-          <li>Prioriteits-support reactie binnen 4 uur (werkdagen)</li>
+          <li>Aantal uur per maand wordt vooraf afgestemd op jouw project</li>
+          <li>Proactief beheer: wij signaleren problemen voordat jij ze ziet</li>
+          <li>Updates bij API-wijzigingen van gekoppelde tools (Make, n8n, CRM)</li>
+          <li>Directe lijn met de bouwer, geen supporttickets</li>
+          <li>Prioriteits-support: reactie binnen 4 uur (werkdagen)</li>
         </ul></div>
       </details>
       <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('AI Automatisering')">Neem contact op</button>
@@ -760,11 +762,11 @@
   <div class="footer-logo" style="white-space:nowrap;">Bri<span>qk</span></div>
   <p>© 2026 Briqk · Arnhem, Nederland · AI Websites voor MKB</p>
   <p style="font-size:13px;color:var(--grey-text)"><a href="/blog-ai-voor-mkb" style="color:var(--lime);text-decoration:none">Blog: AI voor MKB →</a></p>
-  <p style="font-size:12px;color:#888">info@briqk.nl · briqk.nl</p>
+  <p style="font-size:12px;color:#888"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1a73747c755a7868736b71347476">[email&#160;protected]</a> · briqk.nl</p>
   <div style="font-size:12px;color:#666;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;"><a href="/privacy" style="color:#666;text-decoration:none;border-bottom:1px solid #444">Privacybeleid</a><a href="/voorwaarden" style="color:#666;text-decoration:none;border-bottom:1px solid #444">Voorwaarden</a></div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function startGesprek(interesse) {
   document.getElementById('contact').scrollIntoView({behavior:'smooth'});
   if (interesse) {
@@ -802,7 +804,7 @@ var observer = new IntersectionObserver(function(entries) {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(function(el) { observer.observe(el); });
 
 var SYSTEM_1 = "Je bent de vriendelijke AI-assistent van Briqk, een Nederlands bedrijf dat AI-powered websites, automatiseringen en Micro-SaaS tools bouwt voor MKB.\n\nBriqk biedt:\n- Starter Website: \u20ac850 eenmalig + \u20ac99/mnd\n- Pro Website + Chatbot: \u20ac1.750 + \u20ac249/mnd\n- Chatbot Add-on: \u20ac600 + \u20ac149/mnd\n- WhatsApp Bot: \u20ac750 + \u20ac149/mnd\n- Lead Qualifier Agent: \u20ac950 + \u20ac199/mnd\n- AI Automatisering: op aanvraag\n- Micro-SaaS Tools: op aanvraag\n\nLive binnen 2 weken. Geen verborgen kosten. Arnhem, ook remote. info@briqk.nl\n\nBeantwoord vragen kort en vriendelijk in het Nederlands. Max 2-3 zinnen. Stimuleer bezoekers om een gratis gesprek in te plannen.";
@@ -1027,11 +1029,4 @@ async function optimizeCV() {
     else { telErr.style.display = 'none'; telInput.style.borderColor = 'rgba(200,255,0,0.4)'; }
   }
 
-  emailInput.addEventListener('blur', validateEmail);
-  emailInput.addEventListener('input', validateEmail);
-  telInput.addEventListener('blur', validateTel);
-  telInput.addEventListener('input', validateTel);
-})();
-</script>
-</body>
-</html>
+  emailInput.addEv
