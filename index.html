@@ -86,7 +86,7 @@
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 60px; }
   .step { background: var(--black); padding: 40px; position: relative; transition: background 0.3s; }
   .step:hover { background: #111; }
-  .step-num { font-family: var(--font-display); font-size: 72px; font-weight: 800; color: rgba(255,255,255,0.12); line-height: 1; position: absolute; top: 24px; right: 32px; }
+  .step-num { font-family: var(--font-display); font-size: 64px; font-weight: 800; color: rgba(255,255,255,0.12); line-height: 1; position: absolute; top: 20px; right: 24px; width: 80px; text-align: right; overflow: hidden; pointer-events: none; }
   .step-icon { width: 48px; height: 48px; background: rgba(200,255,0,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
   .step h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
   .step p { font-size: 14px; color: var(--grey-text); line-height: 1.7; }
@@ -194,26 +194,6 @@
   .btn-pricing-black { background: var(--black); color: var(--lime); }
   .btn-pricing-black:hover { background: #111; transform: translateY(-1px); }
 
-  /* MAANDKOSTEN ACCORDION */
-  .monthly-accordion { margin-top: 14px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
-  .monthly-accordion summary { list-style: none; cursor: pointer; padding: 10px 14px; font-size: 12px; font-weight: 500; color: #888; background: rgba(255,255,255,0.04); display: flex; align-items: center; gap: 6px; user-select: none; transition: color 0.2s, background 0.2s; }
-  .monthly-accordion summary::-webkit-details-marker { display: none; }
-  .monthly-accordion summary:hover { color: #ccc; background: rgba(255,255,255,0.07); }
-  .monthly-accordion[open] summary { color: #eee; border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .monthly-accordion summary .ma-chevron { margin-left: auto; transition: transform 0.2s; font-size: 9px; opacity: 0.5; }
-  .monthly-accordion[open] summary .ma-chevron { transform: rotate(180deg); }
-  .accordion-body { padding: 12px 14px; background: rgba(0,0,0,0.25); }
-  .accordion-body ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
-  .accordion-body ul li { font-size: 12px; color: #999; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
-  .accordion-body ul li::before { content: "✓"; color: var(--lime); font-weight: 700; font-size: 11px; flex-shrink: 0; margin-top: 1px; }
-  .pricing-card.featured .monthly-accordion { border-color: rgba(0,0,0,0.12); }
-  .pricing-card.featured .monthly-accordion summary { background: rgba(0,0,0,0.08); color: rgba(0,0,0,0.5); }
-  .pricing-card.featured .monthly-accordion summary:hover { color: rgba(0,0,0,0.75); background: rgba(0,0,0,0.12); }
-  .pricing-card.featured .monthly-accordion[open] summary { color: rgba(0,0,0,0.75); border-bottom: 1px solid rgba(0,0,0,0.1); }
-  .pricing-card.featured .accordion-body { background: rgba(0,0,0,0.07); }
-  .pricing-card.featured .accordion-body ul li { color: rgba(0,0,0,0.6); }
-  .pricing-card.featured .accordion-body ul li::before { color: #000; }
-
   /* LAUNCH */
   .launch-section { background: var(--grey); display: flex; justify-content: center; }
   .launch-inner { max-width: 720px; width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; }
@@ -256,7 +236,7 @@
   .footer-logo span { color: var(--lime); }
   footer p { font-size: 13px; color: var(--grey-text); }
 
-  /* REVEAL - ongewijzigd uit live versie */
+  /* REVEAL */
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
@@ -266,6 +246,7 @@
     .pricing-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: repeat(2, 1fr); }
   }
+  .scroll-hint { display: inline-flex; }
   @media (max-width: 900px) {
     * { max-width: 100%; }
     section { overflow-x: hidden; }
@@ -284,6 +265,7 @@
     .launch-deal-includes { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: 16px; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .hero-actions { flex-direction: column; align-items: flex-start; }
+    .scroll-hint { display: none !important; }
   }
 </style>
 <!-- Google tag (gtag.js) -->
@@ -325,22 +307,35 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <a href="#diensten" style="position:absolute;bottom:32px;left:80px;display:inline-flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;animation:fadeUp 0.8s 0.7s ease both;" aria-label="Scroll naar beneden">
+  <a href="#diensten" class="scroll-hint" style="position:absolute;bottom:32px;left:80px;display:inline-flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;animation:fadeUp 0.8s 0.7s ease both;" aria-label="Scroll naar beneden">
     <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-text);">Scroll</span>
     <svg width="24" height="38" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation:boltBounce 1.8s ease-in-out infinite;filter:drop-shadow(0 0 8px #C8FF00) drop-shadow(0 0 16px rgba(200,255,0,0.4));"><g transform="rotate(180, 14, 22)"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C8FF00"/></g></svg>
   </a>
   <div class="hero-tag">AI voor Nederlands MKB</div>
   <h1>Meer klanten.<br><em>Minder werk.</em><br>Automatisch.</h1>
   <p class="hero-sub">Van <strong>AI website</strong> tot volledige <strong>workflow automatisering</strong>. Wij bouwen digitale medewerkers die 24/7 voor jouw bedrijf werken.</p>
+
   <div class="hero-actions">
     <a href="#contact" class="btn-primary">Gratis gesprek inplannen</a>
     <a href="#demo" class="btn-ghost">Bekijk de demo</a>
   </div>
   <div class="hero-stats">
-    <div class="stat-item"><div class="stat-num">2<span>wk</span></div><div class="stat-label">Van gesprek tot live</div></div>
-    <div class="stat-item"><div class="stat-num">24<span>/7</span></div><div class="stat-label">Automatisch actief</div></div>
-    <div class="stat-item"><div class="stat-num">€0</div><div class="stat-label">Verborgen kosten</div></div>
-    <div class="stat-item"><div class="stat-num">100<span>%</span></div><div class="stat-label">Nederlands support</div></div>
+    <div class="stat-item">
+      <div class="stat-num">2<span>wk</span></div>
+      <div class="stat-label">Van gesprek tot live</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24<span>/7</span></div>
+      <div class="stat-label">Automatisch actief</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">€0</div>
+      <div class="stat-label">Verborgen kosten</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100<span>%</span></div>
+      <div class="stat-label">Nederlands support</div>
+    </div>
   </div>
 </section>
 
@@ -350,10 +345,30 @@
   <h2 class="section-title">Van gesprek tot resultaat</h2>
   <p class="section-sub">Geen gedoe met techniek. Wij regelen alles.</p>
   <div class="steps">
-    <div class="step reveal"><div class="step-num">01</div><div class="step-icon">☕</div><h3>Gratis kennismaking</h3><p>30 minuten. We bespreken jouw bedrijf en wat je nodig hebt. Geen verplichtingen.</p></div>
-    <div class="step reveal"><div class="step-num">02</div><div class="step-icon">⚡</div><h3>Wij bouwen het</h3><p>Website, chatbot, automation of Micro-SaaS tool. Binnen 2 weken live.</p></div>
-    <div class="step reveal"><div class="step-num">03</div><div class="step-icon">✅</div><h3>Jij keurt goed</h3><p>Je krijgt een preview. Feedback verwerken we direct. Geen gedoe, maximaal 2 revisierondes.</p></div>
-    <div class="step reveal"><div class="step-num">04</div><div class="step-icon">🚀</div><h3>Meer klanten, minder werk</h3><p>Jouw digitale medewerker werkt 24/7. Wij houden alles draaiende.</p></div>
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <div class="step-icon">☕</div>
+      <h3>Gratis kennismaking</h3>
+      <p>30 minuten. We bespreken jouw bedrijf en wat je nodig hebt. Geen verplichtingen.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">02</div>
+      <div class="step-icon">⚡</div>
+      <h3>Wij bouwen het</h3>
+      <p>Website, chatbot, automation of Micro-SaaS tool. Binnen 2 weken live.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">03</div>
+      <div class="step-icon">✅</div>
+      <h3>Jij keurt goed</h3>
+      <p>Je krijgt een preview. Feedback verwerken we direct. Geen gedoe, maximaal 2 revisierondes.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">04</div>
+      <div class="step-icon">🚀</div>
+      <h3>Meer klanten, minder werk</h3>
+      <p>Jouw digitale medewerker werkt 24/7. Wij houden alles draaiende.</p>
+    </div>
   </div>
 </section>
 
@@ -369,11 +384,11 @@
       <h3>Websites &amp; AI Bots</h3>
       <p>Een professionele website met een slimme AI-assistent die 24/7 voor je werkt. Leads binnenhalen, afspraken inplannen, vragen beantwoorden.</p>
       <div class="pillar-items">
-        <div class="pillar-item">Starter Website vanaf €850</div>
-        <div class="pillar-item">Pro Website + AI Chatbot €1.750</div>
-        <div class="pillar-item">Chatbot Add-on op bestaande site €600</div>
-        <div class="pillar-item">WhatsApp Bot €750</div>
-        <div class="pillar-item">Lead Qualifier Agent €950</div>
+        <div class="pillar-item">Starter Website — vanaf €850</div>
+        <div class="pillar-item">Pro Website + AI Chatbot — €1.750</div>
+        <div class="pillar-item">Chatbot Add-on op bestaande site — €600</div>
+        <div class="pillar-item">WhatsApp Bot — €750</div>
+        <div class="pillar-item">Lead Qualifier Agent — €950</div>
       </div>
     </div>
     <div class="pillar reveal">
@@ -412,10 +427,21 @@
   <p class="section-sub">Twee bots, twee doelen. Test ze allebei en ontdek wat bij jouw bedrijf past.</p>
   <div class="demo-grid">
     <div class="reveal" style="display:flex;flex-direction:column;">
-      <div class="demo-label"><span>Standaard Chatbot</span> Informeert en helpt bezoekers</div>
+      <div class="demo-label"><span>Standaard Chatbot</span> — Informeert en helpt bezoekers</div>
       <div class="chat-widget">
-        <div class="chat-header"><div class="chat-avatar">🤖</div><div><div class="chat-header-name">Briqk Assistent</div><div class="chat-header-status">Online</div></div></div>
-        <div class="chat-messages" id="chatMessages1"><div class="msg bot"><div class="msg-dot">🤖</div><div class="msg-bubble">Hoi! Ik ben de assistent van Briqk. Stel me een vraag over onze diensten of prijzen!</div></div></div>
+        <div class="chat-header">
+          <div class="chat-avatar">🤖</div>
+          <div>
+            <div class="chat-header-name">Briqk Assistent</div>
+            <div class="chat-header-status">Online</div>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages1">
+          <div class="msg bot">
+            <div class="msg-dot">🤖</div>
+            <div class="msg-bubble">Hoi! Ik ben de assistent van Briqk. Stel me een vraag over onze diensten of prijzen!</div>
+          </div>
+        </div>
         <div class="quick-questions">
           <button class="quick-q" onclick="sendQuick1(this)">Wat kost een website?</button>
           <button class="quick-q" onclick="sendQuick1(this)">Hoe snel ben ik live?</button>
@@ -427,12 +453,24 @@
         </div>
       </div>
     </div>
+
     <div class="reveal" style="display:flex;flex-direction:column;">
-      <div class="demo-label"><span>Lead Qualifier Bot</span> Filtert warme leads automatisch</div>
+      <div class="demo-label"><span>Lead Qualifier Bot</span> — Filtert warme leads automatisch</div>
       <div class="chat-widget">
-        <div class="chat-header"><div class="chat-avatar" style="background:#fff;color:#080808">🎯</div><div><div class="chat-header-name">Briqk Lead Qualifier</div><div class="chat-header-status">Online</div></div></div>
+        <div class="chat-header">
+          <div class="chat-avatar" style="background:#fff;color:#080808">🎯</div>
+          <div>
+            <div class="chat-header-name">Briqk Lead Qualifier</div>
+            <div class="chat-header-status">Online</div>
+          </div>
+        </div>
         <div class="progress-bar"><div class="progress-fill" id="qualProgress" style="width:0%"></div></div>
-        <div class="chat-messages" id="chatMessages2"><div class="msg bot"><div class="msg-dot" style="background:#fff;color:#080808">🎯</div><div class="msg-bubble">Goedemiddag! Ik help je snel bepalen of Briqk bij jou past. Ik stel je 5 korte vragen. Klaar?</div></div></div>
+        <div class="chat-messages" id="chatMessages2">
+          <div class="msg bot">
+            <div class="msg-dot" style="background:#fff;color:#080808">🎯</div>
+            <div class="msg-bubble">Goedemiddag! Ik help je snel bepalen of Briqk bij jou past. Ik stel je 5 korte vragen. Klaar?</div>
+          </div>
+        </div>
         <div class="quick-questions" id="qualQuickAnswers">
           <button class="quick-q" onclick="sendMsg2('Ja, ga maar!')">Ja, ga maar!</button>
           <button class="quick-q" onclick="sendMsg2('Vertel me meer eerst')">Vertel me meer eerst</button>
@@ -452,7 +490,7 @@
     <div class="cv-info reveal">
       <div class="section-tag">Micro-SaaS Demo</div>
       <h2>CV Optimizer</h2>
-      <p>Plak je huidige CV en de vacature onze AI herschrijft je CV zodat hij perfect aansluit op de functie. Meer interviews, minder afwijzingen.</p>
+      <p>Plak je huidige CV en de vacature — onze AI herschrijft je CV zodat hij perfect aansluit op de functie. Meer interviews, minder afwijzingen.</p>
       <p>Dit is een voorbeeld van een Micro-SaaS tool die wij bouwen voor klanten. Jij verkoopt toegang, wij bouwen en onderhouden.</p>
       <div class="cv-features">
         <div class="cv-feature">Aanpassen aan specifieke vacature</div>
@@ -463,10 +501,22 @@
       <div class="saas-badge">Micro-SaaS voorbeeld</div>
     </div>
     <div class="cv-tool reveal">
-      <div class="cv-tool-header"><div class="cv-tool-icon">📄</div><div><div style="font-weight:500;font-size:14px">CV Optimizer</div><div style="font-size:12px;color:var(--grey-text)">Powered by Briqk AI</div></div></div>
+      <div class="cv-tool-header">
+        <div class="cv-tool-icon">📄</div>
+        <div>
+          <div style="font-weight:500;font-size:14px">CV Optimizer</div>
+          <div style="font-size:12px;color:var(--grey-text)">Powered by Briqk AI</div>
+        </div>
+      </div>
       <div class="cv-tool-body">
-        <div class="cv-group"><label>Jouw huidige CV (of samenvatting)</label><textarea id="cvInput" rows="5" placeholder="Bijv: Ik werk 3 jaar als marketeer bij een MKB bedrijf. Ik heb campagnes gedraaid, social media beheerd en nieuwsbrieven geschreven..."></textarea></div>
-        <div class="cv-group"><label>Vacature of gewenste functie</label><textarea id="jobInput" rows="3" placeholder="Bijv: Junior Marketing Manager bij een groeiend SaaS bedrijf, focus op content en lead generation..."></textarea></div>
+        <div class="cv-group">
+          <label>Jouw huidige CV (of samenvatting)</label>
+          <textarea id="cvInput" rows="5" placeholder="Bijv: Ik werk 3 jaar als marketeer bij een MKB bedrijf. Ik heb campagnes gedraaid, social media beheerd en nieuwsbrieven geschreven..."></textarea>
+        </div>
+        <div class="cv-group">
+          <label>Vacature of gewenste functie</label>
+          <textarea id="jobInput" rows="3" placeholder="Bijv: Junior Marketing Manager bij een groeiend SaaS bedrijf, focus op content en lead generation..."></textarea>
+        </div>
         <div class="cv-result" id="cvResult"></div>
         <div id="cvError" style="display:none;background:rgba(255,80,80,0.1);border:1px solid rgba(255,80,80,0.3);color:#ff6b6b;padding:12px 16px;border-radius:10px;font-size:13px;"></div>
         <button class="btn-cv" id="cvBtn" onclick="optimizeCV()">CV Optimaliseren</button>
@@ -487,9 +537,24 @@
       <div class="launch-spot"><div class="spot-num">3</div><div class="spot-status">Beschikbaar</div></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%">
-      <div style="background:var(--black);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;text-align:center"><div style="font-size:11px;color:var(--grey-text);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Starter Website</div><div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--grey-text);text-decoration:line-through;margin-bottom:4px">€850</div><div style="font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--lime)">€510</div><div style="font-size:11px;color:var(--grey-text);margin-top:6px">40% korting</div></div>
-      <div style="background:var(--lime);border-radius:16px;padding:24px;text-align:center"><div style="font-size:11px;color:rgba(0,0,0,0.6);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Pro + Chatbot</div><div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:rgba(0,0,0,0.4);text-decoration:line-through;margin-bottom:4px">€1.750</div><div style="font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--black)">€1.050</div><div style="font-size:11px;color:rgba(0,0,0,0.6);margin-top:6px">Meest gekozen</div></div>
-      <div style="background:var(--black);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;text-align:center"><div style="font-size:11px;color:var(--grey-text);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Chatbot Add-on</div><div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--grey-text);text-decoration:line-through;margin-bottom:4px">€600</div><div style="font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--lime)">€360</div><div style="font-size:11px;color:var(--grey-text);margin-top:6px">40% korting</div></div>
+      <div style="background:var(--black);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;text-align:center">
+        <div style="font-size:11px;color:var(--grey-text);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Starter Website</div>
+        <div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--grey-text);text-decoration:line-through;margin-bottom:4px">€850</div>
+        <div style="font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--lime)">€510</div>
+        <div style="font-size:11px;color:var(--grey-text);margin-top:6px">40% korting</div>
+      </div>
+      <div style="background:var(--lime);border-radius:16px;padding:24px;text-align:center">
+        <div style="font-size:11px;color:rgba(0,0,0,0.6);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Pro + Chatbot</div>
+        <div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:rgba(0,0,0,0.4);text-decoration:line-through;margin-bottom:4px">€1.750</div>
+        <div style="font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--black)">€1.050</div>
+        <div style="font-size:11px;color:rgba(0,0,0,0.6);margin-top:6px">Meest gekozen</div>
+      </div>
+      <div style="background:var(--black);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;text-align:center">
+        <div style="font-size:11px;color:var(--grey-text);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Chatbot Add-on</div>
+        <div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--grey-text);text-decoration:line-through;margin-bottom:4px">€600</div>
+        <div style="font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--lime)">€360</div>
+        <div style="font-size:11px;color:var(--grey-text);margin-top:6px">40% korting</div>
+      </div>
     </div>
     <div style="font-size:13px;color:var(--grey-text)">Ook WhatsApp Bot en Lead Qualifier met 40% korting beschikbaar</div>
     <a href="#contact" class="btn-primary">Claim jouw plek</a>
@@ -502,7 +567,6 @@
   <h2 class="section-title">Geen verrassingen</h2>
   <p class="section-sub">Vaste prijs, alles inbegrepen. Geen verborgen kosten.</p>
   <div class="pricing-grid">
-
     <div class="pricing-card reveal">
       <div class="pricing-name">Starter Website</div>
       <div class="pricing-price"><sup>€</sup>850</div>
@@ -516,19 +580,8 @@
         <li>Google Search Console + Bedrijfsprofiel</li>
         <li>Maandelijks onderhoud</li>
       </ul>
-      <details class="monthly-accordion">
-        <summary>Wat zit er in €99/maand?<span class="ma-chevron">▼</span></summary>
-        <div class="accordion-body"><ul>
-          <li>Jouw website en domein altijd online wij beheren alles</li>
-          <li>1 uur aanpassingen per maand (tekst, foto's, kleine wijzigingen)</li>
-          <li>Technisch onderhoud zodat niets stukgaat</li>
-          <li>Google Search Console monitoring jij ziet hoe klanten je vinden</li>
-          <li>Support via WhatsApp reactie binnen 24 uur</li>
-        </ul></div>
-      </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Starter')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Starter')">Start gesprek</button>
     </div>
-
     <div class="pricing-card featured reveal">
       <div class="pricing-badge">Aanbevolen</div>
       <div class="pricing-name">Pro Website + Chatbot</div>
@@ -543,20 +596,8 @@
         <li>WhatsApp koppeling</li>
         <li>Maandelijkse rapportage</li>
       </ul>
-      <details class="monthly-accordion">
-        <summary>Wat zit er in €249/maand?<span class="ma-chevron">▼</span></summary>
-        <div class="accordion-body"><ul>
-          <li>Jouw website en domein altijd online wij beheren alles</li>
-          <li>2 uur aanpassingen per maand (website en chatbot)</li>
-          <li>Chatbot bijhouden zodat antwoorden altijd kloppen</li>
-          <li>Google Search Console monitoring jij ziet hoe klanten je vinden</li>
-          <li>Maandelijkse rapportage: bezoekers, leads en chatgesprekken</li>
-          <li>Prioriteits-support reactie binnen 4 uur (werkdagen)</li>
-        </ul></div>
-      </details>
-      <button class="btn-pricing btn-pricing-black" onclick="startGesprek('Pro Website')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-black" onclick="startGesprek('Pro Website')">Start gesprek</button>
     </div>
-
     <div class="pricing-card reveal">
       <div class="pricing-name">Chatbot Add-on</div>
       <div class="pricing-price"><sup>€</sup>600</div>
@@ -568,18 +609,8 @@
         <li>Agenda-integratie</li>
         <li>Maandelijks onderhoud</li>
       </ul>
-      <details class="monthly-accordion">
-        <summary>Wat zit er in €149/maand?<span class="ma-chevron">▼</span></summary>
-        <div class="accordion-body"><ul>
-          <li>Chatbot altijd online wij houden hem draaiende</li>
-          <li>1 uur updates per maand zodat antwoorden actueel blijven</li>
-          <li>Technisch onderhoud en monitoring</li>
-          <li>Support via WhatsApp reactie binnen 24 uur</li>
-        </ul></div>
-      </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Chatbot Add-on')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Chatbot Add-on')">Start gesprek</button>
     </div>
-
     <div class="pricing-card reveal">
       <div class="pricing-name">WhatsApp Bot</div>
       <div class="pricing-price"><sup>€</sup>750</div>
@@ -592,18 +623,8 @@
         <li>Afspraken inplannen</li>
         <li>Escalatie naar eigenaar</li>
       </ul>
-      <details class="monthly-accordion">
-        <summary>Wat zit er in €149/maand?<span class="ma-chevron">▼</span></summary>
-        <div class="accordion-body"><ul>
-          <li>Bot altijd online ook buiten kantooruren</li>
-          <li>1 uur updates per maand (antwoorden en flows bijhouden)</li>
-          <li>Maandelijkse rapportage: gesprekken, leads en conversies</li>
-          <li>Support via WhatsApp reactie binnen 24 uur</li>
-        </ul></div>
-      </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('WhatsApp Bot')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('WhatsApp Bot')">Start gesprek</button>
     </div>
-
     <div class="pricing-card reveal">
       <div class="pricing-name">Lead Qualifier Agent</div>
       <div class="pricing-price"><sup>€</sup>950</div>
@@ -616,18 +637,8 @@
         <li>WhatsApp of e-mail notificatie</li>
         <li>Maandelijkse leadrapportage</li>
       </ul>
-      <details class="monthly-accordion">
-        <summary>Wat zit er in €199/maand?<span class="ma-chevron">▼</span></summary>
-        <div class="accordion-body"><ul>
-          <li>Agent 24/7 actief elke lead wordt automatisch gekwalificeerd</li>
-          <li>1-2 uur updates per maand (scorecriteria en vragen bijstellen)</li>
-          <li>Maandelijkse rapportage: hoeveel warm, koud en niet relevant</li>
-          <li>Support via WhatsApp reactie binnen 24 uur</li>
-        </ul></div>
-      </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Lead Qualifier')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Lead Qualifier')">Start gesprek</button>
     </div>
-
     <div class="pricing-card reveal">
       <div class="pricing-name">AI Automation &amp; Maatwerk</div>
       <div class="pricing-price" style="font-size:32px;letter-spacing:-1px;margin:16px 0">Op maat</div>
@@ -640,19 +651,8 @@
         <li>Meerdere AI agents</li>
         <li>Dedicated support</li>
       </ul>
-      <details class="monthly-accordion">
-        <summary>Wat zit er in de maandkosten?<span class="ma-chevron">▼</span></summary>
-        <div class="accordion-body"><ul>
-          <li>Aantal uur per maand wordt vooraf afgestemd op jouw project</li>
-          <li>Proactief beheer wij signaleren problemen voordat jij ze ziet</li>
-          <li>Updates bij API-wijzigingen van gekoppelde tools (Make, n8n, CRM)</li>
-          <li>Directe lijn met de bouwer, geen supporttickets</li>
-          <li>Prioriteits-support reactie binnen 4 uur (werkdagen)</li>
-        </ul></div>
-      </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('AI Automatisering')" style="margin-top:14px">Neem contact op</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('AI Automatisering')">Neem contact op</button>
     </div>
-
   </div>
 </section>
 
@@ -664,7 +664,7 @@
       <h2>Klaar om te starten?</h2>
       <p>Plan een gratis kennismakingsgesprek van 30 minuten. Geen verplichtingen.</p>
       <div class="contact-items">
-        <div class="contact-item"><div class="contact-item-icon">📍</div>Arnhem, Gelderland ook remote</div>
+        <div class="contact-item"><div class="contact-item-icon">📍</div>Arnhem, Gelderland — ook remote</div>
         <div class="contact-item"><div class="contact-item-icon">📞</div><a href="tel:0642839335" style="color:var(--lime);text-decoration:underline;text-underline-offset:3px;">06 42839335</a></div>
         <div class="contact-item"><div class="contact-item-icon">⏱️</div>Reactie binnen 24 uur</div>
         <div class="contact-item"><div class="contact-item-icon">🆓</div>Eerste gesprek altijd gratis</div>
@@ -672,10 +672,30 @@
     </div>
     <form class="contact-form reveal" action="https://formspree.io/f/xlgpodnl" method="POST">
       <input type="hidden" name="_next" value="https://briqk.nl/#contact" />
-      <div class="form-group"><label for="formNaam">Naam</label><input type="text" id="formNaam" name="naam" placeholder="Jan de Vries" required /></div>
-      <div class="form-group"><label for="formEmail">E-mailadres</label><input type="email" id="formEmail" name="email" placeholder="jan@bedrijf.nl" required /><span id="emailError" style="display:none;font-size:12px;color:#ff6b6b;margin-top:4px;">Vul een geldig e-mailadres in.</span></div>
-      <div class="form-group"><label for="formTel">Telefoonnummer</label><input type="tel" id="formTel" name="telefoon" placeholder="06 12345678" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9\s\-\+]/g,'')" /><span id="telError" style="display:none;font-size:12px;color:#ff6b6b;margin-top:4px;">Vul een geldig telefoonnummer in (minimaal 10 cijfers).</span></div>
-      <div class="form-group"><label for="formType">Type bedrijf</label><select id="formType" name="bedrijfstype"><option value="">Selecteer...</option><option>ZZP / Freelancer</option><option>MKB (2-10 medewerkers)</option><option>MKB (10-50 medewerkers)</option><option>Anders</option></select></div>
+      <div class="form-group">
+        <label for="formNaam">Naam</label>
+        <input type="text" id="formNaam" name="naam" placeholder="Jan de Vries" required />
+      </div>
+      <div class="form-group">
+        <label for="formEmail">E-mailadres</label>
+        <input type="email" id="formEmail" name="email" placeholder="jan@bedrijf.nl" required />
+        <span id="emailError" style="display:none;font-size:12px;color:#ff6b6b;margin-top:4px;">Vul een geldig e-mailadres in.</span>
+      </div>
+      <div class="form-group">
+        <label for="formTel">Telefoonnummer</label>
+        <input type="tel" id="formTel" name="telefoon" placeholder="06 12345678" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9\s\-\+]/g,'')" />
+        <span id="telError" style="display:none;font-size:12px;color:#ff6b6b;margin-top:4px;">Vul een geldig telefoonnummer in (minimaal 10 cijfers).</span>
+      </div>
+      <div class="form-group">
+        <label for="formType">Type bedrijf</label>
+        <select id="formType" name="bedrijfstype">
+          <option value="">Selecteer...</option>
+          <option>ZZP / Freelancer</option>
+          <option>MKB (2-10 medewerkers)</option>
+          <option>MKB (10-50 medewerkers)</option>
+          <option>Anders</option>
+        </select>
+      </div>
       <div class="form-group">
         <label>Interesse in (meerdere mogelijk)</label>
         <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;" id="interesseCheckboxes">
@@ -688,8 +708,11 @@
           <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Micro-SaaS Tool" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Micro-SaaS Tool</label>
         </div>
       </div>
-      <div class="form-group"><label for="formBericht">Vraag of opmerking (optioneel)</label><textarea id="formBericht" name="bericht" placeholder="Vertel iets over jouw bedrijf..."></textarea></div>
-      <button type="submit" class="form-submit">Gratis gesprek inplannen</button>
+      <div class="form-group">
+        <label for="formBericht">Vraag of opmerking (optioneel)</label>
+        <textarea id="formBericht" name="bericht" placeholder="Vertel iets over jouw bedrijf..."></textarea>
+      </div>
+      <button type="submit" class="form-submit" >Gratis gesprek inplannen</button>
     </form>
   </div>
 </section>
@@ -956,7 +979,7 @@ async function optimizeCV() {
     return;
   }
   if (cvText.split(/\s+/).length < 20) {
-    errEl.textContent = 'Voeg meer toe aan je CV beschrijf je werkervaring, vaardigheden en resultaten.';
+    errEl.textContent = 'Voeg meer toe aan je CV — beschrijf je werkervaring, vaardigheden en resultaten.';
     errEl.style.display = 'block';
     return;
   }
