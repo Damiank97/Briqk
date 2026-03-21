@@ -84,9 +84,9 @@
   /* HOE HET WERKT */
   .how { background: var(--grey); }
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 60px; }
-  .step { background: var(--black); padding: 40px; position: relative; transition: background 0.3s; }
+  .step { background: var(--black); padding: 40px; transition: background 0.3s; }
   .step:hover { background: #111; }
-  .step-num { font-family: var(--font-display); font-size: 72px; font-weight: 800; color: rgba(255,255,255,0.12); line-height: 1; position: absolute; top: 24px; right: 32px; }
+  .step-num { font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--lime); letter-spacing: -0.5px; margin-bottom: 16px; display: block; }
   .step-icon { width: 48px; height: 48px; background: rgba(200,255,0,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
   .step h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
   .step p { font-size: 14px; color: var(--grey-text); line-height: 1.7; }
@@ -246,6 +246,7 @@
     .pricing-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: repeat(2, 1fr); }
   }
+  .scroll-hint { display: inline-flex; }
   @media (max-width: 900px) {
     * { max-width: 100%; }
     section { overflow-x: hidden; }
@@ -264,7 +265,24 @@
     .launch-deal-includes { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: 16px; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .hero-actions { flex-direction: column; align-items: flex-start; }
+    .scroll-hint { display: none !important; }
   }
+
+  /* INBOX DEMO */
+  .inbox-mail { display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:background 0.2s;border:1px solid transparent; }
+  .inbox-mail:hover { background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08); }
+  .inbox-mail.active { background:rgba(200,255,0,0.06);border-color:rgba(200,255,0,0.2); }
+  .mail-dot { width:8px;height:8px;border-radius:50%;background:var(--grey-mid);flex-shrink:0;margin-top:6px; }
+  .mail-dot.new { background:var(--lime); }
+  .mail-content { flex:1;min-width:0; }
+  .mail-from { font-size:13px;font-weight:500;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+  .mail-subject { font-size:12px;color:var(--white);opacity:0.8;margin-top:2px; }
+  .mail-preview { font-size:11px;color:var(--grey-text);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+  .mail-time { font-size:11px;color:var(--grey-text);flex-shrink:0; }
+  .pipe-step { display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);font-size:13px;color:var(--grey-text);transition:all 0.3s; }
+  .pipe-step.running { border-color:rgba(200,255,0,0.3);color:var(--white); }
+  .pipe-step.done { background:rgba(200,255,0,0.06);border-color:rgba(200,255,0,0.2);color:var(--lime); }
+  .pipe-icon { font-size:14px;width:20px;text-align:center; }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1H8P518FLC"></script>
@@ -284,7 +302,7 @@
   <ul class="nav-links">
     <li><a href="#diensten">Diensten</a></li>
     <li><a href="#demo">Bot Demo</a></li>
-    <li><a href="#cv-maker">CV Maker</a></li>
+    <li><a href="#ai-demo">AI Demo</a></li>
     <li><a href="#prijzen">Prijzen</a></li>
     <li><a href="#contact" class="nav-cta">Gratis gesprek</a></li>
   </ul>
@@ -295,7 +313,7 @@
 <div class="mobile-nav" id="mobileNav">
   <a href="#diensten" onclick="toggleMenu()">Diensten</a>
   <a href="#demo" onclick="toggleMenu()">Bot Demo</a>
-  <a href="#cv-maker" onclick="toggleMenu()">CV Maker</a>
+  <a href="#ai-demo" onclick="toggleMenu()">AI Demo</a>
   <a href="#prijzen" onclick="toggleMenu()">Prijzen</a>
   <a href="#contact" onclick="toggleMenu()" style="color:var(--lime)">Gratis gesprek</a>
 </div>
@@ -305,7 +323,7 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <a href="#diensten" style="position:absolute;bottom:32px;left:80px;display:inline-flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;animation:fadeUp 0.8s 0.7s ease both;" aria-label="Scroll naar beneden">
+  <a href="#diensten" class="scroll-hint" style="position:absolute;bottom:32px;left:80px;display:inline-flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;animation:fadeUp 0.8s 0.7s ease both;" aria-label="Scroll naar beneden">
     <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-text);">Scroll</span>
     <svg width="24" height="38" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation:boltBounce 1.8s ease-in-out infinite;filter:drop-shadow(0 0 8px #C8FF00) drop-shadow(0 0 16px rgba(200,255,0,0.4));"><g transform="rotate(180, 14, 22)"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C8FF00"/></g></svg>
   </a>
@@ -483,41 +501,81 @@
 </section>
 
 <!-- CV MAKER -->
-<section class="cv-section" id="cv-maker">
+<section class="cv-section" id="ai-demo">
   <div class="cv-layout">
     <div class="cv-info reveal">
-      <div class="section-tag">Micro-SaaS Demo</div>
-      <h2>CV Optimizer</h2>
-      <p>Plak je huidige CV en de vacature — onze AI herschrijft je CV zodat hij perfect aansluit op de functie. Meer interviews, minder afwijzingen.</p>
-      <p>Dit is een voorbeeld van een Micro-SaaS tool die wij bouwen voor klanten. Jij verkoopt toegang, wij bouwen en onderhouden.</p>
+      <div class="section-tag">AI Automatisering Demo</div>
+      <h2>Eén voorbeeld.<br><em style="color:var(--lime)">Eindeloos mogelijk.</em></h2>
+      <p>Dit is een live demo van AI e-mail automatisering. Een mail komt binnen, de AI leest hem, bepaalt de prioriteit en schrijft direct een professioneel antwoord. Zonder dat jij er naar kijkt.</p>
+      <p>Maar dit is slechts één ding dat we kunnen automatiseren. Denk ook aan: nieuwe lead binnenkomt → CRM bijwerkt → WhatsApp melding → follow-up gepland. Allemaal zonder handmatig werk.</p>
       <div class="cv-features">
-        <div class="cv-feature">Aanpassen aan specifieke vacature</div>
-        <div class="cv-feature">Sterkere werkwoorden en resultaten</div>
-        <div class="cv-feature">Keywords uit vacature verwerkt</div>
-        <div class="cv-feature">Direct bruikbaar</div>
+        <div class="cv-feature">E-mail automatisch beantwoorden</div>
+        <div class="cv-feature">Leads routeren naar CRM</div>
+        <div class="cv-feature">WhatsApp notificaties bij nieuwe aanvragen</div>
+        <div class="cv-feature">Factuur en offerte workflows</div>
       </div>
-      <div class="saas-badge">Micro-SaaS voorbeeld</div>
+      <div class="saas-badge" style="background:rgba(200,255,0,0.1);border-color:rgba(200,255,0,0.3);">⚙️ AI Automatisering</div>
     </div>
-    <div class="cv-tool reveal">
+    <div class="cv-tool reveal" style="background:var(--black);">
+      <!-- INBOX -->
       <div class="cv-tool-header">
-        <div class="cv-tool-icon">📄</div>
+        <div class="cv-tool-icon" style="background:var(--grey-mid);font-size:18px;">📬</div>
         <div>
-          <div style="font-weight:500;font-size:14px">CV Optimizer</div>
-          <div style="font-size:12px;color:var(--grey-text)">Powered by Briqk AI</div>
+          <div style="font-weight:500;font-size:14px">Briqk Mail Automation</div>
+          <div style="font-size:12px;color:var(--grey-text)">Klik op een mail om de AI te starten</div>
         </div>
       </div>
-      <div class="cv-tool-body">
-        <div class="cv-group">
-          <label>Jouw huidige CV (of samenvatting)</label>
-          <textarea id="cvInput" rows="5" placeholder="Bijv: Ik werk 3 jaar als marketeer bij een MKB bedrijf. Ik heb campagnes gedraaid, social media beheerd en nieuwsbrieven geschreven..."></textarea>
+      <div id="inboxList" style="display:flex;flex-direction:column;gap:2px;padding:12px 16px;">
+        <div class="inbox-mail" onclick="runAutomation(0)" data-index="0">
+          <div class="mail-dot new"></div>
+          <div class="mail-content">
+            <div class="mail-from">Jan de Vries &lt;jan@installateur.nl&gt;</div>
+            <div class="mail-subject">Interesse in een nieuwe website</div>
+            <div class="mail-preview">Hallo, ik heb jullie website gezien en ben benieuwd wat...</div>
+          </div>
+          <div class="mail-time">09:14</div>
         </div>
-        <div class="cv-group">
-          <label>Vacature of gewenste functie</label>
-          <textarea id="jobInput" rows="3" placeholder="Bijv: Junior Marketing Manager bij een groeiend SaaS bedrijf, focus op content en lead generation..."></textarea>
+        <div class="inbox-mail" onclick="runAutomation(1)" data-index="1">
+          <div class="mail-dot"></div>
+          <div class="mail-content">
+            <div class="mail-from">Sandra Bakker &lt;info@bakkerij-sandra.nl&gt;</div>
+            <div class="mail-subject">Vraag over de chatbot</div>
+            <div class="mail-preview">Goedemiddag, wij hebben al een website maar willen graag...</div>
+          </div>
+          <div class="mail-time">10:32</div>
         </div>
-        <div class="cv-result" id="cvResult"></div>
-        <div id="cvError" style="display:none;background:rgba(255,80,80,0.1);border:1px solid rgba(255,80,80,0.3);color:#ff6b6b;padding:12px 16px;border-radius:10px;font-size:13px;"></div>
-        <button class="btn-cv" id="cvBtn" onclick="optimizeCV()">CV Optimaliseren</button>
+        <div class="inbox-mail" onclick="runAutomation(2)" data-index="2">
+          <div class="mail-dot"></div>
+          <div class="mail-content">
+            <div class="mail-from">noreply@promo-deals.com</div>
+            <div class="mail-subject">WIN een iPhone 15 Pro!!!</div>
+            <div class="mail-preview">Gefeliciteerd! U bent geselecteerd als winnaar van...</div>
+          </div>
+          <div class="mail-time">11:01</div>
+        </div>
+      </div>
+
+      <!-- PIPELINE -->
+      <div id="pipeline" style="display:none;padding:16px 20px;border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-text);margin-bottom:12px;">AI Pipeline</div>
+        <div style="display:flex;flex-direction:column;gap:8px;" id="pipelineSteps">
+          <div class="pipe-step" id="step0"><span class="pipe-icon">⏳</span><span class="pipe-label">Mail lezen</span></div>
+          <div class="pipe-step" id="step1"><span class="pipe-icon">⏳</span><span class="pipe-label">Categoriseren</span></div>
+          <div class="pipe-step" id="step2"><span class="pipe-icon">⏳</span><span class="pipe-label">Prioriteit bepalen</span></div>
+          <div class="pipe-step" id="step3"><span class="pipe-icon">⏳</span><span class="pipe-label">Antwoord schrijven</span></div>
+          <div class="pipe-step" id="step4"><span class="pipe-icon">⏳</span><span class="pipe-label">Verzenden</span></div>
+        </div>
+      </div>
+
+      <!-- RESULT -->
+      <div id="autoResult" style="display:none;padding:16px 20px;border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-text);">Gegenereerd antwoord</div>
+          <div id="resultBadge" style="font-size:11px;padding:3px 10px;border-radius:100px;"></div>
+        </div>
+        <div id="resultText" style="font-size:13px;color:var(--white);line-height:1.7;background:var(--grey);padding:14px 16px;border-radius:10px;white-space:pre-wrap;"></div>
+        <div id="sendConfirm" style="display:none;margin-top:10px;font-size:12px;color:var(--lime);display:flex;align-items:center;gap:6px;">✓ Automatisch verstuurd — geen actie vereist</div>
+        <button onclick="resetAutomation()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere mail proberen</button>
       </div>
     </div>
   </div>
@@ -945,60 +1003,130 @@ async function sendMsg2(text) {
 
 document.getElementById('chatInput2').addEventListener('keydown', function(e) { if (e.key === 'Enter') { e.preventDefault(); sendMsg2(); } });
 
-const SYSTEM_CV = `Je bent een expert CV-schrijver. Een gebruiker geeft je hun huidige CV en een vacature. Herschrijf hun professionele samenvatting en top 3 werkpunten zodat ze perfect aansluiten op de vacature.
+const MAILS = [
+  {
+    from: "Jan de Vries <jan@installateur.nl>",
+    subject: "Interesse in een nieuwe website",
+    body: "Hallo, ik heb jullie website gezien en ben benieuwd wat jullie kunnen doen voor mijn installatiebedrijf. We hebben momenteel geen website en lopen klanten mis. Kunnen we een keer bellen? Budget is geen groot probleem. Groet, Jan"
+  },
+  {
+    from: "Sandra Bakker <info@bakkerij-sandra.nl>",
+    subject: "Vraag over de chatbot",
+    body: "Goedemiddag, wij hebben al een website maar willen graag een chatbot toevoegen. Kunnen jullie dat doen op een bestaande site? En wat zijn de kosten? Met vriendelijke groet, Sandra"
+  },
+  {
+    from: "noreply@promo-deals.com",
+    subject: "WIN een iPhone 15 Pro!!!",
+    body: "Gefeliciteerd! U bent geselecteerd als winnaar van onze speciale actie. Klik hier om uw prijs te claimen. Tijdelijk aanbod geldig t/m vandaag."
+  }
+];
 
-BELANGRIJK: Als het CV te kort of leeg is (minder dan 50 woorden), geef dan GEEN fictieve inhoud. Zeg dan vriendelijk: "Jouw CV bevat te weinig informatie. Voeg meer details toe over je werkervaring, vaardigheden en resultaten."
+const SYSTEM_MAIL = `Je bent de AI e-mail assistent van Briqk, een bedrijf dat AI-websites en automatiseringen bouwt voor Nederlands MKB. Prijzen: Starter Website €850+€99/mnd, Pro + Chatbot €1750+€249/mnd, Chatbot Add-on €600+€149/mnd.
 
-Als het CV voldoende is: gebruik krachtige werkwoorden, kwantificeer resultaten waar mogelijk, verwerk trefwoorden uit de vacature. Schrijf in het Nederlands. Gebruik geen markdown sterretjes (**). Gebruik hoofdletters voor koppen zoals: PROFESSIONELE SAMENVATTING en TOP 3 WERKPUNTEN. Max 250 woorden totaal.`;
+Je taak: analyseer de inkomende e-mail en geef een JSON-antwoord met EXACT dit formaat (geen uitleg, geen markdown, alleen JSON):
+{"categorie":"LEAD|VRAAG|SPAM","prioriteit":"HOOG|NORMAAL|LAAG","antwoord":"[het antwoord hier, max 80 woorden, professioneel Nederlands, ondertekend met Damian van Briqk]"}
 
-function renderCV(text) {
-  return text.split("\n").map(function(line) {
-    var clean = line.replace(/\*\*/g, "");
-    var headers = ["PROFESSIONELE SAMENVATTING","TOP 3 WERKPUNTEN","Professionele Samenvatting","Top 3 Werkpunten"];
-    for (var i = 0; i < headers.length; i++) {
-      if (clean.indexOf(headers[i]) === 0) {
-        return '<strong style="color:var(--lime);display:block;margin-top:14px;margin-bottom:4px">' + clean + '</strong>';
-      }
-    }
-    if (clean.charAt(0) === "-" || clean.charAt(0) === "\u2013") {
-      return "\u2022 " + clean.slice(2);
-    }
-    return clean;
-  }).join("<br>");
+Bij SPAM: geef geen antwoord, zet antwoord op "Deze mail wordt automatisch genegeerd."`;
+
+let automationRunning = false;
+
+async function runAutomation(index) {
+  if (automationRunning) return;
+  automationRunning = true;
+
+  // Reset UI
+  document.querySelectorAll('.inbox-mail').forEach(m => m.classList.remove('active'));
+  document.querySelectorAll('[data-index="' + index + '"]')[0].classList.add('active');
+  document.getElementById('autoResult').style.display = 'none';
+
+  const pipeline = document.getElementById('pipeline');
+  pipeline.style.display = 'block';
+
+  const steps = ['step0','step1','step2','step3','step4'];
+  const icons = ['📖','🏷️','🎯','✍️','📤'];
+  const labels = ['Mail lezen...','Categoriseren...','Prioriteit bepalen...','Antwoord schrijven...','Verzenden...'];
+
+  // Reset steps
+  steps.forEach(function(id) {
+    var el = document.getElementById(id);
+    el.className = 'pipe-step';
+    el.querySelector('.pipe-icon').textContent = '⏳';
+    el.querySelector('.pipe-label').textContent = el.querySelector('.pipe-label').textContent.replace('...','');
+  });
+
+  // Animate first 3 steps locally
+  for (var i = 0; i < 3; i++) {
+    var el = document.getElementById(steps[i]);
+    el.classList.add('running');
+    el.querySelector('.pipe-icon').textContent = icons[i];
+    el.querySelector('.pipe-label').textContent = labels[i];
+    await new Promise(r => setTimeout(r, 600));
+    el.classList.remove('running');
+    el.classList.add('done');
+    el.querySelector('.pipe-icon').textContent = '✓';
+    el.querySelector('.pipe-label').textContent = labels[i].replace('...','');
+  }
+
+  // Step 4: AI writes answer
+  var step3el = document.getElementById('step3');
+  step3el.classList.add('running');
+  step3el.querySelector('.pipe-icon').textContent = '✍️';
+  step3el.querySelector('.pipe-label').textContent = 'Antwoord schrijven...';
+
+  var mail = MAILS[index];
+  var reply, categorie, prioriteit;
+
+  try {
+    var raw = await callAPI(SYSTEM_MAIL, 'Van: ' + mail.from + '\nOnderwerp: ' + mail.subject + '\nBericht: ' + mail.body);
+    var clean = raw.replace(/```json|```/g, '').trim();
+    var parsed = JSON.parse(clean);
+    categorie = parsed.categorie || 'ONBEKEND';
+    prioriteit = parsed.prioriteit || 'NORMAAL';
+    reply = parsed.antwoord || 'Geen antwoord gegenereerd.';
+  } catch(e) {
+    categorie = 'VRAAG';
+    prioriteit = 'NORMAAL';
+    reply = 'Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.\n\nMet vriendelijke groet,\nDamian van Briqk';
+  }
+
+  step3el.classList.remove('running');
+  step3el.classList.add('done');
+  step3el.querySelector('.pipe-icon').textContent = '✓';
+  step3el.querySelector('.pipe-label').textContent = 'Antwoord geschreven';
+
+  await new Promise(r => setTimeout(r, 400));
+
+  // Step 5: Send
+  var step4el = document.getElementById('step4');
+  step4el.classList.add('running');
+  step4el.querySelector('.pipe-icon').textContent = '📤';
+  step4el.querySelector('.pipe-label').textContent = 'Verzenden...';
+  await new Promise(r => setTimeout(r, 700));
+  step4el.classList.remove('running');
+  step4el.classList.add('done');
+  step4el.querySelector('.pipe-icon').textContent = '✓';
+  step4el.querySelector('.pipe-label').textContent = 'Verzonden';
+
+  // Show result
+  var badge = document.getElementById('resultBadge');
+  var colors = { 'LEAD': 'background:rgba(200,255,0,0.15);color:var(--lime);border:1px solid rgba(200,255,0,0.3)',
+                 'VRAAG': 'background:rgba(100,180,255,0.15);color:#64b4ff;border:1px solid rgba(100,180,255,0.3)',
+                 'SPAM': 'background:rgba(255,80,80,0.15);color:#ff5050;border:1px solid rgba(255,80,80,0.3)' };
+  badge.style.cssText = colors[categorie] || colors['VRAAG'];
+  badge.textContent = categorie + ' · ' + prioriteit;
+
+  document.getElementById('resultText').textContent = reply;
+  var confirm = document.getElementById('sendConfirm');
+  confirm.style.display = categorie === 'SPAM' ? 'none' : 'flex';
+  document.getElementById('autoResult').style.display = 'block';
+  automationRunning = false;
 }
 
-async function optimizeCV() {
-  const cvText = document.getElementById('cvInput').value.trim();
-  const jobText = document.getElementById('jobInput').value.trim();
-  const errEl = document.getElementById('cvError');
-  if (!cvText || !jobText) {
-    errEl.textContent = 'Vul zowel je CV als de vacature in.';
-    errEl.style.display = 'block';
-    return;
-  }
-  if (cvText.split(/\s+/).length < 20) {
-    errEl.textContent = 'Voeg meer toe aan je CV — beschrijf je werkervaring, vaardigheden en resultaten.';
-    errEl.style.display = 'block';
-    return;
-  }
-  errEl.style.display = 'none';
-  const btn = document.getElementById('cvBtn');
-  const result = document.getElementById('cvResult');
-  btn.disabled = true;
-  btn.textContent = 'Optimaliseren...';
-  result.className = 'cv-result';
-  result.innerHTML = '';
-  try {
-    const userMsg = `Huidig CV:\n${cvText}\n\nVacature:\n${jobText}`;
-    const reply = await callAPI(SYSTEM_CV, userMsg);
-    result.innerHTML = renderCV(reply);
-    result.className = 'cv-result visible';
-  } catch(e) {
-    result.innerHTML = 'Er ging iets mis. Probeer het opnieuw.';
-    result.className = 'cv-result visible';
-  }
-  btn.disabled = false;
-  btn.textContent = 'Opnieuw optimaliseren';
+function resetAutomation() {
+  document.querySelectorAll('.inbox-mail').forEach(m => m.classList.remove('active'));
+  document.getElementById('pipeline').style.display = 'none';
+  document.getElementById('autoResult').style.display = 'none';
+  automationRunning = false;
 }
 
 (function() {
