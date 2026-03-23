@@ -68,12 +68,14 @@
   .btn-primary:hover { background: var(--lime-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,255,0,0.3); }
   .btn-ghost { color: var(--white); padding: 16px 24px; border-radius: 100px; font-family: var(--font-body); font-size: 15px; font-weight: 400; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; opacity: 0.7; transition: opacity 0.2s; }
   .btn-ghost:hover { opacity: 1; }
-  .hero-stats { display: flex; gap: 48px; margin-top: auto; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.08); animation: fadeUp 0.8s 0.4s ease both; flex-wrap: wrap; }
+  .hero-stats { display: flex; gap: 48px; margin-top: 80px; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.08); animation: fadeUp 0.8s 0.4s ease both; flex-wrap: wrap; }
   .stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 800; color: var(--white); letter-spacing: -1px; }
   .stat-num span { color: var(--lime); }
   .stat-label { font-size: 13px; color: var(--grey-text); margin-top: 4px; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes boltBounce { 0%, 100% { transform: translateY(0); opacity: 0.6; } 50% { transform: translateY(10px); opacity: 1; } }
+  .scroll-hint { display: inline-flex; }
+  @media (max-width: 900px) { .scroll-hint { display: none !important; } }
 
   /* SECTIONS */
   section { padding: 120px 80px; }
@@ -246,8 +248,6 @@
     .pricing-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: repeat(2, 1fr); }
   }
-  .scroll-hint { display: inline-flex; }
-  @media (max-width: 1200px) { .scroll-hint { display: none !important; } }
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
@@ -264,7 +264,6 @@
     .launch-deal-includes { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: 16px; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .hero-actions { flex-direction: column; align-items: flex-start; }
-    .scroll-hint { display: none !important; }
   }
 
   /* INBOX DEMO */
@@ -358,7 +357,7 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <a href="#diensten" class="scroll-hint" style="position:absolute;bottom:32px;left:80px;display:inline-flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;animation:fadeUp 0.8s 0.7s ease both;" aria-label="Scroll naar beneden">
+  <a href="#diensten" class="scroll-hint" style="position:absolute;bottom:32px;left:80px;flex-direction:column;align-items:center;gap:6px;text-decoration:none;animation:fadeUp 0.8s 0.7s ease both;" aria-label="Scroll naar beneden">
     <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-text);">Scroll</span>
     <svg width="24" height="38" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation:boltBounce 1.8s ease-in-out infinite;filter:drop-shadow(0 0 8px #C8FF00) drop-shadow(0 0 16px rgba(200,255,0,0.4));"><g transform="rotate(180, 14, 22)"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C8FF00"/></g></svg>
   </a>
