@@ -53,7 +53,7 @@
   .mobile-nav a { color: var(--white); text-decoration: none; font-size: 18px; font-weight: 400; }
 
   /* HERO */
-  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 160px 80px 80px; position: relative; overflow: hidden; }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 160px 80px 100px; position: relative; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(200,255,0,0.08) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(200,255,0,0.04) 0%, transparent 60%); pointer-events: none; }
   .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 80px 80px; pointer-events: none; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent); }
   .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(200,255,0,0.1); border: 1px solid rgba(200,255,0,0.25); color: var(--lime); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 36px; width: fit-content; animation: fadeUp 0.8s ease both; }
@@ -68,12 +68,14 @@
   .btn-primary:hover { background: var(--lime-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,255,0,0.3); }
   .btn-ghost { color: var(--white); padding: 16px 24px; border-radius: 100px; font-family: var(--font-body); font-size: 15px; font-weight: 400; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; opacity: 0.7; transition: opacity 0.2s; }
   .btn-ghost:hover { opacity: 1; }
-  .hero-stats { display: flex; gap: 48px; margin-top: 80px; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.08); animation: fadeUp 0.8s 0.4s ease both; flex-wrap: wrap; }
+  .hero-stats { display: flex; gap: 48px; margin-top: 24px; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.08); animation: fadeUp 0.8s 0.4s ease both; flex-wrap: wrap; }
   .stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 800; color: var(--white); letter-spacing: -1px; }
   .stat-num span { color: var(--lime); }
   .stat-label { font-size: 13px; color: var(--grey-text); margin-top: 4px; }
   @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes boltBounce { 0%, 100% { transform: translateY(0); opacity: 0.6; } 50% { transform: translateY(10px); opacity: 1; } }
+  .scroll-hint { display: inline-flex; }
+  @media (max-width: 900px) { .scroll-hint { display: none !important; } }
 
   /* SECTIONS */
   section { padding: 120px 80px; }
@@ -86,7 +88,7 @@
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 60px; }
   .step { background: var(--black); padding: 40px; transition: background 0.3s; }
   .step:hover { background: #111; }
-  .step-num { font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--lime); letter-spacing: -0.5px; margin-bottom: 16px; display: block; }
+  .step-num { font-family: var(--font-display); font-size: 48px; font-weight: 800; color: var(--lime); letter-spacing: -1px; margin-bottom: 16px; display: block; line-height: 1.2; overflow: visible; }
   .step-icon { width: 48px; height: 48px; background: rgba(200,255,0,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
   .step h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
   .step p { font-size: 14px; color: var(--grey-text); line-height: 1.7; }
@@ -246,10 +248,7 @@
     .pricing-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: repeat(2, 1fr); }
   }
-  .scroll-hint { display: inline-flex; }
   @media (max-width: 900px) {
-    * { max-width: 100%; }
-    section { overflow-x: hidden; }
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
@@ -265,8 +264,43 @@
     .launch-deal-includes { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: 16px; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .hero-actions { flex-direction: column; align-items: flex-start; }
-    .scroll-hint { display: none !important; }
   }
+
+  /* INBOX DEMO */
+  .inbox-mail { display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:background 0.2s;border:1px solid transparent; }
+  .inbox-mail:hover { background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08); }
+  .inbox-mail.active { background:rgba(200,255,0,0.06);border-color:rgba(200,255,0,0.2); }
+  .mail-dot { width:8px;height:8px;border-radius:50%;background:var(--grey-mid);flex-shrink:0;margin-top:6px; }
+  .mail-dot.new { background:var(--lime); }
+  .mail-content { flex:1;min-width:0; }
+  .mail-from { font-size:13px;font-weight:500;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+  .mail-subject { font-size:12px;color:var(--white);opacity:0.8;margin-top:2px; }
+  .mail-preview { font-size:11px;color:var(--grey-text);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+  .mail-time { font-size:11px;color:var(--grey-text);flex-shrink:0; }
+  .pipe-step { display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);font-size:13px;color:var(--grey-text);transition:all 0.3s; }
+  .pipe-step.running { border-color:rgba(200,255,0,0.3);color:var(--white); }
+  .pipe-step.done { background:rgba(200,255,0,0.06);border-color:rgba(200,255,0,0.2);color:var(--lime); }
+  .pipe-icon { font-size:14px;width:20px;text-align:center; }
+
+  /* MAANDKOSTEN ACCORDION */
+  .monthly-accordion { margin-top: 14px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+  .monthly-accordion summary { list-style: none; cursor: pointer; padding: 10px 14px; font-size: 12px; font-weight: 500; color: #888; background: rgba(255,255,255,0.04); display: flex; align-items: center; gap: 6px; user-select: none; transition: color 0.2s, background 0.2s; }
+  .monthly-accordion summary::-webkit-details-marker { display: none; }
+  .monthly-accordion summary:hover { color: #ccc; background: rgba(255,255,255,0.07); }
+  .monthly-accordion[open] summary { color: #eee; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .monthly-accordion summary .ma-chevron { margin-left: auto; transition: transform 0.2s; font-size: 9px; opacity: 0.5; }
+  .monthly-accordion[open] summary .ma-chevron { transform: rotate(180deg); }
+  .accordion-body { padding: 12px 14px; background: rgba(0,0,0,0.25); }
+  .accordion-body ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+  .accordion-body ul li { font-size: 12px; color: #999; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+  .accordion-body ul li::before { content: "✓"; color: var(--lime); font-weight: 700; font-size: 11px; flex-shrink: 0; margin-top: 1px; }
+  .pricing-card.featured .monthly-accordion { border-color: rgba(0,0,0,0.12); }
+  .pricing-card.featured .monthly-accordion summary { background: rgba(0,0,0,0.08); color: rgba(0,0,0,0.5); }
+  .pricing-card.featured .monthly-accordion summary:hover { color: rgba(0,0,0,0.75); background: rgba(0,0,0,0.12); }
+  .pricing-card.featured .monthly-accordion[open] summary { color: rgba(0,0,0,0.75); border-bottom: 1px solid rgba(0,0,0,0.1); }
+  .pricing-card.featured .accordion-body { background: rgba(0,0,0,0.07); }
+  .pricing-card.featured .accordion-body ul li { color: rgba(0,0,0,0.6); }
+  .pricing-card.featured .accordion-body ul li::before { color: #000; }
 
   /* INBOX DEMO */
   .inbox-mail { display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:background 0.2s;border:1px solid transparent; }
@@ -323,7 +357,7 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <a href="#diensten" class="scroll-hint" style="position:absolute;bottom:32px;left:80px;display:inline-flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;animation:fadeUp 0.8s 0.7s ease both;" aria-label="Scroll naar beneden">
+  <a href="#diensten" class="scroll-hint" style="position:absolute;bottom:32px;left:80px;flex-direction:column;align-items:center;gap:6px;text-decoration:none;animation:fadeUp 0.8s 0.7s ease both;" aria-label="Scroll naar beneden">
     <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-text);">Scroll</span>
     <svg width="24" height="38" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation:boltBounce 1.8s ease-in-out infinite;filter:drop-shadow(0 0 8px #C8FF00) drop-shadow(0 0 16px rgba(200,255,0,0.4));"><g transform="rotate(180, 14, 22)"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C8FF00"/></g></svg>
   </a>
@@ -400,16 +434,16 @@
       <h3>Websites &amp; AI Bots</h3>
       <p>Een professionele website met een slimme AI-assistent die 24/7 voor je werkt. Leads binnenhalen, afspraken inplannen, vragen beantwoorden.</p>
       <div class="pillar-items">
-        <div class="pillar-item">Starter Website — vanaf €850</div>
-        <div class="pillar-item">Pro Website + AI Chatbot — €1.750</div>
-        <div class="pillar-item">Chatbot Add-on op bestaande site — €600</div>
-        <div class="pillar-item">WhatsApp Bot — €750</div>
-        <div class="pillar-item">Lead Qualifier Agent — €950</div>
+        <div class="pillar-item">Starter Website vanaf €850</div>
+        <div class="pillar-item">Pro Website + AI Chatbot €1.750</div>
+        <div class="pillar-item">Chatbot Add-on op bestaande site €600</div>
+        <div class="pillar-item">WhatsApp Bot €750</div>
+        <div class="pillar-item">Lead Qualifier Agent €950</div>
       </div>
     </div>
     <div class="pillar reveal">
       <div class="pillar-icon">⚙️</div>
-      <div class="pillar-tag">Meest groei</div>
+      <div class="pillar-tag">Meeste groei</div>
       <h3>AI Automatisering</h3>
       <p>Repetitieve taken volledig automatiseren. Lead binnenkomt, CRM bijwerkt, WhatsApp melding verstuurd, follow-up e-mail gestuurd. Allemaal automatisch.</p>
       <div class="pillar-items">
@@ -419,6 +453,7 @@
         <div class="pillar-item">Agenda koppeling en reminders</div>
         <div class="pillar-item">Factuur en offerte workflows</div>
       </div>
+      <a href="/blog/ai-automatisering-mkb" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:13px;color:var(--lime);text-decoration:none;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Lees meer over AI automatisering →</a>
     </div>
     <div class="pillar reveal">
       <div class="pillar-icon">🛠️</div>
@@ -443,7 +478,7 @@
   <p class="section-sub">Twee bots, twee doelen. Test ze allebei en ontdek wat bij jouw bedrijf past.</p>
   <div class="demo-grid">
     <div class="reveal" style="display:flex;flex-direction:column;">
-      <div class="demo-label"><span>Standaard Chatbot</span> — Informeert en helpt bezoekers</div>
+      <div class="demo-label"><span>Standaard Chatbot</span> Informeert en helpt bezoekers</div>
       <div class="chat-widget">
         <div class="chat-header">
           <div class="chat-avatar">🤖</div>
@@ -471,7 +506,7 @@
     </div>
 
     <div class="reveal" style="display:flex;flex-direction:column;">
-      <div class="demo-label"><span>Lead Qualifier Bot</span> — Filtert warme leads automatisch</div>
+      <div class="demo-label"><span>Lead Qualifier Bot</span> Filtert warme leads automatisch</div>
       <div class="chat-widget">
         <div class="chat-header">
           <div class="chat-avatar" style="background:#fff;color:#080808">🎯</div>
@@ -515,6 +550,7 @@
         <div class="cv-feature">Factuur en offerte workflows</div>
       </div>
       <div class="saas-badge" style="background:rgba(200,255,0,0.1);border-color:rgba(200,255,0,0.3);">⚙️ AI Automatisering</div>
+      <a href="/blog/ai-automatisering-mkb" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;color:var(--lime);text-decoration:none;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Ontdek alle mogelijkheden →</a>
     </div>
     <div class="cv-tool reveal" style="background:var(--black);">
       <!-- INBOX -->
@@ -574,7 +610,7 @@
           <div id="resultBadge" style="font-size:11px;padding:3px 10px;border-radius:100px;"></div>
         </div>
         <div id="resultText" style="font-size:13px;color:var(--white);line-height:1.7;background:var(--grey);padding:14px 16px;border-radius:10px;white-space:pre-wrap;"></div>
-        <div id="sendConfirm" style="display:none;margin-top:10px;font-size:12px;color:var(--lime);display:flex;align-items:center;gap:6px;">✓ Automatisch verstuurd — geen actie vereist</div>
+        <div id="sendConfirm" style="display:none;margin-top:10px;font-size:12px;color:var(--lime);display:flex;align-items:center;gap:6px;">✓ Automatisch verstuurd, geen actie vereist</div>
         <button onclick="resetAutomation()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere mail proberen</button>
       </div>
     </div>
@@ -636,7 +672,17 @@
         <li>Google Search Console + Bedrijfsprofiel</li>
         <li>Maandelijks onderhoud</li>
       </ul>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Starter')">Start gesprek</button>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in €99/maand? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Website en domein altijd online, wij beheren alles</li>
+          <li>1 uur aanpassingen per maand (tekst, foto's, kleine wijzigingen)</li>
+          <li>Technisch onderhoud zodat niets stukgaat</li>
+          <li>Google Search Console monitoring</li>
+          <li>Support via WhatsApp, reactie binnen 24 uur</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Starter')" style="margin-top:14px">Start gesprek</button>
     </div>
     <div class="pricing-card featured reveal">
       <div class="pricing-badge">Aanbevolen</div>
@@ -652,7 +698,17 @@
         <li>WhatsApp koppeling</li>
         <li>Maandelijkse rapportage</li>
       </ul>
-      <button class="btn-pricing btn-pricing-black" onclick="startGesprek('Pro Website')">Start gesprek</button>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in €249/maand? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Website en domein altijd online, wij beheren alles</li>
+          <li>2 uur aanpassingen per maand (website en chatbot)</li>
+          <li>Chatbot bijhouden zodat antwoorden altijd kloppen</li>
+          <li>Maandelijkse rapportage: bezoekers, leads en chatgesprekken</li>
+          <li>Prioriteits-support, reactie binnen 4 uur (werkdagen)</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-black" onclick="startGesprek('Pro Website')" style="margin-top:14px">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">Chatbot Add-on</div>
@@ -665,7 +721,16 @@
         <li>Agenda-integratie</li>
         <li>Maandelijks onderhoud</li>
       </ul>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Chatbot Add-on')">Start gesprek</button>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in €149/maand? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Chatbot altijd online, wij houden hem draaiende</li>
+          <li>1 uur updates per maand zodat antwoorden actueel blijven</li>
+          <li>Technisch onderhoud en monitoring</li>
+          <li>Support via WhatsApp, reactie binnen 24 uur</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Chatbot Add-on')" style="margin-top:14px">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">WhatsApp Bot</div>
@@ -679,7 +744,16 @@
         <li>Afspraken inplannen</li>
         <li>Escalatie naar eigenaar</li>
       </ul>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('WhatsApp Bot')">Start gesprek</button>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in €149/maand? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Bot altijd online, ook buiten kantooruren</li>
+          <li>1 uur updates per maand (antwoorden en flows bijhouden)</li>
+          <li>Maandelijkse rapportage: gesprekken, leads en conversies</li>
+          <li>Support via WhatsApp, reactie binnen 24 uur</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('WhatsApp Bot')" style="margin-top:14px">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">Lead Qualifier Agent</div>
@@ -693,7 +767,16 @@
         <li>WhatsApp of e-mail notificatie</li>
         <li>Maandelijkse leadrapportage</li>
       </ul>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Lead Qualifier')">Start gesprek</button>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in €199/maand? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Agent 24/7 actief, elke lead wordt automatisch gekwalificeerd</li>
+          <li>1-2 uur updates per maand (scorecriteria en vragen bijstellen)</li>
+          <li>Maandelijkse rapportage: warm, koud en niet relevant</li>
+          <li>Support via WhatsApp, reactie binnen 24 uur</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Lead Qualifier')" style="margin-top:14px">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">AI Automation &amp; Maatwerk</div>
@@ -707,7 +790,17 @@
         <li>Meerdere AI agents</li>
         <li>Dedicated support</li>
       </ul>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('AI Automatisering')">Neem contact op</button>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in de maandkosten? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Aantal uur per maand vooraf afgestemd op jouw project</li>
+          <li>Proactief beheer, wij signaleren problemen voor jij ze ziet</li>
+          <li>Updates bij API-wijzigingen van gekoppelde tools (Make, n8n, CRM)</li>
+          <li>Directe lijn met de bouwer, geen supporttickets</li>
+          <li>Prioriteits-support, reactie binnen 4 uur (werkdagen)</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('AI Automatisering')" style="margin-top:14px">Neem contact op</button>
     </div>
   </div>
 </section>
@@ -720,7 +813,7 @@
       <h2>Klaar om te starten?</h2>
       <p>Plan een gratis kennismakingsgesprek van 30 minuten. Geen verplichtingen.</p>
       <div class="contact-items">
-        <div class="contact-item"><div class="contact-item-icon">📍</div>Arnhem, Gelderland — ook remote</div>
+        <div class="contact-item"><div class="contact-item-icon">📍</div>Arnhem, Gelderland ook remote</div>
         <div class="contact-item"><div class="contact-item-icon">📞</div><a href="tel:0642839335" style="color:var(--lime);text-decoration:underline;text-underline-offset:3px;">06 42839335</a></div>
         <div class="contact-item"><div class="contact-item-icon">⏱️</div>Reactie binnen 24 uur</div>
         <div class="contact-item"><div class="contact-item-icon">🆓</div>Eerste gesprek altijd gratis</div>
