@@ -41,7 +41,7 @@
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; backdrop-filter: blur(16px); background: rgba(8,8,8,0.7); border-bottom: 1px solid rgba(255,255,255,0.06); }
   .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -0.5px; color: var(--white); text-decoration: none; }
   .nav-logo span { color: var(--lime); }
-  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
   .nav-links a { color: var(--grey-text); text-decoration: none; font-size: 14px; font-weight: 400; letter-spacing: 0.02em; transition: color 0.2s; }
   .nav-links a:hover { color: var(--white); }
   .nav-cta { background: var(--lime); color: var(--black) !important; padding: 10px 22px; border-radius: 100px; font-weight: 500 !important; transition: background 0.2s, transform 0.2s !important; }
@@ -341,6 +341,7 @@
     <li><a href="#demo">Bot Demo</a></li>
     <li><a href="#ai-demo">AI Demo</a></li>
     <li><a href="#prijzen">Prijzen</a></li>
+    <li style="display:flex;align-items:center;"><a href="https://portal.briqk.nl" target="_blank" style="color:var(--white);text-decoration:none;font-size:13px;font-weight:500;padding:8px 18px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.background='transparent'">&#x1F511; Inloggen</a></li>
     <li><a href="#contact" class="nav-cta">Gratis gesprek</a></li>
   </ul>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -352,6 +353,7 @@
   <a href="#demo" onclick="toggleMenu()">Bot Demo</a>
   <a href="#ai-demo" onclick="toggleMenu()">AI Demo</a>
   <a href="#prijzen" onclick="toggleMenu()">Prijzen</a>
+  <a href="https://portal.briqk.nl" target="_blank" style="color:var(--grey-text)">Inloggen</a>
   <a href="#contact" onclick="toggleMenu()" style="color:var(--lime)">Gratis gesprek</a>
 </div>
 
