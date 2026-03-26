@@ -29,6 +29,22 @@
       "destination": "/sitemap.xml"
     },
     {
+      "source": "/website-laten-maken-arnhem",
+      "destination": "/website-laten-maken-arnhem.html"
+    },
+    {
+      "source": "/website-laten-maken-mkb",
+      "destination": "/website-laten-maken-mkb.html"
+    },
+    {
+      "source": "/ai-website-laten-maken",
+      "destination": "/ai-website-laten-maken.html"
+    },
+    {
+      "source": "/whatsapp-bot-bedrijf",
+      "destination": "/whatsapp-bot-bedrijf.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
