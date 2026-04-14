@@ -267,7 +267,6 @@
     .launch-deal-includes { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: 16px; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .hero-actions { flex-direction: column; align-items: flex-start; }
-    .portal-grid { grid-template-columns: 1fr !important; }
   }
 
   /* INBOX DEMO */
@@ -338,9 +337,9 @@
 <nav>
   <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:10px;"><svg width="22" height="34" viewBox="0 0 28 44" fill="none" style="filter:drop-shadow(0 0 6px #C8FF00);flex-shrink:0;"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C8FF00"/></svg><span style="white-space:nowrap;color:var(--white);">Bri<span>qk</span></span></a>
   <ul class="nav-links">
-    <li><a href="#diensten">Diensten</a></li>
+    <li><a href="#ai-demo">Automations</a></li>
+    <li><a href="#diensten">Websites</a></li>
     <li><a href="#demo">Bot Demo</a></li>
-    <li><a href="#ai-demo">AI Demo</a></li>
     <li><a href="#prijzen">Prijzen</a></li>
     <li style="display:flex;align-items:center;"><a href="https://portal.briqk.nl" target="_blank" style="color:var(--white);text-decoration:none;font-size:13px;font-weight:500;padding:8px 18px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.background='transparent'">&#x1F511; Inloggen</a></li>
     <li><a href="#contact" class="nav-cta">Gratis gesprek</a></li>
@@ -350,9 +349,9 @@
   </button>
 </nav>
 <div class="mobile-nav" id="mobileNav">
-  <a href="#diensten" onclick="toggleMenu()">Diensten</a>
+  <a href="#ai-demo" onclick="toggleMenu()">Automations</a>
+  <a href="#diensten" onclick="toggleMenu()">Websites</a>
   <a href="#demo" onclick="toggleMenu()">Bot Demo</a>
-  <a href="#ai-demo" onclick="toggleMenu()">AI Demo</a>
   <a href="#prijzen" onclick="toggleMenu()">Prijzen</a>
   <a href="https://portal.briqk.nl" target="_blank" style="color:var(--grey-text)">Inloggen</a>
   <a href="#contact" onclick="toggleMenu()" style="color:var(--lime)">Gratis gesprek</a>
@@ -369,7 +368,7 @@
   </a>
   <div class="hero-tag">AI voor Nederlands MKB</div>
   <h1>Meer klanten.<br><em>Minder werk.</em><br>Automatisch.</h1>
-  <p class="hero-sub">Van <strong>AI website</strong> tot volledige <strong>workflow automatisering</strong>. Wij bouwen digitale medewerkers die 24/7 voor jouw bedrijf werken.</p>
+  <p class="hero-sub">Van <strong>workflow automatisering</strong> tot slimme <strong>AI websites</strong>. Wij bouwen digitale medewerkers die 24/7 voor jouw bedrijf werken.</p>
 
   <div class="hero-actions">
     <a href="#contact" class="btn-primary">Gratis gesprek inplannen</a>
@@ -389,8 +388,8 @@
       <div class="stat-label">Verborgen kosten</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">100<span>%</span></div>
-      <div class="stat-label">Nederlands support</div>
+      <div class="stat-num">0</div>
+      <div class="stat-label">Extra personeel nodig</div>
     </div>
   </div>
 </section>
@@ -435,21 +434,8 @@
   <p class="section-sub">Van website tot volledige AI automatisering.</p>
   <div class="pillars-grid">
     <div class="pillar reveal">
-      <div class="pillar-icon">🌐</div>
-      <div class="pillar-tag">Meest gevraagd</div>
-      <h3>Websites &amp; AI Bots</h3>
-      <p>Een professionele website met een slimme AI-assistent die 24/7 voor je werkt. Leads binnenhalen, afspraken inplannen, vragen beantwoorden.</p>
-      <div class="pillar-items">
-        <div class="pillar-item">Starter Website vanaf €850</div>
-        <div class="pillar-item">Pro Website + AI Chatbot €1.750</div>
-        <div class="pillar-item">Chatbot Add-on op bestaande site €600</div>
-        <div class="pillar-item">WhatsApp Bot €750</div>
-        <div class="pillar-item">Lead Qualifier Agent €950</div>
-      </div>
-    </div>
-    <div class="pillar reveal">
       <div class="pillar-icon">⚙️</div>
-      <div class="pillar-tag">Meeste groei</div>
+      <div class="pillar-tag">Meest gevraagd</div>
       <h3>AI Automatisering</h3>
       <p>Repetitieve taken volledig automatiseren. Als een lead binnenkomt, werkt het CRM zichzelf bij, krijg jij een WhatsApp melding en gaat de follow-up e-mail automatisch de deur uit.</p>
       <div class="pillar-items">
@@ -460,6 +446,19 @@
         <div class="pillar-item">Factuur en offerte workflows</div>
       </div>
       <a href="/blog/ai-automatisering-mkb" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:13px;color:var(--lime);text-decoration:none;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Lees meer over AI automatisering →</a>
+    </div>
+    <div class="pillar reveal">
+      <div class="pillar-icon">🌐</div>
+      <div class="pillar-tag">Professioneel online</div>
+      <h3>Websites &amp; AI Bots</h3>
+      <p>Een professionele website met een slimme AI-assistent die 24/7 voor je werkt. Leads binnenhalen, afspraken inplannen, vragen beantwoorden.</p>
+      <div class="pillar-items">
+        <div class="pillar-item">Starter Website vanaf €850</div>
+        <div class="pillar-item">Pro Website + AI Chatbot €1.750</div>
+        <div class="pillar-item">Chatbot Add-on op bestaande site €600</div>
+        <div class="pillar-item">WhatsApp Bot €750</div>
+        <div class="pillar-item">Lead Qualifier Agent €950</div>
+      </div>
     </div>
     <div class="pillar reveal">
       <div class="pillar-icon">🛠️</div>
@@ -473,22 +472,6 @@
         <div class="pillar-item">Branche-specifieke AI assistent op maat</div>
         <div class="pillar-item">Prijs op aanvraag</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTAL USP -->
-<section style="background:var(--black);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:80px 80px;">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
-    <div class="reveal">
-      <div class="section-tag">Klantportaal</div>
-      <h2 class="section-title" style="max-width:500px;">Jij ziet altijd wat er gebeurt</h2>
-      <p style="font-size:16px;color:var(--grey-text);line-height:1.8;margin-top:16px;max-width:480px;">Geen black box. Via het Briqk klantportaal zie je live hoeveel vragen je chatbot heeft beantwoord, hoeveel leads er zijn binnengekomen en wat er automatisch is verwerkt. Altijd inzicht, geen verrassingen.</p>
-      <a href="https://portal.briqk.nl" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:28px;color:var(--lime);text-decoration:none;font-size:14px;font-weight:500;border:1px solid rgba(200,255,0,0.3);padding:10px 20px;border-radius:100px;transition:all 0.2s;" onmouseover="this.style.background='rgba(200,255,0,0.08)'" onmouseout="this.style.background='transparent'">Bekijk het portaal &#x2197;</a>
-    </div>
-    <div class="reveal" style="position:relative;">
-      <img src="/portal-screenshot.png" alt="Briqk klantportaal dashboard" style="width:100%;border-radius:16px;border:1px solid rgba(255,255,255,0.08);box-shadow:0 40px 80px rgba(0,0,0,0.6);">
-      <div style="position:absolute;inset:0;border-radius:16px;background:linear-gradient(to bottom, transparent 60%, rgba(8,8,8,0.4) 100%);pointer-events:none;"></div>
     </div>
   </div>
 </section>
@@ -708,6 +691,31 @@
     </div>
     <div class="pricing-card featured reveal">
       <div class="pricing-badge">Aanbevolen</div>
+      <div class="pricing-name">AI Automation &amp; Maatwerk</div>
+      <div class="pricing-price" style="font-size:32px;letter-spacing:-1px;margin:16px 0">Op maat</div>
+      <div class="pricing-period">prijs op aanvraag</div>
+      <div class="pricing-desc">AI automatisering, Micro-SaaS tools of complexe koppelingen.</div>
+      <ul class="pricing-features">
+        <li>Workflow automatisering</li>
+        <li>CRM en tool koppelingen</li>
+        <li>Micro-SaaS tool bouwen</li>
+        <li>Meerdere AI agents</li>
+        <li>Dedicated support</li>
+      </ul>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in de maandkosten? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Aantal uur per maand vooraf afgestemd op jouw project</li>
+          <li>Proactief beheer, wij signaleren problemen voordat jij ze ziet</li>
+          <li>Updates bij API-wijzigingen van gekoppelde tools (Make, n8n, CRM)</li>
+          <li>Directe lijn met de bouwer, geen supporttickets</li>
+          <li>Prioriteits-support, reactie dezelfde werkdag</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-black" onclick="startGesprek('AI Automatisering')" style="margin-top:14px">Neem contact op</button>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-badge">Website + Chatbot</div>
       <div class="pricing-name">Pro Website + Chatbot</div>
       <div class="pricing-price"><sup>€</sup>1.750</div>
       <div class="pricing-period">eenmalig + €249/maand</div>
@@ -727,11 +735,10 @@
           <li>Maandelijkse aanpassingen en optimalisaties (website en chatbot)</li>
           <li>Chatbot bijhouden zodat antwoorden altijd kloppen</li>
           <li>Maandelijkse rapportage: bezoekers, leads en chatgesprekken</li>
-          <li>Toegang tot het Briqk klantportaal met live dashboard</li>
           <li>Prioriteits-support, reactie dezelfde werkdag</li>
         </ul></div>
       </details>
-      <button class="btn-pricing btn-pricing-black" onclick="startGesprek('Pro Website')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Pro Website')" style="margin-top:14px">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">Chatbot Add-on</div>
@@ -773,7 +780,6 @@
           <li>Bot altijd online, ook buiten kantooruren</li>
           <li>Maandelijkse updates (antwoorden en flows bijhouden)</li>
           <li>Maandelijkse rapportage: gesprekken, leads en conversies</li>
-          <li>Toegang tot het Briqk klantportaal met live overzicht</li>
           <li>Support via WhatsApp, reactie binnen 24 uur</li>
         </ul></div>
       </details>
@@ -797,36 +803,10 @@
           <li>Agent 24/7 actief, elke lead wordt automatisch gekwalificeerd</li>
           <li>Maandelijkse updates (scorecriteria en vragen bijstellen)</li>
           <li>Maandelijkse rapportage: warm, koud en niet relevant</li>
-          <li>Toegang tot het Briqk klantportaal met lead dashboard</li>
           <li>Support via WhatsApp, reactie binnen 24 uur</li>
         </ul></div>
       </details>
       <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Lead Qualifier')" style="margin-top:14px">Start gesprek</button>
-    </div>
-    <div class="pricing-card reveal">
-      <div class="pricing-name">AI Automation &amp; Maatwerk</div>
-      <div class="pricing-price" style="font-size:32px;letter-spacing:-1px;margin:16px 0">Op maat</div>
-      <div class="pricing-period">prijs op aanvraag</div>
-      <div class="pricing-desc">AI automatisering, Micro-SaaS tools of complexe koppelingen.</div>
-      <ul class="pricing-features">
-        <li>Workflow automatisering</li>
-        <li>CRM en tool koppelingen</li>
-        <li>Micro-SaaS tool bouwen</li>
-        <li>Meerdere AI agents</li>
-        <li>Dedicated support</li>
-      </ul>
-      <details class="monthly-accordion">
-        <summary>Wat zit er in de maandkosten? <span class="ma-chevron">▼</span></summary>
-        <div class="accordion-body"><ul>
-          <li>Aantal uur per maand vooraf afgestemd op jouw project</li>
-          <li>Proactief beheer, wij signaleren problemen voordat jij ze ziet</li>
-          <li>Updates bij API-wijzigingen van gekoppelde tools (Make, n8n, CRM)</li>
-          <li>Directe lijn met de bouwer, geen supporttickets</li>
-          <li>Toegang tot het Briqk klantportaal met automation overzicht</li>
-          <li>Prioriteits-support, reactie dezelfde werkdag</li>
-        </ul></div>
-      </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('AI Automatisering')" style="margin-top:14px">Neem contact op</button>
     </div>
   </div>
 </section>
