@@ -267,7 +267,6 @@
     .launch-deal-includes { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: 16px; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .hero-actions { flex-direction: column; align-items: flex-start; }
-    .portal-grid { grid-template-columns: 1fr !important; }
   }
 
   /* INBOX DEMO */
@@ -321,6 +320,38 @@
   .pipe-step.running { border-color:rgba(200,255,0,0.3);color:var(--white); }
   .pipe-step.done { background:rgba(200,255,0,0.06);border-color:rgba(200,255,0,0.2);color:var(--lime); }
   .pipe-icon { font-size:14px;width:20px;text-align:center; }
+
+  /* WORKFLOW DEMO */
+  .workflow-section { background: var(--grey); }
+  .workflow-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 60px; }
+  .trigger-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+  .trigger-btn { background: var(--black); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; cursor: pointer; text-align: left; transition: all 0.2s; font-family: var(--font-body); }
+  .trigger-btn:hover { border-color: rgba(200,255,0,0.4); background: rgba(200,255,0,0.04); }
+  .trigger-btn.active { border-color: var(--lime); background: rgba(200,255,0,0.08); }
+  .trigger-btn .t-icon { font-size: 22px; margin-bottom: 8px; display: block; }
+  .trigger-btn .t-label { font-size: 13px; font-weight: 500; color: var(--white); display: block; }
+  .trigger-btn .t-sub { font-size: 11px; color: var(--grey-text); margin-top: 3px; display: block; }
+  .wf-panel { background: var(--black); border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden; }
+  .wf-header { background: var(--grey-mid); padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 12px; }
+  .wf-body { padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .wf-step { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 10px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s; }
+  .wf-step.running { border-color: rgba(200,255,0,0.4); background: rgba(200,255,0,0.05); }
+  .wf-step.done { border-color: rgba(200,255,0,0.3); background: rgba(200,255,0,0.08); }
+  .wf-step .ws-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; transition: background 0.4s; }
+  .wf-step.running .ws-icon { background: rgba(200,255,0,0.15); }
+  .wf-step.done .ws-icon { background: rgba(200,255,0,0.2); }
+  .ws-text { flex: 1; }
+  .ws-text .ws-title { font-size: 13px; font-weight: 500; color: var(--white); }
+  .ws-text .ws-desc { font-size: 11px; color: var(--grey-text); margin-top: 2px; }
+  .wf-step.done .ws-text .ws-desc { color: var(--lime); }
+  .ws-status { font-size: 11px; color: var(--grey-text); flex-shrink: 0; }
+  .wf-step.running .ws-status { color: var(--lime); }
+  .wf-step.done .ws-status { color: var(--lime); }
+  .wf-connector { width: 2px; height: 12px; background: rgba(255,255,255,0.08); margin-left: 29px; border-radius: 1px; transition: background 0.4s; }
+  .wf-connector.active { background: var(--lime); }
+  .wf-result { display: none; margin: 12px 20px 20px; background: rgba(200,255,0,0.06); border: 1px solid rgba(200,255,0,0.2); border-radius: 12px; padding: 16px; }
+  .wf-result.visible { display: block; }
+  @media (max-width: 900px) { .workflow-layout { grid-template-columns: 1fr; } .trigger-grid { grid-template-columns: 1fr 1fr; } }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1H8P518FLC"></script>
@@ -338,9 +369,9 @@
 <nav>
   <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:10px;"><svg width="22" height="34" viewBox="0 0 28 44" fill="none" style="filter:drop-shadow(0 0 6px #C8FF00);flex-shrink:0;"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C8FF00"/></svg><span style="white-space:nowrap;color:var(--white);">Bri<span>qk</span></span></a>
   <ul class="nav-links">
-    <li><a href="#diensten">Diensten</a></li>
+    <li><a href="#ai-demo">Automations</a></li>
+    <li><a href="#diensten">Websites</a></li>
     <li><a href="#demo">Bot Demo</a></li>
-    <li><a href="#ai-demo">AI Demo</a></li>
     <li><a href="#prijzen">Prijzen</a></li>
     <li style="display:flex;align-items:center;"><a href="https://portal.briqk.nl" target="_blank" style="color:var(--white);text-decoration:none;font-size:13px;font-weight:500;padding:8px 18px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.background='transparent'">&#x1F511; Inloggen</a></li>
     <li><a href="#contact" class="nav-cta">Gratis gesprek</a></li>
@@ -350,9 +381,9 @@
   </button>
 </nav>
 <div class="mobile-nav" id="mobileNav">
-  <a href="#diensten" onclick="toggleMenu()">Diensten</a>
+  <a href="#ai-demo" onclick="toggleMenu()">Automations</a>
+  <a href="#diensten" onclick="toggleMenu()">Websites</a>
   <a href="#demo" onclick="toggleMenu()">Bot Demo</a>
-  <a href="#ai-demo" onclick="toggleMenu()">AI Demo</a>
   <a href="#prijzen" onclick="toggleMenu()">Prijzen</a>
   <a href="https://portal.briqk.nl" target="_blank" style="color:var(--grey-text)">Inloggen</a>
   <a href="#contact" onclick="toggleMenu()" style="color:var(--lime)">Gratis gesprek</a>
@@ -369,7 +400,7 @@
   </a>
   <div class="hero-tag">AI voor Nederlands MKB</div>
   <h1>Meer klanten.<br><em>Minder werk.</em><br>Automatisch.</h1>
-  <p class="hero-sub">Van <strong>AI website</strong> tot volledige <strong>workflow automatisering</strong>. Wij bouwen digitale medewerkers die 24/7 voor jouw bedrijf werken.</p>
+  <p class="hero-sub">Van <strong>workflow automatisering</strong> tot slimme <strong>AI websites</strong>. Wij bouwen digitale medewerkers die 24/7 voor jouw bedrijf werken.</p>
 
   <div class="hero-actions">
     <a href="#contact" class="btn-primary">Gratis gesprek inplannen</a>
@@ -389,8 +420,8 @@
       <div class="stat-label">Verborgen kosten</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">100<span>%</span></div>
-      <div class="stat-label">Nederlands support</div>
+      <div class="stat-num">0</div>
+      <div class="stat-label">Extra personeel nodig</div>
     </div>
   </div>
 </section>
@@ -435,21 +466,8 @@
   <p class="section-sub">Van website tot volledige AI automatisering.</p>
   <div class="pillars-grid">
     <div class="pillar reveal">
-      <div class="pillar-icon">🌐</div>
-      <div class="pillar-tag">Meest gevraagd</div>
-      <h3>Websites &amp; AI Bots</h3>
-      <p>Een professionele website met een slimme AI-assistent die 24/7 voor je werkt. Leads binnenhalen, afspraken inplannen, vragen beantwoorden.</p>
-      <div class="pillar-items">
-        <div class="pillar-item">Starter Website vanaf €850</div>
-        <div class="pillar-item">Pro Website + AI Chatbot €1.750</div>
-        <div class="pillar-item">Chatbot Add-on op bestaande site €600</div>
-        <div class="pillar-item">WhatsApp Bot €750</div>
-        <div class="pillar-item">Lead Qualifier Agent €950</div>
-      </div>
-    </div>
-    <div class="pillar reveal">
       <div class="pillar-icon">⚙️</div>
-      <div class="pillar-tag">Meeste groei</div>
+      <div class="pillar-tag">Meest gevraagd</div>
       <h3>AI Automatisering</h3>
       <p>Repetitieve taken volledig automatiseren. Als een lead binnenkomt, werkt het CRM zichzelf bij, krijg jij een WhatsApp melding en gaat de follow-up e-mail automatisch de deur uit.</p>
       <div class="pillar-items">
@@ -460,6 +478,19 @@
         <div class="pillar-item">Factuur en offerte workflows</div>
       </div>
       <a href="/blog/ai-automatisering-mkb" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:13px;color:var(--lime);text-decoration:none;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Lees meer over AI automatisering →</a>
+    </div>
+    <div class="pillar reveal">
+      <div class="pillar-icon">🌐</div>
+      <div class="pillar-tag">Professioneel online</div>
+      <h3>Websites &amp; AI Bots</h3>
+      <p>Een professionele website met een slimme AI-assistent die 24/7 voor je werkt. Leads binnenhalen, afspraken inplannen, vragen beantwoorden.</p>
+      <div class="pillar-items">
+        <div class="pillar-item">Starter Website vanaf €850</div>
+        <div class="pillar-item">Pro Website + AI Chatbot €1.750</div>
+        <div class="pillar-item">Chatbot Add-on op bestaande site €600</div>
+        <div class="pillar-item">WhatsApp Bot €750</div>
+        <div class="pillar-item">Lead Qualifier Agent €950</div>
+      </div>
     </div>
     <div class="pillar reveal">
       <div class="pillar-icon">🛠️</div>
@@ -473,22 +504,6 @@
         <div class="pillar-item">Branche-specifieke AI assistent op maat</div>
         <div class="pillar-item">Prijs op aanvraag</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTAL USP -->
-<section style="background:var(--black);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:80px 80px;">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
-    <div class="reveal">
-      <div class="section-tag">Klantportaal</div>
-      <h2 class="section-title" style="max-width:500px;">Jij ziet altijd wat er gebeurt</h2>
-      <p style="font-size:16px;color:var(--grey-text);line-height:1.8;margin-top:16px;max-width:480px;">Geen black box. Via het Briqk klantportaal zie je live hoeveel vragen je chatbot heeft beantwoord, hoeveel leads er zijn binnengekomen en wat er automatisch is verwerkt. Altijd inzicht, geen verrassingen.</p>
-      <a href="https://portal.briqk.nl" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:28px;color:var(--lime);text-decoration:none;font-size:14px;font-weight:500;border:1px solid rgba(200,255,0,0.3);padding:10px 20px;border-radius:100px;transition:all 0.2s;" onmouseover="this.style.background='rgba(200,255,0,0.08)'" onmouseout="this.style.background='transparent'">Bekijk het portaal &#x2197;</a>
-    </div>
-    <div class="reveal" style="position:relative;">
-      <img src="/portal-screenshot.png" alt="Briqk klantportaal dashboard" style="width:100%;border-radius:16px;border:1px solid rgba(255,255,255,0.08);box-shadow:0 40px 80px rgba(0,0,0,0.6);">
-      <div style="position:absolute;inset:0;border-radius:16px;background:linear-gradient(to bottom, transparent 60%, rgba(8,8,8,0.4) 100%);pointer-events:none;"></div>
     </div>
   </div>
 </section>
@@ -639,6 +654,92 @@
   </div>
 </section>
 
+<!-- WORKFLOW DEMO -->
+<section class="workflow-section" id="workflow-demo">
+  <div class="section-tag">Live Workflow Demo</div>
+  <h2 class="section-title">Kies een trigger. Zie wat er gebeurt.</h2>
+  <p class="section-sub">Zo werkt AI automatisering in de praktijk. Kies een situatie en watch de pipeline draaien.</p>
+  <div class="workflow-layout">
+    <div class="reveal">
+      <p style="font-size:14px;color:var(--grey-text);margin-bottom:16px;">Kies een trigger om de workflow te starten:</p>
+      <div class="trigger-grid">
+        <button class="trigger-btn" onclick="startWorkflow(0)">
+          <span class="t-icon">📋</span>
+          <span class="t-label">Nieuw contactformulier</span>
+          <span class="t-sub">Bezoeker stuurt een aanvraag</span>
+        </button>
+        <button class="trigger-btn" onclick="startWorkflow(1)">
+          <span class="t-icon">📱</span>
+          <span class="t-label">WhatsApp bericht</span>
+          <span class="t-sub">Klant stuurt een berichtje</span>
+        </button>
+        <button class="trigger-btn" onclick="startWorkflow(2)">
+          <span class="t-icon">📅</span>
+          <span class="t-label">Afspraak ingepland</span>
+          <span class="t-sub">Via Calendly of Google Calendar</span>
+        </button>
+        <button class="trigger-btn" onclick="startWorkflow(3)">
+          <span class="t-icon">💼</span>
+          <span class="t-label">Offerte verstuurd</span>
+          <span class="t-sub">Na intake, offerte gaat de deur uit</span>
+        </button>
+      </div>
+      <div id="wfTriggerInfo" style="margin-top:20px;padding:16px;background:rgba(200,255,0,0.06);border:1px solid rgba(200,255,0,0.15);border-radius:12px;display:none;">
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--lime);margin-bottom:6px;">Trigger actief</div>
+        <div id="wfTriggerText" style="font-size:14px;color:var(--white);"></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="wf-panel">
+        <div class="wf-header">
+          <div style="width:36px;height:36px;background:rgba(200,255,0,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;">⚡</div>
+          <div>
+            <div style="font-size:14px;font-weight:500;">Briqk Automation Pipeline</div>
+            <div style="font-size:12px;color:var(--grey-text);" id="wfStatus">Wacht op trigger...</div>
+          </div>
+        </div>
+        <div class="wf-body" id="wfSteps">
+          <div class="wf-step" id="wfs0">
+            <div class="ws-icon">⏳</div>
+            <div class="ws-text"><div class="ws-title">Trigger ontvangen</div><div class="ws-desc">Wacht op actie</div></div>
+            <div class="ws-status" id="wfs0s"></div>
+          </div>
+          <div class="wf-connector" id="wfc0"></div>
+          <div class="wf-step" id="wfs1">
+            <div class="ws-icon">⏳</div>
+            <div class="ws-text"><div class="ws-title">Data verwerken</div><div class="ws-desc">Wacht</div></div>
+            <div class="ws-status" id="wfs1s"></div>
+          </div>
+          <div class="wf-connector" id="wfc1"></div>
+          <div class="wf-step" id="wfs2">
+            <div class="ws-icon">⏳</div>
+            <div class="ws-text"><div class="ws-title">CRM bijwerken</div><div class="ws-desc">Wacht</div></div>
+            <div class="ws-status" id="wfs2s"></div>
+          </div>
+          <div class="wf-connector" id="wfc2"></div>
+          <div class="wf-step" id="wfs3">
+            <div class="ws-icon">⏳</div>
+            <div class="ws-text"><div class="ws-title">Notificatie sturen</div><div class="ws-desc">Wacht</div></div>
+            <div class="ws-status" id="wfs3s"></div>
+          </div>
+          <div class="wf-connector" id="wfc3"></div>
+          <div class="wf-step" id="wfs4">
+            <div class="ws-icon">⏳</div>
+            <div class="ws-text"><div class="ws-title">Follow-up inplannen</div><div class="ws-desc">Wacht</div></div>
+            <div class="ws-status" id="wfs4s"></div>
+          </div>
+        </div>
+        <div class="wf-result" id="wfResult">
+          <div style="font-size:11px;color:var(--lime);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">✓ Workflow voltooid</div>
+          <div id="wfResultText" style="font-size:13px;color:var(--white);line-height:1.7;"></div>
+          <button onclick="resetWorkflow()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere trigger proberen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- LAUNCH OFFER -->
 <section class="launch-section">
   <div class="launch-inner reveal">
@@ -708,6 +809,31 @@
     </div>
     <div class="pricing-card featured reveal">
       <div class="pricing-badge">Aanbevolen</div>
+      <div class="pricing-name">AI Automation &amp; Maatwerk</div>
+      <div class="pricing-price" style="font-size:32px;letter-spacing:-1px;margin:16px 0">Op maat</div>
+      <div class="pricing-period">prijs op aanvraag</div>
+      <div class="pricing-desc">AI automatisering, Micro-SaaS tools of complexe koppelingen.</div>
+      <ul class="pricing-features">
+        <li>Workflow automatisering</li>
+        <li>CRM en tool koppelingen</li>
+        <li>Micro-SaaS tool bouwen</li>
+        <li>Meerdere AI agents</li>
+        <li>Dedicated support</li>
+      </ul>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in de maandkosten? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Aantal uur per maand vooraf afgestemd op jouw project</li>
+          <li>Proactief beheer, wij signaleren problemen voordat jij ze ziet</li>
+          <li>Updates bij API-wijzigingen van gekoppelde tools (Make, n8n, CRM)</li>
+          <li>Directe lijn met de bouwer, geen supporttickets</li>
+          <li>Prioriteits-support, reactie dezelfde werkdag</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-black" onclick="startGesprek('AI Automatisering')" style="margin-top:14px">Neem contact op</button>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-badge">Website + Chatbot</div>
       <div class="pricing-name">Pro Website + Chatbot</div>
       <div class="pricing-price"><sup>€</sup>1.750</div>
       <div class="pricing-period">eenmalig + €249/maand</div>
@@ -727,11 +853,10 @@
           <li>Maandelijkse aanpassingen en optimalisaties (website en chatbot)</li>
           <li>Chatbot bijhouden zodat antwoorden altijd kloppen</li>
           <li>Maandelijkse rapportage: bezoekers, leads en chatgesprekken</li>
-          <li>Toegang tot het Briqk klantportaal met live dashboard</li>
           <li>Prioriteits-support, reactie dezelfde werkdag</li>
         </ul></div>
       </details>
-      <button class="btn-pricing btn-pricing-black" onclick="startGesprek('Pro Website')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Pro Website')" style="margin-top:14px">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">Chatbot Add-on</div>
@@ -773,7 +898,6 @@
           <li>Bot altijd online, ook buiten kantooruren</li>
           <li>Maandelijkse updates (antwoorden en flows bijhouden)</li>
           <li>Maandelijkse rapportage: gesprekken, leads en conversies</li>
-          <li>Toegang tot het Briqk klantportaal met live overzicht</li>
           <li>Support via WhatsApp, reactie binnen 24 uur</li>
         </ul></div>
       </details>
@@ -797,36 +921,10 @@
           <li>Agent 24/7 actief, elke lead wordt automatisch gekwalificeerd</li>
           <li>Maandelijkse updates (scorecriteria en vragen bijstellen)</li>
           <li>Maandelijkse rapportage: warm, koud en niet relevant</li>
-          <li>Toegang tot het Briqk klantportaal met lead dashboard</li>
           <li>Support via WhatsApp, reactie binnen 24 uur</li>
         </ul></div>
       </details>
       <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Lead Qualifier')" style="margin-top:14px">Start gesprek</button>
-    </div>
-    <div class="pricing-card reveal">
-      <div class="pricing-name">AI Automation &amp; Maatwerk</div>
-      <div class="pricing-price" style="font-size:32px;letter-spacing:-1px;margin:16px 0">Op maat</div>
-      <div class="pricing-period">prijs op aanvraag</div>
-      <div class="pricing-desc">AI automatisering, Micro-SaaS tools of complexe koppelingen.</div>
-      <ul class="pricing-features">
-        <li>Workflow automatisering</li>
-        <li>CRM en tool koppelingen</li>
-        <li>Micro-SaaS tool bouwen</li>
-        <li>Meerdere AI agents</li>
-        <li>Dedicated support</li>
-      </ul>
-      <details class="monthly-accordion">
-        <summary>Wat zit er in de maandkosten? <span class="ma-chevron">▼</span></summary>
-        <div class="accordion-body"><ul>
-          <li>Aantal uur per maand vooraf afgestemd op jouw project</li>
-          <li>Proactief beheer, wij signaleren problemen voordat jij ze ziet</li>
-          <li>Updates bij API-wijzigingen van gekoppelde tools (Make, n8n, CRM)</li>
-          <li>Directe lijn met de bouwer, geen supporttickets</li>
-          <li>Toegang tot het Briqk klantportaal met automation overzicht</li>
-          <li>Prioriteits-support, reactie dezelfde werkdag</li>
-        </ul></div>
-      </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('AI Automatisering')" style="margin-top:14px">Neem contact op</button>
     </div>
   </div>
 </section>
@@ -1285,6 +1383,133 @@ function resetAutomation() {
   telInput.addEventListener('blur', validateTel);
   telInput.addEventListener('input', validateTel);
 })();
+
+// ── WORKFLOW DEMO ─────────────────────────────────────────────────────────
+const WF_FLOWS = [
+  {
+    trigger: 'Contactformulier ingevuld door Jan de Vries — "Interesse in een AI website voor mijn bedrijf"',
+    steps: [
+      { icon: '📋', title: 'Trigger ontvangen', desc: 'Formulier binnenkomt op briqk.nl', done: 'Formulierdata opgeslagen', time: '0.2s' },
+      { icon: '🤖', title: 'Lead kwalificeren', desc: 'AI beoordeelt de aanvraag', done: 'Gecategoriseerd als: WARME LEAD', time: '1.1s' },
+      { icon: '📊', title: 'CRM bijwerken', desc: 'Contactpersoon aanmaken in CRM', done: 'Lead aangemaakt in Pipedrive', time: '0.8s' },
+      { icon: '📱', title: 'WhatsApp notificatie', desc: 'Jij ontvangt een melding', done: '"Nieuwe warme lead: Jan de Vries"', time: '0.3s' },
+      { icon: '📧', title: 'Bevestiging sturen', desc: 'Automatische bevestigingsmail', done: 'Mail verstuurd naar jan@bedrijf.nl', time: '0.4s' },
+    ],
+    result: 'Jan ontvangt direct een bevestiging. Jij krijgt een WhatsApp met alle details. De lead staat in je CRM. Jij hoeft alleen nog maar te bellen.'
+  },
+  {
+    trigger: 'WhatsApp bericht ontvangen van +31 6 12345678 — "Hallo, kunnen jullie mij helpen met een chatbot?"',
+    steps: [
+      { icon: '📱', title: 'Trigger ontvangen', desc: 'WhatsApp bericht binnenkomt', done: 'Bericht gedetecteerd', time: '0.1s' },
+      { icon: '🤖', title: 'Intentie herkennen', desc: 'AI analyseert het bericht', done: 'Intentie: chatbot aanvraag', time: '0.9s' },
+      { icon: '💬', title: 'Automatisch antwoord', desc: 'Gepersonaliseerd antwoord sturen', done: 'Antwoord verstuurd via WhatsApp', time: '1.2s' },
+      { icon: '📊', title: 'CRM bijwerken', desc: 'Contactpersoon aanmaken', done: 'Nieuw contact aangemaakt', time: '0.6s' },
+      { icon: '📅', title: 'Follow-up inplannen', desc: 'Reminder voor morgen 10:00', done: 'Reminder ingepland in agenda', time: '0.3s' },
+    ],
+    result: 'De klant krijgt direct een professioneel antwoord. Jij ontvangt een notificatie en hebt morgen een reminder om op te volgen. Niks vergeten.'
+  },
+  {
+    trigger: 'Afspraak ingepland via Calendly — Sandra Bakker, donderdag 15:00',
+    steps: [
+      { icon: '📅', title: 'Trigger ontvangen', desc: 'Nieuwe boeking via Calendly', done: 'Afspraak gedetecteerd', time: '0.2s' },
+      { icon: '📧', title: 'Bevestiging sturen', desc: 'Afspraakbevestiging per mail', done: 'Bevestiging verstuurd', time: '0.5s' },
+      { icon: '📊', title: 'CRM bijwerken', desc: 'Afspraak koppelen aan contact', done: 'CRM bijgewerkt met afspraak', time: '0.7s' },
+      { icon: '⏰', title: 'Reminders instellen', desc: '24u en 1u van tevoren herinnering', done: '2 reminders ingepland', time: '0.3s' },
+      { icon: '📋', title: 'Intake formulier sturen', desc: 'Voorbereiding voor het gesprek', done: 'Intake verstuurd naar Sandra', time: '0.4s' },
+    ],
+    result: 'Sandra ontvangt een bevestiging, een intake formulier en twee reminders. Jij hebt de afspraak in je CRM en wordt ook herinnerd. Geen no-shows meer.'
+  },
+  {
+    trigger: 'Offerte verstuurd aan Bakker Installaties — €1.750 voor Pro Website + Chatbot',
+    steps: [
+      { icon: '💼', title: 'Trigger ontvangen', desc: 'Offerte aangemaakt in Moneybird', done: 'Offerte gedetecteerd', time: '0.2s' },
+      { icon: '📊', title: 'CRM bijwerken', desc: 'Status naar "Offerte verstuurd"', done: 'Dealphasе bijgewerkt', time: '0.5s' },
+      { icon: '⏱️', title: 'Follow-up timer starten', desc: 'Herinnering na 3 dagen zonder reactie', done: 'Timer gestart: 3 werkdagen', time: '0.3s' },
+      { icon: '📧', title: 'Follow-up voorbereiden', desc: 'Gepersonaliseerde follow-up mail', done: 'Follow-up klaar voor verzending', time: '0.8s' },
+      { icon: '📱', title: 'Notificatie instellen', desc: 'Melding als offerte bekeken wordt', done: 'Tracking actief op offerte', time: '0.3s' },
+    ],
+    result: 'Zodra de klant de offerte opent, krijg jij een melding. Na 3 dagen zonder reactie gaat automatisch een follow-up mail de deur uit. Jij vergeet nooit meer een offerte op te volgen.'
+  }
+];
+
+let wfRunning = false;
+let wfActive = -1;
+
+async function startWorkflow(idx) {
+  if (wfRunning) return;
+  wfRunning = true;
+  wfActive = idx;
+
+  // Update trigger buttons
+  document.querySelectorAll('.trigger-btn').forEach((b, i) => {
+    b.classList.toggle('active', i === idx);
+  });
+
+  // Show trigger info
+  const flow = WF_FLOWS[idx];
+  document.getElementById('wfTriggerInfo').style.display = 'block';
+  document.getElementById('wfTriggerText').textContent = flow.trigger;
+  document.getElementById('wfStatus').textContent = 'Pipeline draait...';
+  document.getElementById('wfResult').classList.remove('visible');
+
+  // Reset all steps
+  for (let i = 0; i < 5; i++) {
+    const step = document.getElementById('wfs' + i);
+    step.className = 'wf-step';
+    step.querySelector('.ws-icon').textContent = '⏳';
+    step.querySelector('.ws-title').textContent = flow.steps[i].title;
+    step.querySelector('.ws-desc').textContent = flow.steps[i].desc;
+    document.getElementById('wfs' + i + 's').textContent = '';
+    if (i < 4) document.getElementById('wfc' + i).classList.remove('active');
+  }
+
+  // Run steps
+  for (let i = 0; i < 5; i++) {
+    const step = document.getElementById('wfs' + i);
+    const s = flow.steps[i];
+
+    step.classList.add('running');
+    step.querySelector('.ws-icon').textContent = s.icon;
+    document.getElementById('wfs' + i + 's').textContent = '⟳ bezig';
+
+    await new Promise(r => setTimeout(r, 700 + Math.random() * 400));
+
+    step.classList.remove('running');
+    step.classList.add('done');
+    step.querySelector('.ws-desc').textContent = s.done;
+    document.getElementById('wfs' + i + 's').textContent = '✓ ' + s.time;
+
+    if (i < 4) {
+      await new Promise(r => setTimeout(r, 150));
+      document.getElementById('wfc' + i).classList.add('active');
+    }
+  }
+
+  // Show result
+  document.getElementById('wfStatus').textContent = 'Voltooid in < 4 seconden';
+  document.getElementById('wfResultText').textContent = flow.result;
+  document.getElementById('wfResult').classList.add('visible');
+  wfRunning = false;
+}
+
+function resetWorkflow() {
+  wfActive = -1;
+  wfRunning = false;
+  document.querySelectorAll('.trigger-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('wfTriggerInfo').style.display = 'none';
+  document.getElementById('wfStatus').textContent = 'Wacht op trigger...';
+  document.getElementById('wfResult').classList.remove('visible');
+  const flows = WF_FLOWS[0];
+  for (let i = 0; i < 5; i++) {
+    const step = document.getElementById('wfs' + i);
+    step.className = 'wf-step';
+    step.querySelector('.ws-icon').textContent = '⏳';
+    step.querySelector('.ws-title').textContent = flows.steps[i].title;
+    step.querySelector('.ws-desc').textContent = flows.steps[i].desc;
+    document.getElementById('wfs' + i + 's').textContent = '';
+    if (i < 4) document.getElementById('wfc' + i).classList.remove('active');
+  }
+}
 </script>
 </body>
 </html>
