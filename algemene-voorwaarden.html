@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Algemene Voorwaarden | Briqk</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<meta name="description" content="Bekijk de algemene voorwaarden van Briqk, handelsnaam van Kootstra Digital.">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://briqk.nl/voorwaarden">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"></noscript>
 <style>
   :root { --black:#080808; --white:#F5F2ED; --lime:#C8FF00; --grey:#1A1A1A; --grey-text:#999; --font-display:'Syne',sans-serif; --font-body:'DM Sans',sans-serif; }
   * { box-sizing:border-box; margin:0; padding:0; }
@@ -15,12 +22,18 @@
   h2 { font-family:var(--font-display); font-size:22px; font-weight:700; margin:36px 0 12px; }
   p { color:var(--grey-text); margin-bottom:16px; }
   a { color:var(--lime); }
+  a:focus-visible { outline:3px solid var(--lime); outline-offset:4px; }
+  .skip-link { position:fixed; top:-52px; left:16px; background:var(--lime); color:var(--black); padding:10px 16px; z-index:10; border-radius:0 0 8px 8px; font-size:14px; font-weight:600; text-decoration:none; transition:top 0.2s; }
+  .skip-link:focus { top:0; }
   .back { display:inline-flex; align-items:center; gap:8px; color:var(--grey-text); text-decoration:none; font-size:14px; margin-bottom:48px; border:1px solid rgba(255,255,255,0.1); padding:8px 16px; border-radius:100px; transition:border-color 0.2s; }
   .back:hover { border-color:var(--lime); color:var(--white); }
   @media(max-width:600px){ body { padding:100px 24px 60px; } h1 { font-size:36px; } }
+  @media(prefers-reduced-motion:reduce){ * { scroll-behavior:auto!important; transition-duration:0.01ms!important; } }
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
+<main id="main-content">
 <a href="/" class="back">Terug naar briqk.nl</a>
 <h1>Algemene Voorwaarden</h1>
 <p class="subtitle">Versie 1.0 · Maart 2026 · Kootstra Digital, handelsnaam Briqk · Arnhem</p>
@@ -43,7 +56,7 @@
 <h2>6. Eigendom en intellectueel eigendom</h2>
 <p>Na volledige betaling draagt Briqk het eigendom van de geleverde website en bijbehorende bestanden over aan opdrachtgever. De door Briqk gebruikte tools, templates en werkwijzen blijven eigendom van Briqk.</p>
 
-<h2>7. Opzegging en beeindiging</h2>
+<h2>7. Opzegging en beëindiging</h2>
 <p>Maandelijkse abonnementen kunnen worden opgezegd met een opzegtermijn van 1 kalendermaand via e-mail. Bij opzegging ontvangt opdrachtgever alle logingegevens en bestanden. Briqk behoudt het recht de overeenkomst te ontbinden bij wanbetaling of misbruik.</p>
 
 <h2>8. Aansprakelijkheid</h2>
@@ -57,5 +70,6 @@
 
 <h2>11. Contactgegevens</h2>
 <p>Kootstra Digital, handelsnaam Briqk · Arnhem · <a href="mailto:info@briqk.nl">info@briqk.nl</a> · <a href="https://briqk.nl">briqk.nl</a></p>
+</main>
 </body>
 </html>

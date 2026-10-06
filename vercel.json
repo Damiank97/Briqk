@@ -1,4 +1,56 @@
 {
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ai-voor-mkb",
+      "destination": "/blog/ai-voor-mkb",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ai-voor-mkb.html",
+      "destination": "/blog/ai-voor-mkb",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ai-automatisering-mkb.html",
+      "destination": "/blog/ai-automatisering-mkb",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/algemene-voorwaarden.html",
+      "destination": "/voorwaarden",
+      "permanent": true
+    },
+    {
+      "source": "/website-laten-maken-arnhem.html",
+      "destination": "/website-laten-maken-arnhem",
+      "permanent": true
+    },
+    {
+      "source": "/website-laten-maken-mkb.html",
+      "destination": "/website-laten-maken-mkb",
+      "permanent": true
+    },
+    {
+      "source": "/ai-website-laten-maken.html",
+      "destination": "/ai-website-laten-maken",
+      "permanent": true
+    },
+    {
+      "source": "/whatsapp-bot-bedrijf.html",
+      "destination": "/whatsapp-bot-bedrijf",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
@@ -13,7 +65,7 @@
       "destination": "/algemene-voorwaarden.html"
     },
     {
-      "source": "/blog-ai-voor-mkb",
+      "source": "/blog/ai-voor-mkb",
       "destination": "/blog-ai-voor-mkb.html"
     },
     {
@@ -43,10 +95,41 @@
     {
       "source": "/whatsapp-bot-bedrijf",
       "destination": "/whatsapp-bot-bedrijf.html"
-    },
+    }
+  ],
+  "headers": [
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com; form-action 'self' https://formspree.io; upgrade-insecure-requests"
+        }
+      ]
     }
   ]
 }

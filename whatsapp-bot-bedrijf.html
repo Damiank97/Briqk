@@ -10,23 +10,36 @@
 <meta property="og:description" content="WhatsApp bot laten maken voor je bedrijf. Automatisch reageren op klanten, afspraken inplannen en leads kwalificeren via WhatsApp Business API. Vanaf €750.">
 <meta property="og:url" content="https://briqk.nl/whatsapp-bot-bedrijf">
 <meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="https://briqk.nl/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#080808">
+<link rel="icon" type="image/png" href="/favicon.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type":"Service","name":"WhatsApp Bot voor Bedrijven","provider":{"@type":"LocalBusiness","name":"Briqk","url":"https://briqk.nl"}
-  "description": "Briqk bouwt WhatsApp bots voor MKB bedrijven. Automatisch reageren, leads kwalificeren en afspraken inplannen via WhatsApp Business API."
+  "@type":"Service","name":"WhatsApp Bot voor Bedrijven","url":"https://briqk.nl/whatsapp-bot-bedrijf","provider":{"@id":"https://briqk.nl/#organization"},
+  "areaServed":{"@type":"Country","name":"Nederland"},"description":"WhatsApp-bots voor mkb-bedrijven via de officiële WhatsApp Business Platform."
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"></noscript>
 <style>
   :root{--black:#080808;--white:#F5F2ED;--lime:#C8FF00;--lime-dark:#9FCC00;--grey:#1A1A1A;--grey-mid:#2E2E2E;--grey-text:#888;--font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden;}
+  a:focus-visible,.faq-q:focus-visible,summary:focus-visible{outline:3px solid var(--lime);outline-offset:4px;}
   nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;backdrop-filter:blur(16px);background:rgba(8,8,8,0.85);border-bottom:1px solid rgba(255,255,255,0.06);}
   .nav-logo{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-0.5px;color:var(--white);text-decoration:none;}
   .nav-logo span{color:var(--lime);}
   .nav-cta{background:var(--lime);color:var(--black)!important;padding:10px 22px;border-radius:100px;font-weight:500!important;font-size:14px!important;text-decoration:none;}
+  .nav-mobile-cta{display:none;background:var(--lime);color:var(--black);padding:9px 16px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none;}
   nav ul{display:flex;gap:28px;list-style:none;}
   nav ul a{color:var(--grey-text);text-decoration:none;font-size:14px;transition:color 0.2s;}
   nav ul a:hover{color:var(--white);}
@@ -68,6 +81,12 @@
   .faq-q h3{font-size:15px;font-weight:600;font-family:var(--font-display);letter-spacing:-0.2px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
   .faq-q h3 span{color:var(--lime);font-size:18px;flex-shrink:0;}
   .faq-a{display:none;padding:0 28px 20px;background:var(--grey);font-size:14px;color:var(--grey-text);line-height:1.8;}
+  html:not(.js) .faq-a{display:block;}
+  .mobile-menu{display:none;position:relative;}
+  .mobile-menu summary{cursor:pointer;color:var(--white);font-size:13px;list-style:none;padding:9px 12px;border:1px solid rgba(255,255,255,0.18);border-radius:100px;}
+  .mobile-menu summary::-webkit-details-marker{display:none;}
+  .mobile-menu div{position:absolute;top:44px;right:0;min-width:190px;background:var(--grey);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:2px;box-shadow:0 16px 40px rgba(0,0,0,0.5);}
+  .mobile-menu a{color:var(--white);text-decoration:none;padding:10px 12px;border-radius:8px;font-size:14px;}
   .cta-section{background:var(--grey);text-align:center;padding:80px 48px;}
   .cta-section h2{max-width:600px;margin:0 auto 16px;}
   .cta-section p{color:var(--grey-text);max-width:440px;margin:0 auto 36px;}
@@ -75,37 +94,41 @@
   footer p{font-size:13px;color:var(--grey-text);}
   .footer-logo{font-family:var(--font-display);font-weight:800;font-size:18px;}
   .footer-logo span{color:var(--lime);}
-  @media(max-width:900px){nav{padding:16px 24px;}nav ul{display:none;}.page-hero{padding:120px 24px 60px;}section{padding:60px 24px;}.feature-grid{grid-template-columns:1fr;}footer{flex-direction:column;gap:12px;text-align:center;}}
+  @media(max-width:900px){nav{padding:16px 24px;gap:10px;}nav ul{display:none;}.mobile-menu{display:block;margin-left:auto;}.nav-mobile-cta{display:inline-flex;}.page-hero{padding:120px 24px 60px;}section{padding:60px 24px;}.feature-grid{grid-template-columns:1fr;}footer{flex-direction:column;gap:12px;text-align:center;}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition-duration:0.01ms!important;}}
 </style>
 </head>
 <body>
-<nav>
+<nav aria-label="Hoofdnavigatie">
   <a href="/" class="nav-logo">Bri<span>qk</span></a>
   <ul>
     <li><a href="/#diensten-detail">Diensten</a></li>
     <li><a href="/#prijzen">Prijzen</a></li>
     <li><a href="/#demo">AI Demo</a></li>
-    <li><a href="/#faq">FAQ</a></li>
-    <li><a href="/#contact" class="nav-cta">Gratis gesprek →</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="/#contact" class="nav-cta">Kennismaking →</a></li>
   </ul>
+  <details class="mobile-menu"><summary>Menu</summary><div><a href="/#diensten-detail">Diensten</a><a href="/#prijzen">Prijzen</a><a href="/#demo">AI-demo</a><a href="#faq">FAQ</a></div></details>
+  <a href="/#contact" class="nav-mobile-cta">Kennismaking →</a>
 </nav>
 
+<main>
 <div class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="breadcrumb"><a href="/">Briqk</a> / WhatsApp Bot voor Bedrijven</div>
   <div class="page-tag">⚡ WhatsApp Automation</div>
   <h1><em>WhatsApp bot</em> laten maken<br>voor jouw bedrijf</h1>
-  <p class="hero-sub">Automatisch reageren op WhatsApp berichten — <strong>ook buiten kantooruren</strong>. Vragen beantwoorden, afspraken inplannen en leads kwalificeren via de officiële WhatsApp Business API.</p>
+  <p class="hero-sub">Automatisch reageren op WhatsApp-berichten — <strong>ook buiten kantooruren</strong>. Vragen beantwoorden, afspraken inplannen en leads kwalificeren via de officiële WhatsApp Business Platform.</p>
   <div style="display:flex;gap:16px;flex-wrap:wrap;">
-    <a href="/#contact" class="btn-primary">Gratis gesprek inplannen →</a>
+    <a href="/#contact" class="btn-primary">Gratis kennismaking aanvragen →</a>
     <a href="/#demo" class="btn-ghost">Bekijk AI demo</a>
   </div>
 </div>
 
 <section>
   <div class="section-tag">Wat je krijgt</div>
-  <h2>Alles inbegrepen — vaste prijs</h2>
-  <p class="section-sub">Geen verborgen kosten, geen uurtjes-facturering. Eén prijs, alles inbegrepen.</p>
+  <h2>Duidelijke start- en maandprijs</h2>
+  <p class="section-sub">Vooraf weet je wat de bouw, koppeling, updates en het beheer kosten.</p>
   <div class="feature-grid">
     <div class="feature-card">
       <div class="feature-icon">💬</div>
@@ -125,12 +148,12 @@
     <div class="feature-card">
       <div class="feature-icon">🔌</div>
       <h3>Officiële WhatsApp Business API</h3>
-      <p>Volledig gekoppeld aan de officiële API — geen grijze software, geen risico op blokkering van je nummer.</p>
+      <p>Gekoppeld via de officiële WhatsApp Business Platform. Gebruik blijft onderworpen aan de voorwaarden en kwaliteitsregels van Meta.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🔒</div>
-      <h3>GDPR-proof</h3>
-      <p>Expliciete toestemming voor gespreksverwerking ingebouwd. Voldoet aan alle privacywetgeving.</p>
+      <h3>Privacybewust ingericht</h3>
+      <p>We richten toestemming, bewaartermijnen en toegang in op basis van jouw proces. De uiteindelijke AVG-inrichting blijft afhankelijk van jouw gebruik.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">📊</div>
@@ -152,16 +175,16 @@
           <li>Automatisch reageren op berichten</li>
           <li>Agenda-integratie</li>
           <li>Lead kwalificatie flow</li>
-          <li>GDPR akkoord flow</li>
+          <li>Instelbare toestemmingsflow</li>
           <li>Maandrapportage</li>
           <li>Live binnen 5-7 werkdagen</li>
           <li>Dedicated WhatsApp nummer</li>
     </ul>
-    <a href="/#contact" class="btn-primary" style="margin-top:32px;width:100%;justify-content:center;">Gratis gesprek inplannen →</a>
+    <a href="/#contact" class="btn-primary" style="margin-top:32px;width:100%;justify-content:center;">Gratis kennismaking aanvragen →</a>
   </div>
 </section>
 
-<section>
+<section id="faq">
   <div class="section-tag">Veelgestelde vragen</div>
   <h2>Alles wat je wil weten</h2>
   <div class="faq-wrap">
@@ -170,9 +193,9 @@
     </div>
     <div class="faq-a">Ja, je hebt een WhatsApp Business telefoonnummer nodig. Dit kan een nieuw nummer zijn of je bestaande zakelijke nummer. Wij regelen de API-koppeling.</div>
     <div class="faq-q" style="border-left:3px solid transparent;margin-bottom:2px;">
-      <h3>Is de WhatsApp bot GDPR-proof? <span>+</span></h3>
+      <h3>Hoe gaan jullie om met privacy en de AVG? <span>+</span></h3>
     </div>
-    <div class="faq-a">Ja. De bot vraagt automatisch toestemming voor het verwerken van gesprekken. Voldoet aan AVG/GDPR.</div>
+    <div class="faq-a">We bouwen de bot met dataminimalisatie, een toestemmingsflow en passende toegangsinstellingen. De uiteindelijke AVG-inrichting hangt ook af van jouw doeleinden, bewaartermijnen en privacybeleid.</div>
     <div class="faq-q" style="border-left:3px solid transparent;margin-bottom:2px;">
       <h3>Kan de bot ook in het Engels communiceren? <span>+</span></h3>
     </div>
@@ -187,25 +210,31 @@
 <div class="cta-section">
   <div class="section-tag">Starten?</div>
   <h2>Klaar voor jouw <em style="font-style:normal;color:var(--lime);">AI-powered</em> bedrijf?</h2>
-  <p>Plan een gratis kennismakingsgesprek van 30 minuten. Geen verplichtingen.</p>
-  <a href="/#contact" class="btn-primary">Gratis gesprek inplannen →</a>
+  <p>Vraag een gratis kennismaking van 30 minuten aan. Geen verplichtingen.</p>
+  <a href="/#contact" class="btn-primary">Gratis kennismaking aanvragen →</a>
 </div>
+</main>
 
 <footer>
   <div class="footer-logo">Bri<span>qk</span></div>
   <p>© 2026 Briqk · Arnhem, Gelderland · <a href="/" style="color:var(--grey-text);">AI website laten maken voor MKB en ZZP</a></p>
-  <p style="font-size:12px;color:#555;"><a href="/website-laten-maken-arnhem" style="color:#555;">Arnhem</a> · <a href="/ai-chatbot-laten-maken" style="color:#555;">AI chatbot</a> · <a href="/whatsapp-bot-bedrijf" style="color:#555;">WhatsApp bot</a></p>
+  <p style="font-size:12px;color:#aaa;"><a href="/website-laten-maken-mkb" style="color:#bbb;">Websites</a> · <a href="/ai-website-laten-maken" style="color:#bbb;">AI-website</a> · <a href="/#demo" style="color:#bbb;">AI-demo</a> · <a href="/privacy" style="color:#bbb;">Privacy</a> · <a href="/voorwaarden" style="color:#bbb;">Voorwaarden</a></p>
 </footer>
 <script>
   document.querySelectorAll('.faq-q').forEach(q=>{
-    q.addEventListener('click',()=>{
+    q.setAttribute('role','button');
+    q.setAttribute('tabindex','0');
+    q.setAttribute('aria-expanded','false');
+    const toggleFaq=()=>{
       const a=q.nextElementSibling;
       const icon=q.querySelector('span');
       const open=a.style.display==='block';
       document.querySelectorAll('.faq-a').forEach(x=>x.style.display='none');
-      document.querySelectorAll('.faq-q').forEach(x=>{x.querySelector('span').textContent='+';x.style.borderLeftColor='transparent';});
-      if(!open){a.style.display='block';icon.textContent='−';q.style.borderLeftColor='var(--lime)';}
-    });
+      document.querySelectorAll('.faq-q').forEach(x=>{x.querySelector('span').textContent='+';x.style.borderLeftColor='transparent';x.setAttribute('aria-expanded','false');});
+      if(!open){a.style.display='block';icon.textContent='−';q.style.borderLeftColor='var(--lime)';q.setAttribute('aria-expanded','true');}
+    };
+    q.addEventListener('click',toggleFaq);
+    q.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq();}});
   });
 </script>
 </body>

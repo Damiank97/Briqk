@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacybeleid | Briqk</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<meta name="description" content="Lees hoe Briqk persoonsgegevens verwerkt bij contactaanvragen, AI-demo's en websiteanalyse.">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://briqk.nl/privacy">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"></noscript>
 <style>
   :root { --black:#080808; --white:#F5F2ED; --lime:#C8FF00; --grey:#1A1A1A; --grey-text:#999; --font-display:'Syne',sans-serif; --font-body:'DM Sans',sans-serif; }
   * { box-sizing:border-box; margin:0; padding:0; }
@@ -15,41 +22,51 @@
   h2 { font-family:var(--font-display); font-size:22px; font-weight:700; margin:36px 0 12px; }
   p { color:var(--grey-text); margin-bottom:16px; }
   a { color:var(--lime); }
+  a:focus-visible { outline:3px solid var(--lime); outline-offset:4px; }
+  .skip-link { position:fixed; top:-52px; left:16px; background:var(--lime); color:var(--black); padding:10px 16px; z-index:10; border-radius:0 0 8px 8px; font-size:14px; font-weight:600; text-decoration:none; transition:top 0.2s; }
+  .skip-link:focus { top:0; }
   .back { display:inline-flex; align-items:center; gap:8px; color:var(--grey-text); text-decoration:none; font-size:14px; margin-bottom:48px; border:1px solid rgba(255,255,255,0.1); padding:8px 16px; border-radius:100px; transition:border-color 0.2s; }
   .back:hover { border-color:var(--lime); color:var(--white); }
   @media(max-width:600px){ body { padding:100px 24px 60px; } h1 { font-size:36px; } }
+  @media(prefers-reduced-motion:reduce){ * { scroll-behavior:auto!important; transition-duration:0.01ms!important; } }
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
+<main id="main-content">
 <a href="/" class="back">Terug naar briqk.nl</a>
 <h1>Privacybeleid</h1>
-<p class="subtitle">Laatst bijgewerkt: maart 2026 · Kootstra Digital, handelsnaam Briqk</p>
+<p class="subtitle">Laatst bijgewerkt: oktober 2026 · Kootstra Digital, handelsnaam Briqk</p>
 
 <h2>1. Wie zijn wij?</h2>
 <p>Briqk is een handelsnaam van Kootstra Digital, gevestigd in Arnhem, Nederland. Wij bouwen AI-powered websites, chatbots en workflow automatiseringen voor het Nederlandse MKB. Contact: <a href="mailto:info@briqk.nl">info@briqk.nl</a>.</p>
 
 <h2>2. Welke gegevens verzamelen wij?</h2>
-<p>Via ons contactformulier verzamelen wij: naam, e-mailadres, telefoonnummer (optioneel), type bedrijf en interesse in onze diensten. Wij verzamelen geen bijzondere persoonsgegevens.</p>
+<p>Via ons contactformulier verzamelen wij uw naam, e-mailadres, type bedrijf, interesse en eventuele toelichting. Berichten die u in een AI-demo invoert, worden verwerkt om het gevraagde demo-antwoord te genereren. Deel daarom geen bijzondere, vertrouwelijke of onnodige persoonsgegevens in de demo.</p>
 
 <h2>3. Waarvoor gebruiken wij uw gegevens?</h2>
-<p>Uw gegevens worden uitsluitend gebruikt om contact met u op te nemen naar aanleiding van uw aanvraag. Wij verkopen uw gegevens nooit aan derden.</p>
+<p>Wij gebruiken formuliergegevens uitsluitend om uw aanvraag te beantwoorden en een mogelijke zakelijke relatie voor te bereiden. Demo-invoer wordt uitsluitend gebruikt om het gekozen AI-voorbeeld uit te voeren. Wij verkopen uw gegevens nooit.</p>
 
-<h2>4. Bewaartermijn</h2>
-<p>Gegevens van contactformulieren worden maximaal 12 maanden bewaard, tenzij er een zakelijke relatie ontstaat waarbij een langere termijn wettelijk vereist is.</p>
+<h2>4. Dienstverleners</h2>
+<p>Het contactformulier wordt technisch verwerkt via Formspree. De AI-demo gebruikt Groq om antwoorden te genereren. Voor hosting gebruiken wij Vercel. Deze partijen verwerken alleen gegevens die nodig zijn om hun onderdeel van de dienst te leveren. Gebruik van deze diensten kan betekenen dat gegevens buiten de Europese Economische Ruimte worden verwerkt; daarbij vertrouwen wij op de beschikbare contractuele en technische waarborgen van de betreffende leverancier.</p>
 
-<h2>5. Cookies en analytics</h2>
-<p>Onze website maakt gebruik van Google Analytics om bezoekersgedrag te analyseren met geanonimiseerde gegevens. Wij gebruiken geen tracking cookies voor advertentiedoeleinden.</p>
+<h2>5. Bewaartermijn</h2>
+<p>Gegevens van contactformulieren worden maximaal 12 maanden bewaard, tenzij er een zakelijke relatie ontstaat of een wettelijke bewaarplicht een langere termijn vereist. Briqk slaat demo-gesprekken niet zelf op; technische dienstverleners kunnen beperkte loggegevens volgens hun eigen bewaartermijnen verwerken.</p>
 
-<h2>6. Beveiliging</h2>
+<h2>6. Cookies en analytics</h2>
+<p>Google Analytics wordt pas geladen nadat u daarvoor toestemming heeft gegeven. Wij gebruiken de statistieken om de website te verbeteren en niet voor gepersonaliseerde advertenties. Uw keuze wordt lokaal in uw browser opgeslagen. Google Fonts kan bij het laden van lettertypen technische gegevens, zoals uw IP-adres, verwerken.</p>
+
+<h2>7. Beveiliging</h2>
 <p>Wij nemen passende technische maatregelen om uw persoonsgegevens te beschermen. Onze website maakt gebruik van HTTPS-versleuteling.</p>
 
-<h2>7. Uw rechten</h2>
+<h2>8. Uw rechten</h2>
 <p>U heeft recht op inzage, correctie, verwijdering en overdraagbaarheid van uw persoonsgegevens. Neem contact op via <a href="mailto:info@briqk.nl">info@briqk.nl</a>. Wij reageren binnen 30 dagen.</p>
 
-<h2>8. Klachten</h2>
-<p>Voor klachten over gegevensverwerking kunt u terecht bij de Autoriteit Persoonsgegevens via <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank">autoriteitpersoonsgegevens.nl</a>.</p>
+<h2>9. Klachten</h2>
+<p>Voor klachten over gegevensverwerking kunt u terecht bij de Autoriteit Persoonsgegevens via <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer">autoriteitpersoonsgegevens.nl</a>.</p>
 
-<h2>9. Wijzigingen</h2>
+<h2>10. Wijzigingen</h2>
 <p>Wij behouden het recht dit beleid te wijzigen. De actuele versie staat altijd op <a href="https://briqk.nl/privacy">briqk.nl/privacy</a>.</p>
+</main>
 </body>
 </html>

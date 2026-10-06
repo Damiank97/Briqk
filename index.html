@@ -9,14 +9,23 @@
 <meta property="og:title" content="AI Automatisering & Websites voor MKB | Briqk Arnhem">
 <meta property="og:description" content="Briqk automatiseert jouw bedrijfsprocessen met AI. Lead routing, e-mail follow-ups, WhatsApp notificaties en slimme websites voor MKB.">
 <meta property="og:image" content="https://briqk.nl/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Briqk — AI automatisering en websites voor het MKB">
 <meta property="og:url" content="https://briqk.nl">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Automatisering & Websites voor MKB | Briqk Arnhem">
+<meta name="twitter:description" content="Automatiseer bedrijfsprocessen en win meer klanten met slimme websites, AI-assistenten en workflows van Briqk.">
 <meta name="twitter:image" content="https://briqk.nl/og-image.png">
+<meta name="twitter:image:alt" content="Briqk — AI automatisering en websites voor het MKB">
+<meta name="theme-color" content="#080808">
 <link rel="canonical" href="https://briqk.nl">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Briqk","url":"https://briqk.nl","email":"info@briqk.nl","address":{"@type":"PostalAddress","streetAddress":"Arnhem","addressLocality":"Arnhem","addressRegion":"Gelderland","postalCode":"6800","addressCountry":"NL"},"description":"Briqk bouwt professionele websites met AI chatbot en automatisering voor MKB en ZZP. Website laten maken vanaf €850, live binnen 2 weken.","priceRange":"€€","openingHours":"Mo-Fr 08:00-18:00","areaServed":{"@type":"Country","name":"Netherlands"},"serviceArea":{"@type":"GeoCircle","geoMidpoint":{"@type":"GeoCoordinates","latitude":51.9851,"longitude":5.8987},"geoRadius":"150000"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Webdiensten","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Starter Website","description":"Professionele website voor ZZP"},"price":"850","priceCurrency":"EUR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pro Website met AI Chatbot","description":"Website met AI chatbot voor MKB"},"price":"1750","priceCurrency":"EUR"}]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":["Organization","ProfessionalService"],"@id":"https://briqk.nl/#organization","name":"Briqk","legalName":"Kootstra Digital","url":"https://briqk.nl","logo":"https://briqk.nl/briqk_logo_square.png","image":"https://briqk.nl/og-image.png","email":"info@briqk.nl","address":{"@type":"PostalAddress","addressLocality":"Arnhem","addressRegion":"Gelderland","addressCountry":"NL"},"description":"Briqk bouwt professionele websites, AI-assistenten en automatiseringen voor MKB en ZZP.","priceRange":"€€","areaServed":{"@type":"Country","name":"Nederland"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI- en webdiensten","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Starter Website","url":"https://briqk.nl/website-laten-maken-mkb"},"price":"850","priceCurrency":"EUR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pro Website met AI Chatbot","url":"https://briqk.nl/ai-website-laten-maken"},"price":"1750","priceCurrency":"EUR"}]}}</script>
+<script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -36,6 +45,11 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; overflow-x: hidden; }
   body { background: var(--black); color: var(--white); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; max-width: 100vw; }
+  button, input, select, textarea { font: inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--lime); outline-offset: 4px; }
+  .skip-link { position: absolute; top: -52px; left: 16px; background: var(--lime); color: var(--black); padding: 10px 16px; z-index: 9999; border-radius: 0 0 8px 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: top 0.2s; }
+  .skip-link:focus { top: 0; }
+  .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
 
   /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; backdrop-filter: blur(16px); background: rgba(8,8,8,0.7); border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -109,18 +123,32 @@
   .pillar-items { display: flex; flex-direction: column; gap: 8px; }
   .pillar-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-text); }
   .pillar-item::before { content: ''; width: 6px; height: 6px; background: var(--lime); border-radius: 50%; flex-shrink: 0; }
+  .pillar-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .pillar-links a { color: var(--lime); font-size: 13px; text-decoration: none; border-bottom: 1px solid rgba(200,255,0,0.35); }
+  .pillar-links a:hover { border-bottom-color: var(--lime); }
+
+  /* KLANTPORTAAL */
+  .portal-section { background: var(--black); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding-top: 80px; padding-bottom: 80px; }
+  .portal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .portal-copy { font-size: 16px; color: var(--grey-text); line-height: 1.8; margin-top: 16px; max-width: 480px; }
+  .portal-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; color: var(--lime); text-decoration: none; font-size: 14px; font-weight: 500; border: 1px solid rgba(200,255,0,0.3); padding: 10px 20px; border-radius: 100px; transition: background 0.2s, border-color 0.2s; }
+  .portal-link:hover { background: rgba(200,255,0,0.08); border-color: var(--lime); }
+  .portal-shot { position: relative; }
+  .portal-shot img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 40px 80px rgba(0,0,0,0.6); }
+  .portal-shot::after { content: ''; position: absolute; inset: 0; border-radius: 16px; background: linear-gradient(to bottom, transparent 60%, rgba(8,8,8,0.4) 100%); pointer-events: none; }
 
   /* DUAL BOT DEMO */
   .demo-section { background: var(--black); position: relative; overflow: hidden; }
   .demo-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(200,255,0,0.03), transparent); pointer-events: none; }
-  .demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 60px; align-items: stretch; }
+  .demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 60px; align-items: stretch; }
+  .demo-grid > * { min-width: 0; }
   .demo-grid .chat-widget { display: flex; flex-direction: column; height: 100%; }
   .demo-grid .chat-messages { flex: 1; height: auto; min-height: 240px; }
-  .demo-label { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-  .demo-label span { background: rgba(200,255,0,0.15); border: 1px solid rgba(200,255,0,0.3); padding: 2px 10px; border-radius: 100px; }
+  .demo-label { font-size: 11px; font-weight: 500; line-height: 1.45; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .demo-label span { background: rgba(200,255,0,0.15); border: 1px solid rgba(200,255,0,0.3); padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
 
   /* CHAT WIDGET */
-  .chat-widget { background: var(--grey); border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.5); }
+  .chat-widget { background: linear-gradient(180deg, #1b1b1b 0%, #161616 100%); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; box-shadow: 0 28px 70px rgba(0,0,0,0.42); }
   .chat-header { background: var(--grey-mid); padding: 16px 20px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .chat-avatar { width: 36px; height: 36px; background: var(--lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
   .chat-header-name { font-weight: 500; font-size: 14px; }
@@ -132,7 +160,7 @@
   .msg { display: flex; gap: 10px; max-width: 85%; animation: msgIn 0.3s ease; }
   @keyframes msgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
   .msg.user { align-self: flex-end; flex-direction: row-reverse; }
-  .msg-bubble { padding: 10px 14px; border-radius: 16px; font-size: 14px; line-height: 1.5; }
+  .msg-bubble { padding: 10px 14px; border-radius: 16px; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
   .msg.bot .msg-bubble { background: var(--grey-mid); color: var(--white); border-radius: 4px 16px 16px 16px; }
   .msg.user .msg-bubble { background: var(--lime); color: var(--black); border-radius: 16px 4px 16px 16px; }
   .msg-dot { width: 28px; height: 28px; background: var(--lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; align-self: flex-end; }
@@ -143,15 +171,17 @@
   .typing-dot:nth-child(3) { animation-delay: 0.4s; }
   @keyframes typingBounce { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-6px); opacity: 1; } }
   .chat-input-area { padding: 16px 20px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; gap: 10px; align-items: center; }
-  .chat-input { flex: 1; background: var(--grey-mid); border: 1px solid rgba(255,255,255,0.08); border-radius: 100px; padding: 10px 18px; color: var(--white); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s; }
+  .chat-input { flex: 1; min-width: 0; background: var(--grey-mid); border: 1px solid rgba(255,255,255,0.08); border-radius: 100px; padding: 10px 18px; color: var(--white); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s, background 0.2s; }
   .chat-input::placeholder { color: var(--grey-text); }
-  .chat-input:focus { border-color: rgba(200,255,0,0.4); }
+  .chat-input:focus { border-color: rgba(200,255,0,0.55); background: #333; }
   .chat-send { width: 40px; height: 40px; background: var(--lime); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; transition: background 0.2s, transform 0.2s; flex-shrink: 0; }
   .chat-send:hover { background: var(--lime-dark); transform: scale(1.05); }
   .chat-send:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
   .quick-questions { padding: 0 20px 12px; display: flex; gap: 8px; flex-wrap: wrap; }
-  .quick-q { background: rgba(200,255,0,0.08); border: 1px solid rgba(200,255,0,0.2); color: var(--lime); padding: 6px 12px; border-radius: 100px; font-size: 12px; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); }
+  .quick-q { max-width: 100%; background: rgba(200,255,0,0.08); border: 1px solid rgba(200,255,0,0.25); color: var(--lime); padding: 7px 12px; border-radius: 100px; font-size: 12px; line-height: 1.35; text-align: left; white-space: normal; cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.2s; font-family: var(--font-body); }
   .quick-q:hover { background: rgba(200,255,0,0.15); border-color: rgba(200,255,0,0.4); }
+  .quick-q:active { transform: translateY(1px); }
+  .quick-q:disabled { opacity: 0.45; cursor: wait; transform: none; }
   .progress-bar { height: 3px; background: rgba(200,255,0,0.2); margin: 0 20px 12px; border-radius: 2px; overflow: hidden; }
   .progress-fill { height: 100%; background: var(--lime); border-radius: 2px; transition: width 0.4s ease; }
 
@@ -215,6 +245,7 @@
   .launch-deal-arrow { font-size: 24px; color: var(--grey-text); }
   .launch-deal-includes { display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--grey-text); border-left: 1px solid rgba(255,255,255,0.08); padding-left: 32px; text-align: left; }
   .launch-deal-includes span { color: var(--white); }
+  .launch-price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; width: 100%; }
 
   /* CONTACT */
   .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 60px; }
@@ -226,6 +257,8 @@
   .contact-form { background: var(--grey); padding: 40px; border-radius: 20px; display: flex; flex-direction: column; gap: 16px; }
   .form-group { display: flex; flex-direction: column; gap: 6px; }
   .form-group label { font-size: 12px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--grey-text); }
+  .form-group legend { font-size: 12px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--grey-text); }
+  .form-fieldset { border: 0; min-width: 0; }
   .form-group input, .form-group select, .form-group textarea { background: var(--black); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px 16px; color: var(--white); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s; }
   .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: rgba(200,255,0,0.4); }
   .form-group select { appearance: none; cursor: pointer; }
@@ -234,6 +267,14 @@
   .form-submit { width: 100%; padding: 16px; background: var(--lime); color: var(--black); border: none; border-radius: 100px; font-family: var(--font-body); font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.2s, transform 0.2s; }
   .form-submit:hover { background: var(--lime-dark); transform: translateY(-1px); }
   .success-msg { display: none; background: rgba(200,255,0,0.1); border: 1px solid rgba(200,255,0,0.3); color: var(--lime); padding: 16px; border-radius: 10px; font-size: 14px; text-align: center; }
+  .success-msg.visible { display: block; }
+  .form-note { color: var(--grey-text); font-size: 12px; line-height: 1.6; }
+  .form-note a { color: var(--white); }
+  .form-hp { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important; }
+  .demo-privacy { color: var(--grey-text); font-size: 12px; line-height: 1.6; margin-top: 18px; max-width: 720px; }
+  .demo-privacy a { color: var(--white); }
+  .pricing-detail { display: inline-flex; margin-top: 14px; color: var(--lime); font-size: 13px; text-decoration: none; border-bottom: 1px solid rgba(200,255,0,0.35); }
+  .pricing-card.featured .pricing-detail { color: var(--black); border-bottom-color: rgba(0,0,0,0.35); }
 
   /* FOOTER */
   footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 40px 80px; display: flex; justify-content: space-between; align-items: center; }
@@ -242,14 +283,25 @@
   footer p { font-size: 13px; color: var(--grey-text); }
 
   /* REVEAL */
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal { opacity: 1; transform: none; }
+  .js .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .js .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* PRIVACYKEUZE */
+  .privacy-banner { position: fixed; left: 20px; right: 20px; bottom: 20px; z-index: 300; max-width: 760px; margin: 0 auto; background: #151515; border: 1px solid rgba(255,255,255,0.14); border-radius: 16px; padding: 18px; box-shadow: 0 20px 60px rgba(0,0,0,0.55); }
+  .privacy-banner-inner { display: flex; align-items: center; gap: 20px; }
+  .privacy-banner p { flex: 1; color: var(--grey-text); font-size: 13px; line-height: 1.6; }
+  .privacy-banner a { color: var(--white); }
+  .privacy-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .privacy-button { border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; padding: 9px 14px; background: transparent; color: var(--white); cursor: pointer; font-size: 13px; }
+  .privacy-button.accept { background: var(--lime); border-color: var(--lime); color: var(--black); font-weight: 600; }
 
   /* MOBILE */
   @media (max-width: 1100px) {
     .pillars-grid { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: repeat(2, 1fr); }
+    .demo-grid { grid-template-columns: minmax(0, 760px); justify-content: center; }
   }
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
@@ -259,32 +311,36 @@
     section { padding: 60px 24px; }
     footer { padding: 32px 24px; }
     .hero-stats { gap: 24px; }
-    .demo-grid { grid-template-columns: 1fr; }
+    .demo-grid { grid-template-columns: minmax(0, 1fr); margin-top: 42px; }
     .cv-layout { grid-template-columns: 1fr; }
     .contact-layout { grid-template-columns: 1fr; }
     .steps { grid-template-columns: 1fr; }
     .launch-deal { flex-direction: column; gap: 16px; }
     .launch-deal-includes { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: 16px; }
+    .launch-price-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 12px; text-align: center; }
     .hero-actions { flex-direction: column; align-items: flex-start; }
     .portal-grid { grid-template-columns: 1fr !important; }
+    .privacy-banner-inner { align-items: stretch; flex-direction: column; gap: 14px; }
+    .privacy-actions { width: 100%; }
+    .privacy-button { flex: 1; }
   }
 
-  /* INBOX DEMO */
-  .inbox-mail { display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:background 0.2s;border:1px solid transparent; }
-  .inbox-mail:hover { background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08); }
-  .inbox-mail.active { background:rgba(200,255,0,0.06);border-color:rgba(200,255,0,0.2); }
-  .mail-dot { width:8px;height:8px;border-radius:50%;background:var(--grey-mid);flex-shrink:0;margin-top:6px; }
-  .mail-dot.new { background:var(--lime); }
-  .mail-content { flex:1;min-width:0; }
-  .mail-from { font-size:13px;font-weight:500;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
-  .mail-subject { font-size:12px;color:var(--white);opacity:0.8;margin-top:2px; }
-  .mail-preview { font-size:11px;color:var(--grey-text);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
-  .mail-time { font-size:11px;color:var(--grey-text);flex-shrink:0; }
-  .pipe-step { display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);font-size:13px;color:var(--grey-text);transition:all 0.3s; }
-  .pipe-step.running { border-color:rgba(200,255,0,0.3);color:var(--white); }
-  .pipe-step.done { background:rgba(200,255,0,0.06);border-color:rgba(200,255,0,0.2);color:var(--lime); }
-  .pipe-icon { font-size:14px;width:20px;text-align:center; }
+  @media (max-width: 520px) {
+    .chat-header { padding: 14px 16px; }
+    .chat-messages { padding: 16px; min-height: 220px; }
+    .msg { max-width: 94%; }
+    .quick-questions { padding: 2px 16px 14px; }
+    .quick-q { flex: 1 1 100%; width: 100%; padding: 9px 12px; }
+    .chat-input-area { padding: 14px 16px 16px; }
+    .chat-input { padding: 10px 14px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+    .js .reveal { opacity: 1; transform: none; }
+  }
 
   /* MAANDKOSTEN ACCORDION */
   .monthly-accordion { margin-top: 14px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
@@ -299,11 +355,11 @@
   .accordion-body ul li { font-size: 12px; color: #999; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
   .accordion-body ul li::before { content: "✓"; color: var(--lime); font-weight: 700; font-size: 11px; flex-shrink: 0; margin-top: 1px; }
   .pricing-card.featured .monthly-accordion { border-color: rgba(0,0,0,0.12); }
-  .pricing-card.featured .monthly-accordion summary { background: rgba(0,0,0,0.08); color: rgba(0,0,0,0.5); }
-  .pricing-card.featured .monthly-accordion summary:hover { color: rgba(0,0,0,0.75); background: rgba(0,0,0,0.12); }
-  .pricing-card.featured .monthly-accordion[open] summary { color: rgba(0,0,0,0.75); border-bottom: 1px solid rgba(0,0,0,0.1); }
+  .pricing-card.featured .monthly-accordion summary { background: rgba(0,0,0,0.08); color: rgba(0,0,0,0.72); }
+  .pricing-card.featured .monthly-accordion summary:hover { color: rgba(0,0,0,0.88); background: rgba(0,0,0,0.12); }
+  .pricing-card.featured .monthly-accordion[open] summary { color: rgba(0,0,0,0.88); border-bottom: 1px solid rgba(0,0,0,0.1); }
   .pricing-card.featured .accordion-body { background: rgba(0,0,0,0.07); }
-  .pricing-card.featured .accordion-body ul li { color: rgba(0,0,0,0.6); }
+  .pricing-card.featured .accordion-body ul li { color: rgba(0,0,0,0.72); }
   .pricing-card.featured .accordion-body ul li::before { color: #000; }
 
   /* INBOX DEMO */
@@ -354,45 +410,37 @@
   .wf-result.visible { display: block; }
   @media (max-width: 900px) { .workflow-layout { grid-template-columns: 1fr; } .trigger-grid { grid-template-columns: 1fr 1fr; } }
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1H8P518FLC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1H8P518FLC');
-</script>
 </head>
 <body>
-<a href="#main-content" style="position:absolute;top:-40px;left:0;background:var(--lime);color:var(--black);padding:8px 16px;z-index:9999;border-radius:0 0 8px 0;font-size:14px;text-decoration:none;transition:top 0.2s" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Naar hoofdinhoud</a>
+<a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
 
 <!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:10px;"><svg width="22" height="34" viewBox="0 0 28 44" fill="none" style="filter:drop-shadow(0 0 6px #C8FF00);flex-shrink:0;"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C8FF00"/></svg><span style="white-space:nowrap;color:var(--white);">Bri<span>qk</span></span></a>
+<nav aria-label="Hoofdnavigatie">
+  <a href="/" class="nav-logo" aria-label="Briqk homepage" style="display:flex;align-items:center;gap:10px;"><svg width="22" height="34" viewBox="0 0 28 44" fill="none" aria-hidden="true" focusable="false" style="filter:drop-shadow(0 0 6px #C8FF00);flex-shrink:0;"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C8FF00"/></svg><span style="white-space:nowrap;color:var(--white);">Bri<span>qk</span></span></a>
   <ul class="nav-links">
     <li><a href="#ai-demo">Automations</a></li>
     <li><a href="#diensten">Websites</a></li>
     <li><a href="#demo">Bot Demo</a></li>
     <li><a href="#prijzen">Prijzen</a></li>
-    <li style="display:flex;align-items:center;"><a href="https://portal.briqk.nl" target="_blank" style="color:var(--white);text-decoration:none;font-size:13px;font-weight:500;padding:8px 18px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.background='transparent'">&#x1F511; Inloggen</a></li>
-    <li><a href="#contact" class="nav-cta">Gratis gesprek</a></li>
+    <li style="display:flex;align-items:center;"><a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" style="color:var(--white);text-decoration:none;font-size:13px;font-weight:500;padding:8px 18px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)';this.style.background='transparent'">&#x1F511; Inloggen</a></li>
+    <li><a href="#contact" class="nav-cta">Gratis kennismaking</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <button class="hamburger" id="hamburger" type="button" onclick="toggleMenu()" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
-<div class="mobile-nav" id="mobileNav">
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobiele navigatie" aria-hidden="true">
   <a href="#ai-demo" onclick="toggleMenu()">Automations</a>
   <a href="#diensten" onclick="toggleMenu()">Websites</a>
   <a href="#demo" onclick="toggleMenu()">Bot Demo</a>
   <a href="#prijzen" onclick="toggleMenu()">Prijzen</a>
-  <a href="https://portal.briqk.nl" target="_blank" style="color:var(--grey-text)">Inloggen</a>
-  <a href="#contact" onclick="toggleMenu()" style="color:var(--lime)">Gratis gesprek</a>
-</div>
+  <a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" style="color:var(--grey-text)">Inloggen</a>
+  <a href="#contact" onclick="toggleMenu()" style="color:var(--lime)">Gratis kennismaking</a>
+</nav>
 
 <main id="main-content">
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-labelledby="hero-title">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <a href="#diensten" class="scroll-hint" style="position:absolute;bottom:32px;left:80px;flex-direction:column;align-items:center;gap:6px;text-decoration:none;animation:fadeUp 0.8s 0.7s ease both;" aria-label="Scroll naar beneden">
@@ -400,11 +448,11 @@
     <svg width="24" height="38" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation:boltBounce 1.8s ease-in-out infinite;filter:drop-shadow(0 0 8px #C8FF00) drop-shadow(0 0 16px rgba(200,255,0,0.4));"><g transform="rotate(180, 14, 22)"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C8FF00"/></g></svg>
   </a>
   <div class="hero-tag">AI voor Nederlands MKB</div>
-  <h1>Meer klanten.<br><em>Minder werk.</em><br>Automatisch.</h1>
+  <h1 id="hero-title">Meer klanten.<br><em>Minder werk.</em><br>Automatisch.</h1>
   <p class="hero-sub">Van <strong>workflow automatisering</strong> tot slimme <strong>AI websites</strong>. Wij bouwen digitale medewerkers die 24/7 voor jouw bedrijf werken.</p>
 
   <div class="hero-actions">
-    <a href="#contact" class="btn-primary">Gratis gesprek inplannen</a>
+    <a href="#contact" class="btn-primary">Gratis kennismaking aanvragen</a>
     <a href="#demo" class="btn-ghost">Bekijk de demo</a>
   </div>
   <div class="hero-stats">
@@ -492,6 +540,12 @@
         <div class="pillar-item">WhatsApp Bot €750</div>
         <div class="pillar-item">Lead Qualifier Agent €950</div>
       </div>
+      <div class="pillar-links" aria-label="Meer over onze websites">
+        <a href="/website-laten-maken-mkb">Starter Website</a>
+        <a href="/ai-website-laten-maken">AI-website + chatbot</a>
+        <a href="/website-laten-maken-arnhem">Webdesign Arnhem</a>
+        <a href="/whatsapp-bot-bedrijf">WhatsApp-bot</a>
+      </div>
     </div>
     <div class="pillar reveal">
       <div class="pillar-icon">🛠️</div>
@@ -505,22 +559,22 @@
         <div class="pillar-item">Branche-specifieke AI assistent op maat</div>
         <div class="pillar-item">Prijs op aanvraag</div>
       </div>
+      <div class="pillar-links"><a href="#contact">Bespreek jouw idee →</a></div>
     </div>
   </div>
 </section>
 
 <!-- PORTAL USP -->
-<section style="background:var(--black);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:80px 80px;">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+<section class="portal-section" aria-labelledby="portal-title">
+  <div class="portal-grid">
     <div class="reveal">
       <div class="section-tag">Klantportaal</div>
-      <h2 class="section-title" style="max-width:500px;">Jij ziet altijd wat er gebeurt</h2>
-      <p style="font-size:16px;color:var(--grey-text);line-height:1.8;margin-top:16px;max-width:480px;">Geen black box. Via het Briqk klantportaal zie je live hoeveel vragen je chatbot heeft beantwoord, hoeveel leads er zijn binnengekomen en wat er automatisch is verwerkt. Altijd inzicht, geen verrassingen.</p>
-      <a href="https://portal.briqk.nl" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:28px;color:var(--lime);text-decoration:none;font-size:14px;font-weight:500;border:1px solid rgba(200,255,0,0.3);padding:10px 20px;border-radius:100px;transition:all 0.2s;" onmouseover="this.style.background='rgba(200,255,0,0.08)'" onmouseout="this.style.background='transparent'">Bekijk het portaal &#x2197;</a>
+      <h2 class="section-title" id="portal-title" style="max-width:500px;">Jij ziet altijd wat er gebeurt</h2>
+      <p class="portal-copy">Geen black box. Via het Briqk-klantportaal zie je live hoeveel vragen je chatbot heeft beantwoord, hoeveel leads er zijn binnengekomen en wat er automatisch is verwerkt. Altijd inzicht, geen verrassingen.</p>
+      <a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" class="portal-link">Bekijk het portaal <span aria-hidden="true">↗</span><span class="sr-only">(opent in een nieuw tabblad)</span></a>
     </div>
-    <div class="reveal" style="position:relative;">
-      <img src="/portal-screenshot.png" alt="Briqk klantportaal dashboard" style="width:100%;border-radius:16px;border:1px solid rgba(255,255,255,0.08);box-shadow:0 40px 80px rgba(0,0,0,0.6);">
-      <div style="position:absolute;inset:0;border-radius:16px;background:linear-gradient(to bottom, transparent 60%, rgba(8,8,8,0.4) 100%);pointer-events:none;"></div>
+    <div class="portal-shot reveal">
+      <img src="/portal-screenshot.png" alt="Dashboard van het Briqk-klantportaal met statistieken over leads en automatiseringen" width="1306" height="750" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -532,8 +586,8 @@
   <p class="section-sub">Twee bots, twee doelen. Test ze allebei en ontdek wat bij jouw bedrijf past.</p>
   <div class="demo-grid">
     <div class="reveal" style="display:flex;flex-direction:column;">
-      <div class="demo-label"><span>Standaard Chatbot</span> Informeert en helpt bezoekers</div>
-      <div class="chat-widget">
+      <div class="demo-label"><span>Standaard chatbot</span> Beantwoordt vragen direct</div>
+      <div class="chat-widget" id="assistantDemo" aria-busy="false">
         <div class="chat-header">
           <div class="chat-avatar">🤖</div>
           <div>
@@ -541,26 +595,26 @@
             <div class="chat-header-status">Online</div>
           </div>
         </div>
-        <div class="chat-messages" id="chatMessages1">
+        <div class="chat-messages" id="chatMessages1" role="log" aria-live="polite" aria-relevant="additions">
           <div class="msg bot">
             <div class="msg-dot">🤖</div>
             <div class="msg-bubble">Hoi! Ik ben de assistent van Briqk. Stel me een vraag over onze diensten of prijzen!</div>
           </div>
         </div>
         <div class="quick-questions">
-          <button class="quick-q" onclick="sendQuick1(this)">Wat kost een website?</button>
-          <button class="quick-q" onclick="sendQuick1(this)">Hoe snel ben ik live?</button>
-          <button class="quick-q" onclick="sendQuick1(this)">Wat doet een chatbot?</button>
+          <button class="quick-q" type="button" onclick="sendQuick1(this)">Wat kost een website?</button>
+          <button class="quick-q" type="button" onclick="sendQuick1(this)">Hoe snel ben ik live?</button>
+          <button class="quick-q" type="button" onclick="sendQuick1(this)">Wat doet een chatbot?</button>
         </div>
         <div class="chat-input-area">
-          <input type="text" class="chat-input" id="chatInput1" placeholder="Stel een vraag..." maxlength="300" />
-          <button class="chat-send" id="chatSend1" onclick="sendMsg1()">➤</button>
+          <input type="text" class="chat-input" id="chatInput1" aria-label="Vraag aan de Briqk Assistent" placeholder="Stel een vraag..." maxlength="300" autocomplete="off" />
+          <button class="chat-send" id="chatSend1" type="button" aria-label="Vraag versturen" onclick="sendMsg1()">➤</button>
         </div>
       </div>
     </div>
 
     <div class="reveal" style="display:flex;flex-direction:column;">
-      <div class="demo-label"><span>Lead Qualifier Bot</span> Filtert warme leads automatisch</div>
+      <div class="demo-label"><span>Lead qualifier</span> Herkent kansrijke aanvragen</div>
       <div class="chat-widget">
         <div class="chat-header">
           <div class="chat-avatar" style="background:#fff;color:#080808">🎯</div>
@@ -569,24 +623,25 @@
             <div class="chat-header-status">Online</div>
           </div>
         </div>
-        <div class="progress-bar"><div class="progress-fill" id="qualProgress" style="width:0%"></div></div>
-        <div class="chat-messages" id="chatMessages2">
+        <div class="progress-bar" id="qualProgressBar" role="progressbar" aria-label="Voortgang leadkwalificatie" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="qualProgress" style="width:0%"></div></div>
+        <div class="chat-messages" id="chatMessages2" role="log" aria-live="polite" aria-relevant="additions">
           <div class="msg bot">
             <div class="msg-dot" style="background:#fff;color:#080808">🎯</div>
             <div class="msg-bubble">Goedemiddag! Ik help je snel bepalen of Briqk bij jou past. Ik stel je 5 korte vragen. Klaar?</div>
           </div>
         </div>
         <div class="quick-questions" id="qualQuickAnswers">
-          <button class="quick-q" onclick="sendMsg2('Ja, ga maar!')">Ja, ga maar!</button>
-          <button class="quick-q" onclick="sendMsg2('Vertel me meer eerst')">Vertel me meer eerst</button>
+          <button class="quick-q" type="button" onclick="sendMsg2('Ja, ga maar!')">Ja, ga maar!</button>
+          <button class="quick-q" type="button" onclick="sendMsg2('Vertel me meer eerst')">Vertel me meer eerst</button>
         </div>
         <div class="chat-input-area">
-          <input type="text" class="chat-input" id="chatInput2" placeholder="Type je antwoord..." maxlength="300" />
-          <button class="chat-send" id="chatSend2" onclick="sendMsg2()" style="background:#fff;color:#080808">➤</button>
+          <input type="text" class="chat-input" id="chatInput2" aria-label="Antwoord aan de leadkwalificatie-assistent" placeholder="Type je antwoord..." maxlength="300" autocomplete="off" />
+          <button class="chat-send" id="chatSend2" type="button" aria-label="Antwoord versturen" onclick="sendMsg2()" style="background:#fff;color:#080808">➤</button>
         </div>
       </div>
     </div>
   </div>
+  <p class="demo-privacy">De demo stuurt je invoer naar onze AI-verwerker om een antwoord te genereren. Deel hier geen persoonsgegevens of vertrouwelijke informatie. Lees meer in ons <a href="/privacy">privacybeleid</a>.</p>
 </section>
 
 <!-- CV MAKER -->
@@ -595,8 +650,8 @@
     <div class="cv-info reveal">
       <div class="section-tag">AI Automatisering Demo</div>
       <h2>Eén voorbeeld.<br><em style="color:var(--lime)">Eindeloos mogelijk.</em></h2>
-      <p>Dit is een live demo van AI e-mail automatisering. Een mail komt binnen, de AI leest hem, bepaalt de prioriteit en schrijft direct een professioneel antwoord. Zonder dat jij er naar kijkt.</p>
-      <p>Maar dit is slechts één ding dat we kunnen automatiseren. Denk ook aan een lead die binnenkomt, automatisch in je CRM belandt, jou een WhatsApp melding stuurt en een follow-up inplant. Allemaal zonder handmatig werk.</p>
+      <p>Dit is een live demo van AI-e-mailautomatisering. Een mail komt binnen, de AI leest hem, bepaalt de prioriteit en schrijft direct een professioneel antwoord. Zonder dat jij ernaar hoeft te kijken.</p>
+      <p>Maar dit is slechts één ding dat we kunnen automatiseren. Denk ook aan een lead die binnenkomt, automatisch in je CRM belandt, jou een WhatsApp-melding stuurt en een follow-up inplant. Allemaal zonder handmatig werk.</p>
       <div class="cv-features">
         <div class="cv-feature">E-mail automatisch beantwoorden</div>
         <div class="cv-feature">Leads routeren naar CRM</div>
@@ -616,7 +671,7 @@
         </div>
       </div>
       <div id="inboxList" style="display:flex;flex-direction:column;gap:2px;padding:12px 16px;">
-        <div class="inbox-mail" onclick="runAutomation(0)" data-index="0">
+        <div class="inbox-mail" onclick="runAutomation(0)" data-index="0" role="button" tabindex="0" aria-label="E-mail van Jan de Vries analyseren">
           <div class="mail-dot new"></div>
           <div class="mail-content">
             <div class="mail-from">Jan de Vries &lt;jan@installateur.nl&gt;</div>
@@ -625,7 +680,7 @@
           </div>
           <div class="mail-time">09:14</div>
         </div>
-        <div class="inbox-mail" onclick="runAutomation(1)" data-index="1">
+        <div class="inbox-mail" onclick="runAutomation(1)" data-index="1" role="button" tabindex="0" aria-label="E-mail van Sandra Bakker analyseren">
           <div class="mail-dot"></div>
           <div class="mail-content">
             <div class="mail-from">Sandra Bakker &lt;info@bakkerij-sandra.nl&gt;</div>
@@ -634,7 +689,7 @@
           </div>
           <div class="mail-time">10:32</div>
         </div>
-        <div class="inbox-mail" onclick="runAutomation(2)" data-index="2">
+        <div class="inbox-mail" onclick="runAutomation(2)" data-index="2" role="button" tabindex="0" aria-label="Promotie-e-mail analyseren">
           <div class="mail-dot"></div>
           <div class="mail-content">
             <div class="mail-from">noreply@promo-deals.com</div>
@@ -646,7 +701,7 @@
       </div>
 
       <!-- PIPELINE -->
-      <div id="pipeline" style="display:none;padding:16px 20px;border-top:1px solid rgba(255,255,255,0.06);">
+      <div id="pipeline" role="status" aria-live="polite" style="display:none;padding:16px 20px;border-top:1px solid rgba(255,255,255,0.06);">
         <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-text);margin-bottom:12px;">AI Pipeline</div>
         <div style="display:flex;flex-direction:column;gap:8px;" id="pipelineSteps">
           <div class="pipe-step" id="step0"><span class="pipe-icon">⏳</span><span class="pipe-label">Mail lezen</span></div>
@@ -658,14 +713,14 @@
       </div>
 
       <!-- RESULT -->
-      <div id="autoResult" style="display:none;padding:16px 20px;border-top:1px solid rgba(255,255,255,0.06);">
+      <div id="autoResult" role="status" aria-live="polite" style="display:none;padding:16px 20px;border-top:1px solid rgba(255,255,255,0.06);">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
           <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-text);">Gegenereerd antwoord</div>
           <div id="resultBadge" style="font-size:11px;padding:3px 10px;border-radius:100px;"></div>
         </div>
         <div id="resultText" style="font-size:13px;color:var(--white);line-height:1.7;background:var(--grey);padding:14px 16px;border-radius:10px;white-space:pre-wrap;"></div>
         <div id="sendConfirm" style="display:none;margin-top:10px;font-size:12px;color:var(--lime);display:flex;align-items:center;gap:6px;">✓ Automatisch verstuurd, geen actie vereist</div>
-        <button onclick="resetAutomation()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere mail proberen</button>
+        <button type="button" onclick="resetAutomation()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere mail proberen</button>
       </div>
     </div>
   </div>
@@ -675,27 +730,27 @@
 <section class="workflow-section" id="workflow-demo">
   <div class="section-tag">Live Workflow Demo</div>
   <h2 class="section-title">Kies een trigger. Zie wat er gebeurt.</h2>
-  <p class="section-sub">Zo werkt AI automatisering in de praktijk. Kies een situatie en watch de pipeline draaien.</p>
+  <p class="section-sub">Zo werkt AI-automatisering in de praktijk. Kies een situatie en bekijk de workflow stap voor stap.</p>
   <div class="workflow-layout">
     <div class="reveal">
       <p style="font-size:14px;color:var(--grey-text);margin-bottom:16px;">Kies een trigger om de workflow te starten:</p>
       <div class="trigger-grid">
-        <button class="trigger-btn" onclick="startWorkflow(0)">
+        <button class="trigger-btn" type="button" onclick="startWorkflow(0)">
           <span class="t-icon">📋</span>
           <span class="t-label">Nieuw contactformulier</span>
           <span class="t-sub">Bezoeker stuurt een aanvraag</span>
         </button>
-        <button class="trigger-btn" onclick="startWorkflow(1)">
+        <button class="trigger-btn" type="button" onclick="startWorkflow(1)">
           <span class="t-icon">📱</span>
           <span class="t-label">WhatsApp bericht</span>
           <span class="t-sub">Klant stuurt een berichtje</span>
         </button>
-        <button class="trigger-btn" onclick="startWorkflow(2)">
+        <button class="trigger-btn" type="button" onclick="startWorkflow(2)">
           <span class="t-icon">📅</span>
           <span class="t-label">Afspraak ingepland</span>
           <span class="t-sub">Via Calendly of Google Calendar</span>
         </button>
-        <button class="trigger-btn" onclick="startWorkflow(3)">
+        <button class="trigger-btn" type="button" onclick="startWorkflow(3)">
           <span class="t-icon">💼</span>
           <span class="t-label">Offerte verstuurd</span>
           <span class="t-sub">Na intake, offerte gaat de deur uit</span>
@@ -712,7 +767,7 @@
           <div style="width:36px;height:36px;background:rgba(200,255,0,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;">⚡</div>
           <div>
             <div style="font-size:14px;font-weight:500;">Briqk Automation Pipeline</div>
-            <div style="font-size:12px;color:var(--grey-text);" id="wfStatus">Wacht op trigger...</div>
+            <div style="font-size:12px;color:var(--grey-text);" id="wfStatus" role="status" aria-live="polite">Wacht op trigger...</div>
           </div>
         </div>
         <div class="wf-body" id="wfSteps">
@@ -746,10 +801,10 @@
             <div class="ws-status" id="wfs4s"></div>
           </div>
         </div>
-        <div class="wf-result" id="wfResult">
+        <div class="wf-result" id="wfResult" role="status" aria-live="polite">
           <div style="font-size:11px;color:var(--lime);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">✓ Workflow voltooid</div>
           <div id="wfResultText" style="font-size:13px;color:var(--white);line-height:1.7;"></div>
-          <button onclick="resetWorkflow()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere trigger proberen</button>
+          <button type="button" onclick="resetWorkflow()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere trigger proberen</button>
         </div>
       </div>
     </div>
@@ -768,7 +823,7 @@
       <div class="launch-spot"><div class="spot-num">2</div><div class="spot-status">Beschikbaar</div></div>
       <div class="launch-spot"><div class="spot-num">3</div><div class="spot-status">Beschikbaar</div></div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%">
+    <div class="launch-price-grid">
       <div style="background:var(--black);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:24px;text-align:center">
         <div style="font-size:11px;color:var(--grey-text);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px">Starter Website</div>
         <div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--grey-text);text-decoration:line-through;margin-bottom:4px">€850</div>
@@ -797,7 +852,7 @@
 <section id="prijzen">
   <div class="section-tag">Transparante prijzen</div>
   <h2 class="section-title">Geen verrassingen</h2>
-  <p class="section-sub">Vaste prijs, alles inbegrepen. Geen verborgen kosten.</p>
+  <p class="section-sub">Een duidelijke bouwprijs en een zichtbaar maandbedrag voor beheer. Maatwerk offreren we vooraf.</p>
   <div class="pricing-grid">
     <div class="pricing-card reveal">
       <div class="pricing-name">Starter Website</div>
@@ -806,7 +861,7 @@
       <div class="pricing-desc">Voor ZZP'ers die professioneel online willen staan.</div>
       <ul class="pricing-features">
         <li>Professionele website (5 pagina's)</li>
-        <li>AI contactformulier</li>
+        <li>Slim contactformulier</li>
         <li>Mobielvriendelijk design</li>
         <li>Hosting via Vercel</li>
         <li>Google Search Console + Bedrijfsprofiel</li>
@@ -822,7 +877,8 @@
           <li>Support via WhatsApp, reactie binnen 24 uur</li>
         </ul></div>
       </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Starter')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Starter')" style="margin-top:14px">Start gesprek</button>
+      <a class="pricing-detail" href="/website-laten-maken-mkb">Bekijk pakketdetails →</a>
     </div>
     <div class="pricing-card featured reveal">
       <div class="pricing-badge">Aanbevolen</div>
@@ -848,7 +904,7 @@
           <li>Prioriteits-support, reactie dezelfde werkdag</li>
         </ul></div>
       </details>
-      <button class="btn-pricing btn-pricing-black" onclick="startGesprek('AI Automatisering')" style="margin-top:14px">Neem contact op</button>
+      <button class="btn-pricing btn-pricing-black" type="button" onclick="startGesprek('AI Automatisering')" style="margin-top:14px">Neem contact op</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-badge">Website + Chatbot</div>
@@ -875,7 +931,8 @@
           <li>Prioriteits-support, reactie dezelfde werkdag</li>
         </ul></div>
       </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Pro Website')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Pro Website')" style="margin-top:14px">Start gesprek</button>
+      <a class="pricing-detail" href="/ai-website-laten-maken">Bekijk pakketdetails →</a>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">Chatbot Add-on</div>
@@ -897,7 +954,7 @@
           <li>Support via WhatsApp, reactie binnen 24 uur</li>
         </ul></div>
       </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Chatbot Add-on')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Chatbot Add-on')" style="margin-top:14px">Start gesprek</button>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">WhatsApp Bot</div>
@@ -921,7 +978,8 @@
           <li>Support via WhatsApp, reactie binnen 24 uur</li>
         </ul></div>
       </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('WhatsApp Bot')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('WhatsApp Bot')" style="margin-top:14px">Start gesprek</button>
+      <a class="pricing-detail" href="/whatsapp-bot-bedrijf">Bekijk pakketdetails →</a>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">Lead Qualifier Agent</div>
@@ -945,7 +1003,7 @@
           <li>Support via WhatsApp, reactie binnen 24 uur</li>
         </ul></div>
       </details>
-      <button class="btn-pricing btn-pricing-dark" onclick="startGesprek('Lead Qualifier')" style="margin-top:14px">Start gesprek</button>
+      <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Lead Qualifier')" style="margin-top:14px">Start gesprek</button>
     </div>
   </div>
 </section>
@@ -956,29 +1014,27 @@
     <div class="contact-info reveal">
       <div class="section-tag">Contact</div>
       <h2>Klaar om te starten?</h2>
-      <p>Plan een gratis kennismakingsgesprek van 30 minuten. Geen verplichtingen.</p>
+      <p>Vraag een gratis kennismaking van 30 minuten aan. We reageren per e-mail, zonder verplichtingen.</p>
       <div class="contact-items">
-        <div class="contact-item"><div class="contact-item-icon">📍</div>Arnhem, Gelderland ook remote</div>
+        <div class="contact-item"><div class="contact-item-icon" aria-hidden="true">📍</div>Arnhem, Gelderland · actief in heel Nederland</div>
         <div class="contact-item"><div class="contact-item-icon">✉️</div><a href="mailto:info@briqk.nl" style="color:var(--lime);text-decoration:underline;text-underline-offset:3px;">info@briqk.nl</a></div>
-        <div class="contact-item"><div class="contact-item-icon">⏱️</div>Reactie binnen 24 uur</div>
-        <div class="contact-item"><div class="contact-item-icon">🆓</div>Eerste gesprek altijd gratis</div>
+        <div class="contact-item"><div class="contact-item-icon" aria-hidden="true">⏱️</div>Reactie per e-mail binnen 24 uur</div>
+        <div class="contact-item"><div class="contact-item-icon" aria-hidden="true">🆓</div>Eerste gesprek gratis</div>
       </div>
     </div>
-    <form class="contact-form reveal" action="https://formspree.io/f/xlgpodnl" method="POST">
-      <input type="hidden" name="_next" value="https://briqk.nl/#contact" />
+    <form class="contact-form reveal" action="https://formspree.io/f/xlgpodnl" method="POST" aria-describedby="formPrivacy">
+      <input type="hidden" name="_next" value="https://briqk.nl/?contact=verzonden#contact" />
+      <input type="hidden" name="_subject" value="Nieuwe aanvraag via briqk.nl" />
+      <label class="form-hp" aria-hidden="true">Laat dit veld leeg<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+      <div class="success-msg" id="formSuccess" role="status" aria-live="polite">Bedankt! Je aanvraag is verstuurd. We antwoorden binnen 24 uur per e-mail.</div>
       <div class="form-group">
         <label for="formNaam">Naam</label>
-        <input type="text" id="formNaam" name="naam" placeholder="Jan de Vries" required />
+        <input type="text" id="formNaam" name="naam" placeholder="Jan de Vries" autocomplete="name" required />
       </div>
       <div class="form-group">
         <label for="formEmail">E-mailadres</label>
-        <input type="email" id="formEmail" name="email" placeholder="jan@bedrijf.nl" required />
-        <span id="emailError" style="display:none;font-size:12px;color:#ff6b6b;margin-top:4px;">Vul een geldig e-mailadres in.</span>
-      </div>
-      <div class="form-group">
-        <label for="formTel">Telefoonnummer</label>
-        <input type="tel" id="formTel" name="telefoon" placeholder="06 12345678" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9\s\-\+]/g,'')" />
-        <span id="telError" style="display:none;font-size:12px;color:#ff6b6b;margin-top:4px;">Vul een geldig telefoonnummer in (minimaal 10 cijfers).</span>
+        <input type="email" id="formEmail" name="email" placeholder="jan@bedrijf.nl" autocomplete="email" aria-describedby="emailError" required />
+        <span id="emailError" role="alert" style="display:none;font-size:12px;color:#ff6b6b;margin-top:4px;">Vul een geldig e-mailadres in.</span>
       </div>
       <div class="form-group">
         <label for="formType">Type bedrijf</label>
@@ -990,8 +1046,8 @@
           <option>Anders</option>
         </select>
       </div>
-      <div class="form-group">
-        <label>Interesse in (meerdere mogelijk)</label>
+      <fieldset class="form-group form-fieldset">
+        <legend>Interesse in (meerdere mogelijk)</legend>
         <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;" id="interesseCheckboxes">
           <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Starter Website (€850)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Starter Website (€850)</label>
           <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Pro Website + Chatbot (€1.750)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Pro Website + Chatbot (€1.750)</label>
@@ -1001,12 +1057,13 @@
           <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="AI Automatisering" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> AI Automatisering</label>
           <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Micro-SaaS Tool" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Micro-SaaS Tool</label>
         </div>
-      </div>
+      </fieldset>
       <div class="form-group">
         <label for="formBericht">Vraag of opmerking (optioneel)</label>
         <textarea id="formBericht" name="bericht" placeholder="Vertel iets over jouw bedrijf..."></textarea>
       </div>
-      <button type="submit" class="form-submit" >Gratis gesprek inplannen</button>
+      <p class="form-note" id="formPrivacy">Je gegevens worden via Formspree verwerkt om je aanvraag te beantwoorden. Lees ons <a href="/privacy">privacybeleid</a>.</p>
+      <button type="submit" class="form-submit">Gratis kennismaking aanvragen</button>
     </form>
   </div>
 </section>
@@ -1016,14 +1073,59 @@
 <footer>
   <div class="footer-logo" style="white-space:nowrap;">Bri<span>qk</span></div>
   <p>© 2026 Briqk · Arnhem, Nederland · AI Websites voor MKB</p>
-  <p style="font-size:13px;color:var(--grey-text)"><a href="/blog-ai-voor-mkb" style="color:var(--lime);text-decoration:none">Blog: AI voor MKB →</a></p>
+  <nav aria-label="Diensten en informatie" style="font-size:12px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="/website-laten-maken-mkb" style="color:#bbb;">Websites</a>
+    <a href="/ai-website-laten-maken" style="color:#bbb;">AI-website</a>
+    <a href="/whatsapp-bot-bedrijf" style="color:#bbb;">WhatsApp-bot</a>
+    <a href="/blog/ai-voor-mkb" style="color:var(--lime);">Blog</a>
+  </nav>
   <p style="font-size:12px;color:#888">info@briqk.nl · briqk.nl</p>
   <div style="font-size:12px;color:#666;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;"><a href="/privacy" style="color:#aaa;text-decoration:none;border-bottom:1px solid #666">Privacybeleid</a><a href="/voorwaarden" style="color:#aaa;text-decoration:none;border-bottom:1px solid #666">Voorwaarden</a></div>
 </footer>
 
+<aside class="privacy-banner" id="privacyBanner" aria-label="Privacyvoorkeuren" hidden>
+  <div class="privacy-banner-inner">
+    <p>Met jouw toestemming gebruiken we Google Analytics om de website te verbeteren. We gebruiken geen advertentiecookies. <a href="/privacy">Meer informatie</a>.</p>
+    <div class="privacy-actions">
+      <button type="button" class="privacy-button" id="analyticsDecline">Weigeren</button>
+      <button type="button" class="privacy-button accept" id="analyticsAccept">Toestaan</button>
+    </div>
+  </div>
+</aside>
+
 <script>
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function loadAnalytics() {
+  if (window.__briqkAnalyticsLoaded) return;
+  window.__briqkAnalyticsLoaded = true;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function() { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-1H8P518FLC', { anonymize_ip: true });
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1H8P518FLC';
+  document.head.appendChild(script);
+}
+
+function setAnalyticsPreference(value) {
+  try { localStorage.setItem('briqkAnalyticsConsent', value); } catch (error) { /* Opslag kan door privacy-instellingen geblokkeerd zijn. */ }
+  document.getElementById('privacyBanner').hidden = true;
+  if (value === 'granted') loadAnalytics();
+}
+
+(function initialisePrivacyChoice() {
+  let choice = null;
+  try { choice = localStorage.getItem('briqkAnalyticsConsent'); } catch (error) { /* Toon de keuze opnieuw als opslag niet beschikbaar is. */ }
+  if (choice === 'granted') loadAnalytics();
+  if (choice !== 'granted' && choice !== 'denied') document.getElementById('privacyBanner').hidden = false;
+  document.getElementById('analyticsAccept').addEventListener('click', () => setAnalyticsPreference('granted'));
+  document.getElementById('analyticsDecline').addEventListener('click', () => setAnalyticsPreference('denied'));
+})();
+
 function startGesprek(interesse) {
-  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+  document.getElementById('contact').scrollIntoView({behavior: prefersReducedMotion ? 'auto' : 'smooth'});
   if (interesse) {
     setTimeout(function() {
       var boxes = document.querySelectorAll('#interesseCheckboxes input[type=checkbox]');
@@ -1042,62 +1144,80 @@ function startGesprek(interesse) {
         };
         bericht.value = labels[interesse] || '';
       }
-    }, 600);
+    }, prefersReducedMotion ? 0 : 600);
   }
+  setTimeout(function() {
+    document.getElementById('formNaam').focus({ preventScroll: true });
+  }, prefersReducedMotion ? 0 : 600);
 }
 
 function toggleMenu() {
   const ham = document.getElementById('hamburger');
   const nav = document.getElementById('mobileNav');
-  ham.classList.toggle('open');
-  nav.classList.toggle('open');
+  const isOpen = nav.classList.toggle('open');
+  ham.classList.toggle('open', isOpen);
+  ham.setAttribute('aria-expanded', String(isOpen));
+  nav.setAttribute('aria-hidden', String(!isOpen));
 }
 
+function closeMenu() {
+  const ham = document.getElementById('hamburger');
+  const nav = document.getElementById('mobileNav');
+  ham.classList.remove('open');
+  nav.classList.remove('open');
+  ham.setAttribute('aria-expanded', 'false');
+  nav.setAttribute('aria-hidden', 'true');
+}
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeMenu();
+});
+
 const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-reveals.forEach(el => observer.observe(el));
-
-const SYSTEM_1 = `Je bent de vriendelijke AI-assistent van Briqk, een Nederlands bedrijf dat AI-powered websites, automatiseringen en Micro-SaaS tools bouwt voor MKB.
-
-Briqk biedt:
-- Starter Website: €850 eenmalig + €99/mnd
-- Pro Website + Chatbot: €1.750 + €249/mnd
-- Chatbot Add-on: €600 + €149/mnd
-- WhatsApp Bot: €750 + €149/mnd
-- Lead Qualifier Agent: €950 + €199/mnd
-- AI Automatisering: op aanvraag
-- Micro-SaaS Tools: op aanvraag
-
-Live binnen 2 weken. Geen verborgen kosten. Arnhem, ook remote. info@briqk.nl
-
-Beantwoord vragen kort en vriendelijk in het Nederlands. Max 2-3 zinnen. Stimuleer bezoekers om een gratis gesprek in te plannen.`;
+if ('IntersectionObserver' in window && !prefersReducedMotion) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+} else {
+  reveals.forEach(el => el.classList.add('visible'));
+}
 
 let isLoading1 = false;
 
-async function callAPI(systemPrompt, userMsg) {
+async function callAPI(mode, userMsg) {
   const res = await fetch('/api/chat', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ systemPrompt: systemPrompt, message: userMsg })
+    body: JSON.stringify({ mode, message: userMsg })
   });
-  if (!res.ok) throw new Error('API fout: ' + res.status);
-  const data = await res.json();
-  return data.reply || data.choices?.[0]?.message?.content || 'Geen antwoord ontvangen.';
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    throw new Error(data.error || 'De AI-demo is tijdelijk niet beschikbaar.');
+  }
+  return data.reply || 'Geen antwoord ontvangen.';
 }
 
 function addMsg(containerId, text, type, avatarEmoji) {
   const container = document.getElementById(containerId);
   const msg = document.createElement('div');
   msg.className = `msg ${type}`;
-  const dotStyle = type === 'user' ? 'background:var(--grey-mid);border:1px solid rgba(255,255,255,0.1)' : '';
-  msg.innerHTML = `<div class="msg-dot" style="${dotStyle}">${type === 'bot' ? avatarEmoji : '👤'}</div><div class="msg-bubble">${text}</div>`;
+  const dot = document.createElement('div');
+  const bubble = document.createElement('div');
+  dot.className = 'msg-dot';
+  bubble.className = 'msg-bubble';
+  if (type === 'user') {
+    dot.style.background = 'var(--grey-mid)';
+    dot.style.border = '1px solid rgba(255,255,255,0.1)';
+  }
+  dot.textContent = type === 'bot' ? avatarEmoji : '👤';
+  bubble.textContent = String(text);
+  msg.append(dot, bubble);
   container.appendChild(msg);
   container.scrollTop = container.scrollHeight;
   return msg;
@@ -1113,24 +1233,50 @@ function addTyping(containerId, avatarEmoji) {
   return el;
 }
 
+function getLocalAssistantReply(message) {
+  const question = message.toLocaleLowerCase('nl-NL');
+
+  if (question.includes('kost') || question.includes('prijs') || question.includes('budget')) {
+    return 'Een professionele Starter Website begint bij €850. Een Pro Website met AI-chatbot begint bij €1.750. Tijdens een gratis kennismaking bepalen we wat voor jouw bedrijf echt nodig is.';
+  }
+  if (question.includes('snel') || question.includes('live') || question.includes('lang') || question.includes('oplever')) {
+    return 'Na de intake en zodra alle input compleet is, kan je website meestal binnen 2 weken live. Je krijgt vooraf een duidelijke planning.';
+  }
+  if (question.includes('chatbot') || question.includes('assistent') || question.includes('bot')) {
+    return 'Een AI-chatbot beantwoordt veelgestelde vragen, helpt bezoekers de juiste dienst te vinden en verzamelt aanvragen — ook buiten openingstijden.';
+  }
+  if (question.includes('contact') || question.includes('mail') || question.includes('gesprek')) {
+    return 'Je bereikt Briqk via info@briqk.nl of via het contactformulier hieronder. Je krijgt binnen 24 uur per e-mail antwoord.';
+  }
+
+  return 'De live AI-assistent is even niet bereikbaar. Mail je vraag naar info@briqk.nl of gebruik het contactformulier; je krijgt binnen 24 uur per e-mail antwoord.';
+}
+
 async function sendMsg1(text) {
   const msg = text || document.getElementById('chatInput1').value.trim();
   if (!msg || isLoading1) return;
+  const assistantDemo = document.getElementById('assistantDemo');
+  const sendButton = document.getElementById('chatSend1');
+  const quickButtons = assistantDemo.querySelectorAll('.quick-q');
   addMsg('chatMessages1', msg, 'user', '🤖');
   document.getElementById('chatInput1').value = '';
   isLoading1 = true;
-  document.getElementById('chatSend1').disabled = true;
+  assistantDemo.setAttribute('aria-busy', 'true');
+  sendButton.disabled = true;
+  quickButtons.forEach(button => { button.disabled = true; });
   const typing = addTyping('chatMessages1', '🤖');
+  let reply;
   try {
-    const reply = await callAPI(SYSTEM_1, msg);
-    typing.remove();
-    addMsg('chatMessages1', reply, 'bot', '🤖');
+    reply = await callAPI('assistant', msg);
   } catch(e) {
-    typing.remove();
-    addMsg('chatMessages1', 'Er ging iets mis. Probeer het opnieuw.', 'bot', '🤖');
+    reply = getLocalAssistantReply(msg);
   }
+  typing.remove();
+  addMsg('chatMessages1', reply, 'bot', '🤖');
   isLoading1 = false;
-  document.getElementById('chatSend1').disabled = false;
+  assistantDemo.setAttribute('aria-busy', 'false');
+  sendButton.disabled = false;
+  quickButtons.forEach(button => { button.disabled = false; });
 }
 
 function sendQuick1(btn) { sendMsg1(btn.textContent); }
@@ -1145,14 +1291,6 @@ const QUAL_STEPS = [
   { q: 'Laatste vraag: ben jij degene die de beslissing neemt?', btns: ['Ja, ik beslis zelf', 'Ik moet overleggen'] },
 ];
 
-const SYSTEM_QUAL = `Je bent een vriendelijke assistent van Briqk. Beoordeel de antwoorden en geef een KORTE afsluiting van maximaal 2 zinnen. Geen analyse, geen uitleg.
-
-Warm: "Top, dit klinkt als een goede match! Damian neemt zo snel mogelijk contact met je op."
-Koud: "Goed om te weten! Mocht je er klaar voor zijn, dan staan we voor je klaar."
-Niet relevant: "Bedankt voor je interesse! Dit valt helaas buiten ons werkgebied."
-
-Schrijf ALTIJD in maximaal 2 korte zinnen.`;
-
 let qualStep = 0;
 let isLoading2 = false;
 let qualAnswers = [];
@@ -1162,7 +1300,7 @@ function showQualBtns(btns) {
   if (!c) return;
   if (!btns || btns.length === 0) { c.style.display = 'none'; return; }
   c.style.display = 'flex';
-  c.innerHTML = '';
+  c.replaceChildren();
   btns.forEach(function(a) {
     var btn = document.createElement('button');
     btn.className = 'quick-q';
@@ -1170,6 +1308,18 @@ function showQualBtns(btns) {
     btn.onclick = function() { sendMsg2(a); };
     c.appendChild(btn);
   });
+}
+
+function showQualContactCta() {
+  const container = document.getElementById('qualQuickAnswers');
+  const link = document.createElement('a');
+  link.className = 'quick-q';
+  link.href = '#contact';
+  link.textContent = 'Vraag een gratis kennismaking aan';
+  link.style.textDecoration = 'none';
+  link.addEventListener('click', () => startGesprek());
+  container.replaceChildren(link);
+  container.style.display = 'flex';
 }
 
 async function sendMsg2(text) {
@@ -1201,6 +1351,7 @@ async function sendMsg2(text) {
       addMsg('chatMessages2', QUAL_STEPS[1].q, 'bot', '\ud83c\udfaf');
       showQualBtns(QUAL_STEPS[1].btns);
       document.getElementById('qualProgress').style.width = '0%';
+      document.getElementById('qualProgressBar').setAttribute('aria-valuenow', '0');
       isLoading2 = false;
       document.getElementById('chatSend2').disabled = false;
     }, 800);
@@ -1210,6 +1361,7 @@ async function sendMsg2(text) {
   qualAnswers.push(msg);
   var progress = Math.min((qualAnswers.length / 5) * 100, 100);
   document.getElementById('qualProgress').style.width = progress + '%';
+  document.getElementById('qualProgressBar').setAttribute('aria-valuenow', String(progress));
   var t3 = addTyping('chatMessages2', '\ud83c\udfaf');
 
   if (qualAnswers.length < 5) {
@@ -1223,15 +1375,17 @@ async function sendMsg2(text) {
     }, 800);
   } else {
     document.getElementById('qualProgress').style.width = '100%';
+    document.getElementById('qualProgressBar').setAttribute('aria-valuenow', '100');
     var summary = 'Antwoorden:\n1. Bedrijfstype: ' + qualAnswers[0] + '\n2. Wens: ' + qualAnswers[1] + '\n3. Budget: ' + qualAnswers[2] + '\n4. Timing: ' + qualAnswers[3] + '\n5. Beslisser: ' + qualAnswers[4];
     try {
-      var reply = await callAPI(SYSTEM_QUAL, summary);
+      var reply = await callAPI('qualifier', summary);
       t3.remove();
       addMsg('chatMessages2', reply, 'bot', '\ud83c\udfaf');
     } catch(e) {
       t3.remove();
-      addMsg('chatMessages2', 'Bedankt voor je antwoorden! We nemen snel contact op.', 'bot', '\ud83c\udfaf');
+      addMsg('chatMessages2', 'Bedankt voor je antwoorden! Laat hieronder je naam en e-mailadres achter als je kennis wilt maken.', 'bot', '\ud83c\udfaf');
     }
+    showQualContactCta();
     document.getElementById('chatInput2').disabled = true;
     document.getElementById('chatSend2').disabled = true;
     document.getElementById('chatInput2').placeholder = 'Gesprek afgerond';
@@ -1258,13 +1412,6 @@ const MAILS = [
     body: "Gefeliciteerd! U bent geselecteerd als winnaar van onze speciale actie. Klik hier om uw prijs te claimen. Tijdelijk aanbod geldig t/m vandaag."
   }
 ];
-
-const SYSTEM_MAIL = `Je bent de AI e-mail assistent van Briqk, een bedrijf dat AI-websites en automatiseringen bouwt voor Nederlands MKB. Prijzen: Starter Website €850+€99/mnd, Pro + Chatbot €1750+€249/mnd, Chatbot Add-on €600+€149/mnd.
-
-Je taak: analyseer de inkomende e-mail en geef een JSON-antwoord met EXACT dit formaat (geen uitleg, geen markdown, alleen JSON):
-{"categorie":"LEAD|VRAAG|SPAM","prioriteit":"HOOG|NORMAAL|LAAG","antwoord":"[het antwoord hier, max 80 woorden, professioneel Nederlands, ondertekend met Damian van Briqk]"}
-
-Bij SPAM: geef geen antwoord, zet antwoord op "Deze mail wordt automatisch genegeerd."`;
 
 let automationRunning = false;
 
@@ -1315,7 +1462,7 @@ async function runAutomation(index) {
   var reply, categorie, prioriteit;
 
   try {
-    var raw = await callAPI(SYSTEM_MAIL, 'Van: ' + mail.from + '\nOnderwerp: ' + mail.subject + '\nBericht: ' + mail.body);
+    var raw = await callAPI('mail', 'Van: ' + mail.from + '\nOnderwerp: ' + mail.subject + '\nBericht: ' + mail.body);
     var clean = raw.replace(/```json|```/g, '').trim();
     var parsed = JSON.parse(clean);
     categorie = parsed.categorie || 'ONBEKEND';
@@ -1367,61 +1514,73 @@ function resetAutomation() {
   automationRunning = false;
 }
 
+document.querySelectorAll('.inbox-mail').forEach(mail => {
+  mail.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      runAutomation(Number(mail.dataset.index));
+    }
+  });
+});
+
 (function() {
+  var contactForm = document.querySelector('.contact-form');
   var emailInput = document.getElementById('formEmail');
-  var telInput = document.getElementById('formTel');
   var emailErr = document.getElementById('emailError');
-  var telErr = document.getElementById('telError');
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   function validateEmail() {
     var val = emailInput.value.trim();
-    if (val.length === 0) { emailErr.style.display = 'none'; emailInput.style.borderColor = ''; return; }
+    if (val.length === 0) {
+      emailErr.style.display = 'none';
+      emailInput.style.borderColor = '';
+      emailInput.setCustomValidity('');
+      emailInput.setAttribute('aria-invalid', 'false');
+      return;
+    }
     if (!emailRegex.test(val)) {
       emailErr.style.display = 'block';
       emailInput.style.borderColor = 'rgba(255,107,107,0.6)';
+      emailInput.setCustomValidity('Vul een geldig e-mailadres in.');
+      emailInput.setAttribute('aria-invalid', 'true');
     } else {
       emailErr.style.display = 'none';
       emailInput.style.borderColor = 'rgba(200,255,0,0.4)';
-    }
-  }
-
-  function validateTel() {
-    var val = telInput.value.trim();
-    var digits = val.replace(/[^0-9]/g, '');
-    if (val.length === 0) { telErr.style.display = 'none'; telInput.style.borderColor = ''; return; }
-    if (digits.length < 10) {
-      telErr.style.display = 'block';
-      telInput.style.borderColor = 'rgba(255,107,107,0.6)';
-    } else {
-      telErr.style.display = 'none';
-      telInput.style.borderColor = 'rgba(200,255,0,0.4)';
+      emailInput.setCustomValidity('');
+      emailInput.setAttribute('aria-invalid', 'false');
     }
   }
 
   emailInput.addEventListener('blur', validateEmail);
   emailInput.addEventListener('input', validateEmail);
-  telInput.addEventListener('blur', validateTel);
-  telInput.addEventListener('input', validateTel);
+  contactForm.addEventListener('submit', validateEmail);
+
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('contact') === 'verzonden') {
+    document.getElementById('formSuccess').classList.add('visible');
+    params.delete('contact');
+    var cleanUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + '#contact';
+    window.history.replaceState({}, '', cleanUrl);
+  }
 })();
 
 // ── WORKFLOW DEMO ─────────────────────────────────────────────────────────
 const WF_FLOWS = [
   {
-    trigger: 'Contactformulier ingevuld door Jan de Vries — "Interesse in een AI website voor mijn bedrijf"',
+    trigger: 'Contactformulier ingevuld door Jan de Vries — "Interesse in een AI-website voor mijn bedrijf"',
     steps: [
       { icon: '📋', title: 'Trigger ontvangen', desc: 'Formulier binnenkomt op briqk.nl', done: 'Formulierdata opgeslagen', time: '0.2s' },
       { icon: '🤖', title: 'Lead kwalificeren', desc: 'AI beoordeelt de aanvraag', done: 'Gecategoriseerd als: WARME LEAD', time: '1.1s' },
       { icon: '📊', title: 'CRM bijwerken', desc: 'Contactpersoon aanmaken in CRM', done: 'Lead aangemaakt in Pipedrive', time: '0.8s' },
-      { icon: '📱', title: 'WhatsApp notificatie', desc: 'Jij ontvangt een melding', done: '"Nieuwe warme lead: Jan de Vries"', time: '0.3s' },
+      { icon: '📱', title: 'WhatsApp-notificatie', desc: 'Jij ontvangt een melding', done: '"Nieuwe warme lead: Jan de Vries"', time: '0.3s' },
       { icon: '📧', title: 'Bevestiging sturen', desc: 'Automatische bevestigingsmail', done: 'Mail verstuurd naar jan@bedrijf.nl', time: '0.4s' },
     ],
     result: 'Jan ontvangt direct een bevestiging. Jij krijgt een WhatsApp met alle details. De lead staat in je CRM. Jij hoeft alleen nog maar te bellen.'
   },
   {
-    trigger: 'WhatsApp bericht ontvangen van +31 6 12345678 — "Hallo, kunnen jullie mij helpen met een chatbot?"',
+    trigger: 'WhatsApp-bericht ontvangen van +31 6 12345678 — "Hallo, kunnen jullie mij helpen met een chatbot?"',
     steps: [
-      { icon: '📱', title: 'Trigger ontvangen', desc: 'WhatsApp bericht binnenkomt', done: 'Bericht gedetecteerd', time: '0.1s' },
+      { icon: '📱', title: 'Trigger ontvangen', desc: 'WhatsApp-bericht komt binnen', done: 'Bericht gedetecteerd', time: '0.1s' },
       { icon: '🤖', title: 'Intentie herkennen', desc: 'AI analyseert het bericht', done: 'Intentie: chatbot aanvraag', time: '0.9s' },
       { icon: '💬', title: 'Automatisch antwoord', desc: 'Gepersonaliseerd antwoord sturen', done: 'Antwoord verstuurd via WhatsApp', time: '1.2s' },
       { icon: '📊', title: 'CRM bijwerken', desc: 'Contactpersoon aanmaken', done: 'Nieuw contact aangemaakt', time: '0.6s' },
@@ -1436,15 +1595,15 @@ const WF_FLOWS = [
       { icon: '📧', title: 'Bevestiging sturen', desc: 'Afspraakbevestiging per mail', done: 'Bevestiging verstuurd', time: '0.5s' },
       { icon: '📊', title: 'CRM bijwerken', desc: 'Afspraak koppelen aan contact', done: 'CRM bijgewerkt met afspraak', time: '0.7s' },
       { icon: '⏰', title: 'Reminders instellen', desc: '24u en 1u van tevoren herinnering', done: '2 reminders ingepland', time: '0.3s' },
-      { icon: '📋', title: 'Intake formulier sturen', desc: 'Voorbereiding voor het gesprek', done: 'Intake verstuurd naar Sandra', time: '0.4s' },
+      { icon: '📋', title: 'Intakeformulier sturen', desc: 'Voorbereiding voor het gesprek', done: 'Intake verstuurd naar Sandra', time: '0.4s' },
     ],
-    result: 'Sandra ontvangt een bevestiging, een intake formulier en twee reminders. Jij hebt de afspraak in je CRM en wordt ook herinnerd. Geen no-shows meer.'
+    result: 'Sandra ontvangt een bevestiging, een intakeformulier en twee reminders. Jij hebt de afspraak in je CRM en wordt ook herinnerd. Zo verklein je de kans op no-shows.'
   },
   {
     trigger: 'Offerte verstuurd aan Bakker Installaties — €1.750 voor Pro Website + Chatbot',
     steps: [
       { icon: '💼', title: 'Trigger ontvangen', desc: 'Offerte aangemaakt in Moneybird', done: 'Offerte gedetecteerd', time: '0.2s' },
-      { icon: '📊', title: 'CRM bijwerken', desc: 'Status naar "Offerte verstuurd"', done: 'Dealphasе bijgewerkt', time: '0.5s' },
+      { icon: '📊', title: 'CRM bijwerken', desc: 'Status naar "Offerte verstuurd"', done: 'Dealfase bijgewerkt', time: '0.5s' },
       { icon: '⏱️', title: 'Follow-up timer starten', desc: 'Herinnering na 3 dagen zonder reactie', done: 'Timer gestart: 3 werkdagen', time: '0.3s' },
       { icon: '📧', title: 'Follow-up voorbereiden', desc: 'Gepersonaliseerde follow-up mail', done: 'Follow-up klaar voor verzending', time: '0.8s' },
       { icon: '📱', title: 'Notificatie instellen', desc: 'Melding als offerte bekeken wordt', done: 'Tracking actief op offerte', time: '0.3s' },
