@@ -52,7 +52,7 @@
   .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
 
   /* NAV */
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; backdrop-filter: blur(16px); background: rgba(8,8,8,0.7); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .main-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; backdrop-filter: blur(16px); background: rgba(8,8,8,0.7); border-bottom: 1px solid rgba(255,255,255,0.06); }
   .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -0.5px; color: var(--white); text-decoration: none; }
   .nav-logo span { color: var(--lime); }
   .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
@@ -304,7 +304,7 @@
     .demo-grid { grid-template-columns: minmax(0, 760px); justify-content: center; }
   }
   @media (max-width: 900px) {
-    nav { padding: 16px 24px; }
+    .main-nav { padding: 16px 24px; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
     .hero { padding: 120px 24px 60px; }
@@ -415,7 +415,7 @@
 <a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
 
 <!-- NAV -->
-<nav aria-label="Hoofdnavigatie">
+<nav class="main-nav" aria-label="Hoofdnavigatie">
   <a href="/" class="nav-logo" aria-label="Briqk homepage" style="display:flex;align-items:center;gap:10px;"><svg width="22" height="34" viewBox="0 0 28 44" fill="none" aria-hidden="true" focusable="false" style="filter:drop-shadow(0 0 6px #C8FF00);flex-shrink:0;"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C8FF00"/></svg><span style="white-space:nowrap;color:var(--white);">Bri<span>qk</span></span></a>
   <ul class="nav-links">
     <li><a href="#ai-demo">Automations</a></li>
