@@ -32,6 +32,7 @@ Bij spam geef je geen inhoudelijk antwoord en zet je antwoord op "Deze mail word
 
 const RATE_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT = 12;
+const GROQ_MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-20b';
 const rateLimitStore = globalThis.__briqkRateLimitStore || new Map();
 globalThis.__briqkRateLimitStore = rateLimitStore;
 
@@ -142,8 +143,8 @@ export default async function handler(req, res) {
 
   try {
     const requestBody = {
-      model: 'llama-3.1-8b-instant',
-      max_tokens: mode === 'mail' ? 400 : 300,
+      model: GROQ_MODEL,
+      max_completion_tokens: mode === 'mail' ? 800 : 600,
       temperature: mode === 'mail' ? 0.2 : 0.7,
       messages: [
         { role: 'system', content: PROMPTS[mode] },
@@ -153,6 +154,10 @@ export default async function handler(req, res) {
 
     if (mode === 'mail') {
       requestBody.response_format = { type: 'json_object' };
+    }
+
+    if (GROQ_MODEL.startsWith('openai/gpt-oss')) {
+      requestBody.reasoning_effort = 'low';
     }
 
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
