@@ -6,6 +6,11 @@
       "permanent": true
     },
     {
+      "source": "/labs.html",
+      "destination": "/labs",
+      "permanent": true
+    },
+    {
       "source": "/blog-ai-voor-mkb",
       "destination": "/blog/ai-voor-mkb",
       "permanent": true
@@ -55,6 +60,10 @@
     {
       "source": "/api/(.*)",
       "destination": "/api/$1"
+    },
+    {
+      "source": "/labs",
+      "destination": "/labs.html"
     },
     {
       "source": "/privacy",
