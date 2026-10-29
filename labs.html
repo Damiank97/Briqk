@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Briqk Labs | Werkende prototypes van slimme digitale processen</title>
+<meta name="description" content="Bekijk werkende Briqk-prototypes voor digitale assistenten, e-mailverwerking en procesautomatisering.">
+<meta name="keywords" content="website laten maken, website laten maken MKB, website laten maken Arnhem, AI website laten maken, chatbot laten maken, WhatsApp bot, AI automatisering, website met chatbot, professionele website ZZP, website Arnhem">
+<meta property="og:title" content="Briqk Labs | Werkende prototypes">
+<meta property="og:description" content="Bekijk hoe digitale assistenten en processen in een werkende simulatie samenkomen.">
+<meta property="og:image" content="https://briqk.nl/og-image-2026.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Briqk — AI automatisering en websites voor het MKB">
+<meta property="og:url" content="https://briqk.nl/labs">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Briqk Labs | Werkende prototypes">
+<meta name="twitter:description" content="Bekijk hoe digitale assistenten en processen in een werkende simulatie samenkomen.">
+<meta name="twitter:image" content="https://briqk.nl/og-image-2026.png">
+<meta name="twitter:image:alt" content="Briqk — AI automatisering en websites voor het MKB">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://briqk.nl/labs">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://briqk.nl/#organization","name":"Briqk","legalName":"Kootstra Digital","url":"https://briqk.nl","logo":"https://briqk.nl/briqk_logo_square.png","image":"https://briqk.nl/og-image-2026.png","email":"info@briqk.nl","address":{"@type":"PostalAddress","addressLocality":"Arnhem","addressRegion":"Gelderland","addressCountry":"NL"},"description":"Briqk doorgrondt klantprocessen en vertaalt die naar onderscheidende websites, gespecialiseerde AI, automatiseringen en klantportalen voor het MKB.","priceRange":"€€","areaServed":{"@type":"Country","name":"Nederland"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Webdesign en AI-diensten","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Starter Website","url":"https://briqk.nl/website-laten-maken-mkb"},"price":"850","priceCurrency":"EUR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pro Website met AI-assistent","url":"https://briqk.nl/ai-website-laten-maken"},"price":"1750","priceCurrency":"EUR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI-automatisering","url":"https://briqk.nl/blog/ai-automatisering-mkb"}}]}},{"@type":"ItemList","@id":"https://briqk.nl/#selected-work","name":"Selected work van Briqk","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebSite","name":"Nijtec B.V.","url":"https://nijtec.nl/","creator":{"@id":"https://briqk.nl/#organization"}}},{"@type":"ListItem","position":2,"item":{"@type":"WebSite","name":"Stoke & Smoke","url":"https://briqk-stokeandsmoke.vercel.app/","creator":{"@id":"https://briqk.nl/#organization"}}}]}]}</script>
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root {
+    --black: #0b0e0d;
+    --white: #f4f1e8;
+    --lime: #c9f45b;
+    --lime-dark: #aed53d;
+    --grey: #151a17;
+    --grey-mid: #222a25;
+    --grey-text: #a6aaa6;
+    --paper: #e9e4d8;
+    --ink: #101412;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { background: var(--black); color: var(--white); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; max-width: 100vw; }
+  button, input, select, textarea { font: inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--lime); outline-offset: 4px; }
+  .skip-link { position: absolute; top: -52px; left: 16px; background: var(--lime); color: var(--black); padding: 10px 16px; z-index: 9999; border-radius: 0 0 8px 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: top 0.2s; }
+  .skip-link:focus { top: 0; }
+  .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
+
+  /* NAV */
+  .main-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; backdrop-filter: blur(16px); background: rgba(8,8,8,0.7); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -0.5px; color: var(--white); text-decoration: none; }
+  .nav-logo span { color: var(--lime); }
+  .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+  .nav-links a { color: var(--grey-text); text-decoration: none; font-size: 14px; font-weight: 400; letter-spacing: 0.02em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta { background: var(--lime); color: var(--black) !important; padding: 10px 22px; border-radius: 100px; font-weight: 500 !important; transition: background 0.2s, transform 0.2s !important; }
+  .nav-cta:hover { background: var(--lime-dark) !important; transform: translateY(-1px); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-nav { display: none; position: fixed; top: 65px; left: 0; right: 0; background: rgba(8,8,8,0.97); padding: 24px; z-index: 99; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .mobile-nav.open { display: flex; flex-direction: column; gap: 20px; }
+  .mobile-nav a { color: var(--white); text-decoration: none; font-size: 18px; font-weight: 400; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 160px 80px 100px; position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 70% 40%, rgba(200,255,0,0.08) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(200,255,0,0.04) 0%, transparent 60%); pointer-events: none; }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 80px 80px; pointer-events: none; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent); }
+  .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(200,255,0,0.1); border: 1px solid rgba(200,255,0,0.25); color: var(--lime); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 36px; width: fit-content; animation: fadeUp 0.8s ease both; }
+  .hero-tag::before { content: ''; width: 6px; height: 6px; background: var(--lime); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+  .hero h1 { font-family: var(--font-display); font-size: clamp(36px, 5vw, 72px); font-weight: 800; line-height: 0.95; letter-spacing: -2px; max-width: 800px; animation: fadeUp 0.8s 0.1s ease both; }
+  .hero h1 em { font-style: normal; color: var(--lime); }
+  .hero-sub { font-size: 18px; font-weight: 300; color: var(--grey-text); max-width: 540px; margin-top: 28px; line-height: 1.7; animation: fadeUp 0.8s 0.2s ease both; }
+  .hero-sub strong { color: var(--white); font-weight: 400; }
+  .hero-actions { display: flex; gap: 16px; margin-top: 44px; align-items: center; animation: fadeUp 0.8s 0.3s ease both; flex-wrap: wrap; }
+  .btn-primary { background: var(--lime); color: var(--black); padding: 16px 32px; border-radius: 100px; font-family: var(--font-body); font-size: 15px; font-weight: 500; border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; }
+  .btn-primary:hover { background: var(--lime-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,255,0,0.3); }
+  .btn-ghost { color: var(--white); padding: 16px 24px; border-radius: 100px; font-family: var(--font-body); font-size: 15px; font-weight: 400; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; opacity: 0.7; transition: opacity 0.2s; }
+  .btn-ghost:hover { opacity: 1; }
+  .hero-stats { display: flex; gap: 48px; margin-top: 24px; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.08); animation: fadeUp 0.8s 0.4s ease both; flex-wrap: wrap; }
+  .stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 800; color: var(--white); letter-spacing: -1px; }
+  .stat-num span { color: var(--lime); }
+  .stat-label { font-size: 13px; color: var(--grey-text); margin-top: 4px; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes boltBounce { 0%, 100% { transform: translateY(0); opacity: 0.6; } 50% { transform: translateY(10px); opacity: 1; } }
+  .scroll-hint { display: inline-flex; }
+  @media (max-width: 900px) { .scroll-hint { display: none !important; } }
+
+  /* SECTIONS */
+  section { padding: 120px 80px; }
+  .section-tag { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lime); margin-bottom: 16px; }
+  .section-title { font-family: var(--font-display); font-size: clamp(36px, 4vw, 56px); font-weight: 800; letter-spacing: -2px; line-height: 1; max-width: 600px; }
+  .section-sub { font-size: 16px; color: var(--grey-text); margin-top: 16px; max-width: 480px; line-height: 1.7; }
+
+  /* HOE HET WERKT */
+  .how { background: var(--grey); }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 60px; }
+  .step { background: var(--black); padding: 40px; transition: background 0.3s; }
+  .step:hover { background: #111; }
+  .step-num { font-family: var(--font-display); font-size: 48px; font-weight: 800; color: var(--lime); letter-spacing: -1px; margin-bottom: 16px; display: block; line-height: 1.2; overflow: visible; }
+  .step-icon { width: 48px; height: 48px; background: rgba(200,255,0,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
+  .step h3 { font-family: var(--font-display); font-size: 20px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .step p { font-size: 14px; color: var(--grey-text); line-height: 1.7; }
+
+  /* DRIE PIJLERS */
+  .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 60px; }
+  .pillar { background: var(--grey); padding: 48px; position: relative; overflow: hidden; transition: background 0.3s; }
+  .pillar:hover { background: #1f1f1f; }
+  .pillar::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--lime); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+  .pillar:hover::after { transform: scaleX(1); }
+  .pillar-icon { font-size: 36px; margin-bottom: 20px; }
+  .pillar-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); margin-bottom: 12px; }
+  .pillar h3 { font-family: var(--font-display); font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 14px; }
+  .pillar p { font-size: 14px; color: var(--grey-text); line-height: 1.8; margin-bottom: 24px; }
+  .pillar-items { display: flex; flex-direction: column; gap: 8px; }
+  .pillar-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--grey-text); }
+  .pillar-item::before { content: ''; width: 6px; height: 6px; background: var(--lime); border-radius: 50%; flex-shrink: 0; }
+  .pillar-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .pillar-links a { color: var(--lime); font-size: 13px; text-decoration: none; border-bottom: 1px solid rgba(200,255,0,0.35); }
+  .pillar-links a:hover { border-bottom-color: var(--lime); }
+
+  /* KLANTPORTAAL */
+  .portal-section { background: var(--black); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding-top: 80px; padding-bottom: 80px; }
+  .portal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .portal-copy { font-size: 16px; color: var(--grey-text); line-height: 1.8; margin-top: 16px; max-width: 480px; }
+  .portal-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; color: var(--lime); text-decoration: none; font-size: 14px; font-weight: 500; border: 1px solid rgba(200,255,0,0.3); padding: 10px 20px; border-radius: 100px; transition: background 0.2s, border-color 0.2s; }
+  .portal-link:hover { background: rgba(200,255,0,0.08); border-color: var(--lime); }
+  .portal-shot { position: relative; }
+  .portal-shot img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 40px 80px rgba(0,0,0,0.6); }
+  .portal-shot::after { content: ''; position: absolute; inset: 0; border-radius: 16px; background: linear-gradient(to bottom, transparent 60%, rgba(8,8,8,0.4) 100%); pointer-events: none; }
+
+  /* DUAL BOT DEMO */
+  .demo-section { background: var(--black); position: relative; overflow: hidden; }
+  .demo-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(200,255,0,0.03), transparent); pointer-events: none; }
+  .demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 60px; align-items: stretch; }
+  .demo-grid > * { min-width: 0; }
+  .demo-grid .chat-widget { display: flex; flex-direction: column; height: 100%; }
+  .demo-grid .chat-messages { flex: 1; height: auto; min-height: 240px; }
+  .demo-label { font-size: 11px; font-weight: 500; line-height: 1.45; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .demo-label span { background: rgba(200,255,0,0.15); border: 1px solid rgba(200,255,0,0.3); padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
+
+  /* CHAT WIDGET */
+  .chat-widget { background: linear-gradient(180deg, #1b1b1b 0%, #161616 100%); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; box-shadow: 0 28px 70px rgba(0,0,0,0.42); }
+  .chat-header { background: var(--grey-mid); padding: 16px 20px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .chat-avatar { width: 36px; height: 36px; background: var(--lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .chat-header-name { font-weight: 500; font-size: 14px; }
+  .chat-header-status { font-size: 12px; color: var(--lime); display: flex; align-items: center; gap: 5px; }
+  .chat-header-status::before { content: ''; width: 6px; height: 6px; background: var(--lime); border-radius: 50%; }
+  .chat-messages { height: 260px; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px; scroll-behavior: smooth; }
+  .chat-messages::-webkit-scrollbar { width: 4px; }
+  .chat-messages::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+  .msg { display: flex; gap: 10px; max-width: 85%; animation: msgIn 0.3s ease; }
+  @keyframes msgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .msg.user { align-self: flex-end; flex-direction: row-reverse; }
+  .msg-bubble { padding: 10px 14px; border-radius: 16px; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+  .msg.bot .msg-bubble { background: var(--grey-mid); color: var(--white); border-radius: 4px 16px 16px 16px; }
+  .msg.user .msg-bubble { background: var(--lime); color: var(--black); border-radius: 16px 4px 16px 16px; }
+  .msg-dot { width: 28px; height: 28px; background: var(--lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; align-self: flex-end; }
+  .msg.user .msg-dot { background: var(--grey-mid); border: 1px solid rgba(255,255,255,0.1); }
+  .typing-indicator { display: flex; gap: 4px; padding: 12px 14px; }
+  .typing-dot { width: 6px; height: 6px; background: var(--grey-text); border-radius: 50%; animation: typingBounce 1.2s infinite; }
+  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes typingBounce { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-6px); opacity: 1; } }
+  .chat-input-area { padding: 16px 20px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; gap: 10px; align-items: center; }
+  .chat-input { flex: 1; min-width: 0; background: var(--grey-mid); border: 1px solid rgba(255,255,255,0.08); border-radius: 100px; padding: 10px 18px; color: var(--white); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s, background 0.2s; }
+  .chat-input::placeholder { color: var(--grey-text); }
+  .chat-input:focus { border-color: rgba(200,255,0,0.55); background: #333; }
+  .chat-send { width: 40px; height: 40px; background: var(--lime); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; transition: background 0.2s, transform 0.2s; flex-shrink: 0; }
+  .chat-send:hover { background: var(--lime-dark); transform: scale(1.05); }
+  .chat-send:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .quick-questions { padding: 0 20px 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .quick-q { max-width: 100%; background: rgba(200,255,0,0.08); border: 1px solid rgba(200,255,0,0.25); color: var(--lime); padding: 7px 12px; border-radius: 100px; font-size: 12px; line-height: 1.35; text-align: left; white-space: normal; cursor: pointer; transition: background 0.2s, border-color 0.2s, transform 0.2s; font-family: var(--font-body); }
+  .quick-q:hover { background: rgba(200,255,0,0.15); border-color: rgba(200,255,0,0.4); }
+  .quick-q:active { transform: translateY(1px); }
+  .quick-q:disabled { opacity: 0.45; cursor: wait; transform: none; }
+  .progress-bar { height: 3px; background: rgba(200,255,0,0.2); margin: 0 20px 12px; border-radius: 2px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--lime); border-radius: 2px; transition: width 0.4s ease; }
+
+  /* CV MAKER SECTION */
+  .cv-section { background: var(--grey); }
+  .cv-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 60px; }
+  .cv-info h2 { font-family: var(--font-display); font-size: clamp(28px, 3vw, 42px); font-weight: 800; letter-spacing: -2px; line-height: 1.05; margin-bottom: 16px; }
+  .cv-info p { font-size: 15px; color: var(--grey-text); line-height: 1.8; margin-bottom: 12px; }
+  .cv-features { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
+  .cv-feature { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--grey-text); }
+  .cv-feature::before { content: ''; width: 6px; height: 6px; background: var(--lime); border-radius: 50%; flex-shrink: 0; }
+  .cv-tool { background: var(--black); border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden; }
+  .cv-tool-header { background: var(--grey-mid); padding: 16px 20px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .cv-tool-icon { width: 36px; height: 36px; background: var(--lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .cv-tool-body { padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+  .cv-group label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey-text); display: block; margin-bottom: 6px; }
+  .cv-group textarea { width: 100%; background: var(--grey); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px 16px; color: var(--white); font-family: var(--font-body); font-size: 13px; outline: none; resize: vertical; transition: border-color 0.2s; line-height: 1.6; }
+  .cv-group textarea:focus { border-color: rgba(200,255,0,0.4); }
+  .cv-result { background: var(--grey); border-radius: 10px; padding: 16px; font-size: 13px; color: var(--grey-text); line-height: 1.7; min-height: 100px; white-space: pre-wrap; display: none; }
+  .cv-result.visible { display: block; color: var(--white); }
+  .btn-cv { width: 100%; padding: 14px; background: var(--lime); color: var(--black); border: none; border-radius: 100px; font-family: var(--font-body); font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+  .btn-cv:hover { background: var(--lime-dark); transform: translateY(-1px); }
+  .btn-cv:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .saas-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(200,255,0,0.1); border: 1px solid rgba(200,255,0,0.2); color: var(--lime); padding: 4px 12px; border-radius: 100px; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 12px; }
+
+  /* PRICING */
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 60px; }
+  .pricing-card { background: var(--grey); padding: 40px 32px; position: relative; transition: background 0.3s; }
+  .pricing-card.featured { background: var(--lime); color: var(--black); }
+  .pricing-card:not(.featured):hover { background: #222; }
+  .pricing-badge { display: inline-block; background: var(--black); color: var(--lime); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; margin-bottom: 20px; }
+  .pricing-name { font-family: var(--font-display); font-size: 17px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+  .pricing-price { font-family: var(--font-display); font-size: 48px; font-weight: 800; letter-spacing: -3px; line-height: 1; margin: 16px 0; }
+  .pricing-price sup { font-size: 22px; font-weight: 600; letter-spacing: 0; }
+  .pricing-period { font-size: 13px; opacity: 0.6; font-weight: 300; }
+  .pricing-desc { font-size: 13px; opacity: 0.7; line-height: 1.6; margin: 16px 0; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .pricing-card.featured .pricing-desc { border-top-color: rgba(0,0,0,0.1); }
+  .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+  .pricing-features li { font-size: 13px; display: flex; align-items: flex-start; gap: 8px; }
+  .pricing-features li::before { content: '✓'; font-weight: 700; color: var(--lime); font-size: 12px; flex-shrink: 0; margin-top: 2px; }
+  .pricing-card.featured .pricing-features li::before { color: var(--black); }
+  .btn-pricing { width: 100%; padding: 13px; border-radius: 100px; font-family: var(--font-body); font-size: 14px; font-weight: 500; cursor: pointer; border: none; transition: all 0.2s; }
+  .btn-pricing-dark { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: var(--white); }
+  .btn-pricing-dark:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.3); }
+  .btn-pricing-black { background: var(--black); color: var(--lime); }
+  .btn-pricing-black:hover { background: #111; transform: translateY(-1px); }
+
+  /* LAUNCH */
+  .launch-section { background: var(--grey); display: flex; justify-content: center; }
+  .launch-inner { max-width: 720px; width: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; }
+  .launch-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(200,255,0,0.1); border: 1px solid rgba(200,255,0,0.3); color: var(--lime); padding: 6px 18px; border-radius: 100px; font-size: 13px; font-weight: 500; }
+  .launch-spots { display: flex; gap: 16px; justify-content: center; }
+  .launch-spot { width: 80px; height: 80px; border-radius: 16px; background: var(--black); border: 2px solid rgba(200,255,0,0.3); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+  .spot-num { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--lime); line-height: 1; }
+  .spot-status { font-size: 10px; color: var(--lime); letter-spacing: 0.05em; text-transform: uppercase; }
+  .launch-deal { background: var(--black); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 32px 40px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; justify-content: center; width: 100%; }
+  .launch-deal-label { font-size: 12px; color: var(--grey-text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .launch-deal-price { font-family: var(--font-display); font-size: 38px; font-weight: 800; letter-spacing: -2px; }
+  .launch-deal-price.strike { text-decoration: line-through; color: var(--grey-text); font-size: 26px; }
+  .launch-deal-item.highlight .launch-deal-price { color: var(--lime); }
+  .launch-deal-arrow { font-size: 24px; color: var(--grey-text); }
+  .launch-deal-includes { display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--grey-text); border-left: 1px solid rgba(255,255,255,0.08); padding-left: 32px; text-align: left; }
+  .launch-deal-includes span { color: var(--white); }
+  .launch-price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; width: 100%; }
+
+  /* CONTACT */
+  .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 60px; }
+  .contact-info h2 { font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 44px); font-weight: 800; letter-spacing: -2px; line-height: 1.05; margin-bottom: 16px; }
+  .contact-info p { font-size: 15px; color: var(--grey-text); line-height: 1.8; }
+  .contact-items { display: flex; flex-direction: column; gap: 16px; margin-top: 36px; }
+  .contact-item { display: flex; align-items: center; gap: 14px; font-size: 14px; color: var(--grey-text); }
+  .contact-item-icon { width: 40px; height: 40px; background: var(--grey); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .contact-form { background: var(--grey); padding: 40px; border-radius: 20px; display: flex; flex-direction: column; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 12px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--grey-text); }
+  .form-group legend { font-size: 12px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--grey-text); }
+  .form-fieldset { border: 0; min-width: 0; }
+  .form-group input, .form-group select, .form-group textarea { background: var(--black); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 12px 16px; color: var(--white); font-family: var(--font-body); font-size: 14px; outline: none; transition: border-color 0.2s; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: rgba(200,255,0,0.4); }
+  .form-group select { appearance: none; cursor: pointer; }
+  .form-group select option { background: var(--grey); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-submit { width: 100%; padding: 16px; background: var(--lime); color: var(--black); border: none; border-radius: 100px; font-family: var(--font-body); font-size: 15px; font-weight: 500; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+  .form-submit:hover { background: var(--lime-dark); transform: translateY(-1px); }
+  .success-msg { display: none; background: rgba(200,255,0,0.1); border: 1px solid rgba(200,255,0,0.3); color: var(--lime); padding: 16px; border-radius: 10px; font-size: 14px; text-align: center; }
+  .success-msg.visible { display: block; }
+  .form-note { color: var(--grey-text); font-size: 12px; line-height: 1.6; }
+  .form-note a { color: var(--white); }
+  .form-hp { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important; }
+  .demo-privacy { color: var(--grey-text); font-size: 12px; line-height: 1.6; margin-top: 18px; max-width: 720px; }
+  .demo-privacy a { color: var(--white); }
+  .pricing-detail { display: inline-flex; margin-top: 14px; color: var(--lime); font-size: 13px; text-decoration: none; border-bottom: 1px solid rgba(200,255,0,0.35); }
+  .pricing-card.featured .pricing-detail { color: var(--black); border-bottom-color: rgba(0,0,0,0.35); }
+
+  /* FOOTER */
+  footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 40px 80px; display: flex; justify-content: space-between; align-items: center; }
+  .footer-logo { font-family: var(--font-display); font-weight: 800; font-size: 20px; letter-spacing: -0.5px; }
+  .footer-logo span { color: var(--lime); }
+  footer p { font-size: 13px; color: var(--grey-text); }
+
+  /* REVEAL */
+  .reveal { opacity: 1; transform: none; }
+  .js .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .js .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* PRIVACYKEUZE */
+  .privacy-banner { position: fixed; left: 20px; right: 20px; bottom: 20px; z-index: 300; max-width: 760px; margin: 0 auto; background: #151515; border: 1px solid rgba(255,255,255,0.14); border-radius: 16px; padding: 18px; box-shadow: 0 20px 60px rgba(0,0,0,0.55); }
+  .privacy-banner-inner { display: flex; align-items: center; gap: 20px; }
+  .privacy-banner p { flex: 1; color: var(--grey-text); font-size: 13px; line-height: 1.6; }
+  .privacy-banner a { color: var(--white); }
+  .privacy-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .privacy-button { border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; padding: 9px 14px; background: transparent; color: var(--white); cursor: pointer; font-size: 13px; }
+  .privacy-button.accept { background: var(--lime); border-color: var(--lime); color: var(--black); font-weight: 600; }
+
+  /* MOBILE */
+  @media (max-width: 1100px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .demo-grid { grid-template-columns: minmax(0, 760px); justify-content: center; }
+  }
+  @media (max-width: 900px) {
+    .main-nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero { padding: 120px 24px 60px; }
+    section { padding: 60px 24px; }
+    footer { padding: 32px 24px; }
+    .hero-stats { gap: 24px; }
+    .demo-grid { grid-template-columns: minmax(0, 1fr); margin-top: 42px; }
+    .cv-layout { grid-template-columns: 1fr; }
+    .contact-layout { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .launch-deal { flex-direction: column; gap: 16px; }
+    .launch-deal-includes { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: 16px; }
+    .launch-price-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 12px; text-align: center; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .portal-grid { grid-template-columns: 1fr !important; }
+    .privacy-banner-inner { align-items: stretch; flex-direction: column; gap: 14px; }
+    .privacy-actions { width: 100%; }
+    .privacy-button { flex: 1; }
+  }
+
+  @media (max-width: 520px) {
+    .chat-header { padding: 14px 16px; }
+    .chat-messages { padding: 16px; min-height: 220px; }
+    .msg { max-width: 94%; }
+    .quick-questions { padding: 2px 16px 14px; }
+    .quick-q { flex: 1 1 100%; width: 100%; padding: 9px 12px; }
+    .chat-input-area { padding: 14px 16px 16px; }
+    .chat-input { padding: 10px 14px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+    .js .reveal { opacity: 1; transform: none; }
+  }
+
+  /* MAANDKOSTEN ACCORDION */
+  .monthly-accordion { margin-top: 14px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+  .monthly-accordion summary { list-style: none; cursor: pointer; padding: 10px 14px; font-size: 12px; font-weight: 500; color: #888; background: rgba(255,255,255,0.04); display: flex; align-items: center; gap: 6px; user-select: none; transition: color 0.2s, background 0.2s; }
+  .monthly-accordion summary::-webkit-details-marker { display: none; }
+  .monthly-accordion summary:hover { color: #ccc; background: rgba(255,255,255,0.07); }
+  .monthly-accordion[open] summary { color: #eee; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .monthly-accordion summary .ma-chevron { margin-left: auto; transition: transform 0.2s; font-size: 9px; opacity: 0.5; }
+  .monthly-accordion[open] summary .ma-chevron { transform: rotate(180deg); }
+  .accordion-body { padding: 12px 14px; background: rgba(0,0,0,0.25); }
+  .accordion-body ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+  .accordion-body ul li { font-size: 12px; color: #999; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+  .accordion-body ul li::before { content: "✓"; color: var(--lime); font-weight: 700; font-size: 11px; flex-shrink: 0; margin-top: 1px; }
+  .pricing-card.featured .monthly-accordion { border-color: rgba(0,0,0,0.12); }
+  .pricing-card.featured .monthly-accordion summary { background: rgba(0,0,0,0.08); color: rgba(0,0,0,0.72); }
+  .pricing-card.featured .monthly-accordion summary:hover { color: rgba(0,0,0,0.88); background: rgba(0,0,0,0.12); }
+  .pricing-card.featured .monthly-accordion[open] summary { color: rgba(0,0,0,0.88); border-bottom: 1px solid rgba(0,0,0,0.1); }
+  .pricing-card.featured .accordion-body { background: rgba(0,0,0,0.07); }
+  .pricing-card.featured .accordion-body ul li { color: rgba(0,0,0,0.72); }
+  .pricing-card.featured .accordion-body ul li::before { color: #000; }
+
+  /* INBOX DEMO */
+  .inbox-mail { display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:10px;cursor:pointer;transition:background 0.2s;border:1px solid transparent; }
+  .inbox-mail:hover { background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08); }
+  .inbox-mail.active { background:rgba(200,255,0,0.06);border-color:rgba(200,255,0,0.2); }
+  .mail-dot { width:8px;height:8px;border-radius:50%;background:var(--grey-mid);flex-shrink:0;margin-top:6px; }
+  .mail-dot.new { background:var(--lime); }
+  .mail-content { flex:1;min-width:0; }
+  .mail-from { font-size:13px;font-weight:500;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+  .mail-subject { font-size:12px;color:var(--white);opacity:0.8;margin-top:2px; }
+  .mail-preview { font-size:11px;color:var(--grey-text);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+  .mail-time { font-size:11px;color:var(--grey-text);flex-shrink:0; }
+  .pipe-step { display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);font-size:13px;color:var(--grey-text);transition:all 0.3s; }
+  .pipe-step.running { border-color:rgba(200,255,0,0.3);color:var(--white); }
+  .pipe-step.done { background:rgba(200,255,0,0.06);border-color:rgba(200,255,0,0.2);color:var(--lime); }
+  .pipe-icon { font-size:14px;width:20px;text-align:center; }
+
+  /* WORKFLOW DEMO */
+  .workflow-section { background: var(--grey); }
+  .workflow-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 60px; }
+  .trigger-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
+  .trigger-btn { background: var(--black); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; cursor: pointer; text-align: left; transition: all 0.2s; font-family: var(--font-body); }
+  .trigger-btn:hover { border-color: rgba(200,255,0,0.4); background: rgba(200,255,0,0.04); }
+  .trigger-btn.active { border-color: var(--lime); background: rgba(200,255,0,0.08); }
+  .trigger-btn .t-icon { font-size: 22px; margin-bottom: 8px; display: block; }
+  .trigger-btn .t-label { font-size: 13px; font-weight: 500; color: var(--white); display: block; }
+  .trigger-btn .t-sub { font-size: 11px; color: var(--grey-text); margin-top: 3px; display: block; }
+  .wf-panel { background: var(--black); border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden; }
+  .wf-header { background: var(--grey-mid); padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 12px; }
+  .wf-body { padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .wf-step { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 10px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s; }
+  .wf-step.running { border-color: rgba(200,255,0,0.4); background: rgba(200,255,0,0.05); }
+  .wf-step.done { border-color: rgba(200,255,0,0.3); background: rgba(200,255,0,0.08); }
+  .wf-step .ws-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; transition: background 0.4s; }
+  .wf-step.running .ws-icon { background: rgba(200,255,0,0.15); }
+  .wf-step.done .ws-icon { background: rgba(200,255,0,0.2); }
+  .ws-text { flex: 1; }
+  .ws-text .ws-title { font-size: 13px; font-weight: 500; color: var(--white); }
+  .ws-text .ws-desc { font-size: 11px; color: var(--grey-text); margin-top: 2px; }
+  .wf-step.done .ws-text .ws-desc { color: var(--lime); }
+  .ws-status { font-size: 11px; color: var(--grey-text); flex-shrink: 0; }
+  .wf-step.running .ws-status { color: var(--lime); }
+  .wf-step.done .ws-status { color: var(--lime); }
+  .wf-connector { width: 2px; height: 12px; background: rgba(255,255,255,0.08); margin-left: 29px; border-radius: 1px; transition: background 0.4s; }
+  .wf-connector.active { background: var(--lime); }
+  .wf-result { display: none; margin: 12px 20px 20px; background: rgba(200,255,0,0.06); border: 1px solid rgba(200,255,0,0.2); border-radius: 12px; padding: 16px; }
+  .wf-result.visible { display: block; }
+  @media (max-width: 900px) { .workflow-layout { grid-template-columns: 1fr; } .trigger-grid { grid-template-columns: 1fr 1fr; } }
+
+  /* 2026 SHOWCASE REFRESH */
+  body { letter-spacing: -0.01em; }
+  section { padding: 128px max(32px, calc((100vw - 1280px) / 2)); }
+  .main-nav { padding: 16px max(32px, calc((100vw - 1280px) / 2)); background: rgba(11,14,13,0.82); border-bottom-color: rgba(244,241,232,0.09); }
+  .nav-logo { font-size: 21px; letter-spacing: -0.04em; }
+  .nav-links { gap: 28px; }
+  .nav-links a { color: #b7bbb7; font-size: 13px; }
+  .nav-cta { background: var(--white); color: var(--ink) !important; }
+  .nav-cta:hover { background: var(--lime) !important; box-shadow: none; }
+
+  .hero { min-height: 920px; padding-top: 170px; padding-bottom: 90px; justify-content: center; }
+  .hero-bg { background: radial-gradient(circle at 78% 28%, rgba(201,244,91,0.12), transparent 26%), radial-gradient(circle at 15% 85%, rgba(107,133,121,0.11), transparent 28%); }
+  .hero-grid { background-size: 64px 64px; opacity: .58; mask-image: linear-gradient(to bottom, #000 20%, transparent 95%); }
+  .hero-shell { width: 100%; display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(360px, .88fr); gap: clamp(56px, 8vw, 120px); align-items: center; position: relative; z-index: 1; }
+  .hero-copy { max-width: 760px; }
+  .hero-tag { background: transparent; border: 0; border-radius: 0; padding: 0; color: #c2c7c3; margin-bottom: 26px; letter-spacing: .14em; }
+  .hero h1 { font-size: clamp(52px, 6.4vw, 94px); line-height: .94; letter-spacing: -.065em; max-width: 900px; }
+  .hero h1 em { color: var(--white); position: relative; }
+  .hero h1 em::after { content: ''; position: absolute; left: .03em; right: -.02em; bottom: .02em; height: .13em; background: var(--lime); z-index: -1; opacity: .9; transform: rotate(-1deg); }
+  .hero-sub { color: #b4b9b4; max-width: 640px; font-size: clamp(17px, 1.45vw, 21px); line-height: 1.7; }
+  .hero-actions { margin-top: 36px; }
+  .btn-primary { border-radius: 10px; padding: 15px 24px; background: var(--lime); color: var(--ink); font-weight: 700; box-shadow: none; }
+  .btn-primary:hover { box-shadow: 0 14px 40px rgba(201,244,91,.16); }
+  .btn-ghost { border: 1px solid rgba(244,241,232,.18); border-radius: 10px; padding: 14px 22px; opacity: 1; }
+  .btn-ghost:hover { border-color: rgba(244,241,232,.45); background: rgba(244,241,232,.05); }
+  .hero-proof { align-self: stretch; display: flex; align-items: center; }
+  .system-card { width: 100%; position: relative; overflow: hidden; border: 1px solid rgba(244,241,232,.13); border-radius: 26px; padding: 28px; background: linear-gradient(150deg, rgba(34,42,37,.92), rgba(15,19,17,.96)); box-shadow: 0 40px 110px rgba(0,0,0,.36); }
+  .system-card::before { content: ''; position: absolute; width: 240px; height: 240px; border-radius: 50%; background: rgba(201,244,91,.11); filter: blur(60px); right: -90px; top: -110px; pointer-events: none; }
+  .system-top { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 22px; border-bottom: 1px solid rgba(244,241,232,.1); }
+  .system-kicker { font-size: 11px; text-transform: uppercase; letter-spacing: .14em; color: var(--lime); }
+  .system-status { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; color: #bbc1bc; }
+  .system-status::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 5px rgba(201,244,91,.08); }
+  .signal-flow { list-style: none; display: grid; gap: 0; margin-top: 22px; }
+  .signal-flow li { display: grid; grid-template-columns: 42px 1fr auto; gap: 14px; align-items: center; min-height: 72px; position: relative; }
+  .signal-flow li:not(:last-child)::after { content: ''; position: absolute; left: 20px; top: 55px; height: 35px; width: 1px; background: linear-gradient(var(--lime), rgba(201,244,91,.1)); }
+  .flow-index { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(244,241,232,.06); border: 1px solid rgba(244,241,232,.1); color: var(--lime); font-size: 12px; font-weight: 700; }
+  .flow-title { color: var(--white); font-size: 14px; font-weight: 600; }
+  .flow-desc { color: #8f9891; font-size: 11px; margin-top: 2px; }
+  .flow-state { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: #8f9891; }
+  .system-note { margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: rgba(201,244,91,.08); color: #dce7c2; font-size: 12px; line-height: 1.6; }
+  .capability-strip { position: relative; z-index: 1; margin-top: 70px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .capability-strip span { border: 1px solid rgba(244,241,232,.13); color: #b9bdb9; border-radius: 999px; padding: 8px 13px; font-size: 11px; letter-spacing: .04em; }
+
+  .work-section { background: var(--paper); color: var(--ink); }
+  .work-head { display: grid; grid-template-columns: 1fr .72fr; gap: 80px; align-items: end; margin-bottom: 64px; }
+  .work-section .section-tag { color: #527015; }
+  .work-section .section-title { color: var(--ink); max-width: 760px; }
+  .work-intro { color: #565e58; font-size: 16px; line-height: 1.8; max-width: 540px; justify-self: end; }
+  .case-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
+  .case-card { display: flex; flex-direction: column; min-width: 0; background: #fbf9f4; border: 1px solid rgba(16,20,18,.1); border-radius: 22px; overflow: hidden; box-shadow: 0 24px 70px rgba(24,31,27,.08); }
+  .case-gallery { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(88px, 116px); gap: 12px; align-items: center; height: 300px; padding: 14px; background: linear-gradient(145deg, #d8d5cc, #ebe8df); overflow: hidden; }
+  .case-card.stoke-case .case-gallery { background: radial-gradient(circle at 85% 20%, rgba(249,136,7,.22), transparent 32%), #140e0b; }
+  .case-shot { display: flex; align-items: center; justify-content: center; min-width: 0; max-height: 100%; overflow: hidden; border: 1px solid rgba(16,20,18,.13); border-radius: 11px; background: #fff; box-shadow: 0 12px 30px rgba(16,20,18,.16); }
+  .case-shot.desktop { aspect-ratio: 1280 / 760; }
+  .case-shot.mobile { width: 100%; height: 100%; justify-self: end; border-radius: 18px; background: #0b0d0c; }
+  .case-shot img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: top center; transition: transform .55s cubic-bezier(.2,.75,.25,1); }
+  .case-card:hover .case-shot img { transform: scale(1.012); }
+  .case-number { position: absolute; left: 20px; top: 20px; display: inline-flex; align-items: center; justify-content: center; min-width: 48px; height: 32px; padding: 0 12px; border-radius: 999px; background: rgba(11,14,13,.88); color: var(--white); font-size: 11px; letter-spacing: .1em; backdrop-filter: blur(12px); }
+  .case-copy { display: flex; flex: 1; flex-direction: column; padding: 32px 34px 36px; }
+  .case-meta { color: #68716a; font-size: 11px; letter-spacing: .11em; text-transform: uppercase; margin-bottom: 16px; }
+  .case-copy h3 { font-family: var(--font-display); font-size: clamp(31px, 3vw, 42px); line-height: 1.03; letter-spacing: -.05em; }
+  .case-copy > p { color: #555e58; font-size: 14px; line-height: 1.72; margin-top: 18px; }
+  .case-scope { display: flex; flex-wrap: wrap; gap: 7px; margin: 22px 0 26px; }
+  .case-scope span { padding: 7px 10px; border: 1px solid rgba(16,20,18,.13); border-radius: 999px; color: #404742; font-size: 11px; }
+  .case-link { display: inline-flex; align-items: center; gap: 10px; width: fit-content; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 13px; padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
+  .case-link:hover { color: #527015; border-color: #527015; }
+  .case-disclaimer { margin-top: 20px; color: #737a75; font-size: 11px; line-height: 1.5; }
+
+  .section-tag { color: var(--lime); font-weight: 700; }
+  .section-title { letter-spacing: -.05em; font-size: clamp(42px, 5vw, 66px); }
+  .section-sub { color: #aeb3af; max-width: 620px; }
+  .how { background: #111512; }
+  .steps { gap: 14px; }
+  .step { background: transparent; padding: 30px 8px 12px; border-top: 1px solid rgba(244,241,232,.15); }
+  .step:hover { background: transparent; }
+  .step-num { font-size: 13px; color: var(--lime); letter-spacing: .09em; margin-bottom: 32px; }
+  .step-icon { display: none; }
+  .step h3 { font-size: 21px; }
+  .step p { color: #9da39e; }
+  .pillars-grid { gap: 16px; }
+  .pillar { border: 1px solid rgba(244,241,232,.09); border-radius: 22px; padding: 40px; background: #141916; }
+  .pillar:hover { background: #182019; }
+  .pillar::after { left: 24px; right: 24px; bottom: 0; height: 2px; }
+  .pillar-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-size: 19px; background: rgba(244,241,232,.06); }
+  .pillar h3 { font-size: 27px; }
+  .portal-section { background: var(--paper); color: var(--ink); border: 0; }
+  .portal-section .section-tag { color: #527015; }
+  .portal-section .section-title { color: var(--ink); }
+  .portal-copy { color: #59615b; }
+  .portal-link { color: var(--ink); border-color: rgba(16,20,18,.25); border-radius: 10px; }
+  .portal-link:hover { background: rgba(16,20,18,.05); border-color: var(--ink); }
+  .portal-shot img { border-radius: 20px; border-color: rgba(16,20,18,.12); box-shadow: 0 32px 80px rgba(16,20,18,.16); }
+  .portal-shot::after { display: none; }
+  .demo-section { background: #0b0e0d; }
+  .chat-widget, .cv-tool, .wf-panel { border-radius: 20px; background: #131815; border-color: rgba(244,241,232,.1); box-shadow: none; }
+  .chat-header, .cv-tool-header, .wf-header { background: #202722; }
+  .workflow-section { background: #111512; }
+  .trigger-btn { background: #171c19; border-radius: 14px; }
+  .cv-section { background: #0d100f; }
+  .cv-info h2 { letter-spacing: -.05em; }
+  .studio-standard { background: var(--paper); color: var(--ink); }
+  .standard-head { display: grid; grid-template-columns: 1fr .75fr; gap: 80px; align-items: end; }
+  .studio-standard .section-tag { color: #527015; }
+  .studio-standard .section-title { color: var(--ink); max-width: 760px; }
+  .standard-intro { color: #58615b; line-height: 1.8; }
+  .standard-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(16,20,18,.15); margin-top: 64px; border: 1px solid rgba(16,20,18,.15); }
+  .standard-item { background: var(--paper); padding: 38px; }
+  .standard-item span { color: #527015; font-size: 11px; letter-spacing: .11em; text-transform: uppercase; }
+  .standard-item h3 { font-family: var(--font-display); font-size: 23px; letter-spacing: -.035em; margin-top: 34px; }
+  .standard-item p { color: #5e665f; font-size: 14px; line-height: 1.75; margin-top: 12px; }
+  #prijzen { background: #0b0e0d; }
+  .pricing-grid { gap: 16px; }
+  .pricing-card { border-radius: 20px; background: #151a17; border-color: rgba(244,241,232,.1); }
+  .pricing-card.featured { background: var(--paper); color: var(--ink); }
+  .pricing-grid .pricing-card:nth-child(n+4) { display: none; }
+  .pricing-card.featured .btn-pricing-black { background: var(--ink); color: var(--white); }
+  .pricing-card.featured .pricing-features li::before { color: #527015; }
+  .pricing-card.featured .pricing-detail { color: var(--ink); border-bottom-color: rgba(16,20,18,.35); }
+  #contact { background: #111512 !important; }
+  .contact-form { border-radius: 22px; background: #171c19; border: 1px solid rgba(244,241,232,.09); }
+  footer { background: #080a09; border-top-color: rgba(244,241,232,.08); }
+
+  @media (max-width: 1100px) {
+    .hero-shell { grid-template-columns: 1fr; }
+    .hero { min-height: auto; }
+    .hero-copy { max-width: 850px; }
+    .hero-proof { max-width: 680px; }
+    .work-head, .standard-head { grid-template-columns: 1fr; gap: 24px; }
+    .work-intro { justify-self: start; }
+    .case-gallery { grid-template-columns: minmax(0, 1fr) minmax(82px, 104px); height: 280px; }
+  }
+  @media (max-width: 900px) {
+    section { padding: 92px 24px; }
+    .main-nav { padding: 14px 24px; }
+    .hero { padding: 135px 24px 76px; }
+    .hero-shell { gap: 52px; }
+    .hero h1 { font-size: clamp(48px, 11vw, 76px); }
+    .capability-strip { margin-top: 48px; }
+    .case-list { grid-template-columns: 1fr; }
+    .case-gallery { grid-template-columns: minmax(0, 1fr) minmax(82px, 112px); height: 290px; }
+    .case-copy { padding: 36px 28px 42px; }
+    .standard-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .hero { padding-inline: 18px; }
+    .hero h1 { font-size: 46px; }
+    .hero-sub { font-size: 16px; }
+    .system-card { padding: 20px; border-radius: 20px; }
+    .signal-flow li { grid-template-columns: 38px 1fr; }
+    .flow-state { display: none; }
+    .work-section { padding-inline: 14px; }
+    .work-head { padding-inline: 10px; }
+    .case-card { border-radius: 18px; }
+    .case-gallery { grid-template-columns: minmax(0, 1fr) 82px; gap: 8px; height: 220px; padding: 10px; }
+    .case-shot.mobile { border-radius: 12px; }
+    .case-number { left: 14px; top: 14px; min-width: 42px; height: 28px; }
+    .case-copy { padding: 28px 24px 32px; }
+    .case-copy h3 { font-size: 34px; }
+  }
+
+  /* Labs keeps the experiments together, outside the primary studio homepage. */
+  .labs-page .hero,
+  .labs-page .work-section,
+  .labs-page .how,
+  .labs-page #diensten-detail,
+  .labs-page .portal-section,
+  .labs-page .studio-standard,
+  .labs-page #prijzen,
+  .labs-page #contact { display: none !important; }
+  .labs-page #demo { padding-top: 168px; }
+  .labs-page .main-nav { background: rgba(11,14,13,.95); }
+  .labs-page footer { border-top: 1px solid rgba(255,255,255,.1); }
+  @media (max-width: 760px) { .labs-page #demo { padding-top: 128px; } }
+</style>
+</head>
+<body class="labs-page">
+<a href="#main-content" class="skip-link">Naar hoofdinhoud</a>
+
+<!-- NAV -->
+<nav class="main-nav" aria-label="Hoofdnavigatie">
+  <a href="/" class="nav-logo" aria-label="Briqk homepage" style="display:flex;align-items:center;gap:10px;"><svg width="22" height="34" viewBox="0 0 28 44" fill="none" aria-hidden="true" focusable="false" style="filter:drop-shadow(0 0 6px #C9F45B);flex-shrink:0;"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C9F45B"/></svg><span style="white-space:nowrap;color:var(--white);">Bri<span>qk</span></span></a>
+  <ul class="nav-links">
+    <li><a href="/">Briqk studio</a></li>
+    <li><a href="#demo">Assistenten</a></li>
+    <li><a href="#ai-demo">E-mail</a></li>
+    <li><a href="#workflow-demo">Workflows</a></li>
+    <li style="display:flex;align-items:center;"><a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" style="color:var(--white);text-decoration:none;font-size:13px;font-weight:500;padding:8px 18px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;">Klantportaal ↗</a></li>
+    <li><a href="mailto:info@briqk.nl" class="nav-cta">Bespreek een toepassing</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" type="button" onclick="toggleMenu()" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobiele navigatie" aria-hidden="true">
+  <a href="/">Briqk studio</a>
+  <a href="#demo" onclick="toggleMenu()">Assistenten</a>
+  <a href="#ai-demo" onclick="toggleMenu()">E-mail</a>
+  <a href="#workflow-demo" onclick="toggleMenu()">Workflows</a>
+  <a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" style="color:var(--grey-text)">Klantportaal ↗</a>
+  <a href="mailto:info@briqk.nl" style="color:var(--lime)">Bespreek een toepassing</a>
+</nav>
+
+<main id="main-content">
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-shell">
+    <div class="hero-copy">
+      <div class="hero-tag">Digital studio · Arnhem</div>
+      <h1 id="hero-title">Sterk op het scherm.<br><em>Slim erachter.</em></h1>
+      <p class="hero-sub">We beginnen niet bij een AI-tool, maar bij jouw klantproces. Briqk doorgrondt hoe je bedrijf echt werkt en vertaalt dat naar <strong>onderscheidend webdesign, gespecialiseerde AI en automatisering op maat.</strong></p>
+      <div class="hero-actions">
+        <a href="#werk" class="btn-primary">Bekijk ons werk <span aria-hidden="true">↓</span></a>
+        <a href="#contact" class="btn-ghost">Bespreek jouw idee</a>
+      </div>
+    </div>
+    <div class="hero-proof" aria-label="Van websitebezoek naar geautomatiseerde opvolging">
+      <div class="system-card">
+        <div class="system-top">
+          <div class="system-kicker">Briqk growth system</div>
+          <div class="system-status">Klaar voor livegang</div>
+        </div>
+        <ol class="signal-flow">
+          <li><span class="flow-index">01</span><div><div class="flow-title">Een website met karakter</div><div class="flow-desc">Positionering, design en responsive bouw</div></div><span class="flow-state">Zichtbaar</span></li>
+          <li><span class="flow-index">02</span><div><div class="flow-title">Een bezoeker wordt een lead</div><div class="flow-desc">Slimme formulieren en AI-assistenten</div></div><span class="flow-state">Meetbaar</span></li>
+          <li><span class="flow-index">03</span><div><div class="flow-title">Opvolging loopt vanzelf</div><div class="flow-desc">CRM, e-mail, planning en notificaties</div></div><span class="flow-state">Automatisch</span></li>
+          <li><span class="flow-index">04</span><div><div class="flow-title">Jij houdt het overzicht</div><div class="flow-desc">Inzicht via het Briqk-klantportaal</div></div><span class="flow-state">Controle</span></li>
+        </ol>
+        <div class="system-note"><strong>Onze voorsprong:</strong> proceskennis en diepgaande AI-expertise in één team. Geen generieke promptlaag, maar een systeem dat jouw bedrijf begrijpt.</div>
+      </div>
+    </div>
+  </div>
+  <div class="capability-strip" aria-label="Onze disciplines">
+    <span>Strategie</span><span>Webdesign</span><span>Development</span><span>AI-assistenten</span><span>Automatisering</span><span>Klantportalen</span>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section class="work-section" id="werk" aria-labelledby="work-title">
+  <div class="work-head">
+    <div>
+      <div class="section-tag">Selected work · 2026</div>
+      <h2 class="section-title" id="work-title">Geen praatjes.<br>Werk dat je kunt bekijken.</h2>
+    </div>
+    <p class="work-intro">Twee totaal verschillende bedrijven, dus ook twee totaal verschillende digitale werelden. Dat is precies het punt: we bouwen geen template met een ander logo, maar een site die klopt bij het merk, de klant en het doel.</p>
+  </div>
+  <div class="case-list">
+    <article class="case-card reveal">
+      <div class="case-gallery" aria-label="Desktop- en mobiele preview van Nijtec">
+        <a class="case-shot desktop" href="https://nijtec.nl/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk Nijtec op desktopformaat in een nieuw tabblad">
+          <img src="/assets/cases/nijtec-desktop.webp" width="1280" height="760" loading="lazy" decoding="async" alt="Desktopweergave van de vernieuwde website van Nijtec">
+        </a>
+        <a class="case-shot mobile" href="https://nijtec.nl/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk Nijtec op mobiel formaat in een nieuw tabblad">
+          <img src="/assets/cases/nijtec-mobile.webp" width="390" height="844" loading="lazy" decoding="async" alt="Mobiele weergave van de vernieuwde website van Nijtec">
+        </a>
+        <span class="case-number">01</span>
+      </div>
+      <div class="case-copy">
+        <div class="case-meta">Nijtec B.V. · Bouw &amp; industrie</div>
+        <h3>Technische expertise, helder in beeld.</h3>
+        <p>Een compleet herontwerp voor een specialist in lijmen, kitten, coatings en montage. De nieuwe site vertaalt een breed technisch assortiment naar een rustige, zakelijke ervaring met duidelijke productroutes.</p>
+        <div class="case-scope"><span>Strategie</span><span>Art direction</span><span>Webdesign</span><span>Development</span></div>
+        <a class="case-link" href="https://nijtec.nl/" target="_blank" rel="noopener noreferrer">Bekijk de website <span aria-hidden="true">↗</span><span class="sr-only"> van Nijtec (opent in een nieuw tabblad)</span></a>
+      </div>
+    </article>
+    <article class="case-card stoke-case reveal">
+      <div class="case-gallery" aria-label="Desktop- en mobiele preview van Stoke &amp; Smoke">
+        <a class="case-shot desktop" href="https://briqk-stokeandsmoke.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk Stoke &amp; Smoke op desktopformaat in een nieuw tabblad">
+          <img src="/assets/cases/stoke-smoke-desktop.webp" width="1280" height="760" loading="lazy" decoding="async" alt="Desktopweergave van de website van Stoke &amp; Smoke">
+        </a>
+        <a class="case-shot mobile" href="https://briqk-stokeandsmoke.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk Stoke &amp; Smoke op mobiel formaat in een nieuw tabblad">
+          <img src="/assets/cases/stoke-smoke-mobile.webp" width="390" height="844" loading="lazy" decoding="async" alt="Mobiele weergave van de website van Stoke &amp; Smoke">
+        </a>
+        <span class="case-number">02</span>
+      </div>
+      <div class="case-copy">
+        <div class="case-meta">Stoke &amp; Smoke · BBQ catering</div>
+        <h3>Je ruikt het vuur bijna door je scherm.</h3>
+        <p>Een food-first website voor BBQ-catering uit Arnhem. Donker, warm en uitgesproken, met fotografie in de hoofdrol en een korte route van sfeer naar aanvraag via e-mail of WhatsApp.</p>
+        <div class="case-scope"><span>Concept</span><span>Art direction</span><span>Webdesign</span><span>Leadflow</span></div>
+        <a class="case-link" href="https://briqk-stokeandsmoke.vercel.app/" target="_blank" rel="noopener noreferrer">Bekijk de website <span aria-hidden="true">↗</span><span class="sr-only"> van Stoke &amp; Smoke (opent in een nieuw tabblad)</span></a>
+        <p class="case-disclaimer">Nieuwe productieversie; het eigen domein wordt nog gekoppeld.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- HOE HET WERKT -->
+<section class="how" id="aanpak">
+  <div class="section-tag">Onze aanpak</div>
+  <h2 class="section-title">Van scherp idee naar sterk digitaal product.</h2>
+  <p class="section-sub">Kort op de bal, zichtbaar in ontwikkeling en pas live als het klopt.</p>
+  <div class="steps">
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <div class="step-icon">☕</div>
+      <h3>We maken het probleem scherp</h3>
+      <p>In 30 minuten brengen we doelgroep, doelen en knelpunten terug tot een duidelijke opdracht.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">02</div>
+      <div class="step-icon">⚡</div>
+      <h3>We bepalen de richting</h3>
+      <p>Structuur, visuele stijl en slimme functies worden één doordacht concept.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">03</div>
+      <div class="step-icon">✅</div>
+      <h3>We bouwen zichtbaar</h3>
+      <p>Je krijgt een werkende preview, zodat feedback concreet is en we snel kunnen bijsturen.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">04</div>
+      <div class="step-icon">🚀</div>
+      <h3>We lanceren en verbeteren</h3>
+      <p>Na livegang blijven techniek, content en automatiseringen beheersbaar en uitbreidbaar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DRIE PIJLERS -->
+<section id="diensten-detail">
+  <div class="section-tag">Capabilities</div>
+  <h2 class="section-title">Mooi waar het moet. Slim waar het kan.</h2>
+  <p class="section-sub">Van een onderscheidende website tot een complete digitale workflow. We brengen eerst klantreis, werkproces en knelpunten in kaart; daarna bepalen we waar AI echt waarde toevoegt.</p>
+  <div class="pillars-grid">
+    <div class="pillar reveal">
+      <div class="pillar-icon">⚙️</div>
+      <div class="pillar-tag">Processen</div>
+      <h3>AI Automatisering</h3>
+      <p>Geen standaardbot of losse AI-truc. We brengen eerst je klantreis en interne werkproces in kaart en bouwen daarna een gespecialiseerde workflow: van nieuwe lead tot CRM, notificatie en opvolging.</p>
+      <div class="pillar-items">
+        <div class="pillar-item">Lead routing naar CRM</div>
+        <div class="pillar-item">Automatische e-mail follow-ups</div>
+        <div class="pillar-item">WhatsApp notificaties</div>
+        <div class="pillar-item">Agenda koppeling en reminders</div>
+        <div class="pillar-item">Factuur en offerte workflows</div>
+      </div>
+      <a href="/blog/ai-automatisering-mkb" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:13px;color:var(--lime);text-decoration:none;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Lees meer over AI automatisering →</a>
+    </div>
+    <div class="pillar reveal">
+      <div class="pillar-icon">🌐</div>
+      <div class="pillar-tag">Merk &amp; conversie</div>
+      <h3>Websites &amp; AI-assistenten</h3>
+      <p>Een visueel eigen website die snel, mobiel en helder is. Uit te breiden met een assistent die vragen beantwoordt en aanvragen kwalificeert.</p>
+      <div class="pillar-items">
+        <div class="pillar-item">Starter Website vanaf €850</div>
+        <div class="pillar-item">Pro Website + AI Chatbot €1.750</div>
+        <div class="pillar-item">Chatbot Add-on op bestaande site €600</div>
+        <div class="pillar-item">WhatsApp Bot €750</div>
+        <div class="pillar-item">Lead Qualifier Agent €950</div>
+      </div>
+      <div class="pillar-links" aria-label="Meer over onze websites">
+        <a href="/website-laten-maken-mkb">Starter Website</a>
+        <a href="/ai-website-laten-maken">AI-website + chatbot</a>
+        <a href="/website-laten-maken-arnhem">Webdesign Arnhem</a>
+        <a href="/whatsapp-bot-bedrijf">WhatsApp-bot</a>
+      </div>
+    </div>
+    <div class="pillar reveal">
+      <div class="pillar-icon">🛠️</div>
+      <div class="pillar-tag">Maatwerk</div>
+      <h3>Portalen &amp; slimme tools</h3>
+      <p>Een interne tool, klantportaal of branchespecifieke AI-oplossing wanneer standaardsoftware net niet past.</p>
+      <div class="pillar-items">
+        <div class="pillar-item">CV Optimizer voor recruiters of jobboards</div>
+        <div class="pillar-item">Offerte generator voor installateurs en aannemers</div>
+        <div class="pillar-item">AI content tool voor jouw sector</div>
+        <div class="pillar-item">Branche-specifieke AI assistent op maat</div>
+        <div class="pillar-item">Prijs op aanvraag</div>
+      </div>
+      <div class="pillar-links"><a href="#contact">Bespreek jouw idee →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL USP -->
+<section class="portal-section" aria-labelledby="portal-title">
+  <div class="portal-grid">
+    <div class="reveal">
+      <div class="section-tag">Klantportaal</div>
+      <h2 class="section-title" id="portal-title" style="max-width:560px;">Slim mag nooit onzichtbaar worden.</h2>
+      <p class="portal-copy">Geen black box. In het Briqk-klantportaal zie je wat je chatbot beantwoordt, welke leads binnenkomen en wat automatisch is verwerkt. Zo blijft automatisering begrijpelijk en bestuurbaar.</p>
+      <a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" class="portal-link">Bekijk het portaal <span aria-hidden="true">↗</span><span class="sr-only">(opent in een nieuw tabblad)</span></a>
+    </div>
+    <div class="portal-shot reveal">
+      <img src="/portal-screenshot.png" alt="Dashboard van het Briqk-klantportaal met statistieken over leads en automatiseringen" width="1306" height="750" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- DUAL BOT DEMO -->
+<section class="demo-section" id="demo">
+  <div class="section-tag">Briqk Labs · werkende prototypes</div>
+  <h2 class="section-title">Bekijk wat er achter een slim proces kan gebeuren.</h2>
+  <p class="section-sub">Deze veilige simulaties laten verschillende rollen zien: een bezoeker helpen, een aanvraag kwalificeren en routinewerk voorbereiden. De techniek is nooit het vertrekpunt; het proces bepaalt wat zinvol is.</p>
+  <div class="demo-grid">
+    <div class="reveal" style="display:flex;flex-direction:column;">
+      <div class="demo-label"><span>Standaard chatbot</span> Beantwoordt vragen direct</div>
+      <div class="chat-widget" id="assistantDemo" aria-busy="false">
+        <div class="chat-header">
+          <div class="chat-avatar">🤖</div>
+          <div>
+            <div class="chat-header-name">Briqk Assistent</div>
+            <div class="chat-header-status">Online</div>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages1" role="log" aria-live="polite" aria-relevant="additions">
+          <div class="msg bot">
+            <div class="msg-dot">🤖</div>
+            <div class="msg-bubble">Hoi! Ik ben de assistent van Briqk. Stel me een vraag over onze diensten of prijzen!</div>
+          </div>
+        </div>
+        <div class="quick-questions">
+          <button class="quick-q" type="button" onclick="sendQuick1(this)">Wat kost een website?</button>
+          <button class="quick-q" type="button" onclick="sendQuick1(this)">Hoe snel ben ik live?</button>
+          <button class="quick-q" type="button" onclick="sendQuick1(this)">Wat doet een chatbot?</button>
+        </div>
+        <div class="chat-input-area">
+          <input type="text" class="chat-input" id="chatInput1" aria-label="Vraag aan de Briqk Assistent" placeholder="Stel een vraag..." maxlength="300" autocomplete="off" />
+          <button class="chat-send" id="chatSend1" type="button" aria-label="Vraag versturen" onclick="sendMsg1()">➤</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="display:flex;flex-direction:column;">
+      <div class="demo-label"><span>Lead qualifier</span> Herkent kansrijke aanvragen</div>
+      <div class="chat-widget">
+        <div class="chat-header">
+          <div class="chat-avatar" style="background:#fff;color:#080808">🎯</div>
+          <div>
+            <div class="chat-header-name">Briqk Lead Qualifier</div>
+            <div class="chat-header-status">Online</div>
+          </div>
+        </div>
+        <div class="progress-bar" id="qualProgressBar" role="progressbar" aria-label="Voortgang leadkwalificatie" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="qualProgress" style="width:0%"></div></div>
+        <div class="chat-messages" id="chatMessages2" role="log" aria-live="polite" aria-relevant="additions">
+          <div class="msg bot">
+            <div class="msg-dot" style="background:#fff;color:#080808">🎯</div>
+            <div class="msg-bubble">Goedemiddag! Ik help je snel bepalen of Briqk bij jou past. Ik stel je 5 korte vragen. Klaar?</div>
+          </div>
+        </div>
+        <div class="quick-questions" id="qualQuickAnswers">
+          <button class="quick-q" type="button" onclick="sendMsg2('Ja, ga maar!')">Ja, ga maar!</button>
+          <button class="quick-q" type="button" onclick="sendMsg2('Vertel me meer eerst')">Vertel me meer eerst</button>
+        </div>
+        <div class="chat-input-area">
+          <input type="text" class="chat-input" id="chatInput2" aria-label="Antwoord aan de leadkwalificatie-assistent" placeholder="Type je antwoord..." maxlength="300" autocomplete="off" />
+          <button class="chat-send" id="chatSend2" type="button" aria-label="Antwoord versturen" onclick="sendMsg2()" style="background:#fff;color:#080808">➤</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="demo-privacy">De demo stuurt je invoer naar onze AI-verwerker om een antwoord te genereren. Deel hier geen persoonsgegevens of vertrouwelijke informatie. Lees meer in ons <a href="/privacy">privacybeleid</a>.</p>
+</section>
+
+<!-- CV MAKER -->
+<section class="cv-section" id="ai-demo">
+  <div class="cv-layout">
+    <div class="cv-info reveal">
+      <div class="section-tag">Productdemo · AI-mail</div>
+      <h2>Van inbox naar actie.<br><em style="color:var(--lime)">In één flow.</em></h2>
+      <p>Deze productdemo laat zien hoe AI een binnenkomende e-mail kan lezen, categoriseren en voorbereiden voor opvolging. Jij bepaalt altijd welke stappen automatisch mogen gaan.</p>
+      <p>Hetzelfde principe werkt voor nieuwe leads, CRM-updates, WhatsApp-notificaties, afspraken en offertes.</p>
+      <div class="cv-features">
+        <div class="cv-feature">E-mail automatisch beantwoorden</div>
+        <div class="cv-feature">Leads routeren naar CRM</div>
+        <div class="cv-feature">WhatsApp notificaties bij nieuwe aanvragen</div>
+        <div class="cv-feature">Factuur en offerte workflows</div>
+      </div>
+      <div class="saas-badge" style="background:rgba(200,255,0,0.1);border-color:rgba(200,255,0,0.3);">⚙️ AI Automatisering</div>
+      <a href="/blog/ai-automatisering-mkb" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;color:var(--lime);text-decoration:none;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Ontdek alle mogelijkheden →</a>
+    </div>
+    <div class="cv-tool reveal" style="background:var(--black);">
+      <!-- INBOX -->
+      <div class="cv-tool-header">
+        <div class="cv-tool-icon" style="background:var(--grey-mid);font-size:18px;">📬</div>
+        <div>
+          <div style="font-weight:500;font-size:14px">Briqk AI-maildemo</div>
+          <div style="font-size:12px;color:var(--grey-text)">Klik op een mail om de analyse te starten</div>
+        </div>
+      </div>
+      <div id="inboxList" style="display:flex;flex-direction:column;gap:2px;padding:12px 16px;">
+        <div class="inbox-mail" onclick="runAutomation(0)" data-index="0" role="button" tabindex="0" aria-label="E-mail van Jan de Vries analyseren">
+          <div class="mail-dot new"></div>
+          <div class="mail-content">
+            <div class="mail-from">Jan de Vries &lt;jan@installateur.nl&gt;</div>
+            <div class="mail-subject">Interesse in een nieuwe website</div>
+            <div class="mail-preview">Hallo, ik heb jullie website gezien en ben benieuwd wat...</div>
+          </div>
+          <div class="mail-time">09:14</div>
+        </div>
+        <div class="inbox-mail" onclick="runAutomation(1)" data-index="1" role="button" tabindex="0" aria-label="E-mail van Sandra Bakker analyseren">
+          <div class="mail-dot"></div>
+          <div class="mail-content">
+            <div class="mail-from">Sandra Bakker &lt;info@bakkerij-sandra.nl&gt;</div>
+            <div class="mail-subject">Vraag over de chatbot</div>
+            <div class="mail-preview">Goedemiddag, wij hebben al een website maar willen graag...</div>
+          </div>
+          <div class="mail-time">10:32</div>
+        </div>
+        <div class="inbox-mail" onclick="runAutomation(2)" data-index="2" role="button" tabindex="0" aria-label="Promotie-e-mail analyseren">
+          <div class="mail-dot"></div>
+          <div class="mail-content">
+            <div class="mail-from">noreply@promo-deals.com</div>
+            <div class="mail-subject">WIN een iPhone 15 Pro!!!</div>
+            <div class="mail-preview">Gefeliciteerd! U bent geselecteerd als winnaar van...</div>
+          </div>
+          <div class="mail-time">11:01</div>
+        </div>
+      </div>
+
+      <!-- PIPELINE -->
+      <div id="pipeline" role="status" aria-live="polite" style="display:none;padding:16px 20px;border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-text);margin-bottom:12px;">AI-pipeline · demo</div>
+        <div style="display:flex;flex-direction:column;gap:8px;" id="pipelineSteps">
+          <div class="pipe-step" id="step0"><span class="pipe-icon">⏳</span><span class="pipe-label">Mail lezen</span></div>
+          <div class="pipe-step" id="step1"><span class="pipe-icon">⏳</span><span class="pipe-label">Categoriseren</span></div>
+          <div class="pipe-step" id="step2"><span class="pipe-icon">⏳</span><span class="pipe-label">Prioriteit bepalen</span></div>
+          <div class="pipe-step" id="step3"><span class="pipe-icon">⏳</span><span class="pipe-label">Antwoord schrijven</span></div>
+          <div class="pipe-step" id="step4"><span class="pipe-icon">⏳</span><span class="pipe-label">Verzending controleren</span></div>
+        </div>
+      </div>
+
+      <!-- RESULT -->
+      <div id="autoResult" role="status" aria-live="polite" style="display:none;padding:16px 20px;border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <div id="resultTitle" style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--grey-text);">Gegenereerd antwoord</div>
+          <div id="resultBadge" style="font-size:11px;padding:3px 10px;border-radius:100px;"></div>
+        </div>
+        <div id="resultText" style="font-size:13px;color:var(--white);line-height:1.7;background:var(--grey);padding:14px 16px;border-radius:10px;white-space:pre-wrap;"></div>
+        <div id="sendConfirm" style="display:none;margin-top:10px;font-size:12px;align-items:center;gap:6px;"></div>
+        <button type="button" onclick="resetAutomation()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere mail proberen</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKFLOW DEMO -->
+<section class="workflow-section" id="workflow-demo">
+  <div class="section-tag">Interactieve productdemo</div>
+  <h2 class="section-title">Eén trigger. Een hele keten in beweging.</h2>
+  <p class="section-sub">Een realistische simulatie van AI-automatisering. Kies een situatie en bekijk de workflow stap voor stap; er worden geen externe systemen aangestuurd.</p>
+  <div class="workflow-layout">
+    <div class="reveal">
+      <p style="font-size:14px;color:var(--grey-text);margin-bottom:16px;">Kies een trigger om de workflow te starten:</p>
+      <div class="trigger-grid">
+        <button class="trigger-btn" type="button" onclick="startWorkflow(0)">
+          <span class="t-icon">📋</span>
+          <span class="t-label">Nieuw contactformulier</span>
+          <span class="t-sub">Bezoeker stuurt een aanvraag</span>
+        </button>
+        <button class="trigger-btn" type="button" onclick="startWorkflow(1)">
+          <span class="t-icon">📱</span>
+          <span class="t-label">WhatsApp bericht</span>
+          <span class="t-sub">Klant stuurt een berichtje</span>
+        </button>
+        <button class="trigger-btn" type="button" onclick="startWorkflow(2)">
+          <span class="t-icon">📅</span>
+          <span class="t-label">Afspraak ingepland</span>
+          <span class="t-sub">Via Calendly of Google Calendar</span>
+        </button>
+        <button class="trigger-btn" type="button" onclick="startWorkflow(3)">
+          <span class="t-icon">💼</span>
+          <span class="t-label">Offerte verstuurd</span>
+          <span class="t-sub">Na intake, offerte gaat de deur uit</span>
+        </button>
+      </div>
+      <div id="wfTriggerInfo" style="margin-top:20px;padding:16px;background:rgba(200,255,0,0.06);border:1px solid rgba(200,255,0,0.15);border-radius:12px;display:none;">
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--lime);margin-bottom:6px;">Trigger actief</div>
+        <div id="wfTriggerText" style="font-size:14px;color:var(--white);"></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="wf-panel">
+        <div class="wf-header">
+          <div style="width:36px;height:36px;background:rgba(200,255,0,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;">⚡</div>
+          <div>
+            <div style="font-size:14px;font-weight:500;">Briqk Automation Pipeline</div>
+            <div style="font-size:12px;color:var(--grey-text);" id="wfStatus" role="status" aria-live="polite">Wacht op trigger (simulatie)...</div>
+          </div>
+        </div>
+        <div class="wf-body" id="wfSteps">
+          <div class="wf-step" id="wfs0">
+            <div class="ws-icon">⏳</div>
+            <div class="ws-text"><div class="ws-title">Trigger ontvangen</div><div class="ws-desc">Wacht op actie</div></div>
+            <div class="ws-status" id="wfs0s"></div>
+          </div>
+          <div class="wf-connector" id="wfc0"></div>
+          <div class="wf-step" id="wfs1">
+            <div class="ws-icon">⏳</div>
+            <div class="ws-text"><div class="ws-title">Data verwerken</div><div class="ws-desc">Wacht</div></div>
+            <div class="ws-status" id="wfs1s"></div>
+          </div>
+          <div class="wf-connector" id="wfc1"></div>
+          <div class="wf-step" id="wfs2">
+            <div class="ws-icon">⏳</div>
+            <div class="ws-text"><div class="ws-title">CRM bijwerken</div><div class="ws-desc">Wacht</div></div>
+            <div class="ws-status" id="wfs2s"></div>
+          </div>
+          <div class="wf-connector" id="wfc2"></div>
+          <div class="wf-step" id="wfs3">
+            <div class="ws-icon">⏳</div>
+            <div class="ws-text"><div class="ws-title">Notificatie sturen</div><div class="ws-desc">Wacht</div></div>
+            <div class="ws-status" id="wfs3s"></div>
+          </div>
+          <div class="wf-connector" id="wfc3"></div>
+          <div class="wf-step" id="wfs4">
+            <div class="ws-icon">⏳</div>
+            <div class="ws-text"><div class="ws-title">Follow-up inplannen</div><div class="ws-desc">Wacht</div></div>
+            <div class="ws-status" id="wfs4s"></div>
+          </div>
+        </div>
+        <div class="wf-result" id="wfResult" role="status" aria-live="polite">
+          <div style="font-size:11px;color:var(--lime);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">✓ Simulatie voltooid</div>
+          <div id="wfResultText" style="font-size:13px;color:var(--white);line-height:1.7;"></div>
+          <button type="button" onclick="resetWorkflow()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere trigger proberen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- STUDIO STANDARD -->
+<section class="studio-standard" aria-labelledby="standard-title">
+  <div class="standard-head">
+    <div>
+      <div class="section-tag">De Briqk-standaard</div>
+      <h2 class="section-title" id="standard-title">Ambitieus in uitstraling. Nuchter in uitvoering.</h2>
+    </div>
+    <p class="standard-intro">Een showcase is pas sterk als het onder de motorkap ook klopt. Daarom behandelen we design, inhoud, techniek en automatisering als één geheel.</p>
+  </div>
+  <div class="standard-grid">
+    <article class="standard-item reveal"><span>01 · Eigen karakter</span><h3>Geen templategevoel</h3><p>De visuele richting ontstaat uit jouw merk, markt en klanten. Daardoor voelt de website herkenbaar en niet inwisselbaar.</p></article>
+    <article class="standard-item reveal"><span>02 · Gebouwd voor gebruik</span><h3>Mooi én doelgericht</h3><p>Heldere routes, sterke mobiele weergave en concrete vervolgstappen krijgen net zoveel aandacht als de eerste indruk.</p></article>
+    <article class="standard-item reveal"><span>03 · Slim uit te breiden</span><h3>Van site naar systeem</h3><p>Formulieren, AI-assistenten, CRM en opvolging kunnen later aansluiten zonder dat de basis opnieuw gebouwd moet worden.</p></article>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="prijzen">
+  <div class="section-tag">Startpunten</div>
+  <h2 class="section-title">Duidelijk waar het kan. Maatwerk waar het telt.</h2>
+  <p class="section-sub">Gebruik deze pakketten als vertrekpunt. Na een korte intake weet je precies wat er nodig is, wat het kost en wat wij beheren.</p>
+  <div class="pricing-grid">
+    <div class="pricing-card reveal">
+      <div class="pricing-name">Starter Website</div>
+      <div class="pricing-price"><sup>€</sup>850</div>
+      <div class="pricing-period">eenmalig + €99/maand</div>
+      <div class="pricing-desc">Voor ZZP'ers die professioneel online willen staan.</div>
+      <ul class="pricing-features">
+        <li>Professionele website (5 pagina's)</li>
+        <li>Slim contactformulier</li>
+        <li>Mobielvriendelijk design</li>
+        <li>Hosting via Vercel</li>
+        <li>Google Search Console + Bedrijfsprofiel</li>
+        <li>Maandelijks onderhoud</li>
+      </ul>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in €99/maand? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Website en domein altijd online, wij beheren alles</li>
+          <li>Maandelijkse aanpassingen en optimalisaties</li>
+          <li>Technisch onderhoud zodat niets stukgaat</li>
+          <li>Google Search Console monitoring</li>
+          <li>Support via WhatsApp, reactie binnen 24 uur</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Starter')" style="margin-top:14px">Start gesprek</button>
+      <a class="pricing-detail" href="/website-laten-maken-mkb">Bekijk pakketdetails →</a>
+    </div>
+    <div class="pricing-card featured reveal">
+      <div class="pricing-badge">Aanbevolen</div>
+      <div class="pricing-name">AI Automation &amp; Maatwerk</div>
+      <div class="pricing-price" style="font-size:32px;letter-spacing:-1px;margin:16px 0">Op maat</div>
+      <div class="pricing-period">prijs op aanvraag</div>
+      <div class="pricing-desc">AI automatisering, Micro-SaaS tools of complexe koppelingen.</div>
+      <ul class="pricing-features">
+        <li>Workflow automatisering</li>
+        <li>CRM en tool koppelingen</li>
+        <li>Micro-SaaS tool bouwen</li>
+        <li>Meerdere AI agents</li>
+        <li>Dedicated support</li>
+      </ul>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in de maandkosten? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Aantal uur per maand vooraf afgestemd op jouw project</li>
+          <li>Proactief beheer, wij signaleren problemen voordat jij ze ziet</li>
+          <li>Updates bij API-wijzigingen van gekoppelde tools (Make, n8n, CRM)</li>
+          <li>Directe lijn met de bouwer, geen supporttickets</li>
+          <li>Toegang tot het Briqk klantportaal met automation overzicht</li>
+          <li>Prioriteits-support, reactie dezelfde werkdag</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-black" type="button" onclick="startGesprek('AI Automatisering')" style="margin-top:14px">Neem contact op</button>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-badge">Website + Chatbot</div>
+      <div class="pricing-name">Pro Website + Chatbot</div>
+      <div class="pricing-price"><sup>€</sup>1.750</div>
+      <div class="pricing-period">eenmalig + €249/maand</div>
+      <div class="pricing-desc">De complete AI-powered aanwezigheid voor groeiende bedrijven.</div>
+      <ul class="pricing-features">
+        <li>Alles uit Starter</li>
+        <li>AI chatbot (24/7 actief)</li>
+        <li>Agenda-integratie</li>
+        <li>Lead capture</li>
+        <li>WhatsApp koppeling</li>
+        <li>Maandelijkse rapportage</li>
+      </ul>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in €249/maand? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Website en domein altijd online, wij beheren alles</li>
+          <li>Maandelijkse aanpassingen en optimalisaties (website en chatbot)</li>
+          <li>Chatbot bijhouden zodat antwoorden altijd kloppen</li>
+          <li>Maandelijkse rapportage: bezoekers, leads en chatgesprekken</li>
+          <li>Toegang tot het Briqk klantportaal met live dashboard</li>
+          <li>Prioriteits-support, reactie dezelfde werkdag</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Pro Website')" style="margin-top:14px">Start gesprek</button>
+      <a class="pricing-detail" href="/ai-website-laten-maken">Bekijk pakketdetails →</a>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-name">Chatbot Add-on</div>
+      <div class="pricing-price"><sup>€</sup>600</div>
+      <div class="pricing-period">eenmalig + €149/maand</div>
+      <div class="pricing-desc">Heb je al een website? Voeg een AI chatbot toe.</div>
+      <ul class="pricing-features">
+        <li>AI chatbot op jouw website</li>
+        <li>Getraind op jouw bedrijfsinfo</li>
+        <li>Agenda-integratie</li>
+        <li>Maandelijks onderhoud</li>
+      </ul>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in €149/maand? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Chatbot altijd online, wij houden hem draaiende</li>
+          <li>Maandelijkse updates zodat antwoorden actueel blijven</li>
+          <li>Technisch onderhoud en monitoring</li>
+          <li>Support via WhatsApp, reactie binnen 24 uur</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Chatbot Add-on')" style="margin-top:14px">Start gesprek</button>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-name">WhatsApp Bot</div>
+      <div class="pricing-price"><sup>€</sup>750</div>
+      <div class="pricing-period">eenmalig + €149/maand</div>
+      <div class="pricing-desc">Automatisch reageren op WhatsApp-berichten.</div>
+      <ul class="pricing-features">
+        <li>WhatsApp Business koppeling</li>
+        <li>Automatische begroeting</li>
+        <li>FAQ afhandeling</li>
+        <li>Afspraken inplannen</li>
+        <li>Escalatie naar eigenaar</li>
+      </ul>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in €149/maand? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Bot altijd online, ook buiten kantooruren</li>
+          <li>Maandelijkse updates (antwoorden en flows bijhouden)</li>
+          <li>Maandelijkse rapportage: gesprekken, leads en conversies</li>
+          <li>Toegang tot het Briqk klantportaal met live overzicht</li>
+          <li>Support via WhatsApp, reactie binnen 24 uur</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('WhatsApp Bot')" style="margin-top:14px">Start gesprek</button>
+      <a class="pricing-detail" href="/whatsapp-bot-bedrijf">Bekijk pakketdetails →</a>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-name">Lead Qualifier Agent</div>
+      <div class="pricing-price"><sup>€</sup>950</div>
+      <div class="pricing-period">eenmalig + €199/maand</div>
+      <div class="pricing-desc">Nooit meer tijd verliezen aan slechte leads.</div>
+      <ul class="pricing-features">
+        <li>Kwalificatievragen automatisch</li>
+        <li>Warm / koud / niet relevant scoring</li>
+        <li>Warme leads direct doorsturen</li>
+        <li>WhatsApp of e-mail notificatie</li>
+        <li>Maandelijkse leadrapportage</li>
+      </ul>
+      <details class="monthly-accordion">
+        <summary>Wat zit er in €199/maand? <span class="ma-chevron">▼</span></summary>
+        <div class="accordion-body"><ul>
+          <li>Agent 24/7 actief, elke lead wordt automatisch gekwalificeerd</li>
+          <li>Maandelijkse updates (scorecriteria en vragen bijstellen)</li>
+          <li>Maandelijkse rapportage: warm, koud en niet relevant</li>
+          <li>Toegang tot het Briqk klantportaal met lead dashboard</li>
+          <li>Support via WhatsApp, reactie binnen 24 uur</li>
+        </ul></div>
+      </details>
+      <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Lead Qualifier')" style="margin-top:14px">Start gesprek</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--grey)">
+  <div class="contact-layout">
+    <div class="contact-info reveal">
+      <div class="section-tag">Contact</div>
+      <h2>Zullen we iets bouwen dat wél blijft hangen?</h2>
+      <p>Vertel kort waar je bedrijf nu staat en wat je wilt verbeteren. Je krijgt binnen 24 uur per e-mail een persoonlijk antwoord.</p>
+      <div class="contact-items">
+        <div class="contact-item"><div class="contact-item-icon" aria-hidden="true">📍</div>Arnhem, Gelderland · actief in heel Nederland</div>
+        <div class="contact-item"><div class="contact-item-icon">✉️</div><a href="mailto:info@briqk.nl" style="color:var(--lime);text-decoration:underline;text-underline-offset:3px;">info@briqk.nl</a></div>
+        <div class="contact-item"><div class="contact-item-icon" aria-hidden="true">⏱️</div>Reactie per e-mail binnen 24 uur</div>
+        <div class="contact-item"><div class="contact-item-icon" aria-hidden="true">🆓</div>Eerste gesprek gratis</div>
+      </div>
+    </div>
+    <form class="contact-form reveal" action="https://formspree.io/f/xlgpodnl" method="POST" aria-describedby="formPrivacy">
+      <input type="hidden" name="_next" value="https://briqk.nl/?contact=verzonden#contact" />
+      <input type="hidden" name="_subject" value="Nieuwe aanvraag via briqk.nl" />
+      <label class="form-hp" aria-hidden="true">Laat dit veld leeg<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+      <div class="success-msg" id="formSuccess" role="status" aria-live="polite">Bedankt! Je aanvraag is verstuurd. We antwoorden binnen 24 uur per e-mail.</div>
+      <div class="form-group">
+        <label for="formNaam">Naam</label>
+        <input type="text" id="formNaam" name="naam" placeholder="Jan de Vries" autocomplete="name" required />
+      </div>
+      <div class="form-group">
+        <label for="formEmail">E-mailadres</label>
+        <input type="email" id="formEmail" name="email" placeholder="jan@bedrijf.nl" autocomplete="email" aria-describedby="emailError" required />
+        <span id="emailError" role="alert" style="display:none;font-size:12px;color:#ff6b6b;margin-top:4px;">Vul een geldig e-mailadres in.</span>
+      </div>
+      <div class="form-group">
+        <label for="formType">Type bedrijf</label>
+        <select id="formType" name="bedrijfstype">
+          <option value="">Selecteer...</option>
+          <option>ZZP / Freelancer</option>
+          <option>MKB (2-10 medewerkers)</option>
+          <option>MKB (10-50 medewerkers)</option>
+          <option>Anders</option>
+        </select>
+      </div>
+      <fieldset class="form-group form-fieldset">
+        <legend>Interesse in (meerdere mogelijk)</legend>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;" id="interesseCheckboxes">
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Starter Website (€850)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Starter Website (€850)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Pro Website + Chatbot (€1.750)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Pro Website + Chatbot (€1.750)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Chatbot Add-on (€600)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Chatbot Add-on (€600)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="WhatsApp Bot (€750)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> WhatsApp Bot (€750)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Lead Qualifier Agent (€950)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Lead Qualifier Agent (€950)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="AI Automatisering" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> AI Automatisering</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Micro-SaaS Tool" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Micro-SaaS Tool</label>
+        </div>
+      </fieldset>
+      <div class="form-group">
+        <label for="formBericht">Vraag of opmerking (optioneel)</label>
+        <textarea id="formBericht" name="bericht" placeholder="Vertel iets over jouw bedrijf..."></textarea>
+      </div>
+      <p class="form-note" id="formPrivacy">Je gegevens worden via Formspree verwerkt om je aanvraag te beantwoorden. Lees ons <a href="/privacy">privacybeleid</a>.</p>
+      <button type="submit" class="form-submit">Gratis kennismaking aanvragen</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo" style="white-space:nowrap;">Bri<span>qk</span></div>
+  <p>© 2026 Briqk Labs · Prototypes van slimme digitale processen</p>
+  <nav aria-label="Diensten en informatie" style="font-size:12px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="/" style="color:#bbb;">Terug naar Briqk</a>
+    <a href="#demo" style="color:#bbb;">Assistenten</a>
+    <a href="#ai-demo" style="color:#bbb;">E-mail</a>
+    <a href="#workflow-demo" style="color:#bbb;">Workflows</a>
+    <a href="mailto:info@briqk.nl" style="color:var(--lime);">Bespreek een toepassing</a>
+  </nav>
+  <p style="font-size:12px;color:#888">info@briqk.nl · briqk.nl</p>
+  <div style="font-size:12px;color:#666;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;"><a href="/privacy" style="color:#aaa;text-decoration:none;border-bottom:1px solid #666">Privacybeleid</a><a href="/voorwaarden" style="color:#aaa;text-decoration:none;border-bottom:1px solid #666">Voorwaarden</a></div>
+</footer>
+
+<aside class="privacy-banner" id="privacyBanner" aria-label="Privacyvoorkeuren" hidden>
+  <div class="privacy-banner-inner">
+    <p>Met jouw toestemming gebruiken we Google Analytics om de website te verbeteren. We gebruiken geen advertentiecookies. <a href="/privacy">Meer informatie</a>.</p>
+    <div class="privacy-actions">
+      <button type="button" class="privacy-button" id="analyticsDecline">Weigeren</button>
+      <button type="button" class="privacy-button accept" id="analyticsAccept">Toestaan</button>
+    </div>
+  </div>
+</aside>
+
+<script>
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function loadAnalytics() {
+  if (window.__briqkAnalyticsLoaded) return;
+  window.__briqkAnalyticsLoaded = true;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function() { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-1H8P518FLC', { anonymize_ip: true });
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1H8P518FLC';
+  document.head.appendChild(script);
+}
+
+function setAnalyticsPreference(value) {
+  try { localStorage.setItem('briqkAnalyticsConsent', value); } catch (error) { /* Opslag kan door privacy-instellingen geblokkeerd zijn. */ }
+  document.getElementById('privacyBanner').hidden = true;
+  if (value === 'granted') loadAnalytics();
+}
+
+(function initialisePrivacyChoice() {
+  let choice = null;
+  try { choice = localStorage.getItem('briqkAnalyticsConsent'); } catch (error) { /* Toon de keuze opnieuw als opslag niet beschikbaar is. */ }
+  if (choice === 'granted') loadAnalytics();
+  if (choice !== 'granted' && choice !== 'denied') document.getElementById('privacyBanner').hidden = false;
+  document.getElementById('analyticsAccept').addEventListener('click', () => setAnalyticsPreference('granted'));
+  document.getElementById('analyticsDecline').addEventListener('click', () => setAnalyticsPreference('denied'));
+})();
+
+function startGesprek(interesse) {
+  document.getElementById('contact').scrollIntoView({behavior: prefersReducedMotion ? 'auto' : 'smooth'});
+  if (interesse) {
+    setTimeout(function() {
+      var boxes = document.querySelectorAll('#interesseCheckboxes input[type=checkbox]');
+      boxes.forEach(function(box) {
+        box.checked = box.value.indexOf(interesse) !== -1;
+      });
+      var bericht = document.getElementById('formBericht');
+      if (bericht) {
+        var labels = {
+          'Starter': 'Hallo, ik heb interesse in de Starter Website (€850). Kunnen jullie mij meer informatie geven?',
+          'Pro Website': 'Hallo, ik heb interesse in de Pro Website + Chatbot (€1.750). Kunnen jullie mij meer informatie geven?',
+          'Chatbot Add-on': 'Hallo, ik heb interesse in de Chatbot Add-on (€600). Kunnen jullie mij meer informatie geven?',
+          'WhatsApp Bot': 'Hallo, ik heb interesse in de WhatsApp Bot (€750). Kunnen jullie mij meer informatie geven?',
+          'Lead Qualifier': 'Hallo, ik heb interesse in de Lead Qualifier Agent (€950). Kunnen jullie mij meer informatie geven?',
+          'AI Automatisering': 'Hallo, ik heb interesse in AI Automatisering of Maatwerk. Kunnen jullie mij meer informatie geven?'
+        };
+        bericht.value = labels[interesse] || '';
+      }
+    }, prefersReducedMotion ? 0 : 600);
+  }
+  setTimeout(function() {
+    document.getElementById('formNaam').focus({ preventScroll: true });
+  }, prefersReducedMotion ? 0 : 600);
+}
+
+function toggleMenu() {
+  const ham = document.getElementById('hamburger');
+  const nav = document.getElementById('mobileNav');
+  const isOpen = nav.classList.toggle('open');
+  ham.classList.toggle('open', isOpen);
+  ham.setAttribute('aria-expanded', String(isOpen));
+  nav.setAttribute('aria-hidden', String(!isOpen));
+}
+
+function closeMenu() {
+  const ham = document.getElementById('hamburger');
+  const nav = document.getElementById('mobileNav');
+  ham.classList.remove('open');
+  nav.classList.remove('open');
+  ham.setAttribute('aria-expanded', 'false');
+  nav.setAttribute('aria-hidden', 'true');
+}
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeMenu();
+});
+
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && !prefersReducedMotion) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+} else {
+  reveals.forEach(el => el.classList.add('visible'));
+}
+
+let isLoading1 = false;
+
+async function callAPI(mode, userMsg) {
+  const res = await fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ mode, message: userMsg })
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    throw new Error(data.error || 'De AI-demo is tijdelijk niet beschikbaar.');
+  }
+  return data.reply || 'Geen antwoord ontvangen.';
+}
+
+function addMsg(containerId, text, type, avatarEmoji) {
+  const container = document.getElementById(containerId);
+  const msg = document.createElement('div');
+  msg.className = `msg ${type}`;
+  const dot = document.createElement('div');
+  const bubble = document.createElement('div');
+  dot.className = 'msg-dot';
+  bubble.className = 'msg-bubble';
+  if (type === 'user') {
+    dot.style.background = 'var(--grey-mid)';
+    dot.style.border = '1px solid rgba(255,255,255,0.1)';
+  }
+  dot.textContent = type === 'bot' ? avatarEmoji : '👤';
+  bubble.textContent = String(text);
+  msg.append(dot, bubble);
+  container.appendChild(msg);
+  container.scrollTop = container.scrollHeight;
+  return msg;
+}
+
+function addTyping(containerId, avatarEmoji) {
+  const container = document.getElementById(containerId);
+  const el = document.createElement('div');
+  el.className = 'msg bot';
+  el.innerHTML = `<div class="msg-dot">${avatarEmoji}</div><div class="msg-bubble"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
+  container.appendChild(el);
+  container.scrollTop = container.scrollHeight;
+  return el;
+}
+
+function getLocalAssistantReply(message) {
+  const question = message.toLocaleLowerCase('nl-NL');
+
+  if (question.includes('kost') || question.includes('prijs') || question.includes('budget')) {
+    return 'Een professionele Starter Website begint bij €850. Een Pro Website met AI-chatbot begint bij €1.750. Tijdens een gratis kennismaking bepalen we wat voor jouw bedrijf echt nodig is.';
+  }
+  if (question.includes('snel') || question.includes('live') || question.includes('lang') || question.includes('oplever')) {
+    return 'Na de intake en zodra alle input compleet is, kan je website meestal binnen 2 weken live. Je krijgt vooraf een duidelijke planning.';
+  }
+  if (question.includes('chatbot') || question.includes('assistent') || question.includes('bot')) {
+    return 'Een AI-chatbot beantwoordt veelgestelde vragen, helpt bezoekers de juiste dienst te vinden en verzamelt aanvragen — ook buiten openingstijden.';
+  }
+  if (question.includes('contact') || question.includes('mail') || question.includes('gesprek')) {
+    return 'Je bereikt Briqk via info@briqk.nl of via het contactformulier hieronder. Je krijgt binnen 24 uur per e-mail antwoord.';
+  }
+
+  return 'De live AI-assistent is even niet bereikbaar. Mail je vraag naar info@briqk.nl of gebruik het contactformulier; je krijgt binnen 24 uur per e-mail antwoord.';
+}
+
+async function sendMsg1(text) {
+  const msg = text || document.getElementById('chatInput1').value.trim();
+  if (!msg || isLoading1) return;
+  const assistantDemo = document.getElementById('assistantDemo');
+  const sendButton = document.getElementById('chatSend1');
+  const quickButtons = assistantDemo.querySelectorAll('.quick-q');
+  addMsg('chatMessages1', msg, 'user', '🤖');
+  document.getElementById('chatInput1').value = '';
+  isLoading1 = true;
+  assistantDemo.setAttribute('aria-busy', 'true');
+  sendButton.disabled = true;
+  quickButtons.forEach(button => { button.disabled = true; });
+  const typing = addTyping('chatMessages1', '🤖');
+  let reply;
+  try {
+    reply = await callAPI('assistant', msg);
+  } catch(e) {
+    reply = getLocalAssistantReply(msg);
+  }
+  typing.remove();
+  addMsg('chatMessages1', reply, 'bot', '🤖');
+  isLoading1 = false;
+  assistantDemo.setAttribute('aria-busy', 'false');
+  sendButton.disabled = false;
+  quickButtons.forEach(button => { button.disabled = false; });
+}
+
+function sendQuick1(btn) { sendMsg1(btn.textContent); }
+document.getElementById('chatInput1').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); sendMsg1(); } });
+
+const QUAL_STEPS = [
+  null,
+  { q: 'Super! Wat voor bedrijf heb je?', btns: ['ZZP / Freelancer', 'MKB (2-10 pers)', 'MKB (10-50 pers)'] },
+  { q: 'Goed! En wat wil je verbeteren of automatiseren?', btns: ['Nieuwe website', 'AI chatbot toevoegen', 'Automatisering'] },
+  { q: 'Interessant! Heb je al een idee van je budget?', btns: ['\u20acOnder 1.000', '\u20ac1.000 - \u20ac2.500', 'Meer dan \u20ac2.500'] },
+  { q: 'Wanneer wil je dit gerealiseerd hebben?', btns: ['Zo snel mogelijk', 'Binnen 1 maand', 'Ori\u00ebnterend'] },
+  { q: 'Laatste vraag: ben jij degene die de beslissing neemt?', btns: ['Ja, ik beslis zelf', 'Ik moet overleggen'] },
+];
+
+let qualStep = 0;
+let isLoading2 = false;
+let qualAnswers = [];
+
+function showQualBtns(btns) {
+  var c = document.getElementById('qualQuickAnswers');
+  if (!c) return;
+  if (!btns || btns.length === 0) { c.style.display = 'none'; return; }
+  c.style.display = 'flex';
+  c.replaceChildren();
+  btns.forEach(function(a) {
+    var btn = document.createElement('button');
+    btn.className = 'quick-q';
+    btn.textContent = a;
+    btn.onclick = function() { sendMsg2(a); };
+    c.appendChild(btn);
+  });
+}
+
+function showQualContactCta() {
+  const container = document.getElementById('qualQuickAnswers');
+  const link = document.createElement('a');
+  link.className = 'quick-q';
+  link.href = '#contact';
+  link.textContent = 'Vraag een gratis kennismaking aan';
+  link.style.textDecoration = 'none';
+  link.addEventListener('click', () => startGesprek());
+  container.replaceChildren(link);
+  container.style.display = 'flex';
+}
+
+async function sendMsg2(text) {
+  var msg = text || document.getElementById('chatInput2').value.trim();
+  if (!msg || isLoading2) return;
+  showQualBtns([]);
+  addMsg('chatMessages2', msg, 'user', '\ud83c\udfaf');
+  document.getElementById('chatInput2').value = '';
+  isLoading2 = true;
+  document.getElementById('chatSend2').disabled = true;
+
+  if (qualStep === 0 && msg.indexOf('Vertel me meer') !== -1) {
+    var t1 = addTyping('chatMessages2', '\ud83c\udfaf');
+    setTimeout(function() {
+      t1.remove();
+      addMsg('chatMessages2', 'Briqk bouwt AI websites, chatbots en automatiseringen voor MKB. Vanaf \u20ac850, live binnen 2 weken. Klaar?', 'bot', '\ud83c\udfaf');
+      showQualBtns(['Ja, ga maar!']);
+      isLoading2 = false;
+      document.getElementById('chatSend2').disabled = false;
+    }, 800);
+    return;
+  }
+
+  if (qualStep === 0 && msg.indexOf('Vertel me meer') === -1) {
+    qualStep = 1;
+    var t2 = addTyping('chatMessages2', '\ud83c\udfaf');
+    setTimeout(function() {
+      t2.remove();
+      addMsg('chatMessages2', QUAL_STEPS[1].q, 'bot', '\ud83c\udfaf');
+      showQualBtns(QUAL_STEPS[1].btns);
+      document.getElementById('qualProgress').style.width = '0%';
+      document.getElementById('qualProgressBar').setAttribute('aria-valuenow', '0');
+      isLoading2 = false;
+      document.getElementById('chatSend2').disabled = false;
+    }, 800);
+    return;
+  }
+
+  qualAnswers.push(msg);
+  var progress = Math.min((qualAnswers.length / 5) * 100, 100);
+  document.getElementById('qualProgress').style.width = progress + '%';
+  document.getElementById('qualProgressBar').setAttribute('aria-valuenow', String(progress));
+  var t3 = addTyping('chatMessages2', '\ud83c\udfaf');
+
+  if (qualAnswers.length < 5) {
+    qualStep = qualAnswers.length + 1;
+    setTimeout(function() {
+      t3.remove();
+      addMsg('chatMessages2', QUAL_STEPS[qualStep].q, 'bot', '\ud83c\udfaf');
+      showQualBtns(QUAL_STEPS[qualStep].btns);
+      isLoading2 = false;
+      document.getElementById('chatSend2').disabled = false;
+    }, 800);
+  } else {
+    document.getElementById('qualProgress').style.width = '100%';
+    document.getElementById('qualProgressBar').setAttribute('aria-valuenow', '100');
+    var summary = 'Antwoorden:\n1. Bedrijfstype: ' + qualAnswers[0] + '\n2. Wens: ' + qualAnswers[1] + '\n3. Budget: ' + qualAnswers[2] + '\n4. Timing: ' + qualAnswers[3] + '\n5. Beslisser: ' + qualAnswers[4];
+    try {
+      var reply = await callAPI('qualifier', summary);
+      t3.remove();
+      addMsg('chatMessages2', reply, 'bot', '\ud83c\udfaf');
+    } catch(e) {
+      t3.remove();
+      addMsg('chatMessages2', 'Bedankt voor je antwoorden! Laat hieronder je naam en e-mailadres achter als je kennis wilt maken.', 'bot', '\ud83c\udfaf');
+    }
+    showQualContactCta();
+    document.getElementById('chatInput2').disabled = true;
+    document.getElementById('chatSend2').disabled = true;
+    document.getElementById('chatInput2').placeholder = 'Gesprek afgerond';
+    isLoading2 = false;
+  }
+}
+
+document.getElementById('chatInput2').addEventListener('keydown', function(e) { if (e.key === 'Enter') { e.preventDefault(); sendMsg2(); } });
+
+const MAILS = [
+  {
+    from: "Jan de Vries <jan@installateur.nl>",
+    subject: "Interesse in een nieuwe website",
+    body: "Hallo, ik heb jullie website gezien en ben benieuwd wat jullie kunnen doen voor mijn installatiebedrijf. We hebben momenteel geen website en lopen klanten mis. Kunnen we een keer bellen? Budget is geen groot probleem. Groet, Jan"
+  },
+  {
+    from: "Sandra Bakker <info@bakkerij-sandra.nl>",
+    subject: "Vraag over de chatbot",
+    body: "Goedemiddag, wij hebben al een website maar willen graag een chatbot toevoegen. Kunnen jullie dat doen op een bestaande site? En wat zijn de kosten? Met vriendelijke groet, Sandra"
+  },
+  {
+    from: "noreply@promo-deals.com",
+    subject: "WIN een iPhone 15 Pro!!!",
+    body: "Gefeliciteerd! U bent geselecteerd als winnaar van onze speciale actie. Klik hier om uw prijs te claimen. Tijdelijk aanbod geldig t/m vandaag."
+  }
+];
+
+function getLocalMailResult(index) {
+  const fallbackResults = [
+    {
+      categorie: 'LEAD',
+      prioriteit: 'HOOG',
+      antwoord: 'Beste Jan,\n\nDank voor uw interesse. We denken graag mee over een website voor uw installatiebedrijf. Via het contactformulier kunt u een gratis kennismaking aanvragen; daarna ontvangt u per e-mail een concreet voorstel.\n\nMet vriendelijke groet,\nDamian van Briqk'
+    },
+    {
+      categorie: 'VRAAG',
+      prioriteit: 'NORMAAL',
+      antwoord: 'Beste Sandra,\n\nJa, we kunnen een AI-chatbot aan een bestaande website toevoegen. De chatbot-add-on begint bij €600 plus €149 per maand. Via het contactformulier kijken we graag vrijblijvend mee naar uw huidige website.\n\nMet vriendelijke groet,\nDamian van Briqk'
+    },
+    {
+      categorie: 'SPAM',
+      prioriteit: 'LAAG',
+      antwoord: 'Geen antwoord opgesteld. Deze mail is als spam gemarkeerd.'
+    }
+  ];
+  return fallbackResults[index] || fallbackResults[1];
+}
+
+let automationRunning = false;
+
+async function runAutomation(index) {
+  if (!Number.isInteger(index) || !MAILS[index]) return;
+  if (automationRunning) return;
+  automationRunning = true;
+
+  // Reset UI
+  document.querySelectorAll('.inbox-mail').forEach(m => m.classList.remove('active'));
+  document.querySelectorAll('[data-index="' + index + '"]')[0].classList.add('active');
+  document.getElementById('autoResult').style.display = 'none';
+
+  const pipeline = document.getElementById('pipeline');
+  pipeline.style.display = 'block';
+
+  const steps = ['step0','step1','step2','step3','step4'];
+  const icons = ['📖','🏷️','🎯','✍️','📤'];
+  const labels = ['Mail lezen...','Categoriseren...','Prioriteit bepalen...','Antwoord schrijven...','Verzending controleren...'];
+
+  // Reset steps
+  steps.forEach(function(id, stepIndex) {
+    var el = document.getElementById(id);
+    el.className = 'pipe-step';
+    el.querySelector('.pipe-icon').textContent = '⏳';
+    el.querySelector('.pipe-label').textContent = labels[stepIndex].replace('...','');
+  });
+
+  // Animate first 3 steps locally
+  for (var i = 0; i < 3; i++) {
+    var el = document.getElementById(steps[i]);
+    el.classList.add('running');
+    el.querySelector('.pipe-icon').textContent = icons[i];
+    el.querySelector('.pipe-label').textContent = labels[i];
+    await new Promise(r => setTimeout(r, 600));
+    el.classList.remove('running');
+    el.classList.add('done');
+    el.querySelector('.pipe-icon').textContent = '✓';
+    el.querySelector('.pipe-label').textContent = labels[i].replace('...','');
+  }
+
+  // Step 4: AI writes answer
+  var step3el = document.getElementById('step3');
+  step3el.classList.add('running');
+  step3el.querySelector('.pipe-icon').textContent = '✍️';
+  step3el.querySelector('.pipe-label').textContent = 'Antwoord schrijven...';
+
+  var mail = MAILS[index];
+  var reply, categorie, prioriteit;
+  var usedFallback = false;
+
+  try {
+    var raw = await callAPI('mail', 'Van: ' + mail.from + '\nOnderwerp: ' + mail.subject + '\nBericht: ' + mail.body);
+    var clean = raw.replace(/```json|```/g, '').trim();
+    var parsed = JSON.parse(clean);
+    categorie = String(parsed.categorie || '').toUpperCase();
+    prioriteit = String(parsed.prioriteit || '').toUpperCase();
+    reply = String(parsed.antwoord || '').trim();
+    if (!['LEAD', 'VRAAG', 'SPAM'].includes(categorie) || !['HOOG', 'NORMAAL', 'LAAG'].includes(prioriteit) || !reply) {
+      throw new Error('Ongeldig antwoordformaat van de AI-service.');
+    }
+  } catch(e) {
+    var fallback = getLocalMailResult(index);
+    categorie = fallback.categorie;
+    prioriteit = fallback.prioriteit;
+    reply = fallback.antwoord;
+    usedFallback = true;
+  }
+
+  var isSpam = categorie === 'SPAM';
+  if (isSpam) reply = 'Geen antwoord opgesteld. Deze mail is als spam gemarkeerd.';
+
+  step3el.classList.remove('running');
+  step3el.classList.add('done');
+  step3el.querySelector('.pipe-icon').textContent = '✓';
+  step3el.querySelector('.pipe-label').textContent = isSpam ? 'Geen antwoord nodig' : 'Antwoord opgesteld';
+
+  await new Promise(r => setTimeout(r, 400));
+
+  // Step 5: simulate the routing decision; this demo never sends real mail.
+  var step4el = document.getElementById('step4');
+  step4el.classList.add('running');
+  step4el.querySelector('.pipe-icon').textContent = isSpam ? '🛑' : '📤';
+  step4el.querySelector('.pipe-label').textContent = isSpam ? 'Spam blokkeren...' : 'Verzending simuleren...';
+  await new Promise(r => setTimeout(r, 700));
+  step4el.classList.remove('running');
+  step4el.classList.add('done');
+  step4el.querySelector('.pipe-icon').textContent = '✓';
+  step4el.querySelector('.pipe-label').textContent = isSpam ? 'Niet verzonden' : 'Klaar voor verzending';
+
+  // Show result
+  var badge = document.getElementById('resultBadge');
+  var colors = { 'LEAD': 'background:rgba(200,255,0,0.15);color:var(--lime);border:1px solid rgba(200,255,0,0.3)',
+                 'VRAAG': 'background:rgba(100,180,255,0.15);color:#64b4ff;border:1px solid rgba(100,180,255,0.3)',
+                 'SPAM': 'background:rgba(255,80,80,0.15);color:#ff5050;border:1px solid rgba(255,80,80,0.3)' };
+  badge.style.cssText = colors[categorie] || colors['VRAAG'];
+  badge.textContent = categorie + ' · ' + prioriteit + (usedFallback ? ' · BACK-UP' : '');
+
+  document.getElementById('resultTitle').textContent = isSpam ? 'Beslissing' : 'Gegenereerd antwoord';
+  document.getElementById('resultText').textContent = reply;
+  var confirm = document.getElementById('sendConfirm');
+  confirm.style.display = 'flex';
+  confirm.style.color = isSpam ? '#ff8080' : 'var(--lime)';
+  confirm.textContent = isSpam
+    ? '✓ Spam herkend — geen antwoord verzonden'
+    : '✓ Demo afgerond — er is geen echte e-mail verzonden';
+  document.getElementById('autoResult').style.display = 'block';
+  automationRunning = false;
+}
+
+function resetAutomation() {
+  document.querySelectorAll('.inbox-mail').forEach(m => m.classList.remove('active'));
+  document.getElementById('pipeline').style.display = 'none';
+  document.getElementById('autoResult').style.display = 'none';
+  automationRunning = false;
+}
+
+document.querySelectorAll('.inbox-mail').forEach(mail => {
+  mail.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      runAutomation(Number(mail.dataset.index));
+    }
+  });
+});
+
+(function() {
+  var contactForm = document.querySelector('.contact-form');
+  var emailInput = document.getElementById('formEmail');
+  var emailErr = document.getElementById('emailError');
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function validateEmail() {
+    var val = emailInput.value.trim();
+    if (val.length === 0) {
+      emailErr.style.display = 'none';
+      emailInput.style.borderColor = '';
+      emailInput.setCustomValidity('');
+      emailInput.setAttribute('aria-invalid', 'false');
+      return;
+    }
+    if (!emailRegex.test(val)) {
+      emailErr.style.display = 'block';
+      emailInput.style.borderColor = 'rgba(255,107,107,0.6)';
+      emailInput.setCustomValidity('Vul een geldig e-mailadres in.');
+      emailInput.setAttribute('aria-invalid', 'true');
+    } else {
+      emailErr.style.display = 'none';
+      emailInput.style.borderColor = 'rgba(200,255,0,0.4)';
+      emailInput.setCustomValidity('');
+      emailInput.setAttribute('aria-invalid', 'false');
+    }
+  }
+
+  emailInput.addEventListener('blur', validateEmail);
+  emailInput.addEventListener('input', validateEmail);
+  contactForm.addEventListener('submit', validateEmail);
+
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('contact') === 'verzonden') {
+    document.getElementById('formSuccess').classList.add('visible');
+    params.delete('contact');
+    var cleanUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + '#contact';
+    window.history.replaceState({}, '', cleanUrl);
+  }
+})();
+
+// ── WORKFLOW DEMO ─────────────────────────────────────────────────────────
+const WF_FLOWS = [
+  {
+    trigger: 'Contactformulier ingevuld door Jan de Vries — "Interesse in een AI-website voor mijn bedrijf"',
+    steps: [
+      { icon: '📋', title: 'Trigger ontvangen', desc: 'Formulier binnenkomt op briqk.nl', done: 'Formulierdata opgeslagen', time: '0.2s' },
+      { icon: '🤖', title: 'Lead kwalificeren', desc: 'AI beoordeelt de aanvraag', done: 'Gecategoriseerd als: WARME LEAD', time: '1.1s' },
+      { icon: '📊', title: 'CRM bijwerken', desc: 'Contactpersoon aanmaken in CRM', done: 'Lead aangemaakt in Pipedrive', time: '0.8s' },
+      { icon: '📱', title: 'WhatsApp-notificatie', desc: 'Jij ontvangt een melding', done: '"Nieuwe warme lead: Jan de Vries"', time: '0.3s' },
+      { icon: '📧', title: 'Bevestiging sturen', desc: 'Automatische bevestigingsmail', done: 'Mail verstuurd naar jan@bedrijf.nl', time: '0.4s' },
+    ],
+    result: 'Jan ontvangt direct een bevestiging. Jij krijgt een WhatsApp met alle details. De lead staat in je CRM. Jij hoeft alleen nog maar te bellen.'
+  },
+  {
+    trigger: 'WhatsApp-bericht ontvangen van +31 6 12345678 — "Hallo, kunnen jullie mij helpen met een chatbot?"',
+    steps: [
+      { icon: '📱', title: 'Trigger ontvangen', desc: 'WhatsApp-bericht komt binnen', done: 'Bericht gedetecteerd', time: '0.1s' },
+      { icon: '🤖', title: 'Intentie herkennen', desc: 'AI analyseert het bericht', done: 'Intentie: chatbot aanvraag', time: '0.9s' },
+      { icon: '💬', title: 'Automatisch antwoord', desc: 'Gepersonaliseerd antwoord sturen', done: 'Antwoord verstuurd via WhatsApp', time: '1.2s' },
+      { icon: '📊', title: 'CRM bijwerken', desc: 'Contactpersoon aanmaken', done: 'Nieuw contact aangemaakt', time: '0.6s' },
+      { icon: '📅', title: 'Follow-up inplannen', desc: 'Reminder voor morgen 10:00', done: 'Reminder ingepland in agenda', time: '0.3s' },
+    ],
+    result: 'De klant krijgt direct een professioneel antwoord. Jij ontvangt een notificatie en hebt morgen een reminder om op te volgen. Niks vergeten.'
+  },
+  {
+    trigger: 'Afspraak ingepland via Calendly — Sandra Bakker, donderdag 15:00',
+    steps: [
+      { icon: '📅', title: 'Trigger ontvangen', desc: 'Nieuwe boeking via Calendly', done: 'Afspraak gedetecteerd', time: '0.2s' },
+      { icon: '📧', title: 'Bevestiging sturen', desc: 'Afspraakbevestiging per mail', done: 'Bevestiging verstuurd', time: '0.5s' },
+      { icon: '📊', title: 'CRM bijwerken', desc: 'Afspraak koppelen aan contact', done: 'CRM bijgewerkt met afspraak', time: '0.7s' },
+      { icon: '⏰', title: 'Reminders instellen', desc: '24u en 1u van tevoren herinnering', done: '2 reminders ingepland', time: '0.3s' },
+      { icon: '📋', title: 'Intakeformulier sturen', desc: 'Voorbereiding voor het gesprek', done: 'Intake verstuurd naar Sandra', time: '0.4s' },
+    ],
+    result: 'Sandra ontvangt een bevestiging, een intakeformulier en twee reminders. Jij hebt de afspraak in je CRM en wordt ook herinnerd. Zo verklein je de kans op no-shows.'
+  },
+  {
+    trigger: 'Offerte verstuurd aan Bakker Installaties — €1.750 voor Pro Website + Chatbot',
+    steps: [
+      { icon: '💼', title: 'Trigger ontvangen', desc: 'Offerte aangemaakt in Moneybird', done: 'Offerte gedetecteerd', time: '0.2s' },
+      { icon: '📊', title: 'CRM bijwerken', desc: 'Status naar "Offerte verstuurd"', done: 'Dealfase bijgewerkt', time: '0.5s' },
+      { icon: '⏱️', title: 'Follow-up timer starten', desc: 'Herinnering na 3 dagen zonder reactie', done: 'Timer gestart: 3 werkdagen', time: '0.3s' },
+      { icon: '📧', title: 'Follow-up voorbereiden', desc: 'Gepersonaliseerde follow-up mail', done: 'Follow-up klaar voor verzending', time: '0.8s' },
+      { icon: '📱', title: 'Notificatie instellen', desc: 'Melding als offerte bekeken wordt', done: 'Tracking actief op offerte', time: '0.3s' },
+    ],
+    result: 'Zodra de klant de offerte opent, krijg jij een melding. Na 3 dagen zonder reactie gaat automatisch een follow-up mail de deur uit. Jij vergeet nooit meer een offerte op te volgen.'
+  }
+];
+
+let wfRunning = false;
+let wfActive = -1;
+
+async function startWorkflow(idx) {
+  if (wfRunning) return;
+  wfRunning = true;
+  wfActive = idx;
+
+  // Update trigger buttons
+  document.querySelectorAll('.trigger-btn').forEach((b, i) => {
+    b.classList.toggle('active', i === idx);
+  });
+
+  // Show trigger info
+  const flow = WF_FLOWS[idx];
+  document.getElementById('wfTriggerInfo').style.display = 'block';
+  document.getElementById('wfTriggerText').textContent = flow.trigger;
+  document.getElementById('wfStatus').textContent = 'Simulatie draait...';
+  document.getElementById('wfResult').classList.remove('visible');
+
+  // Reset all steps
+  for (let i = 0; i < 5; i++) {
+    const step = document.getElementById('wfs' + i);
+    step.className = 'wf-step';
+    step.querySelector('.ws-icon').textContent = '⏳';
+    step.querySelector('.ws-title').textContent = flow.steps[i].title;
+    step.querySelector('.ws-desc').textContent = flow.steps[i].desc;
+    document.getElementById('wfs' + i + 's').textContent = '';
+    if (i < 4) document.getElementById('wfc' + i).classList.remove('active');
+  }
+
+  // Run steps
+  for (let i = 0; i < 5; i++) {
+    const step = document.getElementById('wfs' + i);
+    const s = flow.steps[i];
+
+    step.classList.add('running');
+    step.querySelector('.ws-icon').textContent = s.icon;
+    document.getElementById('wfs' + i + 's').textContent = '⟳ bezig';
+
+    await new Promise(r => setTimeout(r, 700 + Math.random() * 400));
+
+    step.classList.remove('running');
+    step.classList.add('done');
+    step.querySelector('.ws-desc').textContent = s.done;
+    document.getElementById('wfs' + i + 's').textContent = '✓ ' + s.time;
+
+    if (i < 4) {
+      await new Promise(r => setTimeout(r, 150));
+      document.getElementById('wfc' + i).classList.add('active');
+    }
+  }
+
+  // Show result
+  document.getElementById('wfStatus').textContent = 'Simulatie voltooid in < 4 seconden';
+  document.getElementById('wfResultText').textContent = flow.result;
+  document.getElementById('wfResult').classList.add('visible');
+  wfRunning = false;
+}
+
+function resetWorkflow() {
+  wfActive = -1;
+  wfRunning = false;
+  document.querySelectorAll('.trigger-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('wfTriggerInfo').style.display = 'none';
+  document.getElementById('wfStatus').textContent = 'Wacht op trigger (simulatie)...';
+  document.getElementById('wfResult').classList.remove('visible');
+  const flows = WF_FLOWS[0];
+  for (let i = 0; i < 5; i++) {
+    const step = document.getElementById('wfs' + i);
+    step.className = 'wf-step';
+    step.querySelector('.ws-icon').textContent = '⏳';
+    step.querySelector('.ws-title').textContent = flows.steps[i].title;
+    step.querySelector('.ws-desc').textContent = flows.steps[i].desc;
+    document.getElementById('wfs' + i + 's').textContent = '';
+    if (i < 4) document.getElementById('wfc' + i).classList.remove('active');
+  }
+}
+</script>
+</body>
+</html>
