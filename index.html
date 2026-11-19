@@ -603,6 +603,10 @@
   .focus-list li:last-child { border-bottom: 1px solid rgba(244,241,232,.1); }
   .focus-link { display: inline-flex; gap: 9px; color: var(--lime); text-decoration: none; font-size: 13px; font-weight: 700; }
   .focus-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+  .focus-bridge { display: grid; grid-template-columns: auto 1fr auto; gap: 28px; align-items: center; margin-top: 38px; padding: 24px 0 0; border-top: 1px solid rgba(244,241,232,.14); }
+  .focus-bridge-label { color: var(--lime); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
+  .focus-bridge-flow { color: var(--white); font-family: var(--font-display); font-size: 17px; letter-spacing: -.02em; }
+  .focus-bridge-note { max-width: 390px; color: #aeb5af; font-size: 13px; line-height: 1.6; text-align: right; }
 
   .journey-section { background: var(--paper); color: var(--ink); }
   .journey-section .section-tag { color: #527015; }
@@ -641,6 +645,8 @@
     .focus-grid { grid-template-columns: 1fr; }
     .focus-track, .focus-track + .focus-track { padding: 38px 0; border-left: 0; }
     .focus-track + .focus-track { border-top: 1px solid rgba(244,241,232,.16); }
+    .focus-bridge { grid-template-columns: 1fr; gap: 10px; }
+    .focus-bridge-note { max-width: 620px; text-align: left; }
     .journey-flow { grid-template-columns: 1fr 1fr; }
     .journey-step:nth-child(3) { border-left: 0; }
     .journey-step:nth-child(n+3) { border-top: 1px solid rgba(16,20,18,.16); }
@@ -670,17 +676,6 @@
   .duality-head span:last-child, .duality-label, .flow-desc { color: #aeb5af; }
   .duality-footer, .system-note, .lab-copy { font-size: 14px; }
   .focus-section { padding-bottom: 92px; }
-  .focus-journey { margin-top: 68px; padding-top: 26px; border-top: 1px solid rgba(244,241,232,.16); }
-  .focus-journey .journey-label { color: var(--lime); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-  .focus-journey .journey-flow { margin-top: 26px; border-color: rgba(244,241,232,.15); }
-  .focus-journey .journey-step { min-height: 190px; }
-  .focus-journey .journey-step + .journey-step { border-color: rgba(244,241,232,.13); }
-  .focus-journey .journey-step::after { display: none; }
-  .focus-journey .journey-step span { color: var(--lime); }
-  .focus-journey .journey-step h3 { margin-top: 34px; color: var(--white); }
-  .focus-journey .journey-step p { color: #b1b8b2; font-size: 15px; }
-  .focus-journey .journey-note { color: #b1b8b2; font-size: 14px; }
-  .focus-journey .journey-note strong { color: var(--white); }
   .review-entry { background: var(--paper); color: var(--ink); padding-top: 92px; padding-bottom: 92px; }
   .review-entry-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(50px,8vw,110px); align-items: start; }
   .review-entry .section-tag { color: #527015; }
@@ -704,7 +699,7 @@
   .how.approach-refined { padding-top: 96px; padding-bottom: 96px; }
   footer p { color: #aeb5af !important; }
   @media (max-width: 1000px) { .review-entry-grid { grid-template-columns: 1fr; } }
-  @media (max-width: 700px) { .review-card { grid-template-columns: 1fr; } .focus-journey .journey-step { min-height: 0; } }
+  @media (max-width: 700px) { .review-card { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -844,19 +839,13 @@
       <h3>Automatisering &amp; maatwerk</h3>
       <p>We begrijpen eerst hoe je bedrijf werkt. Pas daarna bouwen we de koppeling, workflow of gespecialiseerde AI die aantoonbaar werk uit handen neemt.</p>
       <ul class="focus-list"><li>Leadverwerking en CRM-koppelingen</li><li>E-mail, planning en notificaties</li><li>Klantportalen en branchespecifieke tools</li></ul>
-      <a class="focus-link" href="/blog/ai-automatisering-mkb">Lees hoe we processen automatiseren</a>
-      <a class="focus-link" href="/applicatie-ux-audit" style="margin-left:18px">Bekijk Product Review</a>
+      <a class="focus-link" href="/blog/ai-automatisering-mkb">Bekijk onze automatiseringsaanpak</a>
     </article>
   </div>
-  <div class="focus-journey" aria-label="Van eerste klik tot opvolging">
-    <div class="journey-label">De lijn die beide expertises verbindt</div>
-    <div class="journey-flow">
-      <article class="journey-step reveal"><span>01</span><h3>Vertrouwen</h3><p>De bezoeker begrijpt snel wie je bent en waarom je past.</p></article>
-      <article class="journey-step reveal"><span>02</span><h3>Aanvraag</h3><p>De juiste vragen verzamelen precies genoeg context.</p></article>
-      <article class="journey-step reveal"><span>03</span><h3>Verwerking</h3><p>Gegevens komen op de juiste plek in CRM of planning.</p></article>
-      <article class="journey-step reveal"><span>04</span><h3>Opvolging</h3><p>Routine loopt door; persoonlijk contact blijft menselijk.</p></article>
-    </div>
-    <div class="journey-note"><span><strong>Techniek volgt het proces.</strong> Niet andersom.</span><span>We automatiseren alleen waar het aantoonbaar waarde toevoegt.</span></div>
+  <div class="focus-bridge" aria-label="Van vertrouwen naar opvolging">
+    <div class="focus-bridge-label">Eén geheel</div>
+    <div class="focus-bridge-flow">Vertrouwen &rarr; aanvraag &rarr; verwerking &rarr; opvolging</div>
+    <p class="focus-bridge-note">Techniek volgt het proces. We automatiseren alleen waar dat aantoonbaar waarde toevoegt.</p>
   </div>
 </section>
 
