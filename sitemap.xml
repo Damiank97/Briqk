@@ -1,61 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://briqk.nl/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <loc>https://www.briqk.nl/</loc>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://briqk.nl/labs</loc>
-    <lastmod>2026-10-29</lastmod>
+    <loc>https://www.briqk.nl/labs</loc>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://briqk.nl/ai-website-laten-maken</loc>
+    <loc>https://www.briqk.nl/website-analyse</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.briqk.nl/applicatie-ux-audit</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.briqk.nl/ai-website-laten-maken</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://briqk.nl/website-laten-maken-arnhem</loc>
+    <loc>https://www.briqk.nl/website-laten-maken-arnhem</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://briqk.nl/website-laten-maken-mkb</loc>
+    <loc>https://www.briqk.nl/website-laten-maken-mkb</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://briqk.nl/whatsapp-bot-bedrijf</loc>
+    <loc>https://www.briqk.nl/whatsapp-bot-bedrijf</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://briqk.nl/blog/ai-voor-mkb</loc>
+    <loc>https://www.briqk.nl/blog/ai-voor-mkb</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://briqk.nl/blog/ai-automatisering-mkb</loc>
+    <loc>https://www.briqk.nl/blog/ai-automatisering-mkb</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://briqk.nl/privacy</loc>
+    <loc>https://www.briqk.nl/privacy</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://briqk.nl/voorwaarden</loc>
+    <loc>https://www.briqk.nl/voorwaarden</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

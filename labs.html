@@ -8,28 +8,28 @@
 <meta name="keywords" content="website laten maken, website laten maken MKB, website laten maken Arnhem, AI website laten maken, chatbot laten maken, WhatsApp bot, AI automatisering, website met chatbot, professionele website ZZP, website Arnhem">
 <meta property="og:title" content="Briqk Labs | Zelf slimme processen proberen">
 <meta property="og:description" content="Werkende demo's en simulaties van digitale assistenten, e-mailverwerking en workflows.">
-<meta property="og:image" content="https://briqk.nl/og-image-2026.png">
+<meta property="og:image" content="https://www.briqk.nl/og-image-2026.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Briqk — AI automatisering en websites voor het MKB">
-<meta property="og:url" content="https://briqk.nl/labs">
+<meta property="og:url" content="https://www.briqk.nl/labs">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Briqk Labs | Zelf slimme processen proberen">
 <meta name="twitter:description" content="Werkende demo's en simulaties van digitale assistenten, e-mailverwerking en workflows.">
-<meta name="twitter:image" content="https://briqk.nl/og-image-2026.png">
+<meta name="twitter:image" content="https://www.briqk.nl/og-image-2026.png">
 <meta name="twitter:image:alt" content="Briqk — AI automatisering en websites voor het MKB">
 <meta name="theme-color" content="#080808">
-<link rel="canonical" href="https://briqk.nl/labs">
+<link rel="canonical" href="https://www.briqk.nl/labs">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Briqk Labs","url":"https://briqk.nl/labs","description":"Werkende demo's en simulaties van digitale assistenten, e-mailverwerking en workflowautomatisering.","isPartOf":{"@type":"WebSite","name":"Briqk","url":"https://briqk.nl"},"about":{"@type":"Organization","name":"Briqk","email":"info@briqk.nl"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Briqk Labs","url":"https://www.briqk.nl/labs","description":"Werkende demo's en simulaties van digitale assistenten, e-mailverwerking en workflowautomatisering.","isPartOf":{"@type":"WebSite","name":"Briqk","url":"https://www.briqk.nl"},"about":{"@type":"Organization","name":"Briqk","email":"info@briqk.nl"}}</script>
 <script>document.documentElement.classList.add('js');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<script src="/assets/site-tracking.js" defer></script>
 <style>
   :root {
     --black: #0b0e0d;
@@ -582,10 +582,61 @@
   .labs-page .studio-standard,
   .labs-page #prijzen,
   .labs-page #contact { display: none !important; }
-  .labs-page #demo { padding-top: 164px; }
+  .labs-page #demo { padding-top: 128px; }
+  .labs-page .review-lab { padding-top: 164px; }
   .labs-page .main-nav { background: rgba(11,14,13,.95); }
   .labs-page footer { border-top: 1px solid rgba(244,241,232,.08); }
-  @media (max-width: 760px) { .labs-page #demo { padding-top: 126px; } }
+  @media (max-width: 760px) { .labs-page #demo { padding-top: 92px; } .labs-page .review-lab { padding-top: 126px; } }
+  /* REVIEW LAB */
+  .review-lab { background: var(--paper); color: var(--ink); }
+  .review-lab .section-tag { color: #527015; }
+  .review-lab-head { display: grid; grid-template-columns: 1fr .75fr; gap: 70px; align-items: end; }
+  .review-lab-head p { color: #566059; font-size: 17px; line-height: 1.8; }
+  .review-demo-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; margin-top: 56px; }
+  .annotated-example, .review-notes { border: 1px solid rgba(16,20,18,.14); border-radius: 20px; background: #fbf9f3; overflow: hidden; }
+  .example-toolbar { display: flex; justify-content: space-between; gap: 16px; padding: 16px 20px; border-bottom: 1px solid rgba(16,20,18,.12); color: #59635c; font-size: 13px; }
+  .example-canvas { position: relative; min-height: 430px; padding: 34px; background: linear-gradient(135deg,#d8ded7,#eef0e9); }
+  .fake-site { height: 100%; min-height: 362px; padding: 24px; border-radius: 13px; background: #fff; box-shadow: 0 24px 55px rgba(16,20,18,.13); }
+  .fake-nav { width: 100%; height: 22px; border-bottom: 1px solid #d9ddd9; }
+  .fake-hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; padding-top: 42px; }
+  .fake-title { width: 84%; height: 68px; background: #1e2922; border-radius: 5px; }
+  .fake-copy { width: 72%; height: 11px; margin-top: 18px; background: #bec6bf; box-shadow: 0 20px #d3d8d4,0 40px #d3d8d4; }
+  .fake-button { width: 128px; height: 38px; margin-top: 70px; background: #d6dcd7; border-radius: 6px; }
+  .fake-visual { min-height: 230px; background: linear-gradient(135deg,#b5c0b6,#77887a); border-radius: 10px; }
+  .annotation { position: absolute; width: 34px; height: 34px; border: 0; border-radius: 50%; background: #111512; color: var(--lime); font-weight: 700; cursor: pointer; box-shadow: 0 0 0 5px rgba(201,244,91,.45); }
+  .annotation[aria-pressed="true"] { background: var(--lime); color: var(--ink); }
+  .annotation.a1 { left: 8%; top: 27%; }.annotation.a2 { left: 45%; top: 65%; }.annotation.a3 { right: 10%; top: 32%; }
+  .review-notes { padding: 30px; }
+  .review-notes h3 { font-family: var(--font-display); font-size: 28px; letter-spacing: -.04em; }
+  .note-card { margin-top: 22px; padding: 20px; border-radius: 13px; background: #e9eee4; }
+  .note-priority { color: #4f6811; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  .note-card h4 { margin-top: 10px; font-size: 18px; }
+  .note-card p { margin-top: 8px; color: #58625b; font-size: 15px; line-height: 1.7; }
+  .mini-backlog { margin-top: 22px; list-style: none; }
+  .mini-backlog li { padding: 12px 0; border-top: 1px solid rgba(16,20,18,.12); color: #4e5851; font-size: 14px; }
+  .review-lab-cta { display: inline-flex; margin-top: 24px; padding: 13px 19px; border-radius: 9px; background: var(--ink); color: var(--white); font-weight: 700; text-decoration: none; }
+  .ux-check { background: #111512; }
+  .ux-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 70px; align-items: start; }
+  .ux-intro { position: sticky; top: 110px; }
+  .ux-intro p { margin-top: 22px; color: #aeb5af; font-size: 17px; }
+  .ux-form { padding: 30px; border: 1px solid rgba(244,241,232,.12); border-radius: 20px; background: #171d19; }
+  .ux-question { display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; padding: 18px 0; border-top: 1px solid rgba(244,241,232,.1); }
+  .ux-question:first-child { border-top: 0; }
+  .ux-question > p { max-width: 630px; color: #e6eae6; font-size: 15px; }
+  .binary { display: flex; gap: 7px; }
+  .binary label { cursor: pointer; }
+  .binary input { position: absolute; opacity: 0; }
+  .binary span { display: grid; place-items: center; min-width: 48px; min-height: 40px; padding: 8px 11px; border: 1px solid rgba(244,241,232,.18); border-radius: 8px; color: #bbc2bc; font-size: 13px; }
+  .binary input:checked + span { border-color: var(--lime); background: rgba(201,244,91,.1); color: var(--lime); }
+  .binary input:focus-visible + span { outline: 3px solid var(--lime); outline-offset: 3px; }
+  .ux-submit { width: 100%; margin-top: 24px; padding: 14px; border: 0; border-radius: 9px; background: var(--lime); color: var(--ink); font-weight: 700; cursor: pointer; }
+  .ux-result { display: none; margin-top: 18px; padding: 22px; border: 1px solid rgba(201,244,91,.25); border-radius: 13px; background: rgba(201,244,91,.07); }
+  .ux-result.visible { display: block; }
+  .ux-score { color: var(--lime); font: 700 30px/1 var(--font-display); }
+  .ux-result p { margin-top: 10px; color: #d4d9d5; }
+  .ux-result a { display: inline-flex; margin-top: 18px; color: var(--lime); font-weight: 700; }
+  @media(max-width:900px){.review-lab-head,.review-demo-grid,.ux-layout{grid-template-columns:1fr}.ux-intro{position:static}}
+  @media(max-width:600px){.example-canvas{min-height:340px;padding:20px}.fake-site{min-height:300px}.fake-hero{grid-template-columns:1fr}.fake-visual{display:none}.ux-form{padding:20px}.ux-question{grid-template-columns:1fr}.binary span{min-width:60px}}
 </style>
 </head>
 <body class="labs-page">
@@ -596,11 +647,12 @@
   <a href="/" class="nav-logo" aria-label="Briqk homepage" style="display:flex;align-items:center;gap:10px;"><svg width="22" height="34" viewBox="0 0 28 44" fill="none" aria-hidden="true" focusable="false" style="filter:drop-shadow(0 0 6px #C9F45B);flex-shrink:0;"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C9F45B"/></svg><span style="white-space:nowrap;color:var(--white);">Bri<span>qk</span></span></a>
   <ul class="nav-links">
     <li><a href="/">Briqk studio</a></li>
+    <li><a href="#review-example">Reviews</a></li>
     <li><a href="#demo">Assistenten</a></li>
     <li><a href="#ai-demo">E-mail</a></li>
     <li><a href="#workflow-demo">Workflows</a></li>
-    <li style="display:flex;align-items:center;"><a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" style="color:var(--white);text-decoration:none;font-size:13px;font-weight:500;padding:8px 18px;border:1px solid rgba(255,255,255,0.2);border-radius:100px;">Klantportaal ↗</a></li>
-    <li><a href="mailto:info@briqk.nl" class="nav-cta">Bespreek een toepassing</a></li>
+    <li style="display:flex;align-items:center;"><a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" style="color:var(--grey-text);text-decoration:none;font-size:13px;">Klantportaal</a></li>
+    <li><a href="/#contact" class="nav-cta" data-cta-offer="anders" data-cta-location="labs-nav">Plan een kennismaking</a></li>
   </ul>
   <button class="hamburger" id="hamburger" type="button" onclick="toggleMenu()" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -608,11 +660,12 @@
 </nav>
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobiele navigatie" aria-hidden="true">
   <a href="/">Briqk studio</a>
+  <a href="#review-example" onclick="toggleMenu()">Reviews</a>
   <a href="#demo" onclick="toggleMenu()">Assistenten</a>
   <a href="#ai-demo" onclick="toggleMenu()">E-mail</a>
   <a href="#workflow-demo" onclick="toggleMenu()">Workflows</a>
-  <a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" style="color:var(--grey-text)">Klantportaal ↗</a>
-  <a href="mailto:info@briqk.nl" style="color:var(--lime)">Bespreek een toepassing</a>
+  <a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" style="color:var(--grey-text)">Klantportaal</a>
+  <a href="/#contact" style="color:var(--lime)" data-cta-offer="anders" data-cta-location="labs-mobile-nav">Plan een kennismaking</a>
 </nav>
 
 <main id="main-content">
@@ -622,11 +675,11 @@
   <div class="hero-grid"></div>
   <div class="hero-shell">
     <div class="hero-copy">
-      <div class="hero-tag">Digital studio · Arnhem</div>
+      <div class="hero-tag">Briqk Labs · Arnhem</div>
       <h1 id="hero-title">Sterk op het scherm.<br><em>Slim erachter.</em></h1>
       <p class="hero-sub">We beginnen niet bij een AI-tool, maar bij jouw klantproces. Briqk doorgrondt hoe je bedrijf echt werkt en vertaalt dat naar <strong>onderscheidend webdesign, gespecialiseerde AI en automatisering op maat.</strong></p>
       <div class="hero-actions">
-        <a href="#werk" class="btn-primary">Bekijk ons werk <span aria-hidden="true">↓</span></a>
+        <a href="#werk" class="btn-primary">Bekijk ons werk</a>
         <a href="#contact" class="btn-ghost">Bespreek jouw idee</a>
       </div>
     </div>
@@ -676,17 +729,17 @@
         <h3>Technische expertise, helder in beeld.</h3>
         <p>Een compleet herontwerp voor een specialist in lijmen, kitten, coatings en montage. De nieuwe site vertaalt een breed technisch assortiment naar een rustige, zakelijke ervaring met duidelijke productroutes.</p>
         <div class="case-scope"><span>Strategie</span><span>Art direction</span><span>Webdesign</span><span>Development</span></div>
-        <a class="case-link" href="https://nijtec.nl/" target="_blank" rel="noopener noreferrer">Bekijk de website <span aria-hidden="true">↗</span><span class="sr-only"> van Nijtec (opent in een nieuw tabblad)</span></a>
+        <a class="case-link" href="https://nijtec.nl/" target="_blank" rel="noopener noreferrer">Bekijk de website<span class="sr-only"> van Nijtec (opent in een nieuw tabblad)</span></a>
       </div>
     </article>
     <article class="case-card stoke-case reveal">
       <div class="case-gallery" aria-label="Desktop- en mobiele preview van Stoke &amp; Smoke">
-        <a class="case-shot desktop" href="https://briqk-stokeandsmoke.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk Stoke &amp; Smoke op desktopformaat in een nieuw tabblad">
+        <div class="case-shot desktop">
           <img src="/assets/cases/stoke-smoke-desktop.webp" width="1280" height="760" loading="lazy" decoding="async" alt="Desktopweergave van de website van Stoke &amp; Smoke">
-        </a>
-        <a class="case-shot mobile" href="https://briqk-stokeandsmoke.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk Stoke &amp; Smoke op mobiel formaat in een nieuw tabblad">
+        </div>
+        <div class="case-shot mobile">
           <img src="/assets/cases/stoke-smoke-mobile.webp" width="390" height="844" loading="lazy" decoding="async" alt="Mobiele weergave van de website van Stoke &amp; Smoke">
-        </a>
+        </div>
         <span class="case-number">02</span>
       </div>
       <div class="case-copy">
@@ -694,8 +747,7 @@
         <h3>Je ruikt het vuur bijna door je scherm.</h3>
         <p>Een food-first website voor BBQ-catering uit Arnhem. Donker, warm en uitgesproken, met fotografie in de hoofdrol en een korte route van sfeer naar aanvraag via e-mail of WhatsApp.</p>
         <div class="case-scope"><span>Concept</span><span>Art direction</span><span>Webdesign</span><span>Leadflow</span></div>
-        <a class="case-link" href="https://briqk-stokeandsmoke.vercel.app/" target="_blank" rel="noopener noreferrer">Bekijk de website <span aria-hidden="true">↗</span><span class="sr-only"> van Stoke &amp; Smoke (opent in een nieuw tabblad)</span></a>
-        <p class="case-disclaimer">Nieuwe productieversie; het eigen domein wordt nog gekoppeld.</p>
+        <!-- Publieke link pas toevoegen zodra het eigen domein bevestigd is. -->
       </div>
     </article>
   </div>
@@ -752,7 +804,7 @@
         <div class="pillar-item">Agenda koppeling en reminders</div>
         <div class="pillar-item">Factuur en offerte workflows</div>
       </div>
-      <a href="/blog/ai-automatisering-mkb" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:13px;color:var(--lime);text-decoration:none;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Lees meer over AI automatisering →</a>
+      <a href="/blog/ai-automatisering-mkb" style="display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-size:13px;color:var(--lime);text-decoration:none;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Lees meer over AI automatisering</a>
     </div>
     <div class="pillar reveal">
       <div class="pillar-icon">🌐</div>
@@ -785,7 +837,7 @@
         <div class="pillar-item">Branche-specifieke AI assistent op maat</div>
         <div class="pillar-item">Prijs op aanvraag</div>
       </div>
-      <div class="pillar-links"><a href="#contact">Bespreek jouw idee →</a></div>
+      <div class="pillar-links"><a href="#contact">Bespreek jouw idee</a></div>
     </div>
   </div>
 </section>
@@ -797,11 +849,55 @@
       <div class="section-tag">Klantportaal</div>
       <h2 class="section-title" id="portal-title" style="max-width:560px;">Slim mag nooit onzichtbaar worden.</h2>
       <p class="portal-copy">Geen black box. In het Briqk-klantportaal zie je wat je chatbot beantwoordt, welke leads binnenkomen en wat automatisch is verwerkt. Zo blijft automatisering begrijpelijk en bestuurbaar.</p>
-      <a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" class="portal-link">Bekijk het portaal <span aria-hidden="true">↗</span><span class="sr-only">(opent in een nieuw tabblad)</span></a>
+      <a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" class="portal-link">Bekijk het portaal<span class="sr-only"> (opent in een nieuw tabblad)</span></a>
     </div>
     <div class="portal-shot reveal">
       <img src="/portal-screenshot.png" alt="Dashboard van het Briqk-klantportaal met statistieken over leads en automatiseringen" width="1306" height="750" loading="lazy" decoding="async">
     </div>
+  </div>
+</section>
+
+<!-- REVIEW EXAMPLE -->
+<section class="review-lab" id="review-example" aria-labelledby="review-example-title">
+  <div class="review-lab-head">
+    <div><div class="section-tag">Voorbeeld · fictieve website</div><h2 class="section-title" id="review-example-title">Zo ziet een Website Review eruit.</h2></div>
+    <p>Geen generieke score uit een tool, maar concrete observaties in beeld. Klik op de markeringen om te zien wat er schuurt, waarom dat telt en wat de oplossing is.</p>
+  </div>
+  <div class="review-demo-grid">
+    <div class="annotated-example">
+      <div class="example-toolbar"><span>Fictief voorbeeld · desktop</span><span>3 observaties</span></div>
+      <div class="example-canvas">
+        <div class="fake-site" aria-hidden="true"><div class="fake-nav"></div><div class="fake-hero"><div><div class="fake-title"></div><div class="fake-copy"></div><div class="fake-button"></div></div><div class="fake-visual"></div></div></div>
+        <button class="annotation a1" type="button" aria-label="Bekijk observatie 1" aria-pressed="true" data-review-note="0">1</button>
+        <button class="annotation a2" type="button" aria-label="Bekijk observatie 2" aria-pressed="false" data-review-note="1">2</button>
+        <button class="annotation a3" type="button" aria-label="Bekijk observatie 3" aria-pressed="false" data-review-note="2">3</button>
+      </div>
+    </div>
+    <aside class="review-notes" aria-live="polite">
+      <div class="section-tag" style="margin-bottom:8px">Actieve observatie</div><h3 id="reviewNoteTitle">De belofte blijft te algemeen</h3>
+      <div class="note-card"><div class="note-priority" id="reviewNotePriority">Must · Positionering</div><h4 id="reviewNoteWhy">Waarom dit telt</h4><p id="reviewNoteText">Een bezoeker kan niet snel bepalen voor wie de dienst bedoeld is. Daardoor voelt doorklikken als extra uitzoekwerk.</p></div>
+      <ul class="mini-backlog"><li><strong>Oplossing:</strong> <span id="reviewNoteFix">maak doelgroep, probleem en uitkomst concreet in de eerste twee zinnen.</span></li><li>Quick win: hoofdactie specifieker maken</li><li>Should: bewijs direct onder de hero plaatsen</li></ul>
+      <a class="review-lab-cta" href="/website-analyse" data-cta-offer="website_review" data-cta-location="labs-example">Ook zo'n review voor jouw site?</a>
+    </aside>
+  </div>
+</section>
+
+<!-- UX CHECK -->
+<section class="ux-check" id="ux-check" aria-labelledby="ux-check-title">
+  <div class="ux-layout">
+    <div class="ux-intro"><div class="section-tag">Zelftest · 2 minuten</div><h2 class="section-title" id="ux-check-title">Doe de 8-vragen UX-check.</h2><p>Alles gebeurt in je browser. We slaan je antwoorden niet op en vragen geen e-mailadres.</p></div>
+    <form class="ux-form" id="uxCheckForm">
+      <div class="ux-question" role="group" aria-labelledby="q1-label"><p id="q1-label">1. Zie je binnen 5 seconden wat het bedrijf doet en voor wie?</p><div class="binary"><label><input type="radio" name="q1" value="1" required><span>Ja</span></label><label><input type="radio" name="q1" value="0"><span>Nee</span></label></div></div>
+      <div class="ux-question" role="group" aria-labelledby="q2-label"><p id="q2-label">2. Is er één duidelijke hoofdactie boven de vouw, ook op mobiel?</p><div class="binary"><label><input type="radio" name="q2" value="1" required><span>Ja</span></label><label><input type="radio" name="q2" value="0"><span>Nee</span></label></div></div>
+      <div class="ux-question" role="group" aria-labelledby="q3-label"><p id="q3-label">3. Kun je op een telefoon alles lezen zonder in te zoomen?</p><div class="binary"><label><input type="radio" name="q3" value="1" required><span>Ja</span></label><label><input type="radio" name="q3" value="0"><span>Nee</span></label></div></div>
+      <div class="ux-question" role="group" aria-labelledby="q4-label"><p id="q4-label">4. Laadt de homepage op mobiel binnen ongeveer 3 seconden?</p><div class="binary"><label><input type="radio" name="q4" value="1" required><span>Ja</span></label><label><input type="radio" name="q4" value="0"><span>Nee</span></label></div></div>
+      <div class="ux-question" role="group" aria-labelledby="q5-label"><p id="q5-label">5. Heeft het contactformulier maximaal 5 velden?</p><div class="binary"><label><input type="radio" name="q5" value="1" required><span>Ja</span></label><label><input type="radio" name="q5" value="0"><span>Nee</span></label></div></div>
+      <div class="ux-question" role="group" aria-labelledby="q6-label"><p id="q6-label">6. Staan er concrete bewijzen: cases, foto's, namen of cijfers die kloppen?</p><div class="binary"><label><input type="radio" name="q6" value="1" required><span>Ja</span></label><label><input type="radio" name="q6" value="0"><span>Nee</span></label></div></div>
+      <div class="ux-question" role="group" aria-labelledby="q7-label"><p id="q7-label">7. Zegt elke knop wat er gebeurt na het klikken?</p><div class="binary"><label><input type="radio" name="q7" value="1" required><span>Ja</span></label><label><input type="radio" name="q7" value="0"><span>Nee</span></label></div></div>
+      <div class="ux-question" role="group" aria-labelledby="q8-label"><p id="q8-label">8. Weet een bezoeker wat de volgende stap is na een aanvraag?</p><div class="binary"><label><input type="radio" name="q8" value="1" required><span>Ja</span></label><label><input type="radio" name="q8" value="0"><span>Nee</span></label></div></div>
+      <button class="ux-submit" type="submit">Bekijk mijn uitslag</button>
+      <div class="ux-result" id="uxResult" role="status" aria-live="polite"><div class="ux-score" id="uxScore"></div><p id="uxAdvice"></p><a href="/website-analyse" data-cta-offer="website_review" data-cta-location="labs-ux-check">Bekijk de Website Review</a></div>
+    </form>
   </div>
 </section>
 
@@ -885,7 +981,7 @@
         <div class="cv-feature">Factuur en offerte workflows</div>
       </div>
       <div class="saas-badge" style="background:rgba(200,255,0,0.1);border-color:rgba(200,255,0,0.3);">⚙️ AI Automatisering</div>
-      <a href="/blog/ai-automatisering-mkb" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;color:var(--lime);text-decoration:none;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Ontdek alle mogelijkheden →</a>
+      <a href="/blog/ai-automatisering-mkb" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;color:var(--lime);text-decoration:none;opacity:0.8;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.8">Ontdek alle mogelijkheden</a>
     </div>
     <div class="cv-tool reveal" style="background:var(--black);">
       <!-- INBOX -->
@@ -946,7 +1042,7 @@
         </div>
         <div id="resultText" style="font-size:13px;color:var(--white);line-height:1.7;background:var(--grey);padding:14px 16px;border-radius:10px;white-space:pre-wrap;"></div>
         <div id="sendConfirm" style="display:none;margin-top:10px;font-size:12px;align-items:center;gap:6px;"></div>
-        <button type="button" onclick="resetAutomation()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere mail proberen</button>
+        <button type="button" onclick="resetAutomation()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">Andere mail proberen</button>
       </div>
     </div>
   </div>
@@ -1030,7 +1126,7 @@
         <div class="wf-result" id="wfResult" role="status" aria-live="polite">
           <div style="font-size:11px;color:var(--lime);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">✓ Simulatie voltooid</div>
           <div id="wfResultText" style="font-size:13px;color:var(--white);line-height:1.7;"></div>
-          <button type="button" onclick="resetWorkflow()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">← Andere trigger proberen</button>
+          <button type="button" onclick="resetWorkflow()" style="margin-top:12px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--grey-text);padding:8px 16px;border-radius:100px;font-size:12px;cursor:pointer;font-family:var(--font-body);">Andere trigger proberen</button>
         </div>
       </div>
     </div>
@@ -1084,7 +1180,7 @@
         </ul></div>
       </details>
       <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Starter')" style="margin-top:14px">Start gesprek</button>
-      <a class="pricing-detail" href="/website-laten-maken-mkb">Bekijk pakketdetails →</a>
+      <a class="pricing-detail" href="/website-laten-maken-mkb">Bekijk pakketdetails</a>
     </div>
     <div class="pricing-card featured reveal">
       <div class="pricing-badge">Aanbevolen</div>
@@ -1138,7 +1234,7 @@
         </ul></div>
       </details>
       <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Pro Website')" style="margin-top:14px">Start gesprek</button>
-      <a class="pricing-detail" href="/ai-website-laten-maken">Bekijk pakketdetails →</a>
+      <a class="pricing-detail" href="/ai-website-laten-maken">Bekijk pakketdetails</a>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">Chatbot Add-on</div>
@@ -1185,7 +1281,7 @@
         </ul></div>
       </details>
       <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('WhatsApp Bot')" style="margin-top:14px">Start gesprek</button>
-      <a class="pricing-detail" href="/whatsapp-bot-bedrijf">Bekijk pakketdetails →</a>
+      <a class="pricing-detail" href="/whatsapp-bot-bedrijf">Bekijk pakketdetails</a>
     </div>
     <div class="pricing-card reveal">
       <div class="pricing-name">Lead Qualifier Agent</div>
@@ -1228,8 +1324,8 @@
         <div class="contact-item"><div class="contact-item-icon" aria-hidden="true">🆓</div>Eerste gesprek gratis</div>
       </div>
     </div>
-    <form class="contact-form reveal" action="https://formspree.io/f/xlgpodnl" method="POST" aria-describedby="formPrivacy">
-      <input type="hidden" name="_next" value="https://briqk.nl/?contact=verzonden#contact" />
+    <form class="contact-form reveal" action="https://formspree.io/f/xlgpodnl" method="POST" aria-describedby="formPrivacy" data-track-form>
+      <input type="hidden" name="_next" value="https://www.briqk.nl/bedankt?offer=anders" />
       <input type="hidden" name="_subject" value="Nieuwe aanvraag via briqk.nl" />
       <label class="form-hp" aria-hidden="true">Laat dit veld leeg<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
       <div class="success-msg" id="formSuccess" role="status" aria-live="polite">Bedankt! Je aanvraag is verstuurd. We antwoorden binnen 24 uur per e-mail.</div>
@@ -1269,7 +1365,7 @@
         <textarea id="formBericht" name="bericht" placeholder="Vertel iets over jouw bedrijf..."></textarea>
       </div>
       <p class="form-note" id="formPrivacy">Je gegevens worden via Formspree verwerkt om je aanvraag te beantwoorden. Lees ons <a href="/privacy">privacybeleid</a>.</p>
-      <button type="submit" class="form-submit">Gratis kennismaking aanvragen</button>
+      <button type="submit" class="form-submit">Plan een kennismaking</button>
     </form>
   </div>
 </section>
@@ -1302,34 +1398,6 @@
 
 <script>
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-function loadAnalytics() {
-  if (window.__briqkAnalyticsLoaded) return;
-  window.__briqkAnalyticsLoaded = true;
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function() { window.dataLayer.push(arguments); };
-  window.gtag('js', new Date());
-  window.gtag('config', 'G-1H8P518FLC', { anonymize_ip: true });
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1H8P518FLC';
-  document.head.appendChild(script);
-}
-
-function setAnalyticsPreference(value) {
-  try { localStorage.setItem('briqkAnalyticsConsent', value); } catch (error) { /* Opslag kan door privacy-instellingen geblokkeerd zijn. */ }
-  document.getElementById('privacyBanner').hidden = true;
-  if (value === 'granted') loadAnalytics();
-}
-
-(function initialisePrivacyChoice() {
-  let choice = null;
-  try { choice = localStorage.getItem('briqkAnalyticsConsent'); } catch (error) { /* Toon de keuze opnieuw als opslag niet beschikbaar is. */ }
-  if (choice === 'granted') loadAnalytics();
-  if (choice !== 'granted' && choice !== 'denied') document.getElementById('privacyBanner').hidden = false;
-  document.getElementById('analyticsAccept').addEventListener('click', () => setAnalyticsPreference('granted'));
-  document.getElementById('analyticsDecline').addEventListener('click', () => setAnalyticsPreference('denied'));
-})();
 
 function startGesprek(interesse) {
   document.getElementById('contact').scrollIntoView({behavior: prefersReducedMotion ? 'auto' : 'smooth'});
@@ -1932,6 +2000,43 @@ function resetWorkflow() {
     document.getElementById('wfs' + i + 's').textContent = '';
     if (i < 4) document.getElementById('wfc' + i).classList.remove('active');
   }
+}
+
+const reviewNotes = [
+  { title: 'De belofte blijft te algemeen', priority: 'Must · Positionering', text: 'Een bezoeker kan niet snel bepalen voor wie de dienst bedoeld is. Daardoor voelt doorklikken als extra uitzoekwerk.', fix: 'maak doelgroep, probleem en uitkomst concreet in de eerste twee zinnen.' },
+  { title: 'De hoofdactie zegt te weinig', priority: 'Must · Conversie', text: '“Meer informatie” vertelt niet wat er na de klik gebeurt. Dat vergroot twijfel, zeker op mobiel.', fix: 'gebruik een concrete actie zoals “Plan een intake” of “Vraag de prijsindicatie aan”.' },
+  { title: 'Bewijs staat buiten beeld', priority: 'Should · Vertrouwen', text: 'De sterke voorbeelden komen pas laat op de pagina. Bezoekers moeten de belofte daardoor te lang op goed vertrouwen aannemen.', fix: 'plaats één relevante case of bewijsregel direct na de eerste uitleg.' }
+];
+
+document.querySelectorAll('[data-review-note]').forEach(function(button) {
+  button.addEventListener('click', function() {
+    var note = reviewNotes[Number(button.dataset.reviewNote)];
+    document.querySelectorAll('[data-review-note]').forEach(function(item) { item.setAttribute('aria-pressed', String(item === button)); });
+    document.getElementById('reviewNoteTitle').textContent = note.title;
+    document.getElementById('reviewNotePriority').textContent = note.priority;
+    document.getElementById('reviewNoteText').textContent = note.text;
+    document.getElementById('reviewNoteFix').textContent = note.fix;
+  });
+});
+
+var uxCheckForm = document.getElementById('uxCheckForm');
+if (uxCheckForm) {
+  uxCheckForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var data = new FormData(uxCheckForm);
+    var score = 0;
+    for (var q = 1; q <= 8; q += 1) score += Number(data.get('q' + q) || 0);
+    var advice = score >= 7
+      ? 'Sterke basis — kleine verbeteringen leveren het meest op.'
+      : score >= 4
+        ? 'Hier lopen aanvragen weg — een Review laat zien waar.'
+        : 'Waarschijnlijk zijn meer dan quick wins nodig — begin met een Review om dat te bepalen.';
+    document.getElementById('uxScore').textContent = score + ' van 8 keer ja';
+    document.getElementById('uxAdvice').textContent = advice;
+    document.getElementById('uxResult').classList.add('visible');
+    document.getElementById('uxResult').scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'nearest' });
+    if (window.BriqkAnalytics) window.BriqkAnalytics.track('ux_check_completed', { score: score });
+  });
 }
 </script>
 </body>
