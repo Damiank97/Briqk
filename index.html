@@ -24,7 +24,7 @@
 <link rel="canonical" href="https://www.briqk.nl">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.briqk.nl/#organization","name":"Briqk","legalName":"Kootstra Digital","url":"https://www.briqk.nl","logo":"https://www.briqk.nl/briqk_logo_square.png","image":"https://www.briqk.nl/og-image-2026.png","email":"info@briqk.nl","address":{"@type":"PostalAddress","addressLocality":"Arnhem","addressRegion":"Gelderland","addressCountry":"NL"},"description":"Briqk bouwt websites die klanten overtuigen en digitale processen die aanvragen goed verwerken en opvolgen, ontworpen als één geheel.","priceRange":"€€","areaServed":{"@type":"Country","name":"Nederland"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Webdesign, automatisering en analyse","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Webdesign en development","url":"https://www.briqk.nl/website-laten-maken-mkb"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automatisering en maatwerk","url":"https://www.briqk.nl/blog/ai-automatisering-mkb"}},{"@type":"Offer","price":"495","priceCurrency":"EUR","itemOffered":{"@type":"Service","name":"Website Review","url":"https://www.briqk.nl/website-analyse"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Product Review","url":"https://www.briqk.nl/applicatie-ux-audit"}}]}},{"@type":"ItemList","@id":"https://www.briqk.nl/#selected-work","name":"Werk van Briqk","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebSite","name":"Nijtec B.V.","url":"https://nijtec.nl/","creator":{"@id":"https://www.briqk.nl/#organization"}}},{"@type":"ListItem","position":2,"item":{"@type":"CreativeWork","name":"Websiteconcept Stoke & Smoke","creator":{"@id":"https://www.briqk.nl/#organization"}}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.briqk.nl/#organization","name":"Briqk","legalName":"Kootstra Digital","url":"https://www.briqk.nl","logo":"https://www.briqk.nl/briqk_logo_square.png","image":"https://www.briqk.nl/og-image-2026.png","email":"info@briqk.nl","address":{"@type":"PostalAddress","addressLocality":"Arnhem","addressRegion":"Gelderland","addressCountry":"NL"},"description":"Briqk bouwt websites die klanten overtuigen en digitale processen die aanvragen goed verwerken en opvolgen, ontworpen als één geheel.","priceRange":"€€","areaServed":{"@type":"Country","name":"Nederland"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Webdesign, automatisering en analyse","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Webdesign en development","url":"https://www.briqk.nl/website-laten-maken-mkb"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Automatisering en maatwerk","url":"https://www.briqk.nl/blog/ai-automatisering-mkb"}},{"@type":"Offer","price":"495","priceCurrency":"EUR","itemOffered":{"@type":"Service","name":"Website Review","url":"https://www.briqk.nl/website-analyse"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Product Review","url":"https://www.briqk.nl/applicatie-ux-audit"}}]}},{"@type":"ItemList","@id":"https://www.briqk.nl/#selected-work","name":"Werk van Briqk","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebSite","name":"Nijtec B.V.","url":"https://nijtec.nl/","creator":{"@id":"https://www.briqk.nl/#organization"}}},{"@type":"ListItem","position":2,"item":{"@type":"WebSite","name":"Stoke & Smoke","url":"https://stokeandsmoke.nl/","creator":{"@id":"https://www.briqk.nl/#organization"}}}]}]}</script>
 <script>document.documentElement.classList.add('js');</script>
 <link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -462,7 +462,7 @@
   .work-intro { color: #565e58; font-size: 16px; line-height: 1.8; max-width: 540px; justify-self: end; }
   .case-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
   .case-card { display: flex; flex-direction: column; min-width: 0; background: #fbf9f4; border: 1px solid rgba(16,20,18,.1); border-radius: 22px; overflow: hidden; box-shadow: 0 24px 70px rgba(24,31,27,.08); }
-  .case-gallery { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(88px, 116px); gap: 12px; align-items: center; height: 300px; padding: 14px; background: linear-gradient(145deg, #d8d5cc, #ebe8df); overflow: hidden; }
+  .case-gallery { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(88px, 116px); gap: 12px; align-items: center; height: 300px; padding: 14px; background: linear-gradient(145deg, #d8d5cc, #ebe8df); color: inherit; text-decoration: none; overflow: hidden; }
   .case-card.stoke-case .case-gallery { background: radial-gradient(circle at 85% 20%, rgba(249,136,7,.22), transparent 32%), #140e0b; }
   .case-shot { display: flex; align-items: center; justify-content: center; min-width: 0; max-height: 100%; overflow: hidden; border: 1px solid rgba(16,20,18,.13); border-radius: 11px; background: #fff; box-shadow: 0 12px 30px rgba(16,20,18,.16); }
   .case-shot.desktop { aspect-ratio: 1280 / 760; }
@@ -687,8 +687,8 @@
   .review-card p { margin-top: 8px; color: #58625b; font-size: 15px; }
   .review-card strong { color: #4f6811; font-size: 15px; white-space: nowrap; }
   .review-credit { margin-top: 16px; color: #59635c; font-size: 14px; }
-  .main-nav .portal-link { color: #b7bbb7; }
-  .main-nav .portal-link:hover { color: var(--white); }
+  .main-nav .portal-link { display: inline-flex; align-items: center; margin: 0; padding: 0; border: 0; border-radius: 0; background: none; color: #b7bbb7; font-size: 13px; font-weight: 400; }
+  .main-nav .portal-link:hover { background: none; border-color: transparent; color: var(--white); }
   .form-group label, .form-fieldset legend { font-size: 13px; text-transform: none; letter-spacing: 0; }
   .form-group select:invalid { color: #8f9891; }
   .interest-option { display: flex; align-items: center; gap: 11px; padding: 11px 12px; border: 1px solid rgba(244,241,232,.13); border-radius: 9px; color: #e5e9e5; font-size: 14px; cursor: pointer; }
@@ -797,7 +797,7 @@
       </div>
     </article>
     <article class="case-card stoke-case reveal">
-      <div class="case-gallery" aria-label="Desktop- en mobiele preview van Stoke &amp; Smoke">
+      <a class="case-gallery" href="https://stokeandsmoke.nl/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk de website van Stoke &amp; Smoke (opent in een nieuw tabblad)">
         <div class="case-shot desktop">
           <img src="/assets/cases/stoke-smoke-desktop.webp" width="1280" height="760" loading="lazy" decoding="async" alt="Desktopweergave van de website van Stoke &amp; Smoke">
         </div>
@@ -805,13 +805,13 @@
           <img src="/assets/cases/stoke-smoke-mobile.webp" width="390" height="844" loading="lazy" decoding="async" alt="Mobiele weergave van de website van Stoke &amp; Smoke">
         </div>
         <span class="case-number">02</span>
-      </div>
+      </a>
       <div class="case-copy">
         <div class="case-meta">Stoke &amp; Smoke · BBQ catering</div>
         <h3>Je ruikt het vuur bijna door je scherm.</h3>
         <p>Een food-first website voor BBQ-catering uit Arnhem. Donker, warm en uitgesproken, met fotografie in de hoofdrol en een korte route van sfeer naar aanvraag via e-mail of WhatsApp.</p>
         <div class="case-scope"><span>Concept</span><span>Art direction</span><span>Webdesign</span><span>Leadflow</span></div>
-        <!-- Publieke link pas toevoegen zodra het eigen domein bevestigd is. -->
+        <a class="case-link" href="https://stokeandsmoke.nl/" target="_blank" rel="noopener noreferrer">Bekijk de website<span class="sr-only"> van Stoke &amp; Smoke (opent in een nieuw tabblad)</span></a>
       </div>
     </article>
   </div>
