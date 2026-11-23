@@ -1,241 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Laten Maken MKB | Starter Website | Briqk</title>
-<meta name="description" content="Website laten maken voor MKB en ZZP. Professioneel ontwerp, slim contactformulier en beheerde hosting vanaf €850 eenmalig.">
-<link rel="canonical" href="https://www.briqk.nl/website-laten-maken-mkb">
-<meta property="og:title" content="Website Laten Maken MKB | Starter Website | Briqk">
-<meta property="og:description" content="Professionele website voor MKB en ZZP, met slim contactformulier en beheerde hosting vanaf €850 eenmalig.">
-<meta property="og:url" content="https://www.briqk.nl/website-laten-maken-mkb">
-<meta property="og:locale" content="nl_NL">
-<meta property="og:image" content="https://www.briqk.nl/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#080808">
-<link rel="icon" type="image/png" href="/favicon.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type":"Service","name":"Website Laten Maken MKB","url":"https://www.briqk.nl/website-laten-maken-mkb","provider":{"@id":"https://www.briqk.nl/#organization"},
-  "areaServed":{"@type":"Country","name":"Nederland"},"description":"Professionele websites voor MKB en ZZP, inclusief slim contactformulier en beheerde hosting."
-}
-</script>
-<script>document.documentElement.classList.add('js');</script>
-<link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/fonts/fonts.css">
-<script src="/assets/site-tracking.js" defer></script>
-<style>
-  :root{--black:#080808;--white:#F5F2ED;--lime:#C8FF00;--lime-dark:#9FCC00;--grey:#1A1A1A;--grey-mid:#2E2E2E;--grey-text:#aaa;--font-display:'Space Grotesk',sans-serif;--font-body:'Manrope',sans-serif;}
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden;}
-  a:focus-visible,.faq-q:focus-visible,summary:focus-visible{outline:3px solid var(--lime);outline-offset:4px;}
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;backdrop-filter:blur(16px);background:rgba(8,8,8,0.85);border-bottom:1px solid rgba(255,255,255,0.06);}
-  .nav-logo{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:-0.5px;color:var(--white);text-decoration:none;}
-  .nav-logo span{color:var(--lime);}
-  .nav-cta{background:var(--lime);color:var(--black)!important;padding:10px 22px;border-radius:100px;font-weight:500!important;font-size:14px!important;text-decoration:none;}
-  .nav-mobile-cta{display:none;background:var(--lime);color:var(--black);padding:9px 16px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none;}
-  nav ul{display:flex;gap:28px;list-style:none;}
-  nav ul a{color:var(--grey-text);text-decoration:none;font-size:14px;transition:color 0.2s;}
-  nav ul a:hover{color:var(--white);}
-  .page-hero{padding:140px 48px 80px;position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.06);}
-  .page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 40%,rgba(200,255,0,0.07) 0%,transparent 70%);pointer-events:none;}
-  .breadcrumb{font-size:13px;color:var(--grey-text);margin-bottom:20px;}
-  .breadcrumb a{color:var(--grey-text);text-decoration:none;}
-  .breadcrumb a:hover{color:var(--lime);}
-  .page-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(200,255,0,0.1);border:1px solid rgba(200,255,0,0.25);color:var(--lime);padding:6px 16px;border-radius:100px;font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;}
-  h1{font-family:var(--font-display);font-size:clamp(40px,5.5vw,72px);font-weight:800;line-height:1;letter-spacing:-2.5px;max-width:820px;margin-bottom:24px;}
-  h1 em{font-style:normal;color:var(--lime);}
-  .hero-sub{font-size:18px;color:var(--grey-text);max-width:560px;line-height:1.7;margin-bottom:36px;}
-  .hero-sub strong{color:var(--white);font-weight:400;}
-  .btn-primary{background:var(--lime);color:var(--black);padding:16px 32px;border-radius:100px;font-size:15px;font-weight:500;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;}
-  .btn-primary:hover{background:var(--lime-dark);transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,255,0,0.3);}
-  .btn-ghost{color:var(--white);padding:16px 24px;border-radius:100px;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;opacity:0.7;transition:opacity 0.2s;border:1px solid rgba(255,255,255,0.15);}
-  .btn-ghost:hover{opacity:1;}
-  section{padding:80px 48px;}
-  .section-tag{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--lime);margin-bottom:12px;}
-  h2{font-family:var(--font-display);font-size:clamp(28px,3.5vw,44px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin-bottom:16px;}
-  .section-sub{font-size:16px;color:var(--grey-text);max-width:560px;line-height:1.7;margin-bottom:48px;}
-  .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px;}
-  .feature-card{background:var(--grey);padding:36px;transition:background 0.2s;}
-  .feature-card:hover{background:#1f1f1f;}
-  .feature-icon{font-size:28px;margin-bottom:16px;}
-  .feature-card h3{font-family:var(--font-display);font-size:18px;font-weight:700;letter-spacing:-0.3px;margin-bottom:10px;}
-  .feature-card p{font-size:14px;color:var(--grey-text);line-height:1.7;}
-  .price-box{background:var(--grey);border:1px solid rgba(200,255,0,0.2);border-radius:20px;padding:48px;max-width:480px;margin-top:40px;}
-  .price-label{font-size:13px;color:var(--grey-text);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;}
-  .price-main{font-family:var(--font-display);font-size:64px;font-weight:800;letter-spacing:-3px;color:var(--white);line-height:1;}
-  .price-main sup{font-size:28px;font-weight:600;letter-spacing:0;}
-  .price-monthly{font-size:15px;color:var(--grey-text);margin-top:8px;}
-  .price-includes{margin-top:28px;display:flex;flex-direction:column;gap:10px;}
-  .price-includes li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--grey-text);list-style:none;}
-  .price-includes li::before{content:'✓';color:var(--lime);font-weight:700;flex-shrink:0;}
-  .faq-wrap{max-width:720px;}
-  .faq-q{background:var(--grey);padding:24px 28px;cursor:pointer;border-left:3px solid transparent;transition:border-color 0.2s;margin-bottom:2px;}
-  .faq-q:hover{border-left-color:rgba(200,255,0,0.4);}
-  .faq-q h3{font-size:15px;font-weight:600;font-family:var(--font-display);letter-spacing:-0.2px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
-  .faq-q h3 span{color:var(--lime);font-size:18px;flex-shrink:0;}
-  .faq-a{display:none;padding:0 28px 20px;background:var(--grey);font-size:14px;color:var(--grey-text);line-height:1.8;}
-  html:not(.js) .faq-a{display:block;}
-  .mobile-menu{display:none;position:relative;}
-  .mobile-menu summary{cursor:pointer;color:var(--white);font-size:13px;list-style:none;padding:9px 12px;border:1px solid rgba(255,255,255,0.18);border-radius:100px;}
-  .mobile-menu summary::-webkit-details-marker{display:none;}
-  .mobile-menu div{position:absolute;top:44px;right:0;min-width:190px;background:var(--grey);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:2px;box-shadow:0 16px 40px rgba(0,0,0,0.5);}
-  .mobile-menu a{color:var(--white);text-decoration:none;padding:10px 12px;border-radius:8px;font-size:14px;}
-  .cta-section{background:var(--grey);text-align:center;padding:80px 48px;}
-  .cta-section h2{max-width:600px;margin:0 auto 16px;}
-  .cta-section p{color:var(--grey-text);max-width:440px;margin:0 auto 36px;}
-  footer{border-top:1px solid rgba(255,255,255,0.06);padding:32px 48px;display:flex;justify-content:space-between;align-items:center;}
-  footer p{font-size:13px;color:var(--grey-text);}
-  .footer-logo{font-family:var(--font-display);font-weight:800;font-size:18px;}
-  .footer-logo span{color:var(--lime);}
-  @media(max-width:900px){nav{padding:16px 24px;gap:10px;}nav ul{display:none;}.mobile-menu{display:block;margin-left:auto;}.nav-mobile-cta{display:inline-flex;}.page-hero{padding:120px 24px 60px;}section{padding:60px 24px;}.feature-grid{grid-template-columns:1fr;}footer{flex-direction:column;gap:12px;text-align:center;}}
-  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition-duration:0.01ms!important;}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nieuwe website of redesign voor MKB | Briqk</title>
+  <meta name="description" content="Briqk ontwerpt en bouwt nieuwe websites en redesigns voor zzp en MKB. Bekijk de aanpak, cases en heldere startprijzen.">
+  <link rel="canonical" href="https://www.briqk.nl/website-laten-maken-mkb">
+  <meta property="og:title" content="Nieuwe website of redesign | Briqk">
+  <meta property="og:description" content="Websites met een eigen verhaal, sterk ontwerp en een duidelijke route naar contact.">
+  <meta property="og:url" content="https://www.briqk.nl/website-laten-maken-mkb">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.briqk.nl/og-image-2026.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0b0e0d">
+  <link rel="icon" href="/favicon.png">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/review-pages.css">
+  <link rel="stylesheet" href="assets/service-pages.css">
+  <script src="assets/site-tracking.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Nieuwe website en website redesign","url":"https://www.briqk.nl/website-laten-maken-mkb","provider":{"@id":"https://www.briqk.nl/#organization"},"areaServed":{"@type":"Country","name":"Nederland"},"description":"Strategie, webdesign en development voor nieuwe websites en redesigns."}</script>
 </head>
 <body>
-<nav aria-label="Hoofdnavigatie">
-  <a href="/" class="nav-logo">Bri<span>qk</span></a>
-  <ul>
-    <li><a href="/#diensten-detail">Diensten</a></li>
-    <li><a href="/#prijzen">Prijzen</a></li>
-    <li><a href="/#demo">AI Demo</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="/#contact" class="nav-cta">Plan een kennismaking</a></li>
-  </ul>
-  <details class="mobile-menu"><summary>Menu</summary><div><a href="/#diensten-detail">Diensten</a><a href="/#prijzen">Prijzen</a><a href="/#demo">AI-demo</a><a href="#faq">FAQ</a></div></details>
-  <a href="/#contact" class="nav-mobile-cta">Plan een kennismaking</a>
-</nav>
+  <a class="skip-link" href="#main">Naar hoofdinhoud</a>
+  <nav class="nav service-nav" aria-label="Hoofdnavigatie">
+    <a class="logo" href="/" aria-label="Briqk homepage"><svg width="20" height="30" viewBox="0 0 28 44" aria-hidden="true"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#c9f45b"/></svg><span>Bri<b>qk</b></span></a>
+    <div class="nav-links"><a href="/#werk">Ons werk</a><a href="/website-laten-maken-mkb" aria-current="page">Websites</a><a href="/automatisering">Automatisering</a><a href="/#reviews">Reviews</a><a class="nav-cta" href="/#contact" data-cta-offer="website" data-cta-location="nav">Plan een kennismaking</a></div>
+  </nav>
+  <main id="main">
+    <section class="hero service-hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Websites</div>
+          <h1>Nieuw bouwen of opnieuw beginnen. Altijd met een eigen verhaal.</h1>
+          <p>We combineren positionering, art direction en development tot een website die past bij de kwaliteit van je bedrijf en bezoekers gericht laat doorpakken.</p>
+          <div class="hero-actions"><a class="button" href="/#contact" data-cta-offer="website" data-cta-location="hero">Bespreek je website</a><a class="button secondary" href="#mogelijkheden">Bekijk de mogelijkheden</a></div>
+          <p class="hero-note">Nieuwe website vanaf €850 · Redesign op offerte</p>
+        </div>
+        <aside class="proof-card" aria-label="Drie routes voor websites">
+          <div class="proof-label">Kies wat past</div>
+          <h2>Je hoeft niet altijd eerst een Review te doen.</h2>
+          <ul class="route-list"><li><strong>Nieuwe website</strong><span>Direct van strategie naar ontwerp en bouw.</span></li><li><strong>Website Redesign</strong><span>Een bestaande site inhoudelijk en visueel opnieuw neerzetten.</span></li><li><strong>Website Review</strong><span>Alleen als nog niet duidelijk is wat er beter moet.</span></li></ul>
+        </aside>
+      </div>
+    </section>
 
-<main>
-<div class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="breadcrumb"><a href="/">Briqk</a> / Website Laten Maken MKB</div>
-  <div class="page-tag">⚡ Starter pakket · Populair bij ZZP</div>
-  <h1>Website laten maken<br>voor <em>MKB en ZZP</em></h1>
-  <p class="hero-sub">Een professionele website die klanten overtuigt. <strong>Inclusief slim contactformulier, mobielvriendelijk design en beheerde hosting.</strong> De planning leggen we vooraf vast.</p>
-  <div style="display:flex;gap:16px;flex-wrap:wrap;">
-    <a href="/#contact" class="btn-primary">Plan een kennismaking</a>
-    <a href="/#demo" class="btn-ghost">Bekijk AI demo</a>
-  </div>
-</div>
+    <section class="paper" id="mogelijkheden" aria-labelledby="routes-title">
+      <div class="section-head"><div><div class="section-kicker">Mogelijkheden</div><h2 id="routes-title">Eén discipline, drie verschillende vertrekpunten.</h2></div><p>We kiezen de route op basis van wat er al is en hoe duidelijk de opdracht is.</p></div>
+      <div class="service-cards">
+        <article class="service-card"><div class="label">Nieuwe website</div><h3>Vanaf een leeg canvas</h3><p>Positionering, structuur, visueel ontwerp en development als één samenhangend traject.</p><a href="#prijzen">Bekijk de startprijs</a></article>
+        <article class="service-card"><div class="label">Website Redesign</div><h3>De bestaande basis opnieuw doordacht</h3><p>Voor organisaties waarvan de huidige site niet meer past bij het merk, aanbod of de doelgroep.</p><a href="/#contact">Bespreek een redesign</a></article>
+        <article class="service-card"><div class="label">Website Review</div><h3>Eerst scherp krijgen wat er misgaat</h3><p>Een concrete analyse met prioriteiten en advies: verbeteren, redesignen of opnieuw bouwen.</p><a href="/website-analyse">Bekijk de Website Review</a></article>
+      </div>
+    </section>
 
-<section>
-  <div class="section-tag">Wat je krijgt</div>
-  <h2>Duidelijke start- en maandprijs</h2>
-  <p class="section-sub">Vooraf weet je wat de bouw, hosting en het onderhoud kosten.</p>
-  <p class="section-sub" style="margin-top:-30px">Twijfel je of je echt een nieuwe site nodig hebt? Begin dan met een <a href="/website-analyse" style="color:var(--lime)">Website Review</a>.</p>
-  <div class="feature-grid">
-    <div class="feature-card">
-      <div class="feature-icon">⚡</div>
-      <h3>Snel live</h3>
-      <p>Na een complete intake kan een compacte website vaak binnen 5-7 werkdagen klaarstaan. De planning spreken we vooraf af.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📱</div>
-      <h3>Mobielvriendelijk</h3>
-      <p>Jouw website werkt helder op telefoon, tablet en desktop. Dat helpt bezoekers én vormt een sterke technische basis voor zoekmachines.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🤖</div>
-      <h3>Slim contactformulier</h3>
-      <p>Het contactformulier vraagt direct naar de relevante bedrijfsinformatie en interesse, zodat aanvragen overzichtelijk binnenkomen.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔍</div>
-      <h3>SEO basisoptimalisatie</h3>
-      <p>Correcte titels, meta descriptions, structured data en aandacht voor snelle laadtijden. Een solide technische SEO-basis.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🌐</div>
-      <h3>Gratis hosting</h3>
-      <p>Beheerde hosting via Vercel, inclusief SSL-certificaat (https), monitoring en technisch onderhoud.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">✏️</div>
-      <h3>Handleiding</h3>
-      <p>Je ontvangt een duidelijke handleiding om teksten zelf aan te passen. Geen technische kennis nodig.</p>
-    </div>
-  </div>
-</section>
+    <section class="soft" aria-labelledby="work-title">
+      <div class="section-head"><div><div class="section-kicker">Recent werk</div><h2 id="work-title">Geen vaste stijl. Wel een duidelijke lijn.</h2></div><p>Een technische leverancier vraagt om iets anders dan een uitgesproken cateringmerk. Het ontwerp volgt het bedrijf.</p></div>
+      <div class="showcase-grid">
+        <article class="showcase-card"><a class="showcase-image" href="https://nijtec.nl/" target="_blank" rel="noopener noreferrer"><img src="assets/cases/nijtec-desktop.webp" width="1280" height="760" loading="lazy" alt="Website van Nijtec"></a><div class="showcase-copy"><h3>Nijtec B.V.</h3><p>Rustige productroutes en een zakelijke vertaling van technische expertise.</p></div></article>
+        <article class="showcase-card"><a class="showcase-image" href="https://stokeandsmoke.nl/" target="_blank" rel="noopener noreferrer"><img src="assets/cases/stoke-smoke-desktop.webp" width="1280" height="760" loading="lazy" alt="Website van Stoke &amp; Smoke"></a><div class="showcase-copy"><h3>Stoke &amp; Smoke</h3><p>Een warme, food-first website die sfeer snel omzet in een aanvraag.</p></div></article>
+      </div>
+    </section>
 
-<section style="background:var(--grey);">
-  <div class="section-tag">Investering</div>
-  <h2>Transparante prijs</h2>
-  <div class="price-box">
-    <div class="price-label">Eenmalig</div>
-    <div class="price-main"><sup>€</sup>850</div>
-    <div class="price-monthly">€99/maand — onderhoud, updates en support</div>
-    <ul class="price-includes" style="margin-top:28px;">
-      <li>Professionele website (tot 5 pagina's)</li>
-          <li>Slim contactformulier</li>
-          <li>Mobielvriendelijk design</li>
-          <li>SEO basisoptimalisatie</li>
-          <li>Hosting via Vercel</li>
-          <li>1 revisieronde</li>
-          <li>Handleiding voor zelf aanpassen</li>
-          <li>Reactie binnen 1 werkdag</li>
-    </ul>
-    <a href="/#contact" class="btn-primary" style="margin-top:32px;width:100%;justify-content:center;">Plan een kennismaking</a>
-  </div>
-</section>
+    <section class="paper" aria-labelledby="process-title">
+      <div class="section-head"><div><div class="section-kicker">Werkwijze</div><h2 id="process-title">Van richting naar een website die echt staat.</h2></div><p>Je kijkt mee in een werkende versie en geeft feedback op wat je daadwerkelijk ziet.</p></div>
+      <div class="process"><article><span>Richting</span><h3>Merk, doelgroep en inhoud</h3><p>We bepalen wat de website moet vertellen, voor wie en welke actie centraal staat.</p></article><article><span>Ontwerp</span><h3>Een visuele wereld die eigen voelt</h3><p>Geen template met een ander logo, maar art direction die bij het bedrijf past.</p></article><article><span>Bouw</span><h3>Responsive, snel en beheersbaar</h3><p>We bouwen, testen en lanceren met aandacht voor mobiel, snelheid en conversie.</p></article></div>
+    </section>
 
-<section id="faq">
-  <div class="section-tag">Veelgestelde vragen</div>
-  <h2>Alles wat je wil weten</h2>
-  <div class="faq-wrap">
-    <div class="faq-q" style="border-left:3px solid transparent;margin-bottom:2px;">
-      <h3>Wat kost een website laten maken voor MKB? <span>+</span></h3>
-    </div>
-    <div class="faq-a">Een professionele website laten maken bij Briqk kost €850 eenmalig. Daarna betaal je €99/maand voor onderhoud, updates en support. Geen verborgen kosten.</div>
-    <div class="faq-q" style="border-left:3px solid transparent;margin-bottom:2px;">
-      <h3>Wat heb ik nodig om te beginnen? <span>+</span></h3>
-    </div>
-    <div class="faq-a">Je vult ons intakeformulier in met bedrijfsinformatie, diensten en gewenste pagina's. Heb je een logo en teksten? Dan gaan we daarmee aan de slag. Geen logo of tekst? Dan bespreken we wat er nodig is.</div>
-    <div class="faq-q" style="border-left:3px solid transparent;margin-bottom:2px;">
-      <h3>Kan ik later een chatbot toevoegen? <span>+</span></h3>
-    </div>
-    <div class="faq-a">Ja. Je kunt op elk moment de AI Chatbot Add-on erbij nemen voor €600 eenmalig + €149/mnd. De Starter Website is gebouwd om later uit te breiden.</div>
-    <div class="faq-q" style="border-left:3px solid transparent;margin-bottom:2px;">
-      <h3>Is SEO inbegrepen? <span>+</span></h3>
-    </div>
-    <div class="faq-a">Ja, de SEO basisoptimalisatie is standaard inbegrepen. Dit omvat correcte title tags, meta descriptions, H1-structuur en een laadtijd onder 3 seconden.</div>
-  </div>
-</section>
+    <section class="soft" id="prijzen" aria-labelledby="price-title">
+      <div class="section-head"><div><div class="section-kicker">Startprijzen</div><h2 id="price-title">Duidelijk waar het kan. Op maat waar het nodig is.</h2></div><p>Een redesign hangt af van de omvang en bestaande techniek. Daarom ontvang je daarvoor eerst een heldere offerte.</p></div>
+      <div class="package-grid">
+        <article class="package-card featured"><div class="label">Nieuwe website</div><h3>Starter Website</h3><div class="package-price">€850</div><div class="package-period">eenmalig + €99 per maand</div><ul><li>Tot vijf pagina’s</li><li>Responsive ontwerp</li><li>Contactformulier</li><li>SEO-basis en beheer</li></ul><a class="button" href="/#contact" data-cta-offer="starter_website" data-cta-location="website-prijzen">Plan een kennismaking</a></article>
+        <article class="package-card"><div class="label">Uitgebreide website</div><h3>Website + assistent</h3><div class="package-price">€1.750</div><div class="package-period">eenmalig + €249 per maand</div><ul><li>Alles uit Starter</li><li>Digitale assistent</li><li>Agenda en leadcapture</li><li>Rapportage en beheer</li></ul><a class="button" href="/#contact" data-cta-offer="pro_website" data-cta-location="website-prijzen">Bespreek dit pakket</a></article>
+        <article class="package-card"><div class="label">Website Redesign</div><h3>Opnieuw ontwerpen en bouwen</h3><div class="package-price">Op offerte</div><div class="package-period">de Review wordt binnen 30 dagen verrekend</div><ul><li>Nieuwe contentstructuur</li><li>Art direction en UX</li><li>Responsive development</li><li>Migratie en livegang</li></ul><a class="button" href="/#contact" data-cta-offer="website_redesign" data-cta-location="website-prijzen">Bespreek een redesign</a></article>
+      </div>
+    </section>
 
-<div class="cta-section">
-  <div class="section-tag">Starten?</div>
-  <h2>Klaar voor jouw <em style="font-style:normal;color:var(--lime);">AI-powered</em> bedrijf?</h2>
-  <p>Vraag een gratis kennismaking van 30 minuten aan. Geen verplichtingen.</p>
-  <a href="/#contact" class="btn-primary">Plan een kennismaking</a>
-</div>
-</main>
-
-<footer>
-  <div class="footer-logo">Bri<span>qk</span></div>
-  <p>© 2026 Briqk · Arnhem, Gelderland · <a href="/" style="color:var(--grey-text);">AI website laten maken voor MKB en ZZP</a></p>
-  <p style="font-size:12px;color:#aaa;"><a href="/website-laten-maken-arnhem" style="color:#bbb;">Arnhem</a> · <a href="/ai-website-laten-maken" style="color:#bbb;">AI-website</a> · <a href="/whatsapp-bot-bedrijf" style="color:#bbb;">WhatsApp-bot</a> · <a href="/privacy" style="color:#bbb;">Privacy</a> · <a href="/voorwaarden" style="color:#bbb;">Voorwaarden</a></p>
-</footer>
-<script>
-  document.querySelectorAll('.faq-q').forEach(q=>{
-    q.setAttribute('role','button');
-    q.setAttribute('tabindex','0');
-    q.setAttribute('aria-expanded','false');
-    const toggleFaq=()=>{
-      const a=q.nextElementSibling;
-      const icon=q.querySelector('span');
-      const open=a.style.display==='block';
-      document.querySelectorAll('.faq-a').forEach(x=>x.style.display='none');
-      document.querySelectorAll('.faq-q').forEach(x=>{x.querySelector('span').textContent='+';x.style.borderLeftColor='transparent';x.setAttribute('aria-expanded','false');});
-      if(!open){a.style.display='block';icon.textContent='−';q.style.borderLeftColor='var(--lime)';q.setAttribute('aria-expanded','true');}
-    };
-    q.addEventListener('click',toggleFaq);
-    q.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq();}});
-  });
-</script>
+    <section class="cta-band"><div><h2>Weet je al dat er een nieuwe website nodig is?</h2><p>Dan starten we direct met de opdracht. Twijfel je nog tussen verbeteren en opnieuw bouwen, dan is de Website Review de logischere eerste stap.</p></div><a class="button" href="/#contact" data-cta-offer="website" data-cta-location="website-cta">Plan een kennismaking</a></section>
+  </main>
+  <footer><div class="footer-grid"><div><a class="logo" href="/"><span>Bri<b>qk</b></span></a><p class="footer-copy" style="margin-top:14px">Websites en slimme digitale processen · Arnhem</p></div><nav class="footer-nav" aria-label="Voettekst"><a href="/#werk">Ons werk</a><a href="/automatisering">Automatisering</a><a href="/website-analyse">Website Review</a><a href="/labs">Labs</a><a href="/privacy">Privacy</a><a href="/voorwaarden">Voorwaarden</a></nav></div><p class="legal">Briqk is een handelsnaam van Kootstra Digital · info@briqk.nl</p></footer>
+  <aside class="privacy-banner" id="privacyBanner" hidden aria-label="Privacyvoorkeuren"><div class="privacy-inner"><p>Met jouw toestemming gebruiken we Google Analytics om de website te verbeteren. Geen advertentiecookies. <a href="/privacy">Meer informatie</a>.</p><div class="privacy-actions"><button id="analyticsDecline" type="button">Weigeren</button><button id="analyticsAccept" class="accept" type="button">Toestaan</button></div></div></aside>
 </body>
 </html>

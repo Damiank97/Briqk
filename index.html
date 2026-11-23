@@ -522,7 +522,7 @@
   .standard-item span { color: #527015; font-size: 11px; letter-spacing: .11em; text-transform: uppercase; }
   .standard-item h3 { font-family: var(--font-display); font-size: 23px; letter-spacing: -.035em; margin-top: 34px; }
   .standard-item p { color: #5e665f; font-size: 14px; line-height: 1.75; margin-top: 12px; }
-  #prijzen { background: #0b0e0d; }
+  #legacy-prijzen { background: #0b0e0d; }
   .pricing-grid { gap: 16px; }
   .pricing-card { border-radius: 20px; background: #151a17; border-color: rgba(244,241,232,.1); }
   .pricing-card.featured { background: var(--paper); color: var(--ink); }
@@ -700,6 +700,75 @@
   footer p { color: #aeb5af !important; }
   @media (max-width: 1000px) { .review-entry-grid { grid-template-columns: 1fr; } }
   @media (max-width: 700px) { .review-card { grid-template-columns: 1fr; } }
+
+  /* CLEAR OFFER STRUCTURE */
+  .hero { min-height: 780px; padding-top: 138px; padding-bottom: 70px; }
+  .hero-shell { grid-template-columns: minmax(0, 1.04fr) minmax(390px, .96fr); gap: clamp(52px, 7vw, 100px); }
+  .hero h1 { max-width: 760px; font-size: clamp(48px, 5.25vw, 78px); line-height: .98; }
+  .hero h1 em::after { bottom: -.01em; height: .11em; }
+  .hero-sub { max-width: 660px; }
+  .hero-route-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+  .hero-project { display: block; width: 100%; color: var(--white); text-decoration: none; border: 1px solid rgba(244,241,232,.15); border-radius: 22px; overflow: hidden; background: #141916; box-shadow: 0 32px 90px rgba(0,0,0,.32); }
+  .hero-project-head, .hero-project-foot { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 18px; }
+  .hero-project-head { color: #b7beb8; font-size: 13px; }
+  .hero-project-head strong { color: var(--lime); font-size: 13px; }
+  .hero-project-window { aspect-ratio: 1280 / 735; overflow: hidden; border-block: 1px solid rgba(244,241,232,.11); background: #e9e4d8; }
+  .hero-project-window img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .45s ease; }
+  .hero-project:hover .hero-project-window img { transform: scale(1.015); }
+  .hero-project-foot span { color: #aeb5af; font-size: 13px; }
+  .hero-project-foot strong { color: var(--white); font-family: var(--font-display); font-size: 18px; }
+
+  .focus-number { font-size: 13px; letter-spacing: .08em; }
+  .focus-bridge { grid-template-columns: auto 1fr auto; }
+  .focus-review-link { color: var(--lime); font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+  .focus-review-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+  .offer-section { background: var(--paper); color: var(--ink); }
+  .offer-section .section-tag { color: #527015; }
+  .offer-section .section-title { max-width: 900px; color: var(--ink); }
+  .offer-intro { max-width: 700px; margin-top: 24px; color: #525c55; font-size: 17px; line-height: 1.75; }
+  .offer-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 54px; }
+  .offer-card { display: flex; min-height: 410px; flex-direction: column; padding: 32px; border: 1px solid rgba(16,20,18,.15); border-radius: 18px; background: #faf8f2; }
+  .offer-card.primary { background: var(--ink); color: var(--white); }
+  .offer-type { color: #5d6d1e; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .offer-card.primary .offer-type { color: var(--lime); }
+  .offer-card h3 { margin-top: 34px; font-family: var(--font-display); font-size: 29px; line-height: 1.05; letter-spacing: -.045em; }
+  .offer-price { margin-top: 18px; font-family: var(--font-display); font-size: 34px; font-weight: 700; letter-spacing: -.05em; }
+  .offer-period { min-height: 22px; margin-top: 4px; color: #667069; font-size: 13px; }
+  .offer-card.primary .offer-period { color: #aeb5af; }
+  .offer-card p { margin-top: 22px; color: #58625b; font-size: 15px; line-height: 1.7; }
+  .offer-card.primary p { color: #b8beb9; }
+  .offer-card ul { display: grid; gap: 9px; margin: 24px 0 30px; padding: 0; list-style: none; color: #323a35; font-size: 14px; }
+  .offer-card.primary ul { color: #e3e6e3; }
+  .offer-card li::before { content: '—'; margin-right: 9px; color: #647d22; }
+  .offer-card.primary li::before { color: var(--lime); }
+  .offer-link { width: fit-content; margin-top: auto; padding-bottom: 4px; border-bottom: 1px solid currentColor; color: inherit; font-size: 14px; font-weight: 700; text-decoration: none; }
+  .review-route { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; align-items: start; margin-top: 72px; padding-top: 42px; border-top: 1px solid rgba(16,20,18,.16); }
+  .review-route h3 { font-family: var(--font-display); font-size: clamp(30px, 3.2vw, 46px); line-height: 1.05; letter-spacing: -.045em; }
+  .review-route-copy p { margin-top: 18px; color: #59635c; line-height: 1.7; }
+  .review-route .review-cards { gap: 10px; }
+  .review-route .review-card { padding: 22px 24px; border-radius: 13px; }
+  .review-route .review-card h3 { margin: 0; font-size: 22px; }
+
+  @media (max-width: 1100px) {
+    .hero-shell { grid-template-columns: 1fr; }
+    .hero-project { max-width: 720px; }
+    .offer-grid { grid-template-columns: 1fr 1fr; }
+    .offer-card:last-child { grid-column: 1 / -1; min-height: 0; }
+  }
+  @media (max-width: 1150px) {
+    .main-nav .nav-links { display: none; }
+    .main-nav .hamburger { display: flex; }
+  }
+  @media (max-width: 780px) {
+    .hero { padding-top: 120px; }
+    .hero h1 { font-size: clamp(46px, 12vw, 64px); }
+    .hero-route-actions .btn-primary, .hero-route-actions .btn-ghost { width: 100%; justify-content: center; }
+    .offer-grid, .review-route { grid-template-columns: 1fr; }
+    .offer-card, .offer-card:last-child { grid-column: auto; min-height: 0; }
+    .review-route { gap: 28px; }
+    .focus-bridge { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -710,7 +779,8 @@
   <a href="/" class="nav-logo" aria-label="Briqk homepage" style="display:flex;align-items:center;gap:10px;"><svg width="22" height="34" viewBox="0 0 28 44" fill="none" aria-hidden="true" focusable="false" style="filter:drop-shadow(0 0 6px #C9F45B);flex-shrink:0;"><polygon points="16,2 6,20 13,20 10,42 22,18 15,18" fill="#C9F45B"/></svg><span style="white-space:nowrap;color:var(--white);">Bri<span>qk</span></span></a>
   <ul class="nav-links">
     <li><a href="#werk">Ons werk</a></li>
-    <li><a href="#diensten-detail">Diensten</a></li>
+    <li><a href="/website-laten-maken-mkb">Websites</a></li>
+    <li><a href="/automatisering">Automatisering</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="/labs">Labs</a></li>
     <li><a class="portal-link" href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer">Klantportaal</a></li>
@@ -722,7 +792,8 @@
 </nav>
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobiele navigatie" aria-hidden="true">
   <a href="#werk" onclick="toggleMenu()">Ons werk</a>
-  <a href="#diensten-detail" onclick="toggleMenu()">Diensten</a>
+  <a href="/website-laten-maken-mkb">Websites</a>
+  <a href="/automatisering">Automatisering</a>
   <a href="#reviews" onclick="toggleMenu()">Reviews</a>
   <a href="/labs">Labs</a>
   <a href="https://portal.briqk.nl" target="_blank" rel="noopener noreferrer" style="color:var(--grey-text)">Klantportaal</a>
@@ -736,35 +807,23 @@
   <div class="hero-grid"></div>
   <div class="hero-shell">
     <div class="hero-copy">
-      <div class="hero-tag">Digitale studio · Arnhem</div>
-      <h1 id="hero-title">Sterk op het scherm.<br><em>Slim erachter.</em></h1>
-      <p class="hero-sub">Briqk bouwt <strong>websites die klanten overtuigen</strong> en digitale processen die aanvragen goed verwerken en opvolgen — ontworpen als één geheel.</p>
-      <div class="hero-actions">
-        <a href="#werk" class="btn-primary">Bekijk ons werk</a>
-        <a href="#contact" class="btn-ghost" data-cta-offer="anders" data-cta-location="hero">Plan een kennismaking</a>
+      <div class="hero-tag">Websites · workflows · maatwerk</div>
+      <h1 id="hero-title">Websites die overtuigen.<br><em>Workflows die doorwerken.</em></h1>
+      <p class="hero-sub">Briqk ontwerpt en bouwt nieuwe websites, scherpe redesigns en digitale workflows die handmatig werk slimmer organiseren.</p>
+      <div class="hero-route-actions">
+        <a href="/website-laten-maken-mkb" class="btn-primary" data-cta-offer="website" data-cta-location="hero">Bekijk websites</a>
+        <a href="/automatisering" class="btn-ghost" data-cta-offer="automatisering" data-cta-location="hero">Bekijk automatisering</a>
       </div>
     </div>
-    <div class="hero-proof" aria-label="De twee kanten van een Briqk-oplossing">
-      <div class="hero-duality">
-        <div class="duality-head"><span>Eén digitale lijn</span><span>Van aandacht naar opvolging</span></div>
-        <div class="duality-grid">
-          <div class="duality-side">
-            <div class="duality-label">Op het scherm</div>
-            <h2>Een merk dat vertrouwen wekt.</h2>
-            <ul><li>Positionering</li><li>Webdesign</li><li>Conversie</li></ul>
-          </div>
-          <div class="duality-side">
-            <div class="duality-label">Slim erachter</div>
-            <h2>Een proces dat doorwerkt.</h2>
-            <ul><li>Aanvragen</li><li>Verwerking</li><li>Opvolging</li></ul>
-          </div>
+    <div class="hero-proof">
+      <a class="hero-project" href="https://nijtec.nl/" target="_blank" rel="noopener noreferrer" aria-label="Bekijk de website van Nijtec in een nieuw tabblad">
+        <div class="hero-project-head"><span>Recent werk</span><strong>Nijtec B.V.</strong></div>
+        <div class="hero-project-window">
+          <img src="assets/cases/nijtec-desktop.webp" width="1280" height="760" alt="Website van Nijtec, ontworpen en gebouwd door Briqk">
         </div>
-        <div class="duality-footer"><span><strong>Briqk</strong>&nbsp;verbindt beide kanten.</span><span>Techniek volgt het proces.</span></div>
-      </div>
+        <div class="hero-project-foot"><strong>Technische expertise helder in beeld</strong><span>Strategie · webdesign · development</span></div>
+      </a>
     </div>
-  </div>
-  <div class="capability-strip" aria-label="Onze disciplines">
-    <span>Strategie</span><span>Webdesign</span><span>Development</span><span>Automatisering</span><span>Maatwerk</span>
   </div>
 </section>
 
@@ -821,41 +880,73 @@
 <section class="focus-section" id="diensten-detail" aria-labelledby="focus-title">
   <div class="focus-head">
     <div>
-      <div class="section-tag">Twee expertises · één resultaat</div>
-      <h2 class="section-title" id="focus-title">De voorkant overtuigt.<br>De achterkant werkt door.</h2>
+      <div class="section-tag">Twee duidelijke routes</div>
+      <h2 class="section-title" id="focus-title">Wat wil je bouwen<br>of verbeteren?</h2>
     </div>
-    <p class="focus-intro">Een website en het proces erachter horen niet los van elkaar te ontstaan. Daarom combineren we merk, design en development met slimme verwerking en opvolging.</p>
+    <p class="focus-intro">Je hoeft niet eerst een Review te kopen. We starten direct met een nieuwe website of workflow wanneer de opdracht duidelijk is.</p>
   </div>
   <div class="focus-grid">
     <article class="focus-track reveal" id="websites">
-      <div class="focus-number">01 · OP HET SCHERM</div>
-      <h3>Websites &amp; digitale ervaringen</h3>
-      <p>Een eigen verhaal, een duidelijke route en een uitstraling die past bij de kwaliteit van je bedrijf.</p>
-      <ul class="focus-list"><li>Positionering en contentstructuur</li><li>Art direction en responsive webdesign</li><li>Development, snelheid en conversie</li></ul>
-      <a class="focus-link" href="/website-laten-maken-mkb">Bekijk onze website-aanpak</a>
+      <div class="focus-number">Websites</div>
+      <h3>Nieuw bouwen of sterk redesignen</h3>
+      <p>Van positionering en ontwerp tot een snelle, responsive website die past bij je bedrijf en klanten richting actie helpt.</p>
+      <ul class="focus-list"><li>Nieuwe websites</li><li>Website redesign</li><li>Development en doorontwikkeling</li></ul>
+      <a class="focus-link" href="/website-laten-maken-mkb">Bekijk websites</a>
     </article>
     <article class="focus-track reveal" id="automatisering">
-      <div class="focus-number">02 · SLIM ERACHTER</div>
-      <h3>Automatisering &amp; maatwerk</h3>
-      <p>We begrijpen eerst hoe je bedrijf werkt. Pas daarna bouwen we de koppeling, workflow of gespecialiseerde AI die aantoonbaar werk uit handen neemt.</p>
+      <div class="focus-number">Workflows &amp; automatisering</div>
+      <h3>Minder overdracht, minder routinewerk</h3>
+      <p>We brengen eerst het proces scherp in beeld en bouwen daarna de workflow, koppeling of maatwerktool die daarbij past.</p>
       <ul class="focus-list"><li>Leadverwerking en CRM-koppelingen</li><li>E-mail, planning en notificaties</li><li>Klantportalen en branchespecifieke tools</li></ul>
-      <a class="focus-link" href="/blog/ai-automatisering-mkb">Bekijk onze automatiseringsaanpak</a>
+      <a class="focus-link" href="/automatisering">Bekijk automatisering</a>
     </article>
   </div>
   <div class="focus-bridge" aria-label="Van vertrouwen naar opvolging">
-    <div class="focus-bridge-label">Eén geheel</div>
-    <div class="focus-bridge-flow">Vertrouwen &rarr; aanvraag &rarr; verwerking &rarr; opvolging</div>
-    <p class="focus-bridge-note">Techniek volgt het proces. We automatiseren alleen waar dat aantoonbaar waarde toevoegt.</p>
+    <div class="focus-bridge-label">Bestaand product?</div>
+    <div class="focus-bridge-flow">Weet je nog niet wat er beter moet? Dan is een Review een logische eerste stap.</div>
+    <a class="focus-review-link" href="#reviews">Bekijk de Reviews</a>
   </div>
 </section>
 
-<!-- REVIEW ALS INSTAPROUTE -->
-<section class="review-entry" id="reviews" aria-labelledby="reviews-title">
-  <div class="review-entry-grid">
-    <div class="review-entry-copy">
-      <div class="section-tag">Analyse &amp; redesign</div>
-      <h2 class="section-title" id="reviews-title">Niet zeker wat er nodig is? Begin met een Briqk Review.</h2>
-      <p>We onderzoeken waar je website of applicatie schuurt en bepalen wat eerst moet: gericht verbeteren of opnieuw ontwerpen.</p>
+<!-- AANBOD EN PRIJZEN -->
+<section class="offer-section" id="prijzen" aria-labelledby="offers-title">
+  <div class="section-tag">Aanbod &amp; prijzen</div>
+  <h2 class="section-title" id="offers-title">Direct bouwen waar het kan.<br>Eerst onderzoeken waar het moet.</h2>
+  <p class="offer-intro">Dit zijn heldere startpunten. Een nieuwe website kan direct beginnen; redesign en automatisering worden geprijsd op basis van de echte omvang.</p>
+  <div class="offer-grid">
+    <article class="offer-card primary">
+      <div class="offer-type">Nieuwe website</div>
+      <h3>Starter Website</h3>
+      <div class="offer-price">€850</div>
+      <div class="offer-period">eenmalig + €99 per maand</div>
+      <p>Een professionele basis voor zzp en klein mkb.</p>
+      <ul><li>Tot vijf pagina’s</li><li>Responsive ontwerp</li><li>Contactformulier en SEO-basis</li></ul>
+      <a class="offer-link" href="/website-laten-maken-mkb">Bekijk websites</a>
+    </article>
+    <article class="offer-card">
+      <div class="offer-type">Website Redesign</div>
+      <h3>Bestaande site opnieuw ontworpen</h3>
+      <div class="offer-price">Op offerte</div>
+      <div class="offer-period">Review wordt binnen 30 dagen verrekend</div>
+      <p>Voor websites die inhoudelijk of visueel niet meer passen bij het bedrijf.</p>
+      <ul><li>Strategie en contentstructuur</li><li>Nieuw visueel ontwerp</li><li>Responsive development</li></ul>
+      <a class="offer-link" href="#contact" data-cta-offer="website_redesign" data-cta-location="prijzen">Bespreek een redesign</a>
+    </article>
+    <article class="offer-card">
+      <div class="offer-type">Workflow &amp; automatisering</div>
+      <h3>Procesgericht maatwerk</h3>
+      <div class="offer-price">Op maat</div>
+      <div class="offer-period">na een korte procesverkenning</div>
+      <p>Voor terugkerend werk, overdrachten en systemen die niet goed samenwerken.</p>
+      <ul><li>Proces en gewenste uitkomst</li><li>Workflow en koppelingen</li><li>Testen, livegang en beheer</li></ul>
+      <a class="offer-link" href="/automatisering">Bekijk automatisering</a>
+    </article>
+  </div>
+  <div class="review-route" id="reviews">
+    <div class="review-route-copy">
+      <div class="section-tag">Optionele instaproute</div>
+      <h3 id="reviews-title">Nog niet duidelijk wat er misgaat?</h3>
+      <p>Een Review is bedoeld voor een bestaande website of applicatie. Je krijgt concrete prioriteiten en advies: verbeteren, redesignen of opnieuw bouwen.</p>
     </div>
     <div>
       <div class="review-cards">
@@ -1131,7 +1222,7 @@
 </section>
 
 <!-- PRICING -->
-<section id="prijzen" hidden>
+<section id="legacy-prijzen" hidden aria-hidden="true">
   <div class="section-tag">Startpunten</div>
   <h2 class="section-title">Duidelijk waar het kan. Maatwerk waar het telt.</h2>
   <p class="section-sub">Gebruik deze pakketten als vertrekpunt. Na een korte intake weet je precies wat er nodig is, wat het kost en wat wij beheren.</p>
@@ -1331,10 +1422,11 @@
       <fieldset class="form-group form-fieldset">
         <legend>Interesse in (meerdere mogelijk)</legend>
         <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;" id="interesseCheckboxes">
-          <label class="interest-option"><input type="checkbox" name="interesse" value="Website en merk"> Website &amp; merk</label>
+          <label class="interest-option"><input type="checkbox" name="interesse" value="Nieuwe website"> Nieuwe website</label>
+          <label class="interest-option"><input type="checkbox" name="interesse" value="Website Redesign"> Website Redesign</label>
           <label class="interest-option"><input type="checkbox" name="interesse" value="Website Review"> Website Review</label>
           <label class="interest-option"><input type="checkbox" name="interesse" value="Product Review (applicatie/dashboard)"> Product Review (applicatie/dashboard)</label>
-          <label class="interest-option"><input type="checkbox" name="interesse" value="Automatisering en koppelingen"> Automatisering &amp; koppelingen</label>
+          <label class="interest-option"><input type="checkbox" name="interesse" value="Workflow en automatisering"> Workflow &amp; automatisering</label>
           <label class="interest-option"><input type="checkbox" name="interesse" value="Klantportaal of maatwerk"> Klantportaal of maatwerk</label>
         </div>
       </fieldset>
@@ -1355,9 +1447,10 @@
   <p>© 2026 Briqk · Arnhem · Webdesign &amp; slimme digitale processen</p>
   <nav aria-label="Diensten en informatie" style="font-size:12px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
     <a href="#werk" style="color:#bbb;">Ons werk</a>
-    <a href="#diensten-detail" style="color:#bbb;">Diensten</a>
+    <a href="/website-laten-maken-mkb" style="color:#bbb;">Websites</a>
+    <a href="/automatisering" style="color:#bbb;">Automatisering</a>
     <a href="/labs" style="color:#bbb;">Labs</a>
-    <a href="#reviews" style="color:#bbb;">Analyse &amp; redesign</a>
+    <a href="#reviews" style="color:#bbb;">Reviews</a>
     <a href="/website-analyse" style="color:#bbb;">Website Review</a>
     <a href="/applicatie-ux-audit" style="color:#bbb;">Product Review</a>
     <a href="#aanpak" style="color:#bbb;">Aanpak</a>

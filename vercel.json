@@ -21,6 +21,11 @@
       "permanent": true
     },
     {
+      "source": "/automatisering.html",
+      "destination": "/automatisering",
+      "permanent": true
+    },
+    {
       "source": "/bedankt.html",
       "destination": "/bedankt",
       "permanent": true
@@ -102,6 +107,10 @@
     {
       "source": "/applicatie-ux-audit",
       "destination": "/applicatie-ux-audit.html"
+    },
+    {
+      "source": "/automatisering",
+      "destination": "/automatisering.html"
     },
     {
       "source": "/bedankt",
