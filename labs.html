@@ -812,14 +812,14 @@
       <h3>Websites &amp; AI-assistenten</h3>
       <p>Een visueel eigen website die snel, mobiel en helder is. Uit te breiden met een assistent die vragen beantwoordt en aanvragen kwalificeert.</p>
       <div class="pillar-items">
-        <div class="pillar-item">Starter Website vanaf €850</div>
+        <div class="pillar-item">Website op maat vanaf €850</div>
         <div class="pillar-item">Pro Website + AI Chatbot €1.750</div>
         <div class="pillar-item">Chatbot Add-on op bestaande site €600</div>
         <div class="pillar-item">WhatsApp Bot €750</div>
         <div class="pillar-item">Lead Qualifier Agent €950</div>
       </div>
       <div class="pillar-links" aria-label="Meer over onze websites">
-        <a href="/website-laten-maken-mkb">Starter Website</a>
+        <a href="/website-laten-maken-mkb">Website op maat</a>
         <a href="/ai-website-laten-maken">AI-website + chatbot</a>
         <a href="/website-laten-maken-arnhem">Webdesign Arnhem</a>
         <a href="/whatsapp-bot-bedrijf">WhatsApp-bot</a>
@@ -1157,12 +1157,12 @@
   <p class="section-sub">Gebruik deze pakketten als vertrekpunt. Na een korte intake weet je precies wat er nodig is, wat het kost en wat wij beheren.</p>
   <div class="pricing-grid">
     <div class="pricing-card reveal">
-      <div class="pricing-name">Starter Website</div>
+      <div class="pricing-name">Website op maat</div>
       <div class="pricing-price"><sup>€</sup>850</div>
-      <div class="pricing-period">eenmalig + €99/maand</div>
-      <div class="pricing-desc">Voor ZZP'ers die professioneel online willen staan.</div>
+      <div class="pricing-period">vanaf · eenmalig · geen abonnement nodig</div>
+      <div class="pricing-desc">Voor bedrijven die professioneel online willen staan.</div>
       <ul class="pricing-features">
-        <li>Professionele website (5 pagina's)</li>
+        <li>Omvang afgestemd op inhoud en doel</li>
         <li>Slim contactformulier</li>
         <li>Mobielvriendelijk design</li>
         <li>Hosting via Vercel</li>
@@ -1170,13 +1170,13 @@
         <li>Maandelijks onderhoud</li>
       </ul>
       <details class="monthly-accordion">
-        <summary>Wat zit er in €99/maand? <span class="ma-chevron">▼</span></summary>
+        <summary>Optioneel beheer vanaf €99 per maand <span class="ma-chevron">▼</span></summary>
         <div class="accordion-body"><ul>
-          <li>Website en domein altijd online, wij beheren alles</li>
-          <li>Maandelijkse aanpassingen en optimalisaties</li>
-          <li>Technisch onderhoud zodat niets stukgaat</li>
+          <li>Hosting, SSL en technische controles</li>
+          <li>Kleine wijzigingen binnen de afgesproken beheeromvang</li>
+          <li>Onderhoud en controle van formulieren</li>
           <li>Google Search Console monitoring</li>
-          <li>Support via WhatsApp, reactie binnen 24 uur</li>
+          <li>Zonder maandpakket voeren we wijzigingen uit op uurbasis</li>
         </ul></div>
       </details>
       <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Starter')" style="margin-top:14px">Start gesprek</button>
@@ -1351,7 +1351,7 @@
       <fieldset class="form-group form-fieldset">
         <legend>Interesse in (meerdere mogelijk)</legend>
         <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;" id="interesseCheckboxes">
-          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Starter Website (€850)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Starter Website (€850)</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Website op maat (vanaf €850)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Website op maat (vanaf €850)</label>
           <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Pro Website + Chatbot (€1.750)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Pro Website + Chatbot (€1.750)</label>
           <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="Chatbot Add-on (€600)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> Chatbot Add-on (€600)</label>
           <label style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--white);text-transform:none;letter-spacing:0;cursor:pointer;"><input type="checkbox" name="interesse" value="WhatsApp Bot (€750)" style="accent-color:var(--lime);width:16px;height:16px;cursor:pointer;"> WhatsApp Bot (€750)</label>
@@ -1410,7 +1410,7 @@ function startGesprek(interesse) {
       var bericht = document.getElementById('formBericht');
       if (bericht) {
         var labels = {
-          'Starter': 'Hallo, ik heb interesse in de Starter Website (€850). Kunnen jullie mij meer informatie geven?',
+          'Starter': 'Hallo, ik heb interesse in een website op maat vanaf €850. Kunnen jullie mij meer informatie geven?',
           'Pro Website': 'Hallo, ik heb interesse in de Pro Website + Chatbot (€1.750). Kunnen jullie mij meer informatie geven?',
           'Chatbot Add-on': 'Hallo, ik heb interesse in de Chatbot Add-on (€600). Kunnen jullie mij meer informatie geven?',
           'WhatsApp Bot': 'Hallo, ik heb interesse in de WhatsApp Bot (€750). Kunnen jullie mij meer informatie geven?',
@@ -1512,7 +1512,7 @@ function getLocalAssistantReply(message) {
   const question = message.toLocaleLowerCase('nl-NL');
 
   if (question.includes('kost') || question.includes('prijs') || question.includes('budget')) {
-    return 'Een professionele Starter Website begint bij €850. Een Pro Website met AI-chatbot begint bij €1.750. Tijdens een gratis kennismaking bepalen we wat voor jouw bedrijf echt nodig is.';
+    return 'Een website op maat begint bij €850 en vereist geen abonnement. Optioneel beheer met onderhoud en afgesproken wijzigingen begint bij €99 per maand; zonder pakket voeren we latere aanpassingen op uurbasis uit.';
   }
   if (question.includes('snel') || question.includes('live') || question.includes('lang') || question.includes('oplever')) {
     return 'Na de intake en zodra alle input compleet is, kan je website meestal binnen 2 weken live. Je krijgt vooraf een duidelijke planning.';

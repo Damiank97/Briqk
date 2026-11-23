@@ -732,9 +732,9 @@
   .offer-card.primary { background: var(--ink); color: var(--white); }
   .offer-type { color: #5d6d1e; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
   .offer-card.primary .offer-type { color: var(--lime); }
-  .offer-card h3 { margin-top: 34px; font-family: var(--font-display); font-size: 29px; line-height: 1.05; letter-spacing: -.045em; }
-  .offer-price { margin-top: 18px; font-family: var(--font-display); font-size: 34px; font-weight: 700; letter-spacing: -.05em; }
-  .offer-period { min-height: 22px; margin-top: 4px; color: #667069; font-size: 13px; }
+  .offer-card h3 { min-height: 62px; margin-top: 34px; font-family: var(--font-display); font-size: 29px; line-height: 1.05; letter-spacing: -.045em; }
+  .offer-price { display: flex; min-height: 42px; align-items: flex-end; margin-top: 18px; font-family: var(--font-display); font-size: 34px; font-weight: 700; letter-spacing: -.05em; }
+  .offer-period { min-height: 40px; margin-top: 8px; color: #667069; font-size: 13px; line-height: 1.45; }
   .offer-card.primary .offer-period { color: #aeb5af; }
   .offer-card p { margin-top: 22px; color: #58625b; font-size: 15px; line-height: 1.7; }
   .offer-card.primary p { color: #b8beb9; }
@@ -766,6 +766,7 @@
     .hero-route-actions .btn-primary, .hero-route-actions .btn-ghost { width: 100%; justify-content: center; }
     .offer-grid, .review-route { grid-template-columns: 1fr; }
     .offer-card, .offer-card:last-child { grid-column: auto; min-height: 0; }
+    .offer-card h3, .offer-price, .offer-period { min-height: 0; }
     .review-route { gap: 28px; }
     .focus-bridge { grid-template-columns: 1fr; }
   }
@@ -916,11 +917,11 @@
   <div class="offer-grid">
     <article class="offer-card primary">
       <div class="offer-type">Nieuwe website</div>
-      <h3>Starter Website</h3>
-      <div class="offer-price">€850</div>
-      <div class="offer-period">eenmalig + €99 per maand</div>
-      <p>Een professionele basis voor zzp en klein mkb.</p>
-      <ul><li>Tot vijf pagina’s</li><li>Responsive ontwerp</li><li>Contactformulier en SEO-basis</li></ul>
+      <h3>Website op maat</h3>
+      <div class="offer-price">vanaf €850</div>
+      <div class="offer-period">eenmalig · geen abonnement nodig</div>
+      <p>Een professionele website waarvan inhoud en omvang aansluiten op wat je bedrijf nodig heeft.</p>
+      <ul><li>Omvang afgestemd op inhoud en doel</li><li>Responsive ontwerp en development</li><li>Contactroute en technische SEO-basis</li></ul>
       <a class="offer-link" href="/website-laten-maken-mkb">Bekijk websites</a>
     </article>
     <article class="offer-card">
@@ -1228,12 +1229,12 @@
   <p class="section-sub">Gebruik deze pakketten als vertrekpunt. Na een korte intake weet je precies wat er nodig is, wat het kost en wat wij beheren.</p>
   <div class="pricing-grid">
     <div class="pricing-card reveal">
-      <div class="pricing-name">Starter Website</div>
+      <div class="pricing-name">Website op maat</div>
       <div class="pricing-price"><sup>€</sup>850</div>
-      <div class="pricing-period">eenmalig + €99/maand</div>
-      <div class="pricing-desc">Voor ZZP'ers die professioneel online willen staan.</div>
+      <div class="pricing-period">vanaf · eenmalig · geen abonnement nodig</div>
+      <div class="pricing-desc">Voor bedrijven die professioneel online willen staan.</div>
       <ul class="pricing-features">
-        <li>Professionele website (5 pagina's)</li>
+        <li>Omvang afgestemd op inhoud en doel</li>
         <li>Slim contactformulier</li>
         <li>Mobielvriendelijk design</li>
         <li>Hosting via Vercel</li>
@@ -1241,13 +1242,13 @@
         <li>Maandelijks onderhoud</li>
       </ul>
       <details class="monthly-accordion">
-        <summary>Wat zit er in €99/maand? <span class="ma-chevron">▼</span></summary>
+        <summary>Optioneel beheer vanaf €99 per maand <span class="ma-chevron">▼</span></summary>
         <div class="accordion-body"><ul>
-          <li>Website en domein altijd online, wij beheren alles</li>
-          <li>Maandelijkse aanpassingen en optimalisaties</li>
-          <li>Technisch onderhoud zodat niets stukgaat</li>
+          <li>Hosting, SSL en technische controles</li>
+          <li>Kleine wijzigingen binnen de afgesproken beheeromvang</li>
+          <li>Onderhoud en controle van formulieren</li>
           <li>Google Search Console monitoring</li>
-          <li>Support via WhatsApp, reactie binnen 24 uur</li>
+          <li>Zonder maandpakket voeren we wijzigingen uit op uurbasis</li>
         </ul></div>
       </details>
       <button class="btn-pricing btn-pricing-dark" type="button" onclick="startGesprek('Starter')" style="margin-top:14px">Start gesprek</button>
@@ -1484,7 +1485,7 @@ function startGesprek(interesse) {
       var bericht = document.getElementById('formBericht');
       if (bericht) {
         var labels = {
-          'Starter': 'Hallo, ik heb interesse in de Starter Website (€850). Kunnen jullie mij meer informatie geven?',
+          'Starter': 'Hallo, ik heb interesse in een website op maat vanaf €850. Kunnen jullie mij meer informatie geven?',
           'Pro Website': 'Hallo, ik heb interesse in de Pro Website + Chatbot (€1.750). Kunnen jullie mij meer informatie geven?',
           'Chatbot Add-on': 'Hallo, ik heb interesse in de Chatbot Add-on (€600). Kunnen jullie mij meer informatie geven?',
           'WhatsApp Bot': 'Hallo, ik heb interesse in de WhatsApp Bot (€750). Kunnen jullie mij meer informatie geven?',
@@ -1586,7 +1587,7 @@ function getLocalAssistantReply(message) {
   const question = message.toLocaleLowerCase('nl-NL');
 
   if (question.includes('kost') || question.includes('prijs') || question.includes('budget')) {
-    return 'Een professionele Starter Website begint bij €850. Een Pro Website met AI-chatbot begint bij €1.750. Tijdens een gratis kennismaking bepalen we wat voor jouw bedrijf echt nodig is.';
+    return 'Een website op maat begint bij €850 en vereist geen abonnement. Optioneel beheer met onderhoud en afgesproken wijzigingen begint bij €99 per maand; zonder pakket voeren we latere aanpassingen op uurbasis uit.';
   }
   if (question.includes('snel') || question.includes('live') || question.includes('lang') || question.includes('oplever')) {
     return 'Na de intake en zodra alle input compleet is, kan je website meestal binnen 2 weken live. Je krijgt vooraf een duidelijke planning.';

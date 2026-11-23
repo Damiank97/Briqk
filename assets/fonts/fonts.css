@@ -13,3 +13,14 @@
   font-display: swap;
   src: url("/assets/fonts/space-grotesk-latin.woff2") format("woff2");
 }
+
+/* Keep the text caret inside actual editing controls only. */
+body {
+  caret-color: transparent;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  caret-color: auto;
+}
