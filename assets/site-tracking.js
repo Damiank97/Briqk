@@ -60,6 +60,7 @@
     var text = String(value || "").toLowerCase().replace(/[_-]+/g, " ");
     if (text.indexOf("website review") !== -1) return "website_review";
     if (text.indexOf("product review") !== -1 || text.indexOf("applicatie") !== -1) return "product_review";
+    if (text.indexOf("ai advies") !== -1 || text.indexOf("ai verkenning") !== -1 || text.indexOf("ai kansenanalyse") !== -1 || text.indexOf("ai implementatie") !== -1) return "ai_advies";
     if (text.indexOf("website") !== -1 || text.indexOf("merk") !== -1) return "website";
     if (text.indexOf("automatis") !== -1 || text.indexOf("maatwerk") !== -1 || text.indexOf("portaal") !== -1) return "automatisering";
     return "anders";
@@ -108,6 +109,7 @@
         var source = cta.getAttribute("data-cta-offer") || cta.textContent || window.location.pathname;
         if (normaliseOffer(source) === "anders" && /website-laten-maken|ai-website/.test(window.location.pathname)) source = "website";
         if (normaliseOffer(source) === "anders" && /automatisering|whatsapp/.test(window.location.pathname)) source = "automatisering";
+        if (normaliseOffer(source) === "anders" && /ai-advies/.test(window.location.pathname)) source = "ai_advies";
         track("cta_click", {
           offer: normaliseOffer(source),
           location: cta.getAttribute("data-cta-location") || window.location.pathname

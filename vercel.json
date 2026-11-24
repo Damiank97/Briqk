@@ -26,6 +26,11 @@
       "permanent": true
     },
     {
+      "source": "/ai-advies-mkb.html",
+      "destination": "/ai-advies-mkb",
+      "permanent": true
+    },
+    {
       "source": "/bedankt.html",
       "destination": "/bedankt",
       "permanent": true
@@ -111,6 +116,10 @@
     {
       "source": "/automatisering",
       "destination": "/automatisering.html"
+    },
+    {
+      "source": "/ai-advies-mkb",
+      "destination": "/ai-advies-mkb.html"
     },
     {
       "source": "/bedankt",
